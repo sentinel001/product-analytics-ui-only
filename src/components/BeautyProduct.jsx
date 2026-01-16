@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
-import { ChevronRight, Info, HelpCircle, ExternalLink, Play, Clock, Droplet } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { ChevronRight, Info, HelpCircle, ExternalLink, Play, Clock, Droplet, ArrowLeft, ShoppingCart } from 'lucide-react';
 
 const BeautyProduct = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('summary');
   const [showCompatibility, setShowCompatibility] = useState(false);
 
   return (
-    <div className="max-w-md mx-auto bg-white min-h-screen font-['Inter_Tight']">
+    <div className="max-w-md mx-auto bg-white min-h-screen font-['Inter_Tight'] pb-24">
       {/* Header */}
-      <header className="flex items-center justify-between p-4 border-b">
-        <h1 className="text-xl font-semibold">Flash AI</h1>
-        <button className="p-2">
+      <header className="flex items-center justify-between p-4 border-b sticky top-0 bg-white z-10">
+        <div className="flex items-center gap-3">
+          <button onClick={() => navigate(-1)} className="p-1 hover:bg-gray-100 rounded-lg transition-colors">
+            <ArrowLeft className="w-5 h-5" />
+          </button>
+          <h1 className="text-xl font-semibold">Flash AI</h1>
+        </div>
+        <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
           <ExternalLink className="w-5 h-5" />
         </button>
       </header>
@@ -352,6 +359,23 @@ const BeautyProduct = () => {
             ))}
           </div>
         </section>
+      </div>
+
+      {/* Fixed Bottom: Add to Cart */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-200 px-4 py-3 max-w-md mx-auto">
+        <div className="flex items-center gap-3">
+          <div className="flex-1">
+            <p className="text-xs text-gray-600">Best Price</p>
+            <p className="text-xl font-bold text-gray-900">₹799</p>
+          </div>
+          <button
+            onClick={() => navigate('/checkout')}
+            className="flex-1 bg-purple-600 text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-purple-700 transition-all transform active:scale-95 flex items-center justify-center gap-2"
+          >
+            <ShoppingCart className="w-4 h-4" />
+            Add to Cart
+          </button>
+        </div>
       </div>
     </div>
   );

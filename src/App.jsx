@@ -132,7 +132,12 @@ function App() {
         {/* Full User Journey Flow */}
         <Route path="/" element={<FlashHome />} />
         <Route path="/discovery/:category" element={<ProductDiscovery />} />
-        <Route path="/product/:category" element={<BeautyProduct />} />
+
+        {/* Product Detail Pages by Category */}
+        <Route path="/product/beauty" element={<BeautyProduct />} />
+        <Route path="/product/electronics" element={<ElectronicsProduct />} />
+        <Route path="/product/fashion" element={<FashionProduct />} />
+
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
         <Route path="/order-tracking" element={<OrderTracking />} />

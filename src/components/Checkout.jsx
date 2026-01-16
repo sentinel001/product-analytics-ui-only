@@ -82,7 +82,7 @@ const Checkout = () => {
       {/* Header */}
       <div className="bg-white border-b border-gray-200 px-4 py-4 sticky top-0 z-10">
         <div className="flex items-center gap-3">
-          <button onClick={() => navigate(-1)} className="p-1">
+          <button onClick={() => navigate(-1)} className="p-1 hover:bg-gray-100 rounded-lg transition-colors transform active:scale-95">
             <ArrowLeft className="w-5 h-5" />
           </button>
           <div className="flex-1">
@@ -121,7 +121,7 @@ const Checkout = () => {
           <div>
             <div className="flex items-center justify-between mb-3">
               <h2 className="text-base font-bold text-gray-900">Delivery Address</h2>
-              <button className="text-sm text-purple-600 font-medium">+ Add New</button>
+              <button className="text-sm text-purple-600 font-medium hover:underline transition-all transform active:scale-95">+ Add New</button>
             </div>
 
             <div className="space-y-3">
@@ -129,10 +129,10 @@ const Checkout = () => {
                 <button
                   key={addr.id}
                   onClick={() => setSelectedAddress(addr.id)}
-                  className={`w-full text-left p-3 rounded-lg border-2 transition-all ${
+                  className={`w-full text-left p-3 rounded-lg border-2 transition-all transform hover:scale-[1.02] active:scale-95 ${
                     selectedAddress === addr.id
                       ? 'border-purple-600 bg-purple-50'
-                      : 'border-gray-200 bg-white'
+                      : 'border-gray-200 bg-white hover:border-purple-300'
                   }`}
                 >
                   <div className="flex items-start justify-between mb-2">
@@ -157,9 +157,9 @@ const Checkout = () => {
             <button
               onClick={() => setStep('payment')}
               disabled={!selectedAddress}
-              className={`w-full mt-4 py-3 rounded-lg font-semibold text-sm ${
+              className={`w-full mt-4 py-3 rounded-lg font-semibold text-sm transition-all ${
                 selectedAddress
-                  ? 'bg-purple-600 text-white hover:bg-purple-700'
+                  ? 'bg-purple-600 text-white hover:bg-purple-700 transform active:scale-95'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
               }`}
             >
@@ -178,10 +178,10 @@ const Checkout = () => {
                 <button
                   key={method.id}
                   onClick={() => setSelectedPayment(method.id)}
-                  className={`w-full text-left p-3 rounded-lg border-2 transition-all ${
+                  className={`w-full text-left p-3 rounded-lg border-2 transition-all transform hover:scale-[1.02] active:scale-95 ${
                     selectedPayment === method.id
                       ? 'border-purple-600 bg-purple-50'
-                      : 'border-gray-200 bg-white'
+                      : 'border-gray-200 bg-white hover:border-purple-300'
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -221,9 +221,9 @@ const Checkout = () => {
             <button
               onClick={() => setStep('review')}
               disabled={!selectedPayment}
-              className={`w-full mt-4 py-3 rounded-lg font-semibold text-sm ${
+              className={`w-full mt-4 py-3 rounded-lg font-semibold text-sm transition-all ${
                 selectedPayment
-                  ? 'bg-purple-600 text-white hover:bg-purple-700'
+                  ? 'bg-purple-600 text-white hover:bg-purple-700 transform active:scale-95'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
               }`}
             >
@@ -325,7 +325,7 @@ const Checkout = () => {
         {step === 'review' && (
           <button
             onClick={handlePlaceOrder}
-            className="w-full bg-purple-600 text-white py-3 rounded-lg font-bold text-sm hover:bg-purple-700 transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-purple-600 text-white py-3 rounded-lg font-bold text-sm hover:bg-purple-700 transition-all transform active:scale-95 flex items-center justify-center gap-2"
           >
             <Lock className="w-4 h-4" />
             Place Order ₹{total}

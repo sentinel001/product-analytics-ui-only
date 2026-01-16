@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Sparkles, TrendingUp, Zap, Heart, ShoppingBag, ChevronRight } from 'lucide-react';
+import { Search, Sparkles, TrendingUp, Bell, User, ChevronRight, Star, Zap } from 'lucide-react';
 
 const FlashHome = () => {
   const navigate = useNavigate();
@@ -44,146 +44,175 @@ const FlashHome = () => {
     'Gaming laptop under 60k'
   ];
 
+  const trendingProducts = [
+    {
+      name: 'Neutrogena Hydro Boost',
+      category: 'beauty',
+      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=200&q=80',
+      price: 799,
+      rating: 4.6,
+      badge: 'Trending'
+    },
+    {
+      name: 'iPhone 15 Pro',
+      category: 'electronics',
+      image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=200&q=80',
+      price: 134999,
+      rating: 4.6,
+      badge: 'Price Drop'
+    }
+  ];
+
   return (
-    <div className="max-w-md mx-auto bg-gradient-to-b from-purple-50 to-white min-h-screen font-['Inter_Tight']">
+    <div className="max-w-md mx-auto bg-white min-h-screen font-['Inter_Tight']">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-6">
-        <div className="flex items-center justify-between mb-4">
+      <div className="bg-white px-4 py-3 border-b border-gray-100">
+        <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-6 h-6" />
-            <h1 className="text-2xl font-bold">Flash AI</h1>
+            <Sparkles className="w-6 h-6 text-purple-600" />
+            <h1 className="text-xl font-bold text-gray-900">Flash AI</h1>
           </div>
           <div className="flex items-center gap-3">
-            <Heart className="w-5 h-5" />
-            <ShoppingBag className="w-5 h-5" />
+            <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+              <Bell className="w-5 h-5 text-gray-600" />
+            </button>
+            <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+              <User className="w-5 h-5 text-gray-600" />
+            </button>
           </div>
         </div>
 
-        <p className="text-sm opacity-90 mb-4">Your AI Shopping Assistant</p>
+        <p className="text-sm text-gray-600 mb-3">Good afternoon, Ambuj</p>
 
         {/* Search Bar */}
         <div className="relative">
           <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
           <input
             type="text"
-            placeholder="What are you looking for?"
+            placeholder="Search for products..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-purple-300"
+            className="w-full pl-10 pr-4 py-2.5 rounded-lg text-gray-900 text-sm bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:bg-white transition-all"
           />
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="px-4 py-6 space-y-6">
-        {/* Value Props */}
-        <div className="grid grid-cols-3 gap-2">
-          <div className="bg-white rounded-lg p-3 text-center border border-gray-100">
-            <div className="text-2xl mb-1">🎯</div>
-            <div className="text-xs font-semibold text-gray-900">AI Matched</div>
-            <div className="text-xs text-gray-500">For You</div>
+      <div className="px-4 py-4 space-y-5">
+        {/* AI Banner */}
+        <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-4 text-white">
+          <div className="flex items-center gap-2 mb-2">
+            <Sparkles className="w-5 h-5" />
+            <span className="text-sm font-semibold">AI-Powered Shopping</span>
           </div>
-          <div className="bg-white rounded-lg p-3 text-center border border-gray-100">
-            <div className="text-2xl mb-1">💰</div>
-            <div className="text-xs font-semibold text-gray-900">Best Price</div>
-            <div className="text-xs text-gray-500">Guaranteed</div>
-          </div>
-          <div className="bg-white rounded-lg p-3 text-center border border-gray-100">
-            <div className="text-2xl mb-1">✓</div>
-            <div className="text-xs font-semibold text-gray-900">Perfect Fit</div>
-            <div className="text-xs text-gray-500">Every Time</div>
+          <p className="text-xs opacity-90 mb-3">Get personalized recommendations, live price tracking, and perfect fit predictions</p>
+          <div className="grid grid-cols-3 gap-2 text-center">
+            <div>
+              <div className="text-lg font-bold">95%</div>
+              <div className="text-xs opacity-90">Match Rate</div>
+            </div>
+            <div>
+              <div className="text-lg font-bold">26%</div>
+              <div className="text-xs opacity-90">Fewer Returns</div>
+            </div>
+            <div>
+              <div className="text-lg font-bold">₹4.9K</div>
+              <div className="text-xs opacity-90">Avg Savings</div>
+            </div>
           </div>
         </div>
 
         {/* Category Cards */}
         <div>
-          <h2 className="text-lg font-bold text-gray-900 mb-3">Shop by Category</h2>
-          <div className="space-y-3">
+          <h2 className="text-base font-bold text-gray-900 mb-3">Shop by Category</h2>
+          <div className="grid grid-cols-3 gap-3">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => navigate(category.path)}
-                className="w-full bg-white rounded-xl p-4 border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all"
+                className="bg-white rounded-xl p-3 border border-gray-100 hover:border-purple-300 hover:shadow-lg transition-all transform hover:scale-[1.08] active:scale-95"
               >
-                <div className="flex items-center gap-3">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${category.gradient} flex items-center justify-center text-2xl`}>
-                    {category.icon}
+                <div className={`w-12 h-12 mx-auto rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center text-2xl mb-2`}>
+                  {category.icon}
+                </div>
+                <h3 className="font-semibold text-gray-900 text-xs text-center">{category.name.split(' &')[0]}</h3>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Trending Now */}
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-base font-bold text-gray-900">Trending Now</h2>
+            <button className="text-xs text-purple-600 font-medium hover:underline transition-all transform active:scale-95">View All</button>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            {trendingProducts.map((product, idx) => (
+              <button
+                key={idx}
+                onClick={() => navigate(`/product/${product.category}`)}
+                className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:border-purple-300 hover:shadow-lg transition-all transform hover:scale-[1.08] active:scale-95"
+              >
+                <div className="relative">
+                  <img src={product.image} alt={product.name} className="w-full h-32 object-cover" />
+                  <span className="absolute top-2 right-2 text-xs bg-orange-500 text-white px-2 py-1 rounded-full font-semibold">
+                    {product.badge}
+                  </span>
+                </div>
+                <div className="p-3">
+                  <p className="text-xs font-semibold text-gray-900 mb-1 line-clamp-2">{product.name}</p>
+                  <div className="flex items-center gap-1 mb-1">
+                    <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                    <span className="text-xs text-gray-600">{product.rating}</span>
                   </div>
-                  <div className="flex-1 text-left">
-                    <h3 className="font-semibold text-gray-900 text-sm mb-1">{category.name}</h3>
-                    <p className="text-xs text-gray-600 mb-1">{category.description}</p>
-                    <p className="text-xs text-purple-600 font-medium">{category.stats}</p>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-gray-400" />
+                  <p className="text-sm font-bold text-gray-900">₹{product.price.toLocaleString()}</p>
                 </div>
               </button>
             ))}
           </div>
         </div>
 
-        {/* Trending Searches */}
+        {/* Quick Access */}
         <div>
-          <div className="flex items-center gap-2 mb-3">
-            <TrendingUp className="w-4 h-4 text-orange-500" />
-            <h2 className="text-sm font-semibold text-gray-900">Trending Searches</h2>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {trendingSearches.map((search, idx) => (
-              <button
-                key={idx}
-                onClick={() => setSearchQuery(search)}
-                className="px-3 py-2 bg-white rounded-full text-xs text-gray-700 border border-gray-200 hover:border-purple-300 hover:bg-purple-50 transition-colors"
-              >
-                {search}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Why Flash AI */}
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-100">
-          <div className="flex items-center gap-2 mb-3">
-            <Zap className="w-5 h-5 text-purple-600" />
-            <h2 className="text-sm font-bold text-gray-900">Why Flash AI?</h2>
-          </div>
-          <div className="space-y-2 text-xs text-gray-700">
-            <div className="flex items-start gap-2">
-              <span className="text-purple-600">✓</span>
-              <span><strong>Personalized Recommendations:</strong> AI matches products to your needs</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <span className="text-purple-600">✓</span>
-              <span><strong>Price Intelligence:</strong> Track prices & get best deals</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <span className="text-purple-600">✓</span>
-              <span><strong>No More Returns:</strong> Perfect fit & suitability guaranteed</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <span className="text-purple-600">✓</span>
-              <span><strong>Transparent Info:</strong> Full ingredient, material & spec details</span>
-            </div>
+          <h2 className="text-base font-bold text-gray-900 mb-3">Quick Access</h2>
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              onClick={() => navigate('/demo')}
+              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-100 hover:border-blue-300 hover:shadow-lg transition-all transform hover:scale-[1.08] active:scale-95"
+            >
+              <Zap className="w-6 h-6 text-blue-600 mb-2" />
+              <p className="text-sm font-semibold text-gray-900 mb-1">Phase Evolution</p>
+              <p className="text-xs text-gray-600">See features by phase</p>
+            </button>
+            <button className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border border-green-100 hover:border-green-300 hover:shadow-lg transition-all transform hover:scale-[1.08] active:scale-95">
+              <Star className="w-6 h-6 text-green-600 mb-2" />
+              <p className="text-sm font-semibold text-gray-900 mb-1">Best Deals</p>
+              <p className="text-xs text-gray-600">Live price drops</p>
+            </button>
           </div>
         </div>
+      </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 gap-3">
-          <div className="bg-white rounded-lg p-3 border border-gray-200 text-center">
-            <div className="text-2xl font-bold text-purple-600 mb-1">2,847+</div>
-            <div className="text-xs text-gray-600">Success Stories</div>
-          </div>
-          <div className="bg-white rounded-lg p-3 border border-gray-200 text-center">
-            <div className="text-2xl font-bold text-green-600 mb-1">26%</div>
-            <div className="text-xs text-gray-600">Fewer Returns</div>
-          </div>
-          <div className="bg-white rounded-lg p-3 border border-gray-200 text-center">
-            <div className="text-2xl font-bold text-blue-600 mb-1">₹4.9K</div>
-            <div className="text-xs text-gray-600">Avg Savings</div>
-          </div>
-          <div className="bg-white rounded-lg p-3 border border-gray-200 text-center">
-            <div className="text-2xl font-bold text-orange-600 mb-1">4.7★</div>
-            <div className="text-xs text-gray-600">User Rating</div>
-          </div>
+      {/* Bottom Navigation */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 max-w-md mx-auto">
+        <div className="grid grid-cols-4 gap-2">
+          <button className="flex flex-col items-center gap-1 text-purple-600 transform active:scale-90 transition-all">
+            <Sparkles className="w-5 h-5" />
+            <span className="text-xs font-medium">Home</span>
+          </button>
+          <button className="flex flex-col items-center gap-1 text-gray-400 hover:text-gray-600 transform active:scale-90 transition-all">
+            <Search className="w-5 h-5" />
+            <span className="text-xs font-medium">Search</span>
+          </button>
+          <button className="flex flex-col items-center gap-1 text-gray-400 hover:text-gray-600 transform active:scale-90 transition-all">
+            <TrendingUp className="w-5 h-5" />
+            <span className="text-xs font-medium">Trending</span>
+          </button>
+          <button className="flex flex-col items-center gap-1 text-gray-400 hover:text-gray-600 transform active:scale-90 transition-all">
+            <User className="w-5 h-5" />
+            <span className="text-xs font-medium">Account</span>
+          </button>
         </div>
       </div>
     </div>

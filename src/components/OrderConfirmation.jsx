@@ -83,7 +83,7 @@ const OrderConfirmation = () => {
               <p className="text-xs text-gray-600 mb-2">We'll send you smart updates and help you get the best results from your product.</p>
               <button
                 onClick={() => navigate('/order-tracking')}
-                className="text-xs text-purple-600 font-medium flex items-center gap-1"
+                className="text-xs text-purple-600 font-medium flex items-center gap-1 hover:underline transition-all transform active:scale-95"
               >
                 Track Order <ChevronRight className="w-3 h-3" />
               </button>
@@ -173,7 +173,7 @@ const OrderConfirmation = () => {
 
           <div className="space-y-3">
             {smartUpsells.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg border border-gray-200 p-3">
+              <div key={product.id} className="bg-white rounded-lg border border-gray-200 p-3 hover:border-purple-300 hover:shadow-md transition-all">
                 <div className="flex gap-3">
                   <img
                     src={product.image}
@@ -198,7 +198,7 @@ const OrderConfirmation = () => {
                     </div>
                   </div>
                 </div>
-                <button className="w-full mt-2 bg-purple-600 text-white py-2 rounded-lg text-xs font-semibold hover:bg-purple-700 transition-colors">
+                <button className="w-full mt-2 bg-purple-600 text-white py-2 rounded-lg text-xs font-semibold hover:bg-purple-700 transition-all transform active:scale-95">
                   Add to Order - Extra {product.discount}% Off
                 </button>
               </div>
@@ -210,13 +210,13 @@ const OrderConfirmation = () => {
         <div className="space-y-2 pt-2">
           <button
             onClick={() => navigate('/order-tracking')}
-            className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold text-sm hover:bg-purple-700 transition-colors"
+            className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold text-sm hover:bg-purple-700 transition-all transform active:scale-95"
           >
             Track My Order
           </button>
           <button
             onClick={() => navigate('/')}
-            className="w-full bg-white border-2 border-purple-600 text-purple-600 py-3 rounded-lg font-semibold text-sm hover:bg-purple-50 transition-colors"
+            className="w-full bg-white border-2 border-purple-600 text-purple-600 py-3 rounded-lg font-semibold text-sm hover:bg-purple-50 transition-all transform active:scale-95"
           >
             Continue Shopping
           </button>
@@ -225,7 +225,7 @@ const OrderConfirmation = () => {
         {/* Help Section */}
         <div className="text-center py-4">
           <p className="text-xs text-gray-600 mb-2">Need help with your order?</p>
-          <button className="text-sm text-purple-600 font-medium">Contact Support</button>
+          <button className="text-sm text-purple-600 font-medium hover:underline transition-all transform active:scale-95">Contact Support</button>
         </div>
       </div>
     </div>

@@ -112,7 +112,7 @@ const OrderTracking = () => {
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-4">
         <div className="flex items-center gap-3 mb-4">
-          <button onClick={() => navigate(-1)} className="p-1">
+          <button onClick={() => navigate(-1)} className="p-1 hover:bg-white/20 rounded-lg transition-colors transform active:scale-95">
             <ArrowLeft className="w-5 h-5" />
           </button>
           <div className="flex-1">
@@ -188,7 +188,7 @@ const OrderTracking = () => {
                 <span className="text-xs text-gray-600">{orderDetails.delivery.driverRating} rating</span>
               </div>
             </div>
-            <button className="p-2 bg-green-100 rounded-lg">
+            <button className="p-2 bg-green-100 rounded-lg hover:bg-green-200 transition-all transform active:scale-95">
               <MessageCircle className="w-4 h-4 text-green-600" />
             </button>
           </div>
@@ -271,7 +271,7 @@ const OrderTracking = () => {
             ))}
           </div>
 
-          <button className="w-full mt-3 bg-blue-600 text-white py-2 rounded-lg text-xs font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-1">
+          <button className="w-full mt-3 bg-blue-600 text-white py-2 rounded-lg text-xs font-semibold hover:bg-blue-700 transition-all transform active:scale-95 flex items-center justify-center gap-1">
             <Calendar className="w-3 h-3" />
             Enable Smart Reminders
           </button>
@@ -279,11 +279,11 @@ const OrderTracking = () => {
 
         {/* Quick Actions */}
         <div className="grid grid-cols-2 gap-3">
-          <button className="bg-white border border-gray-200 rounded-lg p-3 hover:border-purple-300 transition-colors">
+          <button className="bg-white border border-gray-200 rounded-lg p-3 hover:border-purple-300 hover:shadow-md transition-all transform hover:scale-105 active:scale-95">
             <MessageCircle className="w-5 h-5 text-purple-600 mb-2" />
             <p className="text-xs font-semibold text-gray-900">Contact Driver</p>
           </button>
-          <button className="bg-white border border-gray-200 rounded-lg p-3 hover:border-purple-300 transition-colors">
+          <button className="bg-white border border-gray-200 rounded-lg p-3 hover:border-purple-300 hover:shadow-md transition-all transform hover:scale-105 active:scale-95">
             <Package className="w-5 h-5 text-orange-600 mb-2" />
             <p className="text-xs font-semibold text-gray-900">Delivery Issues</p>
           </button>
@@ -298,10 +298,10 @@ const OrderTracking = () => {
             </div>
             <p className="text-xs text-gray-600 mb-3">Rate this product and delivery to help others</p>
             <div className="flex gap-2">
-              <button className="flex-1 bg-yellow-600 text-white py-2 rounded-lg text-xs font-semibold hover:bg-yellow-700 transition-colors">
+              <button className="flex-1 bg-yellow-600 text-white py-2 rounded-lg text-xs font-semibold hover:bg-yellow-700 transition-all transform active:scale-95">
                 Rate Product
               </button>
-              <button className="flex-1 bg-white border border-yellow-600 text-yellow-600 py-2 rounded-lg text-xs font-semibold hover:bg-yellow-50 transition-colors">
+              <button className="flex-1 bg-white border border-yellow-600 text-yellow-600 py-2 rounded-lg text-xs font-semibold hover:bg-yellow-50 transition-all transform active:scale-95">
                 Rate Delivery
               </button>
             </div>
@@ -311,7 +311,7 @@ const OrderTracking = () => {
         {/* Help Section */}
         <div className="text-center py-4">
           <p className="text-xs text-gray-600 mb-2">Having issues with your delivery?</p>
-          <button className="text-sm text-purple-600 font-medium">Get Help from Flash AI Support</button>
+          <button className="text-sm text-purple-600 font-medium hover:underline transition-all transform active:scale-95">Get Help from Flash AI Support</button>
         </div>
       </div>
     </div>

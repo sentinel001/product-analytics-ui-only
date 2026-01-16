@@ -199,7 +199,7 @@ const ProductDiscovery = () => {
             <button
               key={product.id}
               onClick={() => navigate(product.path || `/product/${category}`)}
-              className="w-full bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all p-3"
+              className="w-full bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all transform hover:scale-[1.02] active:scale-95 p-3"
             >
               <div className="flex gap-3">
                 {/* Product Image */}

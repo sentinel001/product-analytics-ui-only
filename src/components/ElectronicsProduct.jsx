@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Star, TrendingDown, Clock, AlertCircle, ChevronDown, ChevronUp, Info, Zap, Cpu, Battery, Camera, Shield } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Star, TrendingDown, Clock, AlertCircle, ChevronDown, ChevronUp, Info, Zap, Cpu, Battery, Camera, Shield, ArrowLeft, ShoppingCart } from 'lucide-react';
 
 const ElectronicsProduct = () => {
+  const navigate = useNavigate();
   const [expandedSpec, setExpandedSpec] = useState(null);
   const [priceHistory, setPriceHistory] = useState('30d');
 
@@ -74,11 +76,16 @@ const ElectronicsProduct = () => {
   ];
 
   return (
-    <div className="max-w-md mx-auto bg-white min-h-screen font-['Inter_Tight']">
+    <div className="max-w-md mx-auto bg-white min-h-screen font-['Inter_Tight'] pb-24">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 px-4 py-3">
+      <div className="bg-white border-b border-gray-200 px-4 py-3 sticky top-0 z-10">
         <div className="flex items-center justify-between">
-          <h1 className="text-lg font-bold text-gray-900">Product Analysis</h1>
+          <div className="flex items-center gap-3">
+            <button onClick={() => navigate(-1)} className="p-1 hover:bg-gray-100 rounded-lg transition-colors">
+              <ArrowLeft className="w-5 h-5" />
+            </button>
+            <h1 className="text-lg font-bold text-gray-900">Product Analysis</h1>
+          </div>
           <div className="flex items-center gap-2">
             <span className="text-xs text-gray-500">Electronics</span>
           </div>
@@ -383,6 +390,23 @@ const ElectronicsProduct = () => {
           ))}
         </div>
       </section>
+
+      {/* Fixed Bottom: Add to Cart */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-200 px-4 py-3 max-w-md mx-auto">
+        <div className="flex items-center gap-3">
+          <div className="flex-1">
+            <p className="text-xs text-gray-600">Best Price</p>
+            <p className="text-xl font-bold text-gray-900">₹1,34,999</p>
+          </div>
+          <button
+            onClick={() => navigate('/checkout')}
+            className="flex-1 bg-purple-600 text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-purple-700 transition-all transform active:scale-95 flex items-center justify-center gap-2"
+          >
+            <ShoppingCart className="w-4 h-4" />
+            Add to Cart
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
