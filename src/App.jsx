@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import BeautyProduct from './components/BeautyProduct';
 import BeautyProduct_Phase2 from './components/BeautyProduct_Phase2';
 import BeautyProduct_Phase3 from './components/BeautyProduct_Phase3';
@@ -8,9 +9,15 @@ import ElectronicsProduct_Phase3 from './components/ElectronicsProduct_Phase3';
 import FashionProduct from './components/FashionProduct';
 import FashionProduct_Phase2 from './components/FashionProduct_Phase2';
 import FashionProduct_Phase3 from './components/FashionProduct_Phase3';
+import FlashHome from './components/FlashHome';
+import ProductDiscovery from './components/ProductDiscovery';
+import Checkout from './components/Checkout';
+import OrderConfirmation from './components/OrderConfirmation';
+import OrderTracking from './components/OrderTracking';
 import { Sparkles, Zap, Shirt, Calendar } from 'lucide-react';
 
-function App() {
+// Phase Evolution Demo Component
+function PhaseEvolutionDemo() {
   const [activeCategory, setActiveCategory] = useState('beauty');
   const [activePhase, setActivePhase] = useState('phase1');
 
@@ -115,6 +122,28 @@ function App() {
       {/* Active Product Component */}
       {ActiveComponent && <ActiveComponent />}
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* Full User Journey Flow */}
+        <Route path="/" element={<FlashHome />} />
+        <Route path="/discovery/:category" element={<ProductDiscovery />} />
+        <Route path="/product/:category" element={<BeautyProduct />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/order-confirmation" element={<OrderConfirmation />} />
+        <Route path="/order-tracking" element={<OrderTracking />} />
+
+        {/* Phase Evolution Demo (original view) */}
+        <Route path="/demo" element={<PhaseEvolutionDemo />} />
+
+        {/* Redirect old root to demo */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
   );
 }
 
