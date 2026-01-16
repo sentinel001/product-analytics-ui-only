@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Sparkles, TrendingUp, Bell, User, ChevronRight, Star, Zap, Camera, Link as LinkIcon, Award, TrendingDown, Flame, Filter, ShoppingBag } from 'lucide-react';
+import { Search, Sparkles, TrendingUp, Bell, User, ChevronRight, Star, Zap, Camera, Link as LinkIcon, Award, TrendingDown, CheckCircle } from 'lucide-react';
 
 const FlashHome = () => {
   const navigate = useNavigate();
