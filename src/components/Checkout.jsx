@@ -97,16 +97,16 @@ const Checkout = () => {
 
         {/* Progress Bar */}
         <div className="mt-3 flex gap-2">
-          <div className={`flex-1 h-1 rounded-full ${step === 'address' || step === 'payment' || step === 'review' ? 'bg-purple-600' : 'bg-gray-200'}`}></div>
-          <div className={`flex-1 h-1 rounded-full ${step === 'payment' || step === 'review' ? 'bg-purple-600' : 'bg-gray-200'}`}></div>
-          <div className={`flex-1 h-1 rounded-full ${step === 'review' ? 'bg-purple-600' : 'bg-gray-200'}`}></div>
+          <div className={`flex-1 h-1 rounded-full ${step === 'address' || step === 'payment' || step === 'review' ? 'bg-black' : 'bg-gray-200'}`}></div>
+          <div className={`flex-1 h-1 rounded-full ${step === 'payment' || step === 'review' ? 'bg-black' : 'bg-gray-200'}`}></div>
+          <div className={`flex-1 h-1 rounded-full ${step === 'review' ? 'bg-black' : 'bg-gray-200'}`}></div>
         </div>
       </div>
 
       {/* AI Assistant Banner */}
-      <div className="mx-4 mt-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-3 border border-purple-100">
+      <div className="mx-4 mt-3 bg-gray-50 rounded-lg p-3 border-2 border-gray-300">
         <div className="flex items-start gap-2">
-          <Sparkles className="w-4 h-4 text-purple-600 mt-0.5 flex-shrink-0" />
+          <Sparkles className="w-4 h-4 text-black mt-0.5 flex-shrink-0" />
           <div className="flex-1">
             <p className="text-xs font-semibold text-gray-900 mb-1">AI Shopping Assistant Active</p>
             <p className="text-xs text-gray-600">We'll track your order & send smart updates. Plus, you've earned ₹160 discount!</p>
@@ -121,7 +121,7 @@ const Checkout = () => {
           <div>
             <div className="flex items-center justify-between mb-3">
               <h2 className="text-base font-bold text-gray-900">Delivery Address</h2>
-              <button className="text-sm text-purple-600 font-medium hover:underline transition-all transform active:scale-95">+ Add New</button>
+              <button className="text-sm text-black font-medium hover:underline transition-all transform active:scale-95">+ Add New</button>
             </div>
 
             <div className="space-y-3">
@@ -131,8 +131,8 @@ const Checkout = () => {
                   onClick={() => setSelectedAddress(addr.id)}
                   className={`w-full text-left p-3 rounded-lg border-2 transition-all transform hover:scale-[1.02] active:scale-95 ${
                     selectedAddress === addr.id
-                      ? 'border-purple-600 bg-purple-50'
-                      : 'border-gray-200 bg-white hover:border-purple-300'
+                      ? 'border-black bg-gray-50'
+                      : 'border-gray-200 bg-white hover:border-gray-400'
                   }`}
                 >
                   <div className="flex items-start justify-between mb-2">
@@ -140,11 +140,11 @@ const Checkout = () => {
                       <MapPin className="w-4 h-4 text-gray-600" />
                       <span className="text-sm font-semibold text-gray-900">{addr.type}</span>
                       {addr.isDefault && (
-                        <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">Default</span>
+                        <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">Default</span>
                       )}
                     </div>
                     {selectedAddress === addr.id && (
-                      <CheckCircle className="w-5 h-5 text-purple-600" />
+                      <CheckCircle className="w-5 h-5 text-black" />
                     )}
                   </div>
                   <p className="text-sm text-gray-900 mb-1">{addr.name}</p>
@@ -159,7 +159,7 @@ const Checkout = () => {
               disabled={!selectedAddress}
               className={`w-full mt-4 py-3 rounded-lg font-semibold text-sm transition-all ${
                 selectedAddress
-                  ? 'bg-purple-600 text-white hover:bg-purple-700 transform active:scale-95'
+                  ? 'bg-black text-white hover:bg-gray-800 transform active:scale-95'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
               }`}
             >
@@ -180,8 +180,8 @@ const Checkout = () => {
                   onClick={() => setSelectedPayment(method.id)}
                   className={`w-full text-left p-3 rounded-lg border-2 transition-all transform hover:scale-[1.02] active:scale-95 ${
                     selectedPayment === method.id
-                      ? 'border-purple-600 bg-purple-50'
-                      : 'border-gray-200 bg-white hover:border-purple-300'
+                      ? 'border-black bg-gray-50'
+                      : 'border-gray-200 bg-white hover:border-gray-400'
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -190,7 +190,7 @@ const Checkout = () => {
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-sm font-semibold text-gray-900">{method.name}</span>
                         {method.recommended && (
-                          <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full flex items-center gap-1">
+                          <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full flex items-center gap-1">
                             <Sparkles className="w-3 h-3" />
                             Recommended
                           </span>
@@ -199,7 +199,7 @@ const Checkout = () => {
                       <p className="text-xs text-gray-600">{method.description}</p>
                     </div>
                     {selectedPayment === method.id && (
-                      <CheckCircle className="w-5 h-5 text-purple-600" />
+                      <CheckCircle className="w-5 h-5 text-black" />
                     )}
                   </div>
                 </button>
@@ -207,14 +207,14 @@ const Checkout = () => {
             </div>
 
             {/* AI Discount Applied */}
-            <div className="mt-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-3 border border-green-200">
+            <div className="mt-4 bg-gray-50 rounded-lg p-3 border-2 border-gray-300">
               <div className="flex items-center gap-2">
-                <Gift className="w-4 h-4 text-green-600" />
+                <Gift className="w-4 h-4 text-black" />
                 <div className="flex-1">
                   <p className="text-xs font-semibold text-gray-900">AI Discount Applied!</p>
                   <p className="text-xs text-gray-600">You saved ₹160 with our smart recommendations</p>
                 </div>
-                <p className="text-sm font-bold text-green-600">-₹160</p>
+                <p className="text-sm font-bold text-black">-₹160</p>
               </div>
             </div>
 
@@ -223,7 +223,7 @@ const Checkout = () => {
               disabled={!selectedPayment}
               className={`w-full mt-4 py-3 rounded-lg font-semibold text-sm transition-all ${
                 selectedPayment
-                  ? 'bg-purple-600 text-white hover:bg-purple-700 transform active:scale-95'
+                  ? 'bg-black text-white hover:bg-gray-800 transform active:scale-95'
                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
               }`}
             >
@@ -245,8 +245,8 @@ const Checkout = () => {
                   <div className="flex-1">
                     <p className="text-sm font-semibold text-gray-900 mb-1">{item.name}</p>
                     <div className="flex items-center gap-1 mb-1">
-                      <Sparkles className="w-3 h-3 text-purple-600" />
-                      <p className="text-xs text-purple-600">{item.aiInsight}</p>
+                      <Sparkles className="w-3 h-3 text-black" />
+                      <p className="text-xs text-gray-700">{item.aiInsight}</p>
                     </div>
                     <p className="text-sm font-bold text-gray-900">₹{item.price} × {item.quantity}</p>
                   </div>
@@ -255,19 +255,19 @@ const Checkout = () => {
             </div>
 
             {/* Delivery Info */}
-            <div className="bg-white rounded-lg p-3 border border-gray-200 mb-3">
+            <div className="bg-white rounded-lg p-3 border-2 border-gray-300 mb-3">
               <div className="flex items-center gap-2 mb-2">
-                <Truck className="w-4 h-4 text-blue-600" />
+                <Truck className="w-4 h-4 text-black" />
                 <span className="text-sm font-semibold text-gray-900">Delivery Information</span>
               </div>
               <p className="text-xs text-gray-600 mb-1">Estimated delivery: Tomorrow, 11 AM - 5 PM</p>
-              <p className="text-xs text-green-600 font-medium">Free delivery on this order</p>
+              <p className="text-xs text-black font-medium">Free delivery on this order</p>
             </div>
 
             {/* AI Guarantee */}
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-3 border border-purple-100 mb-3">
+            <div className="bg-gray-50 rounded-lg p-3 border-2 border-gray-300 mb-3">
               <div className="flex items-center gap-2 mb-2">
-                <Shield className="w-4 h-4 text-purple-600" />
+                <Shield className="w-4 h-4 text-black" />
                 <span className="text-xs font-semibold text-gray-900">Flash AI Guarantee</span>
               </div>
               <div className="space-y-1 text-xs text-gray-600">
@@ -318,14 +318,14 @@ const Checkout = () => {
           </div>
           <div className="flex justify-between text-base font-bold pt-2 border-t border-gray-200">
             <span className="text-gray-900">Total</span>
-            <span className="text-purple-600">₹{total}</span>
+            <span className="text-black">₹{total}</span>
           </div>
         </div>
 
         {step === 'review' && (
           <button
             onClick={handlePlaceOrder}
-            className="w-full bg-purple-600 text-white py-3 rounded-lg font-bold text-sm hover:bg-purple-700 transition-all transform active:scale-95 flex items-center justify-center gap-2"
+            className="w-full bg-black text-white py-3 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
           >
             <Lock className="w-4 h-4" />
             Place Order ₹{total}
