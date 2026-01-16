@@ -14,6 +14,10 @@ import ProductDiscovery from './components/ProductDiscovery';
 import Checkout from './components/Checkout';
 import OrderConfirmation from './components/OrderConfirmation';
 import OrderTracking from './components/OrderTracking';
+import RankedListPage from './components/RankedListPage';
+import SkincareCategory from './components/SkincareCategory';
+import OilySkinRoutine from './components/OilySkinRoutine';
+import ProgrammerSetup from './components/ProgrammerSetup';
 import { Sparkles, Zap, Shirt, Calendar } from 'lucide-react';
 
 // Phase Evolution Demo Component
@@ -137,6 +141,14 @@ function App() {
         <Route path="/product/beauty" element={<BeautyProduct />} />
         <Route path="/product/electronics" element={<ElectronicsProduct />} />
         <Route path="/product/fashion" element={<FashionProduct />} />
+
+        {/* Ranked Lists & Categories */}
+        <Route path="/ranked-list/:id" element={<RankedListPage />} />
+        <Route path="/category/skincare" element={<SkincareCategory />} />
+
+        {/* Personalized Bundles & Routines */}
+        <Route path="/routine/oily-skin" element={<OilySkinRoutine />} />
+        <Route path="/bundle/programmer-setup" element={<ProgrammerSetup />} />
 
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />

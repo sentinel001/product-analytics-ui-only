@@ -8,7 +8,7 @@ const FlashHome = () => {
   const [searchMode, setSearchMode] = useState('name'); // 'name', 'url', 'image'
 
   const beautyCategories = [
-    { name: 'Skincare', icon: '✨', path: '/discovery/beauty?sub=skincare' },
+    { name: 'Skincare', icon: '✨', path: '/category/skincare' },
     { name: 'Haircare', icon: '💇', path: '/discovery/beauty?sub=haircare' },
     { name: 'Makeup', icon: '💄', path: '/discovery/beauty?sub=makeup' },
     { name: 'Fragrance', icon: '🌸', path: '/discovery/beauty?sub=fragrance' }
@@ -102,9 +102,25 @@ const FlashHome = () => {
     }
   ];
 
-  const buyingGuides = [
-    { title: 'Sunscreen Buying Guide', category: 'By Skin Type', icon: '☀️' },
-    { title: 'Laptop Selection Guide', category: 'By Usage', icon: '💻' }
+  const personalizedRoutines = [
+    {
+      title: 'Oily Skin Complete Routine',
+      description: 'Curated 4-step routine for your skin type',
+      products: '5 products',
+      icon: '💧',
+      color: 'from-blue-50 to-cyan-50',
+      borderColor: 'border-blue-200',
+      path: '/routine/oily-skin'
+    },
+    {
+      title: 'High-End Programmer Setup',
+      description: 'Ergonomic workspace essentials for coding',
+      products: '6 products',
+      icon: '⌨️',
+      color: 'from-purple-50 to-indigo-50',
+      borderColor: 'border-purple-200',
+      path: '/bundle/programmer-setup'
+    }
   ];
 
   return (
@@ -214,7 +230,7 @@ const FlashHome = () => {
             {rankedLists.map((list, idx) => (
               <div
                 key={idx}
-                onClick={() => navigate('/product/beauty')}
+                onClick={() => navigate('/ranked-list/microplastic-free-scrubs')}
                 className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
               >
                 <div className="flex gap-3">
@@ -310,30 +326,29 @@ const FlashHome = () => {
           </div>
         </section>
 
-        {/* Buying Guides */}
+        {/* Personalized For You */}
         <section>
           <div className="flex items-center justify-between mb-3">
-            <h2 className="text-base font-bold text-black flex items-center gap-2">
-              <Filter className="w-5 h-5" />
-              Buying Guides
-            </h2>
-            <button className="text-xs text-gray-600 hover:text-black font-medium">View All</button>
+            <h2 className="text-base font-bold text-black">Personalized For You</h2>
+            <span className="text-xs bg-black text-white px-2 py-1 rounded font-medium">AI Curated</span>
           </div>
-          <div className="space-y-2">
-            {buyingGuides.map((guide, idx) => (
+          <div className="space-y-3">
+            {personalizedRoutines.map((routine, idx) => (
               <div
                 key={idx}
-                className="bg-gray-50 border border-gray-200 rounded-lg p-3 hover:border-black transition-all cursor-pointer"
+                onClick={() => navigate(routine.path)}
+                className={`bg-gradient-to-br ${routine.color} border ${routine.borderColor} rounded-lg p-4 hover:border-black hover:shadow-md transition-all cursor-pointer`}
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">{guide.icon}</span>
-                    <div>
-                      <h3 className="text-sm font-semibold text-black">{guide.title}</h3>
-                      <p className="text-xs text-gray-600">{guide.category}</p>
+                <div className="flex items-start gap-3">
+                  <span className="text-3xl">{routine.icon}</span>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-bold text-black mb-1">{routine.title}</h3>
+                    <p className="text-xs text-gray-600 mb-2">{routine.description}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-gray-700 font-medium">{routine.products}</span>
+                      <ChevronRight className="w-4 h-4 text-gray-600" />
                     </div>
                   </div>
-                  <ChevronRight className="w-4 h-4 text-gray-400" />
                 </div>
               </div>
             ))}
@@ -415,25 +430,6 @@ const FlashHome = () => {
           </div>
         </section>
 
-        {/* Quick Access */}
-        <section>
-          <h2 className="text-base font-bold text-black mb-3">Quick Access</h2>
-          <div className="grid grid-cols-2 gap-3">
-            <button
-              onClick={() => navigate('/demo')}
-              className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-black hover:shadow-sm transition-all"
-            >
-              <Zap className="w-6 h-6 text-black mb-2" />
-              <p className="text-sm font-semibold text-black mb-1">Phase Evolution</p>
-              <p className="text-xs text-gray-600">See features by phase</p>
-            </button>
-            <button className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-black hover:shadow-sm transition-all">
-              <Award className="w-6 h-6 text-black mb-2" />
-              <p className="text-sm font-semibold text-black mb-1">Best Deals</p>
-              <p className="text-xs text-gray-600">Live price drops</p>
-            </button>
-          </div>
-        </section>
       </div>
     </div>
   );
