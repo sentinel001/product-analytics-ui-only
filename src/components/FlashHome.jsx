@@ -125,9 +125,9 @@ const FlashHome = () => {
 
   return (
     <div className="max-w-md mx-auto bg-white min-h-screen font-['Inter_Tight'] pb-6">
-      {/* Header */}
+      {/* Compact Header */}
       <div className="sticky top-0 z-50 bg-white px-4 py-3 border-b border-gray-200">
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
@@ -143,48 +143,59 @@ const FlashHome = () => {
             </button>
           </div>
         </div>
+      </div>
+
+      {/* Hero Search Section */}
+      <div className="px-4 pt-6 pb-8 bg-gradient-to-b from-gray-50 to-white border-b border-gray-200">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-bold text-black mb-2">Find Your Perfect Product</h2>
+          <p className="text-sm text-gray-600">AI-powered search across millions of products</p>
+        </div>
 
         {/* Search Bar with Multi-mode */}
-        <div className="space-y-2">
+        <div className="space-y-3">
           <div className="relative">
-            {searchMode === 'name' && <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />}
-            {searchMode === 'url' && <LinkIcon className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />}
-            {searchMode === 'image' && <Camera className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />}
+            {searchMode === 'name' && <Search className="w-5 h-5 absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />}
+            {searchMode === 'url' && <LinkIcon className="w-5 h-5 absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />}
+            {searchMode === 'image' && <Camera className="w-5 h-5 absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />}
             <input
               type="text"
               placeholder={
-                searchMode === 'name' ? 'Search products...' :
-                searchMode === 'url' ? 'Paste product URL...' :
-                'Upload or capture image...'
+                searchMode === 'name' ? 'Search products by name...' :
+                searchMode === 'url' ? 'Paste any product URL...' :
+                'Upload or capture product image...'
               }
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-lg text-black text-sm bg-gray-50 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-black focus:border-black transition-all"
+              className="w-full pl-12 pr-4 py-4 rounded-xl text-black text-base bg-white border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-black transition-all shadow-sm"
             />
           </div>
           <div className="flex items-center gap-2">
             <button
               onClick={() => setSearchMode('name')}
-              className={`flex-1 py-1.5 px-3 rounded-md text-xs font-medium transition-all ${
-                searchMode === 'name' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all ${
+                searchMode === 'name' ? 'bg-black text-white shadow-md' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
               }`}
             >
+              <Search className="w-4 h-4 inline-block mr-1" />
               By Name
             </button>
             <button
               onClick={() => setSearchMode('url')}
-              className={`flex-1 py-1.5 px-3 rounded-md text-xs font-medium transition-all ${
-                searchMode === 'url' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all ${
+                searchMode === 'url' ? 'bg-black text-white shadow-md' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
               }`}
             >
+              <LinkIcon className="w-4 h-4 inline-block mr-1" />
               By URL
             </button>
             <button
               onClick={() => setSearchMode('image')}
-              className={`flex-1 py-1.5 px-3 rounded-md text-xs font-medium transition-all ${
-                searchMode === 'image' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all ${
+                searchMode === 'image' ? 'bg-black text-white shadow-md' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
               }`}
             >
+              <Camera className="w-4 h-4 inline-block mr-1" />
               By Image
             </button>
           </div>
@@ -192,95 +203,235 @@ const FlashHome = () => {
       </div>
 
       {/* Main Content - Scrollable */}
-      <div className="px-4 py-4 space-y-6">
-        {/* Social Trends */}
+      <div className="px-4 py-6 space-y-8">
+
+        {/* 1. Just For You - Personalized First Impression */}
         <section>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-base font-bold text-black">Social Trends</h2>
-            <button className="text-xs text-gray-600 hover:text-black font-medium">View All</button>
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+              <Sparkles className="w-4 h-4 text-white" />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-lg font-bold text-black">Just For You</h2>
+              <p className="text-xs text-gray-600">Based on your profile and shopping history</p>
+            </div>
           </div>
-          <div className="space-y-2">
-            {socialTrends.map((trend, idx) => (
-              <div key={idx} className={`${trend.color} border border-gray-200 rounded-lg p-3 hover:border-black transition-all cursor-pointer`}>
-                <div className="flex items-start justify-between">
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">{trend.icon}</span>
-                    <div>
-                      <h3 className="text-sm font-semibold text-black mb-0.5">{trend.title}</h3>
-                      <p className="text-xs text-gray-600">{trend.description}</p>
-                    </div>
-                  </div>
-                  <span className="text-xs font-bold text-green-600 flex items-center gap-1">
-                    <TrendingUp className="w-3 h-3" />
-                    {trend.trend}
+
+          {/* Oily Skin Routine - Detailed Card */}
+          <div
+            onClick={() => navigate('/routine/oily-skin')}
+            className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-xl p-5 hover:border-blue-400 hover:shadow-lg transition-all cursor-pointer mb-4"
+          >
+            <div className="flex items-start gap-4 mb-4">
+              <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm">
+                💧
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <h3 className="text-base font-bold text-black">Complete Oily Skin Routine</h3>
+                  <span className="bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">94% Match</span>
+                </div>
+                <p className="text-xs text-gray-700 mb-3">
+                  We've noticed you struggle with shine and enlarged pores. This 4-step routine is scientifically designed to balance oil production without over-drying.
+                </p>
+                <div className="flex items-center gap-4 text-xs text-gray-700">
+                  <span className="flex items-center gap-1">
+                    <CheckCircle className="w-3 h-3 text-green-600" />
+                    <strong>5 products</strong>
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
+                    <strong>4.6 avg rating</strong>
                   </span>
                 </div>
               </div>
-            ))}
+            </div>
+            <div className="bg-white rounded-lg p-3 mb-3">
+              <p className="text-xs font-semibold text-black mb-2">What's included:</p>
+              <div className="space-y-1.5">
+                <div className="flex items-center gap-2 text-xs text-gray-700">
+                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-xs">1</span>
+                  <span>CeraVe Foaming Cleanser - Removes excess oil</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-gray-700">
+                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-xs">2</span>
+                  <span>Niacinamide Serum - Controls oil & minimizes pores</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-gray-700">
+                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-xs">3</span>
+                  <span>Hydro Boost Gel - Oil-free hydration</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-gray-700">
+                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-xs">4</span>
+                  <span>SPF 50 Sunscreen - Matte finish protection</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs text-gray-700">Bundle Price</p>
+                <div className="flex items-center gap-2">
+                  <span className="text-lg font-bold text-black">₹3,389</span>
+                  <span className="text-xs text-gray-500 line-through">₹3,987</span>
+                  <span className="text-xs font-bold text-green-600">Save ₹598</span>
+                </div>
+              </div>
+              <ChevronRight className="w-5 h-5 text-gray-600" />
+            </div>
+          </div>
+
+          {/* Programmer Setup - Detailed Card */}
+          <div
+            onClick={() => navigate('/bundle/programmer-setup')}
+            className="bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-purple-200 rounded-xl p-5 hover:border-purple-400 hover:shadow-lg transition-all cursor-pointer"
+          >
+            <div className="flex items-start gap-4 mb-4">
+              <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm">
+                ⌨️
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <h3 className="text-base font-bold text-black">High-End Programmer Setup</h3>
+                  <span className="bg-purple-600 text-white px-2 py-0.5 rounded text-xs font-bold">Detected</span>
+                </div>
+                <p className="text-xs text-gray-700 mb-3">
+                  Your recent searches for ultrawide monitors and mechanical keyboards reveal you're building a serious dev workspace. This ergonomic bundle prevents strain during long coding sessions.
+                </p>
+                <div className="flex items-center gap-4 text-xs text-gray-700">
+                  <span className="flex items-center gap-1">
+                    <CheckCircle className="w-3 h-3 text-green-600" />
+                    <strong>6 products</strong>
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <TrendingUp className="w-3 h-3 text-gray-900" />
+                    <strong>25% productivity boost</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg p-3 mb-3">
+              <p className="text-xs font-semibold text-black mb-2">Premium components:</p>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="flex items-center gap-2 text-xs text-gray-700">
+                  <span className="text-base">🖥️</span>
+                  <span>34" UltraWide Monitor</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-gray-700">
+                  <span className="text-base">⌨️</span>
+                  <span>Mechanical Keyboard</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-gray-700">
+                  <span className="text-base">🖱️</span>
+                  <span>Ergonomic Mouse</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-gray-700">
+                  <span className="text-base">🪑</span>
+                  <span>Herman Miller Chair</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-gray-700">
+                  <span className="text-base">💡</span>
+                  <span>Monitor Light Bar</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-gray-700">
+                  <span className="text-base">🔌</span>
+                  <span>Thunderbolt Dock</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs text-gray-700">Bundle Price</p>
+                <div className="flex items-center gap-2">
+                  <span className="text-lg font-bold text-black">₹74,999</span>
+                  <span className="text-xs text-gray-500 line-through">₹87,499</span>
+                  <span className="text-xs font-bold text-green-600">Save ₹12,500</span>
+                </div>
+              </div>
+              <ChevronRight className="w-5 h-5 text-gray-600" />
+            </div>
           </div>
         </section>
 
-        {/* Ranked Lists */}
+        {/* 2. Ranked Lists - Personalized to user interests */}
         <section>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-base font-bold text-black">Expert Ranked Lists</h2>
-            <button className="text-xs text-gray-600 hover:text-black font-medium">View All</button>
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+              <Award className="w-4 h-4 text-white" />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-lg font-bold text-black">Expert Rankings You'll Love</h2>
+              <p className="text-xs text-gray-600">Curated lists based on your beauty & tech interests</p>
+            </div>
           </div>
           <div className="space-y-3">
             {rankedLists.map((list, idx) => (
               <div
                 key={idx}
                 onClick={() => navigate('/ranked-list/microplastic-free-scrubs')}
-                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
+                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-black hover:shadow-lg transition-all cursor-pointer"
               >
-                <div className="flex gap-3">
-                  <img src={list.image} alt={list.title} className="w-24 h-24 object-cover" />
-                  <div className="flex-1 p-3">
-                    <h3 className="text-sm font-semibold text-black mb-2 line-clamp-2">{list.title}</h3>
-                    <div className="flex items-center gap-3 text-xs text-gray-600">
-                      <span>Updated {list.updated}</span>
+                <div className="flex gap-4 p-4">
+                  <img src={list.image} alt={list.title} className="w-28 h-28 object-cover rounded-lg border border-gray-200" />
+                  <div className="flex-1">
+                    <div className="flex items-start justify-between mb-2">
+                      <h3 className="text-sm font-bold text-black line-clamp-2 flex-1">{list.title}</h3>
+                      <ChevronRight className="w-4 h-4 text-gray-400 flex-shrink-0 ml-2" />
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-gray-600 mb-3">
+                      <span className="bg-gray-100 px-2 py-0.5 rounded font-medium">Updated {list.updated}</span>
                       <span>•</span>
-                      <span>{list.productsCount} products</span>
+                      <span>{list.productsCount} analyzed</span>
+                    </div>
+                    <p className="text-xs text-gray-700 mb-2">
+                      {idx === 0 ? 'Matched to your oily skin concerns - all products are non-comedogenic and dermatologist-tested.' : 'Perfect for your tech upgrade plans - best value options under ₹20K.'}
+                    </p>
+                    <div className="flex items-center gap-1">
+                      <Star className="w-3 h-3 fill-blue-600 text-blue-600" />
+                      <span className="text-xs font-semibold text-blue-600">Personalized for you</span>
                     </div>
                   </div>
-                  <ChevronRight className="w-4 h-4 text-gray-400 mr-2 mt-3" />
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Value Finds */}
+        {/* 3. Value Finds - Personalized */}
         <section>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-base font-bold text-black flex items-center gap-2">
-              <TrendingDown className="w-5 h-5" />
-              Value Finds
-            </h2>
-            <button className="text-xs text-gray-600 hover:text-black font-medium">View All</button>
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+              <TrendingDown className="w-4 h-4 text-white" />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-lg font-bold text-black">Value Picks For You</h2>
+              <p className="text-xs text-gray-600">Budget-friendly options matching your needs</p>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
             {valueFinds.map((product, idx) => (
               <div
                 key={idx}
                 onClick={() => navigate(`/product/${product.category}`)}
-                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
+                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-black hover:shadow-lg transition-all cursor-pointer"
               >
                 <div className="relative">
                   <img src={product.image} alt={product.name} className="w-full h-36 object-cover" />
-                  <span className="absolute top-2 right-2 text-xs bg-green-600 text-white px-2 py-1 rounded font-semibold">
+                  <span className="absolute top-2 right-2 text-xs bg-green-600 text-white px-2 py-1 rounded-md font-bold shadow-sm">
                     {product.badge}
                   </span>
-                  <div className="absolute top-2 left-2 text-xs bg-black text-white px-2 py-1 rounded font-bold">
+                  <div className="absolute top-2 left-2 text-xs bg-black text-white px-2 py-1 rounded-md font-bold">
                     AI {product.aiScore}
                   </div>
                 </div>
                 <div className="p-3">
-                  <p className="text-xs font-semibold text-black mb-1 line-clamp-2">{product.name}</p>
-                  <div className="flex items-center gap-1 mb-1">
+                  <p className="text-xs font-bold text-black mb-1 line-clamp-2">{product.name}</p>
+                  <div className="flex items-center gap-1 mb-2">
                     <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
-                    <span className="text-xs text-gray-600">{product.rating}</span>
+                    <span className="text-xs text-gray-600 font-medium">{product.rating}</span>
                   </div>
+                  <p className="text-xs text-gray-600 mb-2">
+                    {idx === 0 ? 'Great for oily skin' : 'Budget smartwatch pick'}
+                  </p>
                   <p className="text-sm font-bold text-black">₹{product.price.toLocaleString()}</p>
                 </div>
               </div>
@@ -288,66 +439,39 @@ const FlashHome = () => {
           </div>
         </section>
 
-        {/* Hidden Gems */}
+        {/* 4. Social Trends - Personalized */}
         <section>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-base font-bold text-black flex items-center gap-2">
-              <Flame className="w-5 h-5" />
-              Hidden Gems
-            </h2>
-            <button className="text-xs text-gray-600 hover:text-black font-medium">View All</button>
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            {hiddenGems.map((product, idx) => (
-              <div
-                key={idx}
-                onClick={() => navigate(`/product/${product.category}`)}
-                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
-              >
-                <div className="relative">
-                  <img src={product.image} alt={product.name} className="w-full h-36 object-cover" />
-                  <span className="absolute top-2 right-2 text-xs bg-purple-600 text-white px-2 py-1 rounded font-semibold">
-                    {product.badge}
-                  </span>
-                  <div className="absolute top-2 left-2 text-xs bg-black text-white px-2 py-1 rounded font-bold">
-                    AI {product.aiScore}
-                  </div>
-                </div>
-                <div className="p-3">
-                  <p className="text-xs font-semibold text-black mb-1 line-clamp-2">{product.name}</p>
-                  <div className="flex items-center gap-1 mb-1">
-                    <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
-                    <span className="text-xs text-gray-600">{product.rating}</span>
-                  </div>
-                  <p className="text-sm font-bold text-black">₹{product.price.toLocaleString()}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Personalized For You */}
-        <section>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-base font-bold text-black">Personalized For You</h2>
-            <span className="text-xs bg-black text-white px-2 py-1 rounded font-medium">AI Curated</span>
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+              <TrendingUp className="w-4 h-4 text-white" />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-lg font-bold text-black">Trending In Your World</h2>
+              <p className="text-xs text-gray-600">Popular among people with similar interests</p>
+            </div>
           </div>
           <div className="space-y-3">
-            {personalizedRoutines.map((routine, idx) => (
-              <div
-                key={idx}
-                onClick={() => navigate(routine.path)}
-                className={`bg-gradient-to-br ${routine.color} border ${routine.borderColor} rounded-lg p-4 hover:border-black hover:shadow-md transition-all cursor-pointer`}
-              >
-                <div className="flex items-start gap-3">
-                  <span className="text-3xl">{routine.icon}</span>
-                  <div className="flex-1">
-                    <h3 className="text-sm font-bold text-black mb-1">{routine.title}</h3>
-                    <p className="text-xs text-gray-600 mb-2">{routine.description}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-gray-700 font-medium">{routine.products}</span>
-                      <ChevronRight className="w-4 h-4 text-gray-600" />
+            {socialTrends.map((trend, idx) => (
+              <div key={idx} className="bg-gray-50 border-2 border-gray-200 rounded-xl p-4 hover:border-black hover:shadow-md transition-all cursor-pointer">
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl shadow-sm">
+                      {trend.icon}
                     </div>
+                    <div>
+                      <h3 className="text-sm font-bold text-black mb-1">{trend.title}</h3>
+                      <p className="text-xs text-gray-600 mb-2">{trend.description}</p>
+                      <p className="text-xs text-gray-700">
+                        {idx === 0 ? 'Trending among skincare enthusiasts like you' : 'Popular with tech professionals in your network'}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-end">
+                    <span className="text-sm font-bold text-green-600 flex items-center gap-1 mb-1">
+                      <TrendingUp className="w-4 h-4" />
+                      {trend.trend}
+                    </span>
+                    <span className="text-xs text-gray-500">this month</span>
                   </div>
                 </div>
               </div>
@@ -355,78 +479,89 @@ const FlashHome = () => {
           </div>
         </section>
 
-        {/* Explore Beauty */}
-        <section>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-base font-bold text-black">Explore Beauty</h2>
-            <button
-              onClick={() => navigate('/discovery/beauty')}
-              className="text-xs text-gray-600 hover:text-black font-medium"
-            >
-              View All
-            </button>
+        {/* 5. Browse All Categories - General Purpose */}
+        <section className="border-t-2 border-gray-200 pt-6">
+          <div className="mb-6">
+            <h2 className="text-lg font-bold text-black mb-1">Browse All Categories</h2>
+            <p className="text-xs text-gray-600">Explore our complete product catalog</p>
           </div>
-          <div className="grid grid-cols-4 gap-2">
-            {beautyCategories.map((cat, idx) => (
-              <button
-                key={idx}
-                onClick={() => navigate(cat.path)}
-                className="bg-white border border-gray-200 rounded-lg p-3 hover:border-black hover:shadow-sm transition-all text-center"
-              >
-                <span className="text-2xl mb-2 block">{cat.icon}</span>
-                <span className="text-xs font-medium text-black block">{cat.name}</span>
-              </button>
-            ))}
-          </div>
-        </section>
 
-        {/* Explore Electronics */}
-        <section>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-base font-bold text-black">Explore Electronics</h2>
-            <button
-              onClick={() => navigate('/discovery/electronics')}
-              className="text-xs text-gray-600 hover:text-black font-medium"
-            >
-              View All
-            </button>
-          </div>
-          <div className="grid grid-cols-4 gap-2">
-            {electronicsCategories.map((cat, idx) => (
+          {/* Beauty */}
+          <div className="mb-6">
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-sm font-bold text-black">Beauty & Personal Care</h3>
               <button
-                key={idx}
-                onClick={() => navigate(cat.path)}
-                className="bg-white border border-gray-200 rounded-lg p-3 hover:border-black hover:shadow-sm transition-all text-center"
+                onClick={() => navigate('/discovery/beauty')}
+                className="text-xs text-gray-600 hover:text-black font-semibold flex items-center gap-1"
               >
-                <span className="text-2xl mb-2 block">{cat.icon}</span>
-                <span className="text-xs font-medium text-black block">{cat.name}</span>
+                View All
+                <ChevronRight className="w-3 h-3" />
               </button>
-            ))}
+            </div>
+            <div className="grid grid-cols-4 gap-2">
+              {beautyCategories.map((cat, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => navigate(cat.path)}
+                  className="bg-white border border-gray-200 rounded-lg p-3 hover:border-black hover:shadow-sm transition-all text-center"
+                >
+                  <span className="text-2xl mb-2 block">{cat.icon}</span>
+                  <span className="text-xs font-medium text-black block">{cat.name}</span>
+                </button>
+              ))}
+            </div>
           </div>
-        </section>
 
-        {/* Explore Fashion */}
-        <section>
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="text-base font-bold text-black">Explore Fashion</h2>
-            <button
-              onClick={() => navigate('/discovery/fashion')}
-              className="text-xs text-gray-600 hover:text-black font-medium"
-            >
-              View All
-            </button>
-          </div>
-          <div className="grid grid-cols-4 gap-2">
-            {fashionCategories.map((cat, idx) => (
+          {/* Electronics */}
+          <div className="mb-6">
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-sm font-bold text-black">Electronics & Gadgets</h3>
               <button
-                key={idx}
-                onClick={() => navigate(cat.path)}
-                className="bg-white border border-gray-200 rounded-lg p-3 hover:border-black hover:shadow-sm transition-all text-center"
+                onClick={() => navigate('/discovery/electronics')}
+                className="text-xs text-gray-600 hover:text-black font-semibold flex items-center gap-1"
               >
-                <span className="text-2xl mb-2 block">{cat.icon}</span>
-                <span className="text-xs font-medium text-black block">{cat.name}</span>
+                View All
+                <ChevronRight className="w-3 h-3" />
               </button>
-            ))}
+            </div>
+            <div className="grid grid-cols-4 gap-2">
+              {electronicsCategories.map((cat, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => navigate(cat.path)}
+                  className="bg-white border border-gray-200 rounded-lg p-3 hover:border-black hover:shadow-sm transition-all text-center"
+                >
+                  <span className="text-2xl mb-2 block">{cat.icon}</span>
+                  <span className="text-xs font-medium text-black block">{cat.name}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Fashion */}
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-sm font-bold text-black">Fashion & Lifestyle</h3>
+              <button
+                onClick={() => navigate('/discovery/fashion')}
+                className="text-xs text-gray-600 hover:text-black font-semibold flex items-center gap-1"
+              >
+                View All
+                <ChevronRight className="w-3 h-3" />
+              </button>
+            </div>
+            <div className="grid grid-cols-4 gap-2">
+              {fashionCategories.map((cat, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => navigate(cat.path)}
+                  className="bg-white border border-gray-200 rounded-lg p-3 hover:border-black hover:shadow-sm transition-all text-center"
+                >
+                  <span className="text-2xl mb-2 block">{cat.icon}</span>
+                  <span className="text-xs font-medium text-black block">{cat.name}</span>
+                </button>
+              ))}
+            </div>
           </div>
         </section>
 
