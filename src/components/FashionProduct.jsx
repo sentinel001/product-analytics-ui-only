@@ -71,7 +71,7 @@ const FashionProduct = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-8" style={{ fontFamily: '"Inter Tight", sans-serif' }}>
+    <div className="max-w-md mx-auto bg-white min-h-screen font-['Inter_Tight']">
       {/* Header */}
       <div className="bg-white border-b border-gray-200 px-4 py-3">
         <div className="flex items-center justify-between">
