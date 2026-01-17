@@ -238,7 +238,7 @@ const FlashHome = () => {
             </div>
             <div className="flex-1">
               <h2 className="text-lg font-bold text-[#363636]">Just For You</h2>
-              <p className="text-xs text-gray-600">Based on your profile and shopping history</p>
+              <p className="text-sm text-gray-600">Based on your profile and shopping history</p>
             </div>
           </div>
 
@@ -254,12 +254,12 @@ const FlashHome = () => {
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="text-base font-bold text-[#363636]">Complete Oily Skin Routine</h3>
-                  <span className="bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">94% Match</span>
+                  <span className="bg-blue-600 text-white px-2 py-0.5 rounded text-sm font-bold">94% Match</span>
                 </div>
-                <p className="text-xs text-gray-700 mb-3">
+                <p className="text-sm text-gray-700 mb-3">
                   We've noticed you struggle with shine and enlarged pores. This 4-step routine is scientifically designed to balance oil production without over-drying.
                 </p>
-                <div className="flex items-center gap-4 text-xs text-gray-700">
+                <div className="flex items-center gap-4 text-sm text-gray-700">
                   <span className="flex items-center gap-1">
                     <CheckCircle className="w-3 h-3 text-green-600" />
                     <strong>5 products</strong>
@@ -272,33 +272,33 @@ const FlashHome = () => {
               </div>
             </div>
             <div className="bg-white rounded-lg p-3 mb-3">
-              <p className="text-xs font-semibold text-[#363636] mb-2">What's included:</p>
+              <p className="text-sm font-semibold text-[#363636] mb-2">What's included:</p>
               <div className="space-y-1.5">
-                <div className="flex items-center gap-2 text-xs text-gray-700">
-                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-xs">1</span>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-sm">1</span>
                   <span>CeraVe Foaming Cleanser - Removes excess oil</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-700">
-                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-xs">2</span>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-sm">2</span>
                   <span>Niacinamide Serum - Controls oil & minimizes pores</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-700">
-                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-xs">3</span>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-sm">3</span>
                   <span>Hydro Boost Gel - Oil-free hydration</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-700">
-                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-xs">4</span>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-sm">4</span>
                   <span>SPF 50 Sunscreen - Matte finish protection</span>
                 </div>
               </div>
             </div>
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs text-gray-700">Bundle Price</p>
+                <p className="text-sm text-gray-700">Bundle Price</p>
                 <div className="flex items-center gap-2">
                   <span className="text-lg font-bold text-[#363636]">₹3,389</span>
-                  <span className="text-xs text-gray-500 line-through">₹3,987</span>
-                  <span className="text-xs font-bold text-green-600">Save ₹598</span>
+                  <span className="text-sm text-gray-500 line-through">₹3,987</span>
+                  <span className="text-base font-bold text-green-600">Save ₹598</span>
                 </div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-600" />
@@ -317,12 +317,12 @@ const FlashHome = () => {
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="text-base font-bold text-[#363636]">High-End Programmer Setup</h3>
-                  <span className="bg-purple-600 text-white px-2 py-0.5 rounded text-xs font-bold">Detected</span>
+                  <span className="bg-purple-600 text-white px-2 py-0.5 rounded text-sm font-bold">Detected</span>
                 </div>
-                <p className="text-xs text-gray-700 mb-3">
+                <p className="text-sm text-gray-700 mb-3">
                   Your recent searches for ultrawide monitors and mechanical keyboards reveal you're building a serious dev workspace. This ergonomic bundle prevents strain during long coding sessions.
                 </p>
-                <div className="flex items-center gap-4 text-xs text-gray-700">
+                <div className="flex items-center gap-4 text-sm text-gray-700">
                   <span className="flex items-center gap-1">
                     <CheckCircle className="w-3 h-3 text-green-600" />
                     <strong>6 products</strong>
@@ -335,29 +335,29 @@ const FlashHome = () => {
               </div>
             </div>
             <div className="bg-white rounded-lg p-3 mb-3">
-              <p className="text-xs font-semibold text-[#363636] mb-2">Premium components:</p>
+              <p className="text-sm font-semibold text-[#363636] mb-2">Premium components:</p>
               <div className="grid grid-cols-2 gap-2">
-                <div className="flex items-center gap-2 text-xs text-gray-700">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
                   <span className="text-base">🖥️</span>
                   <span>34" UltraWide Monitor</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-700">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
                   <span className="text-base">⌨️</span>
                   <span>Mechanical Keyboard</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-700">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
                   <span className="text-base">🖱️</span>
                   <span>Ergonomic Mouse</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-700">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
                   <span className="text-base">🪑</span>
                   <span>Herman Miller Chair</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-700">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
                   <span className="text-base">💡</span>
                   <span>Monitor Light Bar</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-700">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
                   <span className="text-base">🔌</span>
                   <span>Thunderbolt Dock</span>
                 </div>
@@ -365,11 +365,11 @@ const FlashHome = () => {
             </div>
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs text-gray-700">Bundle Price</p>
+                <p className="text-sm text-gray-700">Bundle Price</p>
                 <div className="flex items-center gap-2">
                   <span className="text-lg font-bold text-[#363636]">₹74,999</span>
-                  <span className="text-xs text-gray-500 line-through">₹87,499</span>
-                  <span className="text-xs font-bold text-green-600">Save ₹12,500</span>
+                  <span className="text-sm text-gray-500 line-through">₹87,499</span>
+                  <span className="text-base font-bold text-green-600">Save ₹12,500</span>
                 </div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-600" />
@@ -385,7 +385,7 @@ const FlashHome = () => {
             </div>
             <div className="flex-1">
               <h2 className="text-lg font-bold text-[#363636]">Price Drop Alerts</h2>
-              <p className="text-xs text-gray-600">Products you're watching are now cheaper</p>
+              <p className="text-sm text-gray-600">Products you're watching are now cheaper</p>
             </div>
           </div>
 
@@ -402,28 +402,28 @@ const FlashHome = () => {
                   <div className="relative">
                     <img src={alert.image} alt={alert.name} className="w-24 h-24 object-cover rounded-lg border border-gray-200" />
                     {alert.historicalLow && (
-                      <div className="absolute -top-1 -right-1 bg-[#363636] text-white px-2 py-1 rounded-full text-xs font-bold">
+                      <div className="absolute -top-1 -right-1 bg-[#363636] text-white px-2 py-1 rounded-full text-sm font-bold">
                         🔥 Low
                       </div>
                     )}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-sm font-bold text-[#363636] line-clamp-2 mb-2">{alert.name}</h3>
+                    <h3 className="text-base font-bold text-[#363636] line-clamp-2 mb-2">{alert.name}</h3>
 
                     <div className="mb-2">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs text-gray-500 line-through">₹{alert.originalPrice.toLocaleString()}</span>
+                        <span className="text-sm text-gray-500 line-through">₹{alert.originalPrice.toLocaleString()}</span>
                         <span className="text-lg font-bold text-[#363636]">₹{alert.currentPrice.toLocaleString()}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="bg-[#363636] text-white px-2 py-0.5 rounded text-xs font-bold">
+                        <span className="bg-[#363636] text-white px-2 py-0.5 rounded text-sm font-bold">
                           {alert.dropPercentage}% OFF
                         </span>
-                        <span className="text-xs text-gray-600">Save ₹{(alert.originalPrice - alert.currentPrice).toLocaleString()}</span>
+                        <span className="text-sm text-gray-600">Save ₹{(alert.originalPrice - alert.currentPrice).toLocaleString()}</span>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-2 text-xs">
+                    <div className="flex items-center gap-2 text-sm">
                       <span className="text-gray-600">Alert set {alert.alertSetDate}</span>
                       <span className="text-gray-400">•</span>
                       <span className="text-[#363636] font-semibold">Historical low price!</span>
@@ -455,7 +455,7 @@ const FlashHome = () => {
             </div>
             <div className="flex-1">
               <h2 className="text-lg font-bold text-[#363636]">Expert Rankings You'll Love</h2>
-              <p className="text-xs text-gray-600">Curated lists based on your beauty & tech interests</p>
+              <p className="text-sm text-gray-600">Curated lists based on your beauty & tech interests</p>
             </div>
           </div>
           <div className="space-y-3">
@@ -469,20 +469,20 @@ const FlashHome = () => {
                   <img src={list.image} alt={list.title} className="w-28 h-28 object-cover rounded-lg border border-gray-200" />
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-2">
-                      <h3 className="text-sm font-bold text-[#363636] line-clamp-2 flex-1">{list.title}</h3>
+                      <h3 className="text-base font-bold text-[#363636] line-clamp-2 flex-1">{list.title}</h3>
                       <ChevronRight className="w-4 h-4 text-gray-400 flex-shrink-0 ml-2" />
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-gray-600 mb-3">
+                    <div className="flex items-center gap-2 text-sm text-gray-600 mb-3">
                       <span className="bg-gray-100 px-2 py-0.5 rounded font-medium">Updated {list.updated}</span>
                       <span>•</span>
                       <span>{list.productsCount} analyzed</span>
                     </div>
-                    <p className="text-xs text-gray-700 mb-2">
+                    <p className="text-sm text-gray-700 mb-2">
                       {idx === 0 ? 'Matched to your oily skin concerns - all products are non-comedogenic and dermatologist-tested.' : 'Perfect for your tech upgrade plans - best value options under ₹20K.'}
                     </p>
                     <div className="flex items-center gap-1">
                       <Star className="w-3 h-3 fill-blue-600 text-blue-600" />
-                      <span className="text-xs font-semibold text-blue-600">Personalized for you</span>
+                      <span className="text-base font-semibold text-blue-600">Personalized for you</span>
                     </div>
                   </div>
                 </div>
@@ -499,7 +499,7 @@ const FlashHome = () => {
             </div>
             <div className="flex-1">
               <h2 className="text-lg font-bold text-[#363636]">Value Picks For You</h2>
-              <p className="text-xs text-gray-600">Budget-friendly options matching your needs</p>
+              <p className="text-sm text-gray-600">Budget-friendly options matching your needs</p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -511,20 +511,20 @@ const FlashHome = () => {
               >
                 <div className="relative">
                   <img src={product.image} alt={product.name} className="w-full h-36 object-cover" />
-                  <span className="absolute top-2 right-2 text-xs bg-green-600 text-white px-2 py-1 rounded-md font-bold shadow-sm">
+                  <span className="absolute top-2 right-2 text-sm bg-green-600 text-white px-2 py-1 rounded-md font-bold shadow-sm">
                     {product.badge}
                   </span>
-                  <div className="absolute top-2 left-2 text-xs bg-[#363636] text-white px-2 py-1 rounded-md font-bold">
+                  <div className="absolute top-2 left-2 text-sm bg-[#363636] text-white px-2 py-1 rounded-md font-bold">
                     AI {product.aiScore}
                   </div>
                 </div>
                 <div className="p-3">
-                  <p className="text-xs font-bold text-[#363636] mb-1 line-clamp-2">{product.name}</p>
+                  <p className="text-sm font-bold text-[#363636] mb-1 line-clamp-2">{product.name}</p>
                   <div className="flex items-center gap-1 mb-2">
                     <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
-                    <span className="text-xs text-gray-600 font-medium">{product.rating}</span>
+                    <span className="text-sm text-gray-600 font-medium">{product.rating}</span>
                   </div>
-                  <p className="text-xs text-gray-600 mb-2">
+                  <p className="text-sm text-gray-600 mb-2">
                     {idx === 0 ? 'Great for oily skin' : 'Budget smartwatch pick'}
                   </p>
                   <p className="text-sm font-bold text-[#363636]">₹{product.price.toLocaleString()}</p>
@@ -542,7 +542,7 @@ const FlashHome = () => {
             </div>
             <div className="flex-1">
               <h2 className="text-lg font-bold text-[#363636]">Trending In Your World</h2>
-              <p className="text-xs text-gray-600">Popular among people with similar interests</p>
+              <p className="text-sm text-gray-600">Popular among people with similar interests</p>
             </div>
           </div>
           <div className="space-y-3">
@@ -555,18 +555,18 @@ const FlashHome = () => {
                     </div>
                     <div>
                       <h3 className="text-sm font-bold text-[#363636] mb-1">{trend.title}</h3>
-                      <p className="text-xs text-gray-600 mb-2">{trend.description}</p>
-                      <p className="text-xs text-gray-700">
+                      <p className="text-sm text-gray-600 mb-2">{trend.description}</p>
+                      <p className="text-sm text-gray-700">
                         {idx === 0 ? 'Trending among skincare enthusiasts like you' : 'Popular with tech professionals in your network'}
                       </p>
                     </div>
                   </div>
                   <div className="flex flex-col items-end">
-                    <span className="text-sm font-bold text-green-600 flex items-center gap-1 mb-1">
+                    <span className="text-base font-bold text-green-600 flex items-center gap-1 mb-1">
                       <TrendingUp className="w-4 h-4" />
                       {trend.trend}
                     </span>
-                    <span className="text-xs text-gray-500">this month</span>
+                    <span className="text-sm text-gray-500">this month</span>
                   </div>
                 </div>
               </div>
@@ -578,7 +578,7 @@ const FlashHome = () => {
         <section className="border-t-2 border-gray-200 pt-6">
           <div className="mb-6">
             <h2 className="text-lg font-bold text-[#363636] mb-1">Browse All Categories</h2>
-            <p className="text-xs text-gray-600">Explore our complete product catalog</p>
+            <p className="text-sm text-gray-600">Explore our complete product catalog</p>
           </div>
 
           {/* Beauty */}
@@ -587,7 +587,7 @@ const FlashHome = () => {
               <h3 className="text-sm font-bold text-[#363636]">Beauty & Personal Care</h3>
               <button
                 onClick={() => navigate('/discovery/beauty')}
-                className="text-xs text-gray-600 hover:text-[#363636] font-semibold flex items-center gap-1"
+                className="text-sm text-gray-600 hover:text-[#363636] font-semibold flex items-center gap-1"
               >
                 View All
                 <ChevronRight className="w-3 h-3" />
@@ -601,7 +601,7 @@ const FlashHome = () => {
                   className="bg-white border border-gray-200 rounded-lg p-3 hover:border-[#363636] hover:shadow-sm transition-all text-center"
                 >
                   <span className="text-2xl mb-2 block">{cat.icon}</span>
-                  <span className="text-xs font-medium text-[#363636] block">{cat.name}</span>
+                  <span className="text-sm font-medium text-[#363636] block">{cat.name}</span>
                 </button>
               ))}
             </div>
@@ -613,7 +613,7 @@ const FlashHome = () => {
               <h3 className="text-sm font-bold text-[#363636]">Electronics & Gadgets</h3>
               <button
                 onClick={() => navigate('/discovery/electronics')}
-                className="text-xs text-gray-600 hover:text-[#363636] font-semibold flex items-center gap-1"
+                className="text-sm text-gray-600 hover:text-[#363636] font-semibold flex items-center gap-1"
               >
                 View All
                 <ChevronRight className="w-3 h-3" />
@@ -627,7 +627,7 @@ const FlashHome = () => {
                   className="bg-white border border-gray-200 rounded-lg p-3 hover:border-[#363636] hover:shadow-sm transition-all text-center"
                 >
                   <span className="text-2xl mb-2 block">{cat.icon}</span>
-                  <span className="text-xs font-medium text-[#363636] block">{cat.name}</span>
+                  <span className="text-sm font-medium text-[#363636] block">{cat.name}</span>
                 </button>
               ))}
             </div>
@@ -639,7 +639,7 @@ const FlashHome = () => {
               <h3 className="text-sm font-bold text-[#363636]">Fashion & Lifestyle</h3>
               <button
                 onClick={() => navigate('/discovery/fashion')}
-                className="text-xs text-gray-600 hover:text-[#363636] font-semibold flex items-center gap-1"
+                className="text-sm text-gray-600 hover:text-[#363636] font-semibold flex items-center gap-1"
               >
                 View All
                 <ChevronRight className="w-3 h-3" />
@@ -653,7 +653,7 @@ const FlashHome = () => {
                   className="bg-white border border-gray-200 rounded-lg p-3 hover:border-[#363636] hover:shadow-sm transition-all text-center"
                 >
                   <span className="text-2xl mb-2 block">{cat.icon}</span>
-                  <span className="text-xs font-medium text-[#363636] block">{cat.name}</span>
+                  <span className="text-sm font-medium text-[#363636] block">{cat.name}</span>
                 </button>
               ))}
             </div>

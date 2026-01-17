@@ -156,7 +156,7 @@ const FashionCategory = () => {
           </button>
           <div className="flex-1">
             <h1 className="text-lg font-bold text-[#363636]">Fashion</h1>
-            <p className="text-xs text-gray-600">Personalized for you</p>
+            <p className="text-sm text-gray-600">Personalized for you</p>
           </div>
         </div>
       </header>
@@ -171,21 +171,21 @@ const FashionCategory = () => {
             </div>
             <div className="flex-1">
               <h3 className="text-sm font-bold text-[#363636] mb-1">AI-Personalized Selection</h3>
-              <p className="text-xs text-gray-700 mb-3">
+              <p className="text-sm text-gray-700 mb-3">
                 Curated styles based on {userProfile.previousPurchases} purchases.
               </p>
 
               {/* User Profile Pills */}
               <div className="flex items-center gap-2 mb-2">
                 <User className="w-3 h-3 text-gray-600" />
-                <span className="text-xs font-semibold text-gray-700">Your Profile:</span>
+                <span className="text-base font-semibold text-gray-700">Your Profile:</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-white border border-gray-300 px-2 py-1 rounded text-xs font-medium text-gray-700">
+                <span className="bg-white border border-gray-300 px-2 py-1 rounded text-sm font-medium text-gray-700">
                   {userProfile.bodyType}
                 </span>
                 {userProfile.preferences.map((pref, idx) => (
-                  <span key={idx} className="bg-white border border-gray-300 px-2 py-1 rounded text-xs font-medium text-gray-700">
+                  <span key={idx} className="bg-white border border-gray-300 px-2 py-1 rounded text-sm font-medium text-gray-700">
                     {pref}
                   </span>
                 ))}
@@ -203,7 +203,7 @@ const FashionCategory = () => {
           <div className="flex items-center gap-2 overflow-x-auto pb-2">
             <button
               onClick={() => setSelectedFilter('all')}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+              className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                 selectedFilter === 'all' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -211,7 +211,7 @@ const FashionCategory = () => {
             </button>
             <button
               onClick={() => setSelectedFilter('tshirts')}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+              className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                 selectedFilter === 'tshirts' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -219,7 +219,7 @@ const FashionCategory = () => {
             </button>
             <button
               onClick={() => setSelectedFilter('pants')}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+              className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                 selectedFilter === 'pants' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -227,7 +227,7 @@ const FashionCategory = () => {
             </button>
             <button
               onClick={() => setSelectedFilter('footwear')}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+              className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                 selectedFilter === 'footwear' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -235,7 +235,7 @@ const FashionCategory = () => {
             </button>
             <button
               onClick={() => setSelectedFilter('jackets')}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+              className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                 selectedFilter === 'jackets' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -248,7 +248,7 @@ const FashionCategory = () => {
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-semibold text-[#363636]">{products.length} Products Matched</h3>
-            <button className="text-xs text-gray-600 hover:text-[#363636] font-medium flex items-center gap-1">
+            <button className="text-sm text-gray-600 hover:text-[#363636] font-medium flex items-center gap-1">
               Sort by Match
               <ChevronDown className="w-3 h-3" />
             </button>
@@ -268,7 +268,7 @@ const FashionCategory = () => {
                       alt={product.name}
                       className="w-20 h-24 object-cover rounded border border-gray-200"
                     />
-                    <div className="absolute top-1 left-1 bg-[#363636] text-white px-1.5 py-0.5 rounded text-xs font-bold">
+                    <div className="absolute top-1 left-1 bg-[#363636] text-white px-1.5 py-0.5 rounded text-sm font-bold">
                       AI {product.aiScore}
                     </div>
                   </div>
@@ -277,12 +277,12 @@ const FashionCategory = () => {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between mb-1">
                       <div className="flex-1">
-                        <p className="text-xs text-gray-600 mb-0.5">{product.brand}</p>
-                        <h3 className="text-sm font-bold text-[#363636] line-clamp-2 mb-1">{product.name}</h3>
+                        <p className="text-sm text-gray-600 mb-0.5">{product.brand}</p>
+                        <h3 className="text-base font-bold text-[#363636] line-clamp-2 mb-1">{product.name}</h3>
                       </div>
                     </div>
 
-                    <span className="inline-block bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-xs font-medium mb-2">
+                    <span className="inline-block bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-sm font-medium mb-2">
                       {product.category}
                     </span>
 
@@ -295,17 +295,17 @@ const FashionCategory = () => {
                             style={{ width: `${product.matchPercentage}%` }}
                           ></div>
                         </div>
-                        <span className="text-xs font-bold text-green-600">{product.matchPercentage}%</span>
+                        <span className="text-base font-bold text-green-600">{product.matchPercentage}%</span>
                       </div>
-                      <p className="text-xs text-gray-700 italic">"{product.matchReason}"</p>
+                      <p className="text-sm text-gray-700 italic">"{product.matchReason}"</p>
                     </div>
 
                     {/* Rating & Price */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1">
                         <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
-                        <span className="text-xs font-medium text-gray-700">{product.rating}</span>
-                        <span className="text-xs text-gray-500">({product.reviews})</span>
+                        <span className="text-sm font-medium text-gray-700">{product.rating}</span>
+                        <span className="text-sm text-gray-500">({product.reviews})</span>
                       </div>
                       <span className="text-sm font-bold text-[#363636]">₹{product.price}</span>
                     </div>
@@ -333,8 +333,8 @@ const FashionCategory = () => {
                           </div>
                           <div>
                             <h4 className="text-sm font-bold text-[#363636] mb-1">{occasion.title}</h4>
-                            <p className="text-xs text-gray-700 mb-2 line-clamp-2">{occasion.description}</p>
-                            <div className="flex flex-wrap items-center gap-2 text-xs">
+                            <p className="text-sm text-gray-700 mb-2 line-clamp-2">{occasion.description}</p>
+                            <div className="flex flex-wrap items-center gap-2 text-sm">
                               <span className="bg-white px-2 py-0.5 rounded text-gray-900 font-medium">
                                 {occasion.products} items
                               </span>

@@ -127,15 +127,15 @@ const BeautyProduct_v1 = () => {
           />
         </div>
         <div className="px-4 py-4 border-b border-gray-200">
-          <p className="text-xs text-gray-600 mb-1">Neutrogena</p>
+          <p className="text-sm text-gray-600 mb-1">Neutrogena</p>
           <h2 className="text-xl font-bold text-[#363636] mb-2">Hydro Boost Water Gel</h2>
           <div className="flex items-center gap-3 mb-3">
             <div className="flex items-center gap-1">
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-sm font-semibold text-gray-900">4.5</span>
+              <span className="text-base font-semibold text-gray-900">4.5</span>
             </div>
-            <span className="text-xs text-gray-500">1,243 reviews</span>
-            <span className="bg-[#363636] text-white px-2 py-1 rounded text-xs font-bold">
+            <span className="text-sm text-gray-500">1,243 reviews</span>
+            <span className="bg-[#363636] text-white px-2 py-1 rounded text-sm font-bold">
               AI 92
             </span>
           </div>
@@ -144,7 +144,7 @@ const BeautyProduct_v1 = () => {
               <span className="text-2xl font-bold text-[#363636]">₹799</span>
               <span className="text-gray-600 text-sm ml-2">50g</span>
             </div>
-            <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">In Stock</span>
+            <span className="text-sm bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">In Stock</span>
           </div>
         </div>
       </section>
@@ -156,8 +156,8 @@ const BeautyProduct_v1 = () => {
           <div className="flex items-center gap-2">
             <Award className="w-5 h-5 text-[#363636]" />
             <div>
-              <p className="text-xs font-bold text-[#363636]">Ranked #2 in "Top 10 Microplastic-Free Face Scrubs"</p>
-              <p className="text-xs text-gray-600">Updated Jan 2026 • 200 products analyzed</p>
+              <p className="text-sm font-bold text-[#363636]">Ranked #2 in "Top 10 Microplastic-Free Face Scrubs"</p>
+              <p className="text-sm text-gray-600">Updated Jan 2026 • 200 products analyzed</p>
             </div>
           </div>
         </div>
@@ -177,8 +177,8 @@ const BeautyProduct_v1 = () => {
           {uploadStep === 'initial' && (
             <div className="text-center py-4">
               <Camera className="w-12 h-12 text-gray-400 mx-auto mb-3" />
-              <p className="text-sm font-semibold text-[#363636] mb-1">Get Personalized Matches</p>
-              <p className="text-xs text-gray-600 mb-3">Upload 3 face photos for AI analysis</p>
+              <p className="text-base font-semibold text-[#363636] mb-1">Get Personalized Matches</p>
+              <p className="text-sm text-gray-600 mb-3">Upload 3 face photos for AI analysis</p>
               <button
                 onClick={simulateUpload}
                 className="bg-[#363636] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#4a4a4a] transition-all transform active:scale-95"
@@ -229,7 +229,7 @@ const BeautyProduct_v1 = () => {
               </div>
               <div className="text-center">
                 <div className="animate-spin w-8 h-8 border-4 border-gray-200 border-t-[#363636] rounded-full mx-auto mb-2"></div>
-                <p className="text-xs font-semibold text-[#363636]">Analyzing your skin...</p>
+                <p className="text-sm font-semibold text-[#363636]">Analyzing your skin...</p>
               </div>
             </div>
           )}
@@ -294,7 +294,7 @@ const BeautyProduct_v1 = () => {
                 </div>
 
                 <div className="bg-gray-50 border border-gray-200 rounded p-2">
-                  <p className="text-xs text-gray-700">
+                  <p className="text-sm text-gray-700">
                     <span className="font-semibold text-[#363636]">Saved to profile.</span> Used for all future recommendations.
                   </p>
                 </div>
@@ -458,7 +458,7 @@ const BeautyProduct_v1 = () => {
 
           {showComparison && (
             <div className="space-y-3">
-              <p className="text-xs text-gray-600">Compare up to 3 products:</p>
+              <p className="text-sm text-gray-600">Compare up to 3 products:</p>
 
               {comparisonProducts.map((product) => (
                 <div
@@ -635,8 +635,8 @@ const BeautyProduct_v1 = () => {
               </div>
             </div>
             <div className="flex-1">
-              <div className="text-xs text-green-600 font-bold mb-1">Excellent Match</div>
-              <p className="text-sm text-gray-700">
+              <div className="text-sm text-green-600 font-bold mb-1">Excellent Match</div>
+              <p className="text-base text-gray-700">
                 Ideal for oily/combination skin
               </p>
             </div>

@@ -67,7 +67,7 @@ const OrderConfirmation = () => {
         <h1 className="text-2xl font-bold text-[#363636] mb-2">Order Confirmed!</h1>
         <p className="text-sm text-gray-600 mb-4">Your AI-optimized order has been placed</p>
         <div className="bg-white rounded-lg px-4 py-2 inline-block border-2 border-gray-300">
-          <p className="text-xs text-gray-600 mb-1">Order ID</p>
+          <p className="text-sm text-gray-600 mb-1">Order ID</p>
           <p className="text-base font-bold text-[#363636]">{orderDetails.orderId}</p>
         </div>
       </div>
@@ -80,10 +80,10 @@ const OrderConfirmation = () => {
             <Sparkles className="w-5 h-5 text-[#363636] mt-0.5 flex-shrink-0" />
             <div>
               <p className="text-sm font-semibold text-[#363636] mb-1">AI Tracking Your Order</p>
-              <p className="text-xs text-gray-600 mb-2">Get smart updates and product guidance.</p>
+              <p className="text-sm text-gray-600 mb-2">Get smart updates and product guidance.</p>
               <button
                 onClick={() => navigate('/order-tracking')}
-                className="text-xs text-[#363636] font-medium flex items-center gap-1 hover:underline transition-all transform active:scale-95"
+                className="text-sm text-[#363636] font-medium flex items-center gap-1 hover:underline transition-all transform active:scale-95"
               >
                 Track Order <ChevronRight className="w-3 h-3" />
               </button>
@@ -111,7 +111,7 @@ const OrderConfirmation = () => {
               <MapPin className="w-4 h-4 text-gray-600 mt-1" />
               <div>
                 <p className="text-sm font-semibold text-[#363636]">Delivering to</p>
-                <p className="text-xs text-gray-600">123 MG Road, Bangalore, Karnataka 560001</p>
+                <p className="text-sm text-gray-600">123 MG Road, Bangalore, Karnataka 560001</p>
               </div>
             </div>
 
@@ -119,7 +119,7 @@ const OrderConfirmation = () => {
               <Bell className="w-4 h-4 text-gray-600 mt-1" />
               <div>
                 <p className="text-sm font-semibold text-[#363636]">Real-time Updates</p>
-                <p className="text-xs text-gray-600">Notifications at every step</p>
+                <p className="text-sm text-gray-600">Notifications at every step</p>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@ const OrderConfirmation = () => {
             />
             <div className="flex-1">
               <p className="text-sm font-semibold text-[#363636] mb-1">{orderDetails.item.name}</p>
-              <p className="text-xs text-gray-600 mb-2">Quantity: {orderDetails.item.quantity}</p>
+              <p className="text-sm text-gray-600 mb-2">Quantity: {orderDetails.item.quantity}</p>
               <p className="text-sm font-bold text-[#363636]">₹{orderDetails.item.price}</p>
             </div>
           </div>
@@ -153,8 +153,8 @@ const OrderConfirmation = () => {
               <div key={idx} className="flex items-start gap-3">
                 <span className="text-2xl">{insight.icon}</span>
                 <div>
-                  <p className="text-xs font-semibold text-[#363636] mb-0.5">{insight.title}</p>
-                  <p className="text-xs text-gray-600">{insight.description}</p>
+                  <p className="text-sm font-semibold text-[#363636] mb-0.5">{insight.title}</p>
+                  <p className="text-sm text-gray-600">{insight.description}</p>
                 </div>
               </div>
             ))}
@@ -168,7 +168,7 @@ const OrderConfirmation = () => {
               <Gift className="w-4 h-4 text-[#363636]" />
               <h2 className="text-base font-bold text-[#363636]">Complete Your Routine</h2>
             </div>
-            <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">AI Picks</span>
+            <span className="text-sm bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">AI Picks</span>
           </div>
 
           <div className="space-y-3">
@@ -181,24 +181,24 @@ const OrderConfirmation = () => {
                     className="w-20 h-20 object-cover rounded-lg border border-gray-200"
                   />
                   <div className="flex-1">
-                    <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full font-medium mb-2 inline-block">
+                    <span className="text-sm bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full font-medium mb-2 inline-block">
                       {product.badge}
                     </span>
                     <p className="text-sm font-semibold text-[#363636] mb-1">{product.name}</p>
                     <div className="flex items-center gap-1 mb-2">
                       <Sparkles className="w-3 h-3 text-[#363636]" />
-                      <p className="text-xs text-gray-700">{product.aiReason}</p>
+                      <p className="text-sm text-gray-700">{product.aiReason}</p>
                     </div>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <span className="text-base font-bold text-[#363636]">₹{Math.round(product.price * (1 - product.discount/100))}</span>
-                        <span className="text-xs text-gray-500 line-through">₹{product.price}</span>
-                        <span className="text-xs text-gray-700 font-medium">{product.discount}% off</span>
+                        <span className="text-sm text-gray-500 line-through">₹{product.price}</span>
+                        <span className="text-sm text-gray-700 font-medium">{product.discount}% off</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <button className="w-full mt-2 bg-[#363636] text-white py-2 rounded-lg text-xs font-semibold hover:bg-gray-800 transition-all transform active:scale-95">
+                <button className="w-full mt-2 bg-[#363636] text-white py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-all transform active:scale-95">
                   Add to Order - Extra {product.discount}% Off
                 </button>
               </div>
@@ -224,7 +224,7 @@ const OrderConfirmation = () => {
 
         {/* Help Section */}
         <div className="text-center py-4">
-          <p className="text-xs text-gray-600 mb-2">Need help with your order?</p>
+          <p className="text-sm text-gray-600 mb-2">Need help with your order?</p>
           <button className="text-sm text-[#363636] font-medium hover:underline transition-all transform active:scale-95">Contact Support</button>
         </div>
       </div>

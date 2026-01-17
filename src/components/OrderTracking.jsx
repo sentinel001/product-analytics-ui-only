@@ -117,7 +117,7 @@ const OrderTracking = () => {
           </button>
           <div className="flex-1">
             <h1 className="text-lg font-bold">Track Order</h1>
-            <p className="text-xs opacity-90">Order ID: {orderDetails.orderId}</p>
+            <p className="text-sm opacity-90">Order ID: {orderDetails.orderId}</p>
           </div>
         </div>
 
@@ -125,9 +125,9 @@ const OrderTracking = () => {
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
           <div className="flex items-center gap-2 mb-2">
             <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            <span className="text-sm font-semibold">Live Tracking Active</span>
+            <span className="text-base font-semibold">Live Tracking Active</span>
           </div>
-          <p className="text-xs opacity-90">{orderDetails.delivery.estimatedTime}</p>
+          <p className="text-sm opacity-90">{orderDetails.delivery.estimatedTime}</p>
         </div>
       </div>
 
@@ -143,7 +143,7 @@ const OrderTracking = () => {
             />
             <div className="flex-1">
               <p className="text-sm font-semibold text-[#363636] mb-1">{orderDetails.product.name}</p>
-              <p className="text-xs text-gray-600 mb-2">Quantity: {orderDetails.product.quantity}</p>
+              <p className="text-sm text-gray-600 mb-2">Quantity: {orderDetails.product.quantity}</p>
               <p className="text-sm font-bold text-[#363636]">₹{orderDetails.product.price}</p>
             </div>
           </div>
@@ -154,7 +154,7 @@ const OrderTracking = () => {
           <div className="flex items-center gap-2 mb-3">
             <Sparkles className="w-4 h-4 text-[#363636]" />
             <h2 className="text-sm font-bold text-[#363636]">AI Live Updates</h2>
-            <span className="ml-auto text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">Real-time</span>
+            <span className="ml-auto text-sm bg-gray-200 text-gray-700 px-2 py-1 rounded-full">Real-time</span>
           </div>
 
           <div className="space-y-2">
@@ -162,8 +162,8 @@ const OrderTracking = () => {
               <div key={idx} className="flex items-start gap-2 bg-white rounded-lg p-2 border border-gray-200">
                 <span className="text-lg flex-shrink-0">{update.icon}</span>
                 <div className="flex-1">
-                  <p className="text-xs text-[#363636] mb-0.5">{update.message}</p>
-                  <p className="text-xs text-gray-500">{update.time}</p>
+                  <p className="text-sm text-[#363636] mb-0.5">{update.message}</p>
+                  <p className="text-sm text-gray-500">{update.time}</p>
                 </div>
               </div>
             ))}
@@ -185,7 +185,7 @@ const OrderTracking = () => {
               <p className="text-sm font-semibold text-[#363636]">{orderDetails.delivery.driverName}</p>
               <div className="flex items-center gap-1 mt-0.5">
                 <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                <span className="text-xs text-gray-600">{orderDetails.delivery.driverRating} rating</span>
+                <span className="text-sm text-gray-600">{orderDetails.delivery.driverRating} rating</span>
               </div>
             </div>
             <button className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all transform active:scale-95">
@@ -193,7 +193,7 @@ const OrderTracking = () => {
             </button>
           </div>
 
-          <div className="mt-3 flex items-start gap-2 text-xs text-gray-600">
+          <div className="mt-3 flex items-start gap-2 text-sm text-gray-600">
             <MapPin className="w-3 h-3 mt-0.5 flex-shrink-0" />
             <span>{orderDetails.delivery.address}</span>
           </div>
@@ -236,12 +236,12 @@ const OrderTracking = () => {
                     }`}>
                       {step.title}
                     </p>
-                    <span className="text-xs text-gray-500">{step.time}</span>
+                    <span className="text-sm text-gray-500">{step.time}</span>
                   </div>
-                  <p className="text-xs text-gray-600 mb-1">{step.description}</p>
+                  <p className="text-sm text-gray-600 mb-1">{step.description}</p>
 
                   {step.aiInsight && (
-                    <div className="mt-2 flex items-center gap-1 bg-gray-100 px-2 py-1 rounded text-xs">
+                    <div className="mt-2 flex items-center gap-1 bg-gray-100 px-2 py-1 rounded text-sm">
                       <Sparkles className="w-3 h-3 text-[#363636]" />
                       <span className="text-gray-700">{step.aiInsight}</span>
                     </div>
@@ -264,14 +264,14 @@ const OrderTracking = () => {
               <div key={idx} className="flex items-start gap-3 bg-white rounded-lg p-2 border border-gray-200">
                 <span className="text-xl flex-shrink-0">{reminder.icon}</span>
                 <div>
-                  <p className="text-xs font-semibold text-[#363636] mb-0.5">{reminder.title}</p>
-                  <p className="text-xs text-gray-600">{reminder.description}</p>
+                  <p className="text-sm font-semibold text-[#363636] mb-0.5">{reminder.title}</p>
+                  <p className="text-sm text-gray-600">{reminder.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <button className="w-full mt-3 bg-[#363636] text-white py-2 rounded-lg text-xs font-semibold hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-1">
+          <button className="w-full mt-3 bg-[#363636] text-white py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-1">
             <Calendar className="w-3 h-3" />
             Enable Smart Reminders
           </button>
@@ -281,11 +281,11 @@ const OrderTracking = () => {
         <div className="grid grid-cols-2 gap-3">
           <button className="bg-white border-2 border-gray-300 rounded-lg p-3 hover:border-[#363636] hover:shadow-md transition-all transform hover:scale-105 active:scale-95">
             <MessageCircle className="w-5 h-5 text-[#363636] mb-2" />
-            <p className="text-xs font-semibold text-[#363636]">Contact Driver</p>
+            <p className="text-sm font-semibold text-[#363636]">Contact Driver</p>
           </button>
           <button className="bg-white border-2 border-gray-300 rounded-lg p-3 hover:border-[#363636] hover:shadow-md transition-all transform hover:scale-105 active:scale-95">
             <Package className="w-5 h-5 text-[#363636] mb-2" />
-            <p className="text-xs font-semibold text-[#363636]">Delivery Issues</p>
+            <p className="text-sm font-semibold text-[#363636]">Delivery Issues</p>
           </button>
         </div>
 
@@ -296,12 +296,12 @@ const OrderTracking = () => {
               <Star className="w-5 h-5 text-[#363636]" />
               <h2 className="text-sm font-bold text-[#363636]">How was your experience?</h2>
             </div>
-            <p className="text-xs text-gray-600 mb-3">Rate this product and delivery to help others</p>
+            <p className="text-sm text-gray-600 mb-3">Rate this product and delivery to help others</p>
             <div className="flex gap-2">
-              <button className="flex-1 bg-[#363636] text-white py-2 rounded-lg text-xs font-semibold hover:bg-gray-800 transition-all transform active:scale-95">
+              <button className="flex-1 bg-[#363636] text-white py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-all transform active:scale-95">
                 Rate Product
               </button>
-              <button className="flex-1 bg-white border-2 border-[#363636] text-[#363636] py-2 rounded-lg text-xs font-semibold hover:bg-gray-50 transition-all transform active:scale-95">
+              <button className="flex-1 bg-white border-2 border-[#363636] text-[#363636] py-2 rounded-lg text-sm font-semibold hover:bg-gray-50 transition-all transform active:scale-95">
                 Rate Delivery
               </button>
             </div>
@@ -310,7 +310,7 @@ const OrderTracking = () => {
 
         {/* Help Section */}
         <div className="text-center py-4">
-          <p className="text-xs text-gray-600 mb-2">Having issues with your delivery?</p>
+          <p className="text-sm text-gray-600 mb-2">Having issues with your delivery?</p>
           <button className="text-sm text-[#363636] font-medium hover:underline transition-all transform active:scale-95">Get Help from Flash AI Support</button>
         </div>
       </div>
