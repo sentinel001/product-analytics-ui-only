@@ -17,22 +17,22 @@ const FashionProduct = () => {
     {
       material: 'Organic Cotton',
       percentage: 95,
-      icon: <Wind className="w-5 h-5 text-green-600" />,
+      icon: <Wind className="w-5 h-5 text-black" />,
       sustainability: 'Excellent',
       properties: ['Breathable', 'Soft', 'Hypoallergenic'],
       certifications: ['GOTS Certified', 'Fair Trade'],
       description: 'Premium organic cotton grown without harmful pesticides. Soft, breathable, and environmentally friendly.',
-      color: 'from-green-50 to-emerald-50 border-green-200'
+      color: 'bg-white border-gray-200'
     },
     {
       material: 'Elastane (Spandex)',
       percentage: 5,
-      icon: <Shirt className="w-5 h-5 text-blue-600" />,
+      icon: <Shirt className="w-5 h-5 text-black" />,
       sustainability: 'Good',
       properties: ['Stretch', 'Shape Retention', 'Flexibility'],
       certifications: ['OEKO-TEX Standard 100'],
       description: 'Provides comfortable stretch and helps the fabric maintain its shape after multiple wears.',
-      color: 'from-blue-50 to-cyan-50 border-blue-200'
+      color: 'bg-white border-gray-200'
     }
   ];
 
@@ -108,13 +108,13 @@ const FashionProduct = () => {
               <span className="text-xs text-gray-500">2,123 reviews</span>
             </div>
             <div className="flex gap-2">
-              <div className="inline-flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
-                <CheckCircle className="w-3 h-3 text-green-600" />
-                <span className="text-xs font-medium text-green-700">Sustainable</span>
+              <div className="inline-flex items-center gap-1 bg-gray-50 border border-gray-300 px-2 py-1 rounded">
+                <CheckCircle className="w-3 h-3 text-black" />
+                <span className="text-xs font-medium text-black">Sustainable</span>
               </div>
-              <div className="inline-flex items-center gap-1 bg-blue-50 px-2 py-1 rounded">
-                <Shield className="w-3 h-3 text-blue-600" />
-                <span className="text-xs font-medium text-blue-700">Premium Quality</span>
+              <div className="inline-flex items-center gap-1 bg-gray-50 border border-gray-300 px-2 py-1 rounded">
+                <Shield className="w-3 h-3 text-black" />
+                <span className="text-xs font-medium text-black">Premium Quality</span>
               </div>
             </div>
           </div>
@@ -122,13 +122,13 @@ const FashionProduct = () => {
       </div>
 
       {/* PHASE 1 FEATURE: Advanced Size & Fit Prediction Engine */}
-      <section className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-4 mx-4 mb-3 border border-purple-100">
+      <section className="bg-gray-50 rounded-xl p-4 mx-4 mb-3 border-2 border-gray-300">
         <div className="flex items-center justify-between mb-3">
           <h3 className="font-bold text-gray-900 text-base flex items-center gap-2">
-            <Ruler className="w-5 h-5 text-purple-600" />
+            <Ruler className="w-5 h-5 text-black" />
             Smart Size & Fit Predictor
           </h3>
-          <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
+          <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">
             {returnReduction.savings}% fewer returns
           </span>
         </div>
@@ -137,7 +137,7 @@ const FashionProduct = () => {
         {!showSizePredictor ? (
           <button
             onClick={() => setShowSizePredictor(true)}
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg p-4 font-semibold text-sm flex items-center justify-between hover:from-purple-700 hover:to-pink-700 transition-all"
+            className="w-full bg-black text-white rounded-lg p-4 font-semibold text-sm flex items-center justify-between hover:bg-gray-800 transition-all"
           >
             <span>Find Your Perfect Size</span>
             <ChevronRight className="w-5 h-5" />
@@ -188,7 +188,7 @@ const FashionProduct = () => {
             </div>
 
             {/* AI Recommendation */}
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg p-4">
+            <div className="bg-black text-white rounded-lg p-4">
               <div className="flex items-start justify-between mb-2">
                 <div>
                   <p className="text-sm font-semibold mb-1">Recommended Size</p>
@@ -245,7 +245,7 @@ const FashionProduct = () => {
                   {sizeChart.map((row, idx) => (
                     <tr
                       key={idx}
-                      className={`border-b border-gray-100 ${row.size === sizePrediction.recommended ? 'bg-purple-50' : ''}`}
+                      className={`border-b border-gray-100 ${row.size === sizePrediction.recommended ? 'bg-gray-100' : ''}`}
                     >
                       <td className="py-2 font-semibold text-gray-900">{row.size}</td>
                       <td className="text-center py-2 text-gray-700">{row.chest}</td>
@@ -258,10 +258,10 @@ const FashionProduct = () => {
             </div>
 
             {/* Customer Fit Feedback */}
-            <div className="bg-white rounded-lg p-3">
+            <div className="bg-white rounded-lg p-3 border border-gray-200">
               <div className="flex items-center justify-between mb-2">
                 <p className="text-sm font-semibold text-gray-900 flex items-center gap-2">
-                  <Users className="w-4 h-4 text-blue-600" />
+                  <Users className="w-4 h-4 text-black" />
                   How Customers Rate the Fit
                 </p>
                 <span className="text-xs text-gray-500">2,123 reviews</span>
@@ -275,7 +275,7 @@ const FashionProduct = () => {
                     </div>
                     <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                       <div
-                        className={`h-full rounded-full ${idx === 0 ? 'bg-green-500' : idx === 1 ? 'bg-orange-500' : 'bg-blue-500'}`}
+                        className="h-full rounded-full bg-black"
                         style={{ width: `${item.percentage}%` }}
                       />
                     </div>
@@ -294,13 +294,13 @@ const FashionProduct = () => {
             <Shield className="w-5 h-5 text-gray-700" />
             Material & Quality Details
           </h3>
-          <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">Certified Sustainable</span>
+          <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">Certified Sustainable</span>
         </div>
 
         {/* Material Composition */}
         <div className="space-y-3 mb-4">
           {materialBreakdown.map((material, idx) => (
-            <div key={idx} className={`bg-gradient-to-br ${material.color} rounded-lg p-3 border`}>
+            <div key={idx} className={`${material.color} rounded-lg p-3 border-2`}>
               <div className="flex items-start justify-between mb-2">
                 <div className="flex items-center gap-2">
                   {material.icon}
@@ -309,7 +309,7 @@ const FashionProduct = () => {
                     <p className="text-xs text-gray-600">{material.percentage}% of fabric</p>
                   </div>
                 </div>
-                <span className={`text-xs px-2 py-1 rounded-full font-medium ${material.sustainability === 'Excellent' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
+                <span className="text-xs px-2 py-1 rounded-full font-medium bg-gray-200 text-gray-700">
                   {material.sustainability}
                 </span>
               </div>
@@ -319,7 +319,7 @@ const FashionProduct = () => {
               {/* Properties */}
               <div className="flex flex-wrap gap-1 mb-2">
                 {material.properties.map((prop, pIdx) => (
-                  <span key={pIdx} className="text-xs bg-white px-2 py-1 rounded text-gray-700 border border-gray-200">
+                  <span key={pIdx} className="text-xs bg-gray-50 px-2 py-1 rounded text-gray-700 border border-gray-200">
                     {prop}
                   </span>
                 ))}
@@ -328,7 +328,7 @@ const FashionProduct = () => {
               {/* Certifications */}
               <div className="flex flex-wrap gap-1">
                 {material.certifications.map((cert, cIdx) => (
-                  <span key={cIdx} className="text-xs bg-white px-2 py-1 rounded text-green-700 font-medium border border-green-200 flex items-center gap-1">
+                  <span key={cIdx} className="text-xs bg-gray-50 px-2 py-1 rounded text-black font-medium border border-gray-300 flex items-center gap-1">
                     <CheckCircle className="w-3 h-3" />
                     {cert}
                   </span>
@@ -339,23 +339,23 @@ const FashionProduct = () => {
         </div>
 
         {/* Quality Indicators */}
-        <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-3 border border-amber-200">
+        <div className="bg-gray-50 rounded-lg p-3 border-2 border-gray-300">
           <p className="font-semibold text-gray-900 text-sm mb-3 flex items-center gap-2">
-            <Star className="w-4 h-4 text-amber-600" />
+            <Star className="w-4 h-4 text-black" />
             Premium Quality Indicators
           </p>
           <div className="space-y-2">
             {qualityIndicators.map((indicator, idx) => (
-              <div key={idx} className="bg-white rounded p-2 flex items-center justify-between">
+              <div key={idx} className="bg-white rounded p-2 flex items-center justify-between border border-gray-200">
                 <div className="flex items-center gap-2">
-                  <div className="text-amber-600">{indicator.icon}</div>
+                  <div className="text-black">{indicator.icon}</div>
                   <div>
                     <p className="text-xs font-semibold text-gray-900">{indicator.aspect}</p>
                     <p className="text-xs text-gray-600">{indicator.value}</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
+                  <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">
                     {indicator.rating}
                   </span>
                   <div className="group relative inline-block ml-1">
@@ -371,9 +371,9 @@ const FashionProduct = () => {
         </div>
 
         {/* Care Instructions */}
-        <div className="mt-3 bg-blue-50 rounded-lg p-3 border border-blue-200">
+        <div className="mt-3 bg-gray-50 rounded-lg p-3 border-2 border-gray-300">
           <p className="font-semibold text-gray-900 text-sm mb-2 flex items-center gap-2">
-            <Droplets className="w-4 h-4 text-blue-600" />
+            <Droplets className="w-4 h-4 text-black" />
             Care Instructions for Longevity
           </p>
           <div className="space-y-1 text-xs text-gray-700">
@@ -383,25 +383,25 @@ const FashionProduct = () => {
             <p>• Iron on low heat if needed (inside out)</p>
             <p>• Do not dry clean</p>
           </div>
-          <div className="mt-2 flex items-start gap-2 bg-white rounded p-2">
-            <AlertCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+          <div className="mt-2 flex items-start gap-2 bg-white rounded p-2 border border-gray-200">
+            <AlertCircle className="w-4 h-4 text-black mt-0.5 flex-shrink-0" />
             <p className="text-xs text-gray-700">
-              Following these instructions can extend your garment's life by <span className="font-semibold text-blue-700">2-3 years</span>
+              Following these instructions can extend your garment's life by <span className="font-semibold text-black">2-3 years</span>
             </p>
           </div>
         </div>
       </section>
 
       {/* Price Comparison */}
-      <section className="bg-white rounded-xl p-4 mx-4 mb-3">
+      <section className="bg-white rounded-xl p-4 mx-4 mb-3 border border-gray-200">
         <h3 className="font-bold text-gray-900 text-base mb-3">Best Price</h3>
         <div className="space-y-2">
           {[
-            { platform: 'Myntra', price: 1299, rating: 4.7, reviews: '2,123', logo: 'https://logo.clearbit.com/myntra.com', color: 'bg-pink-50 border-pink-200' },
-            { platform: 'Ajio', price: 1399, rating: 4.6, reviews: '847', logo: 'https://logo.clearbit.com/ajio.com', color: 'bg-orange-50 border-orange-200' },
-            { platform: 'Amazon Fashion', price: 1499, rating: 4.5, reviews: '1,534', logo: 'https://logo.clearbit.com/amazon.in', color: 'bg-blue-50 border-blue-200' }
+            { platform: 'Myntra', price: 1299, rating: 4.7, reviews: '2,123', logo: 'https://logo.clearbit.com/myntra.com', color: 'bg-white border-gray-200' },
+            { platform: 'Ajio', price: 1399, rating: 4.6, reviews: '847', logo: 'https://logo.clearbit.com/ajio.com', color: 'bg-white border-gray-200' },
+            { platform: 'Amazon Fashion', price: 1499, rating: 4.5, reviews: '1,534', logo: 'https://logo.clearbit.com/amazon.in', color: 'bg-white border-gray-200' }
           ].map((platform, idx) => (
-            <div key={idx} className={`${platform.color} border rounded-lg p-3`}>
+            <div key={idx} className={`${platform.color} border-2 rounded-lg p-3`}>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <img src={platform.logo} alt={platform.platform} className="w-8 h-8 object-contain" />
@@ -424,15 +424,15 @@ const FashionProduct = () => {
       </section>
 
       {/* Score Breakdown */}
-      <section className="bg-white rounded-xl p-4 mx-4 mb-3">
+      <section className="bg-white rounded-xl p-4 mx-4 mb-3 border border-gray-200">
         <h3 className="font-bold text-gray-900 text-base mb-3">Score Breakdown</h3>
         <div className="space-y-3">
           {[
-            { name: 'Material Quality', score: 95, color: 'bg-green-500', description: 'Premium organic cotton' },
-            { name: 'Sustainability', score: 98, color: 'bg-emerald-500', description: 'GOTS certified, eco-friendly' },
-            { name: 'Comfort', score: 93, color: 'bg-blue-500', description: 'Soft, breathable fabric' },
-            { name: 'Durability', score: 90, color: 'bg-purple-500', description: '220 GSM, double-stitched' },
-            { name: 'Value for Money', score: 88, color: 'bg-orange-500', description: 'Premium quality, fair price' }
+            { name: 'Material Quality', score: 95, description: 'Premium organic cotton' },
+            { name: 'Sustainability', score: 98, description: 'GOTS certified, eco-friendly' },
+            { name: 'Comfort', score: 93, description: 'Soft, breathable fabric' },
+            { name: 'Durability', score: 90, description: '220 GSM, double-stitched' },
+            { name: 'Value for Money', score: 88, description: 'Premium quality, fair price' }
           ].map((item, idx) => (
             <div key={idx}>
               <div className="flex items-center justify-between mb-1">
@@ -441,7 +441,7 @@ const FashionProduct = () => {
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-1">
                 <div
-                  className={`h-full ${item.color} rounded-full transition-all duration-500`}
+                  className="h-full bg-black rounded-full transition-all duration-500"
                   style={{ width: `${item.score}%` }}
                 />
               </div>
@@ -470,7 +470,7 @@ const FashionProduct = () => {
                     <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                     <span className="text-xs text-gray-700">{product.rating}</span>
                   </div>
-                  <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">{product.match} match</span>
+                  <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">{product.match} match</span>
                 </div>
                 <p className="font-bold text-gray-900 text-sm">₹{product.price}</p>
               </div>
@@ -488,7 +488,7 @@ const FashionProduct = () => {
           </div>
           <button
             onClick={() => navigate('/checkout')}
-            className="flex-1 bg-purple-600 text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-purple-700 transition-all transform active:scale-95 flex items-center justify-center gap-2"
+            className="flex-1 bg-black text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />
             Add to Cart
