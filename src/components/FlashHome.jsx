@@ -15,17 +15,17 @@ const FlashHome = () => {
   ];
 
   const electronicsCategories = [
-    { name: 'Smartphones', icon: '📱', path: '/discovery/electronics?sub=smartphones' },
-    { name: 'Laptops', icon: '💻', path: '/discovery/electronics?sub=laptops' },
-    { name: 'Audio', icon: '🎧', path: '/discovery/electronics?sub=audio' },
-    { name: 'Wearables', icon: '⌚', path: '/discovery/electronics?sub=wearables' }
+    { name: 'Smartphones', icon: '📱', path: '/category/electronics' },
+    { name: 'Laptops', icon: '💻', path: '/category/electronics' },
+    { name: 'Audio', icon: '🎧', path: '/category/electronics' },
+    { name: 'Wearables', icon: '⌚', path: '/category/electronics' }
   ];
 
   const fashionCategories = [
-    { name: 'Tops & Tees', icon: '👕', path: '/discovery/fashion?sub=tops' },
-    { name: 'Bottoms', icon: '👖', path: '/discovery/fashion?sub=bottoms' },
-    { name: 'Footwear', icon: '👟', path: '/discovery/fashion?sub=footwear' },
-    { name: 'Accessories', icon: '👜', path: '/discovery/fashion?sub=accessories' }
+    { name: 'Tops & Tees', icon: '👕', path: '/category/fashion' },
+    { name: 'Bottoms', icon: '👖', path: '/category/fashion' },
+    { name: 'Footwear', icon: '👟', path: '/category/fashion' },
+    { name: 'Accessories', icon: '👜', path: '/category/fashion' }
   ];
 
   const socialTrends = [
