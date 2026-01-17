@@ -3,12 +3,16 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import BeautyProduct from './components/BeautyProduct';
 import BeautyProduct_Phase2 from './components/BeautyProduct_Phase2';
 import BeautyProduct_Phase3 from './components/BeautyProduct_Phase3';
+import BeautyProduct_v1 from './components/BeautyProduct_v1';
+import BeautyProduct_v2 from './components/BeautyProduct_v2';
 import ElectronicsProduct from './components/ElectronicsProduct';
 import ElectronicsProduct_Phase2 from './components/ElectronicsProduct_Phase2';
 import ElectronicsProduct_Phase3 from './components/ElectronicsProduct_Phase3';
 import FashionProduct from './components/FashionProduct';
 import FashionProduct_Phase2 from './components/FashionProduct_Phase2';
 import FashionProduct_Phase3 from './components/FashionProduct_Phase3';
+import FashionProduct_v1 from './components/FashionProduct_v1';
+import FashionProduct_v2 from './components/FashionProduct_v2';
 import FlashHome from './components/FlashHome';
 import ProductDiscovery from './components/ProductDiscovery';
 import Checkout from './components/Checkout';
@@ -141,8 +145,12 @@ function App() {
 
         {/* Product Detail Pages by Category */}
         <Route path="/product/beauty" element={<BeautyProduct />} />
+        <Route path="/product/beauty-v1" element={<BeautyProduct_v1 />} />
+        <Route path="/product/beauty-v2" element={<BeautyProduct_v2 />} />
         <Route path="/product/electronics" element={<ElectronicsProduct />} />
         <Route path="/product/fashion" element={<FashionProduct />} />
+        <Route path="/product/fashion-v1" element={<FashionProduct_v1 />} />
+        <Route path="/product/fashion-v2" element={<FashionProduct_v2 />} />
 
         {/* Ranked Lists & Categories */}
         <Route path="/ranked-list/:id" element={<RankedListPage />} />
