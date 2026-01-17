@@ -31,14 +31,14 @@ const FlashHome = () => {
   const socialTrends = [
     {
       title: 'Glass Skin Routine',
-      description: 'Korean beauty trend taking over',
+      description: 'Korean beauty trending',
       trend: '+145%',
       icon: '✨',
       color: 'bg-gray-50'
     },
     {
       title: 'Minimalist Tech',
-      description: 'Less is more in gadgets',
+      description: 'Less is more',
       trend: '+89%',
       icon: '📱',
       color: 'bg-gray-50'
@@ -105,7 +105,7 @@ const FlashHome = () => {
   const personalizedRoutines = [
     {
       title: 'Oily Skin Complete Routine',
-      description: 'Curated 4-step routine for your skin type',
+      description: '4-step routine for your skin',
       products: '5 products',
       icon: '💧',
       color: 'from-blue-50 to-cyan-50',
@@ -114,7 +114,7 @@ const FlashHome = () => {
     },
     {
       title: 'High-End Programmer Setup',
-      description: 'Ergonomic workspace essentials for coding',
+      description: 'Workspace essentials for coding',
       products: '6 products',
       icon: '⌨️',
       color: 'from-purple-50 to-indigo-50',

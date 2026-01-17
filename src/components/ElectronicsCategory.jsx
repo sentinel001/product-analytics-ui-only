@@ -172,7 +172,7 @@ const ElectronicsCategory = () => {
             <div className="flex-1">
               <h3 className="text-sm font-bold text-[#363636] mb-1">AI-Personalized Selection</h3>
               <p className="text-xs text-gray-700 mb-3">
-                Based on your interests and {userProfile.previousPurchases} previous purchases, we've curated tech that fits your lifestyle.
+                Tech curated for you based on {userProfile.previousPurchases} purchases.
               </p>
 
               {/* User Profile Pills */}

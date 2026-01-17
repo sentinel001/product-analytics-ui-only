@@ -72,19 +72,19 @@ const OrderTracking = () => {
     {
       time: '2 min ago',
       icon: '🚚',
-      message: 'Your driver Rajesh is nearby! Estimated arrival: 15 minutes',
+      message: 'Driver Rajesh nearby! Arriving in 15 min',
       type: 'info'
     },
     {
       time: '30 min ago',
       icon: '📍',
-      message: 'Package crossed Brigade Road. On time for delivery!',
+      message: 'Crossed Brigade Road. On time!',
       type: 'success'
     },
     {
       time: '1 hour ago',
       icon: '☀️',
-      message: 'Weather is perfect for delivery. No delays expected.',
+      message: 'Clear weather. No delays expected.',
       type: 'info'
     }
   ];
@@ -98,7 +98,7 @@ const OrderTracking = () => {
     {
       icon: '⏰',
       title: 'Set Usage Schedule',
-      description: 'Use twice daily - Morning & Night'
+      description: 'Twice daily - Morning & Night'
     },
     {
       icon: '📊',
@@ -110,7 +110,7 @@ const OrderTracking = () => {
   return (
     <div className="max-w-md mx-auto bg-white min-h-screen font-['Inter_Tight']">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-4">
+      <div className="bg-[#363636] text-white px-4 py-4">
         <div className="flex items-center gap-3 mb-4">
           <button onClick={() => navigate(-1)} className="p-1 hover:bg-white/20 rounded-lg transition-colors transform active:scale-95">
             <ArrowLeft className="w-5 h-5" />
@@ -122,9 +122,9 @@ const OrderTracking = () => {
         </div>
 
         {/* Live Status Banner */}
-        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
             <span className="text-sm font-semibold">Live Tracking Active</span>
           </div>
           <p className="text-xs opacity-90">{orderDetails.delivery.estimatedTime}</p>
@@ -134,35 +134,35 @@ const OrderTracking = () => {
       {/* Main Content */}
       <div className="px-4 py-4 space-y-4">
         {/* Product Card */}
-        <div className="bg-gray-50 rounded-lg p-3">
+        <div className="bg-gray-50 rounded-lg p-3 border border-gray-200">
           <div className="flex gap-3">
             <img
               src={orderDetails.product.image}
               alt={orderDetails.product.name}
-              className="w-20 h-20 object-cover rounded-lg"
+              className="w-20 h-20 object-cover rounded-lg border border-gray-200"
             />
             <div className="flex-1">
-              <p className="text-sm font-semibold text-gray-900 mb-1">{orderDetails.product.name}</p>
+              <p className="text-sm font-semibold text-[#363636] mb-1">{orderDetails.product.name}</p>
               <p className="text-xs text-gray-600 mb-2">Quantity: {orderDetails.product.quantity}</p>
-              <p className="text-sm font-bold text-gray-900">₹{orderDetails.product.price}</p>
+              <p className="text-sm font-bold text-[#363636]">₹{orderDetails.product.price}</p>
             </div>
           </div>
         </div>
 
         {/* AI Live Updates */}
-        <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-3 border border-purple-100">
+        <div className="bg-gray-50 rounded-lg p-3 border-2 border-gray-300">
           <div className="flex items-center gap-2 mb-3">
-            <Sparkles className="w-4 h-4 text-purple-600" />
-            <h2 className="text-sm font-bold text-gray-900">AI Live Updates</h2>
-            <span className="ml-auto text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Real-time</span>
+            <Sparkles className="w-4 h-4 text-[#363636]" />
+            <h2 className="text-sm font-bold text-[#363636]">AI Live Updates</h2>
+            <span className="ml-auto text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">Real-time</span>
           </div>
 
           <div className="space-y-2">
             {aiUpdates.map((update, idx) => (
-              <div key={idx} className="flex items-start gap-2 bg-white rounded-lg p-2">
+              <div key={idx} className="flex items-start gap-2 bg-white rounded-lg p-2 border border-gray-200">
                 <span className="text-lg flex-shrink-0">{update.icon}</span>
                 <div className="flex-1">
-                  <p className="text-xs text-gray-900 mb-0.5">{update.message}</p>
+                  <p className="text-xs text-[#363636] mb-0.5">{update.message}</p>
                   <p className="text-xs text-gray-500">{update.time}</p>
                 </div>
               </div>
@@ -171,25 +171,25 @@ const OrderTracking = () => {
         </div>
 
         {/* Delivery Partner Info */}
-        <div className="bg-white rounded-lg border border-gray-200 p-3">
+        <div className="bg-white rounded-lg border-2 border-gray-300 p-3">
           <div className="flex items-center gap-2 mb-3">
-            <Truck className="w-4 h-4 text-blue-600" />
-            <h2 className="text-sm font-bold text-gray-900">Your Delivery Partner</h2>
+            <Truck className="w-4 h-4 text-[#363636]" />
+            <h2 className="text-sm font-bold text-[#363636]">Your Delivery Partner</h2>
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+            <div className="w-12 h-12 bg-[#363636] rounded-full flex items-center justify-center text-white font-bold text-lg">
               {orderDetails.delivery.driverName.split(' ').map(n => n[0]).join('')}
             </div>
             <div className="flex-1">
-              <p className="text-sm font-semibold text-gray-900">{orderDetails.delivery.driverName}</p>
+              <p className="text-sm font-semibold text-[#363636]">{orderDetails.delivery.driverName}</p>
               <div className="flex items-center gap-1 mt-0.5">
                 <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                 <span className="text-xs text-gray-600">{orderDetails.delivery.driverRating} rating</span>
               </div>
             </div>
-            <button className="p-2 bg-green-100 rounded-lg hover:bg-green-200 transition-all transform active:scale-95">
-              <MessageCircle className="w-4 h-4 text-green-600" />
+            <button className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all transform active:scale-95">
+              <MessageCircle className="w-4 h-4 text-[#363636]" />
             </button>
           </div>
 
@@ -200,8 +200,8 @@ const OrderTracking = () => {
         </div>
 
         {/* Tracking Timeline */}
-        <div className="bg-white rounded-lg border border-gray-200 p-4">
-          <h2 className="text-sm font-bold text-gray-900 mb-4">Order Journey</h2>
+        <div className="bg-white rounded-lg border-2 border-gray-300 p-4">
+          <h2 className="text-sm font-bold text-[#363636] mb-4">Order Journey</h2>
 
           <div className="space-y-4">
             {trackingSteps.map((step, idx) => (
@@ -210,9 +210,9 @@ const OrderTracking = () => {
                 <div className="flex flex-col items-center">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
                     step.completed
-                      ? 'bg-green-500'
+                      ? 'bg-[#363636]'
                       : step.current
-                      ? 'bg-purple-600 animate-pulse'
+                      ? 'bg-[#363636] animate-pulse'
                       : 'bg-gray-200'
                   }`}>
                     {step.completed ? (
@@ -224,7 +224,7 @@ const OrderTracking = () => {
                     )}
                   </div>
                   {idx < trackingSteps.length - 1 && (
-                    <div className={`w-0.5 h-12 ${step.completed ? 'bg-green-500' : 'bg-gray-200'}`}></div>
+                    <div className={`w-0.5 h-12 ${step.completed ? 'bg-[#363636]' : 'bg-gray-200'}`}></div>
                   )}
                 </div>
 
@@ -232,7 +232,7 @@ const OrderTracking = () => {
                 <div className="flex-1 pb-4">
                   <div className="flex items-start justify-between mb-1">
                     <p className={`text-sm font-semibold ${
-                      step.current ? 'text-purple-600' : step.completed ? 'text-gray-900' : 'text-gray-500'
+                      step.current ? 'text-[#363636]' : step.completed ? 'text-[#363636]' : 'text-gray-500'
                     }`}>
                       {step.title}
                     </p>
@@ -241,9 +241,9 @@ const OrderTracking = () => {
                   <p className="text-xs text-gray-600 mb-1">{step.description}</p>
 
                   {step.aiInsight && (
-                    <div className="mt-2 flex items-center gap-1 bg-purple-50 px-2 py-1 rounded text-xs">
-                      <Sparkles className="w-3 h-3 text-purple-600" />
-                      <span className="text-purple-700">{step.aiInsight}</span>
+                    <div className="mt-2 flex items-center gap-1 bg-gray-100 px-2 py-1 rounded text-xs">
+                      <Sparkles className="w-3 h-3 text-[#363636]" />
+                      <span className="text-gray-700">{step.aiInsight}</span>
                     </div>
                   )}
                 </div>
@@ -253,25 +253,25 @@ const OrderTracking = () => {
         </div>
 
         {/* Post-Delivery Preparation */}
-        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-4 border border-blue-100">
+        <div className="bg-gray-50 rounded-lg p-4 border-2 border-gray-300">
           <div className="flex items-center gap-2 mb-3">
-            <Bell className="w-4 h-4 text-blue-600" />
-            <h2 className="text-sm font-bold text-gray-900">After Delivery</h2>
+            <Bell className="w-4 h-4 text-[#363636]" />
+            <h2 className="text-sm font-bold text-[#363636]">After Delivery</h2>
           </div>
 
           <div className="space-y-3">
             {usageReminders.map((reminder, idx) => (
-              <div key={idx} className="flex items-start gap-3 bg-white rounded-lg p-2">
+              <div key={idx} className="flex items-start gap-3 bg-white rounded-lg p-2 border border-gray-200">
                 <span className="text-xl flex-shrink-0">{reminder.icon}</span>
                 <div>
-                  <p className="text-xs font-semibold text-gray-900 mb-0.5">{reminder.title}</p>
+                  <p className="text-xs font-semibold text-[#363636] mb-0.5">{reminder.title}</p>
                   <p className="text-xs text-gray-600">{reminder.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <button className="w-full mt-3 bg-blue-600 text-white py-2 rounded-lg text-xs font-semibold hover:bg-blue-700 transition-all transform active:scale-95 flex items-center justify-center gap-1">
+          <button className="w-full mt-3 bg-[#363636] text-white py-2 rounded-lg text-xs font-semibold hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-1">
             <Calendar className="w-3 h-3" />
             Enable Smart Reminders
           </button>
@@ -279,29 +279,29 @@ const OrderTracking = () => {
 
         {/* Quick Actions */}
         <div className="grid grid-cols-2 gap-3">
-          <button className="bg-white border border-gray-200 rounded-lg p-3 hover:border-purple-300 hover:shadow-md transition-all transform hover:scale-105 active:scale-95">
-            <MessageCircle className="w-5 h-5 text-purple-600 mb-2" />
-            <p className="text-xs font-semibold text-gray-900">Contact Driver</p>
+          <button className="bg-white border-2 border-gray-300 rounded-lg p-3 hover:border-[#363636] hover:shadow-md transition-all transform hover:scale-105 active:scale-95">
+            <MessageCircle className="w-5 h-5 text-[#363636] mb-2" />
+            <p className="text-xs font-semibold text-[#363636]">Contact Driver</p>
           </button>
-          <button className="bg-white border border-gray-200 rounded-lg p-3 hover:border-purple-300 hover:shadow-md transition-all transform hover:scale-105 active:scale-95">
-            <Package className="w-5 h-5 text-orange-600 mb-2" />
-            <p className="text-xs font-semibold text-gray-900">Delivery Issues</p>
+          <button className="bg-white border-2 border-gray-300 rounded-lg p-3 hover:border-[#363636] hover:shadow-md transition-all transform hover:scale-105 active:scale-95">
+            <Package className="w-5 h-5 text-[#363636] mb-2" />
+            <p className="text-xs font-semibold text-[#363636]">Delivery Issues</p>
           </button>
         </div>
 
         {/* Rate & Review Prompt (appears after delivery) */}
         {showFeedbackPrompt && (
-          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-4 border border-yellow-200">
+          <div className="bg-gray-50 rounded-lg p-4 border-2 border-gray-300">
             <div className="flex items-center gap-2 mb-3">
-              <Star className="w-5 h-5 text-yellow-600" />
-              <h2 className="text-sm font-bold text-gray-900">How was your experience?</h2>
+              <Star className="w-5 h-5 text-[#363636]" />
+              <h2 className="text-sm font-bold text-[#363636]">How was your experience?</h2>
             </div>
             <p className="text-xs text-gray-600 mb-3">Rate this product and delivery to help others</p>
             <div className="flex gap-2">
-              <button className="flex-1 bg-yellow-600 text-white py-2 rounded-lg text-xs font-semibold hover:bg-yellow-700 transition-all transform active:scale-95">
+              <button className="flex-1 bg-[#363636] text-white py-2 rounded-lg text-xs font-semibold hover:bg-gray-800 transition-all transform active:scale-95">
                 Rate Product
               </button>
-              <button className="flex-1 bg-white border border-yellow-600 text-yellow-600 py-2 rounded-lg text-xs font-semibold hover:bg-yellow-50 transition-all transform active:scale-95">
+              <button className="flex-1 bg-white border-2 border-[#363636] text-[#363636] py-2 rounded-lg text-xs font-semibold hover:bg-gray-50 transition-all transform active:scale-95">
                 Rate Delivery
               </button>
             </div>
@@ -311,7 +311,7 @@ const OrderTracking = () => {
         {/* Help Section */}
         <div className="text-center py-4">
           <p className="text-xs text-gray-600 mb-2">Having issues with your delivery?</p>
-          <button className="text-sm text-purple-600 font-medium hover:underline transition-all transform active:scale-95">Get Help from Flash AI Support</button>
+          <button className="text-sm text-[#363636] font-medium hover:underline transition-all transform active:scale-95">Get Help from Flash AI Support</button>
         </div>
       </div>
     </div>
