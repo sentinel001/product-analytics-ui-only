@@ -24,7 +24,7 @@ const FashionProduct_v1 = () => {
       sustainability: 'Excellent',
       properties: ['Breathable', 'Soft', 'Hypoallergenic'],
       certifications: ['GOTS Certified', 'Fair Trade'],
-      description: 'Premium organic cotton grown without harmful pesticides. Soft, breathable, and environmentally friendly.',
+      description: 'Organic cotton grown without pesticides. Soft, breathable, eco-friendly.',
       color: 'bg-white border-gray-200'
     },
     {
@@ -34,16 +34,16 @@ const FashionProduct_v1 = () => {
       sustainability: 'Good',
       properties: ['Stretch', 'Shape Retention', 'Flexibility'],
       certifications: ['OEKO-TEX Standard 100'],
-      description: 'Provides comfortable stretch and helps the fabric maintain its shape after multiple wears.',
+      description: 'Provides stretch and shape retention.',
       color: 'bg-white border-gray-200'
     }
   ];
 
   const qualityIndicators = [
-    { aspect: 'Fabric GSM', value: '220 GSM', rating: 'Premium', info: 'Higher GSM = Thicker, more durable fabric', icon: <Package className="w-4 h-4" /> },
-    { aspect: 'Thread Count', value: '180 TPI', rating: 'Excellent', info: 'Tightly woven for durability and comfort', icon: <Droplets className="w-4 h-4" /> },
-    { aspect: 'Stitch Quality', value: 'Double-stitched seams', rating: 'Premium', info: 'Reinforced stitching prevents tearing', icon: <Shield className="w-4 h-4" /> },
-    { aspect: 'Color Fastness', value: 'Grade 4-5', rating: 'Excellent', info: 'Won\'t fade after 30+ washes', icon: <Star className="w-4 h-4" /> }
+    { aspect: 'Fabric GSM', value: '220 GSM', rating: 'Premium', info: 'Thicker, more durable fabric', icon: <Package className="w-4 h-4" /> },
+    { aspect: 'Thread Count', value: '180 TPI', rating: 'Excellent', info: 'Tightly woven for durability', icon: <Droplets className="w-4 h-4" /> },
+    { aspect: 'Stitch Quality', value: 'Double-stitched', rating: 'Premium', info: 'Prevents tearing', icon: <Shield className="w-4 h-4" /> },
+    { aspect: 'Color Fastness', value: 'Grade 4-5', rating: 'Excellent', info: 'No fading after 30+ washes', icon: <Star className="w-4 h-4" /> }
   ];
 
   const sizePrediction = {
@@ -51,8 +51,8 @@ const FashionProduct_v1 = () => {
     confidence: 92,
     fit: 'Regular Fit',
     alternatives: [
-      { size: 'S', fit: 'Slim Fit', confidence: 73, note: 'May feel snug around chest' },
-      { size: 'L', fit: 'Relaxed Fit', confidence: 65, note: 'May be loose around waist' }
+      { size: 'S', fit: 'Slim Fit', confidence: 73, note: 'Snug around chest' },
+      { size: 'L', fit: 'Relaxed Fit', confidence: 65, note: 'Loose around waist' }
     ]
   };
 
@@ -203,7 +203,7 @@ const FashionProduct_v1 = () => {
               </div>
 
               <p className="text-sm text-gray-600 mb-3">
-                Upload 3 photos for AI measurements and size recommendations.
+                Upload 3 photos for AI sizing.
               </p>
 
               {uploadedBodyPhotos.length === 0 ? (
@@ -298,7 +298,7 @@ const FashionProduct_v1 = () => {
                         <div>
                           <p className="text-sm font-semibold text-[#363636]">Saved to Profile</p>
                           <p className="text-sm text-gray-600 mt-0.5">
-                            Used for all future size recommendations.
+                            Used for future sizing.
                           </p>
                         </div>
                       </div>
@@ -512,7 +512,7 @@ const FashionProduct_v1 = () => {
           <div className="mt-2 flex items-start gap-2 bg-white rounded p-2 border border-gray-200">
             <AlertCircle className="w-4 h-4 text-[#363636] mt-0.5 flex-shrink-0" />
             <p className="text-sm text-gray-700">
-              Following these instructions can extend your garment's life by <span className="font-semibold text-[#363636]">2-3 years</span>
+              Can extend garment life by <span className="font-semibold text-[#363636]">2-3 years</span>
             </p>
           </div>
         </div>
@@ -555,10 +555,10 @@ const FashionProduct_v1 = () => {
         <div className="space-y-3">
           {[
             { name: 'Material Quality', score: 95, description: 'Premium organic cotton' },
-            { name: 'Sustainability', score: 98, description: 'GOTS certified, eco-friendly' },
-            { name: 'Comfort', score: 93, description: 'Soft, breathable fabric' },
+            { name: 'Sustainability', score: 98, description: 'GOTS certified' },
+            { name: 'Comfort', score: 93, description: 'Soft & breathable' },
             { name: 'Durability', score: 90, description: '220 GSM, double-stitched' },
-            { name: 'Value for Money', score: 88, description: 'Premium quality, fair price' }
+            { name: 'Value', score: 88, description: 'Quality at fair price' }
           ].map((item, idx) => (
             <div key={idx}>
               <div className="flex items-center justify-between mb-1">
@@ -579,7 +579,7 @@ const FashionProduct_v1 = () => {
 
       {/* Similar Products */}
       <section className="bg-white rounded-xl p-4 mx-4">
-        <h3 className="font-bold text-gray-900 text-base mb-3">Similar Products You Might Like</h3>
+        <h3 className="font-bold text-gray-900 text-base mb-3">Similar Products</h3>
         <div className="space-y-3">
           {[
             { name: 'Organic Crew Neck Tee', brand: 'H&M Conscious', price: 999, image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=200&q=80', rating: 4.6, match: '92%' },

@@ -70,7 +70,7 @@ const FashionCategory = () => {
       aiScore: 95,
       rating: 4.7,
       reviews: 2123,
-      matchReason: 'Perfect fit for athletic build - slim fit with stretch',
+      matchReason: 'Slim fit with stretch',
       matchPercentage: 95,
       inStock: true
     },
@@ -84,7 +84,7 @@ const FashionCategory = () => {
       aiScore: 92,
       rating: 4.5,
       reviews: 1567,
-      matchReason: 'Tailored fit complements your body type',
+      matchReason: 'Tailored fit',
       matchPercentage: 92,
       inStock: true
     },
@@ -98,7 +98,7 @@ const FashionCategory = () => {
       aiScore: 90,
       rating: 4.8,
       reviews: 3421,
-      matchReason: 'Versatile style matches your minimalist preference',
+      matchReason: 'Minimalist style',
       matchPercentage: 90,
       inStock: true
     },
@@ -172,7 +172,7 @@ const FashionCategory = () => {
             <div className="flex-1">
               <h3 className="text-sm font-bold text-[#363636] mb-1">AI-Personalized Selection</h3>
               <p className="text-sm text-gray-700 mb-3">
-                Curated styles based on {userProfile.previousPurchases} purchases.
+                Curated based on {userProfile.previousPurchases} purchases.
               </p>
 
               {/* User Profile Pills */}

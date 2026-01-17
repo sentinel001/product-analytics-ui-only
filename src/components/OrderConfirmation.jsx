@@ -48,7 +48,7 @@ const OrderConfirmation = () => {
     {
       icon: '📊',
       title: 'Track Your Results',
-      description: 'AI analysis of progress photos in 2 weeks'
+      description: 'AI photo analysis in 2 weeks'
     },
     {
       icon: '🔔',
@@ -80,7 +80,7 @@ const OrderConfirmation = () => {
             <Sparkles className="w-5 h-5 text-[#363636] mt-0.5 flex-shrink-0" />
             <div>
               <p className="text-sm font-semibold text-[#363636] mb-1">AI Tracking Your Order</p>
-              <p className="text-sm text-gray-600 mb-2">Get smart updates and product guidance.</p>
+              <p className="text-sm text-gray-600 mb-2">Smart updates & guidance.</p>
               <button
                 onClick={() => navigate('/order-tracking')}
                 className="text-sm text-[#363636] font-medium flex items-center gap-1 hover:underline transition-all transform active:scale-95"

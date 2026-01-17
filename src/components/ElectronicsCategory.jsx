@@ -70,7 +70,7 @@ const ElectronicsCategory = () => {
       aiScore: 96,
       rating: 4.8,
       reviews: 5243,
-      matchReason: 'Perfect for programmers - exceptional noise cancellation',
+      matchReason: 'Exceptional noise cancellation',
       matchPercentage: 96,
       inStock: true
     },
@@ -84,7 +84,7 @@ const ElectronicsCategory = () => {
       aiScore: 95,
       rating: 4.9,
       reviews: 3567,
-      matchReason: 'Ideal for your productivity and programming needs',
+      matchReason: 'For productivity & programming',
       matchPercentage: 95,
       inStock: true
     },
@@ -98,7 +98,7 @@ const ElectronicsCategory = () => {
       aiScore: 92,
       rating: 4.7,
       reviews: 2891,
-      matchReason: 'Ergonomic mouse perfect for long coding sessions',
+      matchReason: 'Ergonomic for long sessions',
       matchPercentage: 92,
       inStock: true
     },
@@ -172,7 +172,7 @@ const ElectronicsCategory = () => {
             <div className="flex-1">
               <h3 className="text-sm font-bold text-[#363636] mb-1">AI-Personalized Selection</h3>
               <p className="text-sm text-gray-700 mb-3">
-                Tech curated for you based on {userProfile.previousPurchases} purchases.
+                Curated based on {userProfile.previousPurchases} purchases.
               </p>
 
               {/* User Profile Pills */}

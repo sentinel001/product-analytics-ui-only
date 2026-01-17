@@ -14,7 +14,7 @@ const FashionProduct_v2 = () => {
       sustainability: 'Excellent',
       properties: ['Breathable', 'Soft', 'Hypoallergenic'],
       certifications: ['GOTS Certified', 'Fair Trade'],
-      description: 'Premium organic cotton grown without harmful pesticides. Soft, breathable, and environmentally friendly.',
+      description: 'Organic cotton grown without pesticides. Soft, breathable, eco-friendly.',
       color: 'bg-white border-gray-200'
     },
     {
@@ -24,7 +24,7 @@ const FashionProduct_v2 = () => {
       sustainability: 'Good',
       properties: ['Stretch', 'Shape Retention', 'Flexibility'],
       certifications: ['OEKO-TEX Standard 100'],
-      description: 'Provides comfortable stretch and helps the fabric maintain its shape after multiple wears.',
+      description: 'Provides stretch and shape retention.',
       color: 'bg-white border-gray-200'
     }
   ];
@@ -53,14 +53,14 @@ const FashionProduct_v2 = () => {
       fit: 'Too Tight',
       match: 45,
       confidence: 45,
-      description: 'Too tight in chest and shoulders.',
+      description: 'Tight in chest Too tight in chest and shoulders. shoulders.',
       issues: ['Tight around chest', 'Restricted shoulders', 'May cause discomfort']
     },
     'M': {
       fit: 'Perfect Fit',
       match: 95,
       confidence: 92,
-      description: 'Ideal fit for your athletic build.',
+      description: 'Ideal for athletic build.',
       benefits: ['Perfect chest fit', 'Comfortable shoulders', 'Ideal length']
     },
     'L': {
@@ -74,7 +74,7 @@ const FashionProduct_v2 = () => {
       fit: 'Too Loose',
       match: 35,
       confidence: 35,
-      description: 'Too loose and oversized.',
+      description: 'Loose Too loose and oversized. oversized.',
       issues: ['Very loose fit', 'Poor silhouette', 'Not recommended']
     }
   };
@@ -502,10 +502,10 @@ const FashionProduct_v2 = () => {
         <div className="space-y-3">
           {[
             { name: 'Material Quality', score: 95, description: 'Premium organic cotton' },
-            { name: 'Sustainability', score: 98, description: 'GOTS certified, eco-friendly' },
-            { name: 'Comfort', score: 93, description: 'Soft, breathable fabric' },
+            { name: 'Sustainability', score: 98, description: 'GOTS certified' },
+            { name: 'Comfort', score: 93, description: 'Soft Soft, breathable fabric breathable' },
             { name: 'Durability', score: 90, description: '220 GSM, double-stitched' },
-            { name: 'Value for Money', score: 88, description: 'Premium quality, fair price' }
+            { name: 'Value', score: 88, description: 'Quality at fair price' }
           ].map((item, idx) => (
             <div key={idx}>
               <div className="flex items-center justify-between mb-1">

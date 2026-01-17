@@ -86,8 +86,8 @@ const BeautyProduct_v1 = () => {
     concerns: ['Large Pores', 'Occasional Breakouts', 'Mild Redness'],
     recommendations: [
       'Use oil-free, non-comedogenic products',
-      'Focus on hydration without heavy oils',
-      'Consider products with niacinamide for pore refinement'
+      'Focus on lightweight hydration',
+      'Try niacinamide for pore refinement'
     ],
     confidence: 94
   };
@@ -157,7 +157,7 @@ const BeautyProduct_v1 = () => {
             <Award className="w-5 h-5 text-[#363636]" />
             <div>
               <p className="text-sm font-bold text-[#363636]">Ranked #2 in "Top 10 Microplastic-Free Face Scrubs"</p>
-              <p className="text-sm text-gray-600">Updated Jan 2026 • 200 products analyzed</p>
+              <p className="text-sm text-gray-600">Jan 2026 • 200 products</p>
             </div>
           </div>
         </div>
@@ -178,7 +178,7 @@ const BeautyProduct_v1 = () => {
             <div className="text-center py-4">
               <Camera className="w-12 h-12 text-gray-400 mx-auto mb-3" />
               <p className="text-base font-semibold text-[#363636] mb-1">Get Personalized Matches</p>
-              <p className="text-sm text-gray-600 mb-3">Upload 3 face photos for AI analysis</p>
+              <p className="text-sm text-gray-600 mb-3">Upload 3 photos for AI analysis</p>
               <button
                 onClick={simulateUpload}
                 className="bg-[#363636] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#4a4a4a] transition-all transform active:scale-95"
@@ -295,7 +295,7 @@ const BeautyProduct_v1 = () => {
 
                 <div className="bg-gray-50 border border-gray-200 rounded p-2">
                   <p className="text-sm text-gray-700">
-                    <span className="font-semibold text-[#363636]">Saved to profile.</span> Used for all future recommendations.
+                    <span className="font-semibold text-[#363636]">Saved to profile.</span> Used for future recommendations.
                   </p>
                 </div>
               </div>
@@ -342,10 +342,10 @@ const BeautyProduct_v1 = () => {
           {/* Application Steps */}
           <div className="space-y-2">
             {[
-              { step: 1, text: 'Cleanse face and pat dry', icon: '💧' },
+              { step: 1, text: 'Cleanse and pat dry', icon: '💧' },
               { step: 2, text: 'Take pea-sized amount', icon: '🫘' },
-              { step: 3, text: 'Apply in upward circular motions', icon: '↻' },
-              { step: 4, text: 'Allow 2 min to absorb', icon: '⏱️' },
+              { step: 3, text: 'Apply in circular motions', icon: '↻' },
+              { step: 4, text: 'Let absorb for 2 min', icon: '⏱️' },
             ].map((item) => (
               <div key={item.step} className="flex items-center gap-2 text-xs bg-white border border-gray-200 rounded p-2">
                 <span className="w-5 h-5 bg-[#363636] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
@@ -458,7 +458,7 @@ const BeautyProduct_v1 = () => {
 
           {showComparison && (
             <div className="space-y-3">
-              <p className="text-sm text-gray-600">Compare up to 3 products:</p>
+              <p className="text-sm text-gray-600">Compare up to 3:</p>
 
               {comparisonProducts.map((product) => (
                 <div
@@ -581,8 +581,8 @@ const BeautyProduct_v1 = () => {
           <h3 className="text-sm font-bold text-[#363636] mb-3">Key Ingredients</h3>
           <div className="bg-gray-50 rounded-lg p-4 space-y-2">
             {[
-              { name: 'Hyaluronic Acid', purpose: 'Deep hydration', safe: true },
-              { name: 'Glycerin', purpose: 'Moisture retention', safe: true },
+              { name: 'Hyaluronic Acid', purpose: 'Hydration', safe: true },
+              { name: 'Glycerin', purpose: 'Moisture lock', safe: true },
               { name: 'Dimethicone', purpose: 'Smooth texture', safe: true },
               { name: 'Fragrance', purpose: 'Light scent', safe: false, warning: 'May cause sensitivity' },
             ].map((ingredient, idx) => (
@@ -637,7 +637,7 @@ const BeautyProduct_v1 = () => {
             <div className="flex-1">
               <div className="text-sm text-green-600 font-bold mb-1">Excellent Match</div>
               <p className="text-base text-gray-700">
-                Ideal for oily/combination skin
+                For oily/combination skin
               </p>
             </div>
           </div>

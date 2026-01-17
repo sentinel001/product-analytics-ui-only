@@ -134,7 +134,7 @@ const BeautyProduct_v2 = () => {
             <Award className="w-5 h-5 text-[#363636]" />
             <div>
               <p className="text-sm font-bold text-[#363636]">Ranked #1 in "Best Acne Treatments for Oily Skin"</p>
-              <p className="text-sm text-gray-600">Updated Jan 2026 • 350 products analyzed</p>
+              <p className="text-sm text-gray-600">Jan 2026 • 350 products</p>
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@ const BeautyProduct_v2 = () => {
                 {userSkinProfile.matchScore}% Match for Your Skin
               </h3>
               <p className="text-sm text-gray-700 mb-3">
-                Ideal for your {userSkinProfile.skinType} skin type.
+                For your {userSkinProfile.skinType} skin.
               </p>
 
               {/* Profile Pills */}
@@ -175,7 +175,7 @@ const BeautyProduct_v2 = () => {
                 <div className="space-y-1">
                   <div className="flex items-start gap-2 text-sm text-gray-700">
                     <CheckCircle className="w-3 h-3 text-[#363636] mt-0.5 flex-shrink-0" />
-                    <span>Addresses your acne & large pores</span>
+                    <span>Targets acne & large pores</span>
                   </div>
                   <div className="flex items-start gap-2 text-sm text-gray-700">
                     <CheckCircle className="w-3 h-3 text-[#363636] mt-0.5 flex-shrink-0" />
@@ -183,7 +183,7 @@ const BeautyProduct_v2 = () => {
                   </div>
                   <div className="flex items-start gap-2 text-sm text-gray-700">
                     <CheckCircle className="w-3 h-3 text-[#363636] mt-0.5 flex-shrink-0" />
-                    <span>Has niacinamide for pores</span>
+                    <span>Has niacinamide</span>
                   </div>
                 </div>
               </div>
@@ -239,9 +239,9 @@ const BeautyProduct_v2 = () => {
           {/* Application Steps */}
           <div className="space-y-2">
             {[
-              { step: 1, text: 'Cleanse face and pat dry', icon: '💧' },
-              { step: 2, text: 'Apply thin layer on affected areas', icon: '✨' },
-              { step: 3, text: 'Gently massage until absorbed', icon: '↻' },
+              { step: 1, text: 'Cleanse and pat dry', icon: '💧' },
+              { step: 2, text: 'Apply thin layer on area', icon: '✨' },
+              { step: 3, text: 'Massage until absorbed', icon: '↻' },
               { step: 4, text: 'Follow with moisturizer', icon: '💦' },
             ].map((item) => (
               <div key={item.step} className="flex items-center gap-2 text-sm bg-white border border-gray-200 rounded p-2">
@@ -355,7 +355,7 @@ const BeautyProduct_v2 = () => {
 
           {showComparison && (
             <div className="space-y-3">
-              <p className="text-sm text-gray-600">Select up to 3 products to compare:</p>
+              <p className="text-sm text-gray-600">Select up to 3 to compare:</p>
 
               {comparisonProducts.map((product) => (
                 <div
@@ -478,10 +478,10 @@ const BeautyProduct_v2 = () => {
           <h3 className="text-base font-bold text-[#363636] mb-3">Key Ingredients</h3>
           <div className="bg-gray-50 rounded-lg p-4 space-y-2">
             {[
-              { name: 'Niacinamide', purpose: 'Reduces pore size & inflammation', safe: true },
+              { name: 'Niacinamide', purpose: 'Reduces pores & inflammation', safe: true },
               { name: 'Salicylic Acid', purpose: 'Unclogs pores & prevents acne', safe: true },
-              { name: 'Zinc PCA', purpose: 'Controls oil production', safe: true },
-              { name: 'Piroctone Olamine', purpose: 'Anti-bacterial agent', safe: true },
+              { name: 'Zinc PCA', purpose: 'Controls oil', safe: true },
+              { name: 'Piroctone Olamine', purpose: 'Anti-bacterial', safe: true },
             ].map((ingredient, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded p-3">
                 <div className="flex items-start justify-between">
@@ -534,7 +534,7 @@ const BeautyProduct_v2 = () => {
             <div className="flex-1">
               <div className="text-sm text-green-600 font-bold mb-1">Excellent Match!</div>
               <p className="text-base text-gray-700">
-                Perfect for your oily/combination skin with acne concerns. Clinically proven formula
+                For your oily/combination skin with acne. Clinically proven
               </p>
             </div>
           </div>

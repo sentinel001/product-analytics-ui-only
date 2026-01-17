@@ -72,7 +72,7 @@ const OrderTracking = () => {
     {
       time: '2 min ago',
       icon: '🚚',
-      message: 'Driver Rajesh nearby! Arriving in 15 min',
+      message: 'Driver nearby! Arriving in 15 min',
       type: 'info'
     },
     {
@@ -103,7 +103,7 @@ const OrderTracking = () => {
     {
       icon: '📊',
       title: 'Track Results in 2 Weeks',
-      description: 'Upload before/after photos for AI analysis'
+      description: 'Upload photos for AI analysis'
     }
   ];
 
