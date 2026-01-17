@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ChevronRight, Info, ExternalLink, Play, Clock, Droplet, ArrowLeft, ShoppingCart, Award, TrendingUp, Star, Check, X, Filter, CheckCircle } from 'lucide-react';
+import { ChevronRight, Info, ExternalLink, Play, Clock, Droplet, ArrowLeft, ShoppingCart, Award, TrendingUp, Star, Check, X, Filter, CheckCircle, Camera, Upload, Sparkles } from 'lucide-react';
 
 const BeautyProduct = () => {
   const navigate = useNavigate();
@@ -8,6 +8,9 @@ const BeautyProduct = () => {
   const [showCompatibility, setShowCompatibility] = useState(false);
   const [showComparison, setShowComparison] = useState(false);
   const [selectedProducts, setSelectedProducts] = useState([1]);
+  const [showSkinAnalysis, setShowSkinAnalysis] = useState(false);
+  const [uploadedPhotos, setUploadedPhotos] = useState([]);
+  const [analysisComplete, setAnalysisComplete] = useState(false);
 
   const comparisonProducts = [
     {
@@ -73,6 +76,32 @@ const BeautyProduct = () => {
     }
   };
 
+  const skinAnalysisResult = {
+    skinType: 'Oily/Combination',
+    concerns: ['Large Pores', 'Occasional Breakouts', 'Mild Redness'],
+    recommendations: [
+      'Use oil-free, non-comedogenic products',
+      'Focus on hydration without heavy oils',
+      'Consider products with niacinamide for pore refinement'
+    ],
+    confidence: 94
+  };
+
+  const handlePhotoUpload = (e) => {
+    const files = Array.from(e.target.files);
+    if (uploadedPhotos.length + files.length <= 3) {
+      setUploadedPhotos([...uploadedPhotos, ...files]);
+      if (uploadedPhotos.length + files.length === 3) {
+        setTimeout(() => setAnalysisComplete(true), 1500);
+      }
+    }
+  };
+
+  const removePhoto = (index) => {
+    setUploadedPhotos(uploadedPhotos.filter((_, i) => i !== index));
+    setAnalysisComplete(false);
+  };
+
   return (
     <div className="max-w-md mx-auto bg-white min-h-screen font-['Inter_Tight'] pb-24">
       {/* Header */}
@@ -131,6 +160,139 @@ const BeautyProduct = () => {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Skin Analysis Section */}
+        <section className="bg-gray-50 border-2 border-gray-300 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-sm font-bold text-black flex items-center gap-2">
+              <Sparkles className="w-5 h-5" />
+              AI Skin Analysis
+            </h3>
+            {!showSkinAnalysis && (
+              <button
+                onClick={() => setShowSkinAnalysis(true)}
+                className="text-xs font-semibold text-black hover:underline"
+              >
+                Start Analysis
+              </button>
+            )}
+          </div>
+
+          {!showSkinAnalysis ? (
+            <div className="text-center py-4">
+              <Camera className="w-12 h-12 text-gray-400 mx-auto mb-3" />
+              <p className="text-sm font-semibold text-black mb-1">Get Personalized Recommendations</p>
+              <p className="text-xs text-gray-600 mb-3">Upload 3 photos of your face from different angles for AI analysis</p>
+              <button
+                onClick={() => setShowSkinAnalysis(true)}
+                className="bg-black text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-all transform active:scale-95"
+              >
+                Upload Photos
+              </button>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {/* Photo Upload Area */}
+              {uploadedPhotos.length < 3 && (
+                <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-4">
+                  <label className="cursor-pointer block">
+                    <input
+                      type="file"
+                      accept="image/*"
+                      multiple
+                      onChange={handlePhotoUpload}
+                      className="hidden"
+                    />
+                    <div className="text-center">
+                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                      <p className="text-xs font-semibold text-black">Upload {3 - uploadedPhotos.length} more photo{3 - uploadedPhotos.length !== 1 ? 's' : ''}</p>
+                      <p className="text-xs text-gray-600 mt-1">Front, left side, right side views</p>
+                    </div>
+                  </label>
+                </div>
+              )}
+
+              {/* Uploaded Photos Preview */}
+              {uploadedPhotos.length > 0 && (
+                <div className="grid grid-cols-3 gap-2">
+                  {uploadedPhotos.map((photo, idx) => (
+                    <div key={idx} className="relative">
+                      <div className="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                        <img
+                          src={URL.createObjectURL(photo)}
+                          alt={`Upload ${idx + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <button
+                        onClick={() => removePhoto(idx)}
+                        className="absolute -top-1 -right-1 bg-black text-white rounded-full p-1 hover:bg-gray-800"
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                      <p className="text-xs text-gray-600 text-center mt-1">Photo {idx + 1}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Analysis Result */}
+              {analysisComplete && (
+                <div className="bg-white border border-gray-200 rounded-lg p-3 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h4 className="text-sm font-bold text-black">Analysis Complete</h4>
+                    <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">
+                      {skinAnalysisResult.confidence}% confidence
+                    </span>
+                  </div>
+
+                  <div>
+                    <p className="text-xs font-semibold text-gray-700 mb-1">Detected Skin Type:</p>
+                    <div className="bg-gray-50 border border-gray-200 rounded p-2">
+                      <p className="text-sm font-bold text-black">{skinAnalysisResult.skinType}</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-xs font-semibold text-gray-700 mb-1">Main Concerns:</p>
+                    <div className="flex flex-wrap gap-1">
+                      {skinAnalysisResult.concerns.map((concern, idx) => (
+                        <span key={idx} className="text-xs bg-gray-50 border border-gray-300 text-gray-700 px-2 py-1 rounded">
+                          {concern}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-xs font-semibold text-gray-700 mb-1">AI Recommendations:</p>
+                    <div className="space-y-1">
+                      {skinAnalysisResult.recommendations.map((rec, idx) => (
+                        <div key={idx} className="flex items-start gap-2 text-xs text-gray-700">
+                          <CheckCircle className="w-3 h-3 text-black mt-0.5 flex-shrink-0" />
+                          <span>{rec}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 border border-gray-200 rounded p-2">
+                    <p className="text-xs text-gray-700">
+                      <span className="font-semibold text-black">Saved to your profile.</span> We'll use this to personalize your beauty recommendations.
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {uploadedPhotos.length === 3 && !analysisComplete && (
+                <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
+                  <div className="animate-spin w-8 h-8 border-4 border-gray-200 border-t-black rounded-full mx-auto mb-2"></div>
+                  <p className="text-xs font-semibold text-black">Analyzing your skin...</p>
+                </div>
+              )}
+            </div>
+          )}
         </section>
 
         {/* Buying Guide Reference */}
