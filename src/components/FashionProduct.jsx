@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Star, TrendingDown, Ruler, AlertCircle, ChevronRight, CheckCircle, Info, Shirt, Wind, Droplets, Shield, Package, Users, ArrowLeft, ShoppingCart } from 'lucide-react';
+import { Star, TrendingDown, Ruler, AlertCircle, ChevronRight, CheckCircle, Info, Shirt, Wind, Droplets, Shield, Package, Users, ArrowLeft, ShoppingCart, Camera, Upload, Sparkles, X } from 'lucide-react';
 
 const FashionProduct = () => {
   const navigate = useNavigate();
@@ -12,6 +12,9 @@ const FashionProduct = () => {
     waist: '32'
   });
   const [showSizePredictor, setShowSizePredictor] = useState(false);
+  const [showBodyAnalysis, setShowBodyAnalysis] = useState(false);
+  const [uploadedBodyPhotos, setUploadedBodyPhotos] = useState([]);
+  const [bodyAnalysisComplete, setBodyAnalysisComplete] = useState(false);
 
   const materialBreakdown = [
     {
@@ -70,6 +73,32 @@ const FashionProduct = () => {
     withPredictor: 12,
     without: 38,
     savings: 26
+  };
+
+  const bodyAnalysisResult = {
+    bodyType: 'Athletic Build',
+    recommendations: {
+      styles: ['Slim Fit', 'Regular Fit', 'Athletic Fit'],
+      types: ['Crew Neck T-Shirts', 'V-Neck T-Shirts', 'Polo Shirts', 'Henley Shirts'],
+      patterns: ['Solid Colors', 'Subtle Stripes', 'Geometric Patterns'],
+      colors: ['Navy Blue', 'Charcoal Grey', 'Forest Green', 'Burgundy', 'White']
+    },
+    confidence: 91
+  };
+
+  const handleBodyPhotoUpload = (e) => {
+    const files = Array.from(e.target.files);
+    if (uploadedBodyPhotos.length + files.length <= 3) {
+      setUploadedBodyPhotos([...uploadedBodyPhotos, ...files]);
+      if (uploadedBodyPhotos.length + files.length === 3) {
+        setTimeout(() => setBodyAnalysisComplete(true), 1500);
+      }
+    }
+  };
+
+  const removeBodyPhoto = (index) => {
+    setUploadedBodyPhotos(uploadedBodyPhotos.filter((_, i) => i !== index));
+    setBodyAnalysisComplete(false);
   };
 
   return (
@@ -283,6 +312,185 @@ const FashionProduct = () => {
                 ))}
               </div>
             </div>
+          </div>
+        )}
+      </section>
+
+      {/* AI Body Analysis Feature */}
+      <section className="bg-gray-50 border-2 border-gray-300 rounded-lg p-4 mx-4 mb-3">
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-sm font-bold text-black flex items-center gap-2">
+            <Sparkles className="w-5 h-5" />
+            AI Body & Style Analysis
+          </h3>
+          {bodyAnalysisComplete && (
+            <span className="text-xs bg-black text-white px-2 py-1 rounded-full">Saved to Profile</span>
+          )}
+        </div>
+
+        <p className="text-xs text-gray-600 mb-3">
+          Upload photos from different angles and our AI will recommend the best dress styles, types, patterns, and colors for your body type.
+        </p>
+
+        {!showBodyAnalysis ? (
+          <button
+            onClick={() => setShowBodyAnalysis(true)}
+            className="w-full bg-white border-2 border-gray-300 rounded-lg p-4 hover:border-black transition-all transform active:scale-95"
+          >
+            <div className="flex flex-col items-center gap-2">
+              <Camera className="w-8 h-8 text-black" />
+              <p className="text-sm font-semibold text-black">Upload Body Photos</p>
+              <p className="text-xs text-gray-600">Get personalized style recommendations</p>
+            </div>
+          </button>
+        ) : (
+          <div className="space-y-3">
+            {/* Photo Upload Area */}
+            {uploadedBodyPhotos.length < 3 && (
+              <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 hover:border-black transition-all">
+                <label className="cursor-pointer block">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    onChange={handleBodyPhotoUpload}
+                    className="hidden"
+                  />
+                  <div className="flex flex-col items-center gap-2">
+                    <Upload className="w-6 h-6 text-gray-400" />
+                    <p className="text-xs font-semibold text-black">
+                      Upload {uploadedBodyPhotos.length === 0 ? '3' : 3 - uploadedBodyPhotos.length} more photo{3 - uploadedBodyPhotos.length !== 1 ? 's' : ''}
+                    </p>
+                    <p className="text-xs text-gray-600 text-center">
+                      Front view, side view, and back view for best results
+                    </p>
+                  </div>
+                </label>
+              </div>
+            )}
+
+            {/* Photo Previews Grid */}
+            {uploadedBodyPhotos.length > 0 && (
+              <div className="grid grid-cols-3 gap-2">
+                {uploadedBodyPhotos.map((photo, idx) => (
+                  <div key={idx} className="relative">
+                    <div className="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                      <img
+                        src={URL.createObjectURL(photo)}
+                        alt={`Body photo ${idx + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <button
+                      onClick={() => removeBodyPhoto(idx)}
+                      className="absolute -top-1 -right-1 bg-black text-white rounded-full p-1 hover:bg-gray-800 transition-all"
+                    >
+                      <X className="w-3 h-3" />
+                    </button>
+                    <p className="text-xs text-gray-600 text-center mt-1">
+                      {idx === 0 ? 'Front' : idx === 1 ? 'Side' : 'Back'}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Loading State */}
+            {uploadedBodyPhotos.length === 3 && !bodyAnalysisComplete && (
+              <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
+                <div className="animate-spin w-8 h-8 border-4 border-gray-200 border-t-black rounded-full mx-auto mb-2"></div>
+                <p className="text-xs font-semibold text-black">Analyzing your body type & style preferences...</p>
+                <p className="text-xs text-gray-600 mt-1">This may take a few moments</p>
+              </div>
+            )}
+
+            {/* Analysis Result */}
+            {bodyAnalysisComplete && (
+              <div className="bg-white border border-gray-200 rounded-lg p-3 space-y-3">
+                {/* Confidence & Body Type */}
+                <div className="flex items-center justify-between pb-3 border-b border-gray-200">
+                  <div>
+                    <p className="text-xs text-gray-600 mb-1">Detected Body Type</p>
+                    <p className="text-base font-bold text-black">{bodyAnalysisResult.bodyType}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-xs text-gray-600 mb-1">Confidence</p>
+                    <p className="text-base font-bold text-black">{bodyAnalysisResult.confidence}%</p>
+                  </div>
+                </div>
+
+                {/* Recommended Styles */}
+                <div>
+                  <p className="text-xs font-semibold text-black mb-2 flex items-center gap-1">
+                    <CheckCircle className="w-3 h-3" />
+                    Recommended Fits
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {bodyAnalysisResult.recommendations.styles.map((style, idx) => (
+                      <span key={idx} className="text-xs bg-gray-50 border border-gray-300 px-2 py-1 rounded text-gray-900">
+                        {style}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Recommended Types */}
+                <div>
+                  <p className="text-xs font-semibold text-black mb-2 flex items-center gap-1">
+                    <CheckCircle className="w-3 h-3" />
+                    Best Dress Types
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {bodyAnalysisResult.recommendations.types.map((type, idx) => (
+                      <span key={idx} className="text-xs bg-gray-50 border border-gray-300 px-2 py-1 rounded text-gray-900">
+                        {type}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Recommended Patterns */}
+                <div>
+                  <p className="text-xs font-semibold text-black mb-2 flex items-center gap-1">
+                    <CheckCircle className="w-3 h-3" />
+                    Flattering Patterns
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {bodyAnalysisResult.recommendations.patterns.map((pattern, idx) => (
+                      <span key={idx} className="text-xs bg-gray-50 border border-gray-300 px-2 py-1 rounded text-gray-900">
+                        {pattern}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Recommended Colors */}
+                <div>
+                  <p className="text-xs font-semibold text-black mb-2 flex items-center gap-1">
+                    <CheckCircle className="w-3 h-3" />
+                    Complementary Colors
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {bodyAnalysisResult.recommendations.colors.map((color, idx) => (
+                      <span key={idx} className="text-xs bg-gray-50 border border-gray-300 px-2 py-1 rounded text-gray-900">
+                        {color}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Profile Save Notice */}
+                <div className="bg-gray-50 rounded-lg p-2.5 flex items-start gap-2 border border-gray-200">
+                  <Sparkles className="w-4 h-4 text-black mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-xs font-semibold text-black">Saved to Your Profile</p>
+                    <p className="text-xs text-gray-600 mt-0.5">
+                      We'll use this to personalize your Fashion recommendations and show you clothes that match your body type.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </section>
