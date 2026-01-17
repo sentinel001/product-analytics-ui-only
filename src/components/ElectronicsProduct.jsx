@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Star, TrendingDown, Clock, AlertCircle, ChevronDown, ChevronUp, Info, Zap, Cpu, Battery, Camera, Shield, ArrowLeft, ShoppingCart } from 'lucide-react';
+import { Star, TrendingDown, Clock, AlertCircle, ChevronDown, ChevronUp, Info, Zap, Cpu, Battery, Camera, Shield, ArrowLeft, ShoppingCart, Bell, BellOff } from 'lucide-react';
 
 const ElectronicsProduct = () => {
   const navigate = useNavigate();
   const [expandedSpec, setExpandedSpec] = useState(null);
   const [priceHistory, setPriceHistory] = useState('30d');
+  const [priceAlertEnabled, setPriceAlertEnabled] = useState(false);
 
   const specifications = [
     {
       category: 'Performance',
-      icon: <Cpu className="w-5 h-5 text-blue-600" />,
+      icon: <Cpu className="w-5 h-5 text-black" />,
       specs: [
         { name: 'Processor', value: 'Apple A17 Pro', tooltip: '3nm chip with 6-core CPU (2 performance + 4 efficiency cores)', highlight: true },
         { name: 'RAM', value: '8GB', tooltip: 'LPDDR5 unified memory for smooth multitasking' },
@@ -20,7 +21,7 @@ const ElectronicsProduct = () => {
     },
     {
       category: 'Display',
-      icon: <Zap className="w-5 h-5 text-purple-600" />,
+      icon: <Zap className="w-5 h-5 text-black" />,
       specs: [
         { name: 'Screen Size', value: '6.1 inches', tooltip: 'Super Retina XDR OLED display' },
         { name: 'Resolution', value: '2556 x 1179', tooltip: '460 ppi pixel density for crisp visuals', highlight: true },
@@ -30,7 +31,7 @@ const ElectronicsProduct = () => {
     },
     {
       category: 'Battery & Charging',
-      icon: <Battery className="w-5 h-5 text-green-600" />,
+      icon: <Battery className="w-5 h-5 text-black" />,
       specs: [
         { name: 'Battery Capacity', value: '3,877 mAh', tooltip: 'Lithium-ion battery', visualBar: 3877 },
         { name: 'Video Playback', value: 'Up to 23 hours', tooltip: 'Based on Apple testing conditions', highlight: true },
@@ -40,7 +41,7 @@ const ElectronicsProduct = () => {
     },
     {
       category: 'Camera System',
-      icon: <Camera className="w-5 h-5 text-pink-600" />,
+      icon: <Camera className="w-5 h-5 text-black" />,
       specs: [
         { name: 'Main Camera', value: '48MP f/1.6', tooltip: 'Quad-pixel sensor with sensor-shift OIS', highlight: true },
         { name: 'Ultra Wide', value: '12MP f/2.4', tooltip: '120° field of view with macro capability' },
@@ -51,10 +52,10 @@ const ElectronicsProduct = () => {
   ];
 
   const priceComparisons = [
-    { platform: 'Amazon', price: 134999, rating: 4.6, reviews: '2,847', discount: 5, stock: 'In Stock', delivery: 'Tomorrow', logo: 'https://logo.clearbit.com/amazon.in', color: 'bg-orange-50 border-orange-200' },
-    { platform: 'Flipkart', price: 135999, rating: 4.5, reviews: '1,932', discount: 4, stock: 'In Stock', delivery: 'Tomorrow', logo: 'https://logo.clearbit.com/flipkart.com', color: 'bg-blue-50 border-blue-200', bestSeller: true },
-    { platform: 'Croma', price: 139900, rating: 4.7, reviews: '486', discount: 0, stock: 'Limited Stock', delivery: '2-3 days', logo: 'https://logo.clearbit.com/croma.com', color: 'bg-green-50 border-green-200' },
-    { platform: 'Apple Store', price: 139900, rating: 4.8, reviews: '12,453', discount: 0, stock: 'In Stock', delivery: '3-5 days', logo: 'https://logo.clearbit.com/apple.com', color: 'bg-gray-50 border-gray-200' }
+    { platform: 'Amazon', price: 134999, rating: 4.6, reviews: '2,847', discount: 5, stock: 'In Stock', delivery: 'Tomorrow', logo: 'https://logo.clearbit.com/amazon.in', color: 'bg-white border-gray-200' },
+    { platform: 'Flipkart', price: 135999, rating: 4.5, reviews: '1,932', discount: 4, stock: 'In Stock', delivery: 'Tomorrow', logo: 'https://logo.clearbit.com/flipkart.com', color: 'bg-white border-gray-200', bestSeller: true },
+    { platform: 'Croma', price: 139900, rating: 4.7, reviews: '486', discount: 0, stock: 'Limited Stock', delivery: '2-3 days', logo: 'https://logo.clearbit.com/croma.com', color: 'bg-white border-gray-200' },
+    { platform: 'Apple Store', price: 139900, rating: 4.8, reviews: '12,453', discount: 0, stock: 'In Stock', delivery: '3-5 days', logo: 'https://logo.clearbit.com/apple.com', color: 'bg-white border-gray-200' }
   ];
 
   const priceHistoryData = {
@@ -110,22 +111,22 @@ const ElectronicsProduct = () => {
               </div>
               <span className="text-xs text-gray-500">16,718 reviews</span>
             </div>
-            <div className="inline-flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
-              <TrendingDown className="w-3 h-3 text-green-600" />
-              <span className="text-xs font-medium text-green-700">₹14,901 price drop</span>
+            <div className="inline-flex items-center gap-1 bg-gray-50 border border-gray-300 px-2 py-1 rounded">
+              <TrendingDown className="w-3 h-3 text-black" />
+              <span className="text-xs font-medium text-black">₹14,901 price drop</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* PHASE 1 FEATURE: Real-Time Price Intelligence Engine */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 mx-4 mb-3 border border-blue-100">
+      <section className="bg-gray-50 rounded-xl p-4 mx-4 mb-3 border-2 border-gray-300">
         <div className="flex items-center justify-between mb-3">
           <h3 className="font-bold text-gray-900 text-base flex items-center gap-2">
-            <TrendingDown className="w-5 h-5 text-blue-600" />
+            <TrendingDown className="w-5 h-5 text-black" />
             Live Price Intelligence
           </h3>
-          <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">Updated 2 min ago</span>
+          <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">Updated 2 min ago</span>
         </div>
 
         {/* Price History Graph */}
@@ -137,7 +138,7 @@ const ElectronicsProduct = () => {
                 <button
                   key={period}
                   onClick={() => setPriceHistory(period)}
-                  className={`text-xs px-2 py-1 rounded ${priceHistory === period ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600'}`}
+                  className={`text-xs px-2 py-1 rounded ${priceHistory === period ? 'bg-black text-white' : 'bg-gray-100 text-gray-600'}`}
                 >
                   {period}
                 </button>
@@ -145,44 +146,109 @@ const ElectronicsProduct = () => {
             </div>
           </div>
 
-          {/* Simple line chart visualization */}
-          <div className="relative h-24 flex items-end gap-1">
-            {currentHistory.map((price, idx) => {
-              const height = ((price - lowestPrice) / (highestPrice - lowestPrice)) * 100;
-              return (
-                <div key={idx} className="flex-1 flex flex-col items-center">
-                  <div
-                    className="w-full bg-gradient-to-t from-blue-500 to-blue-300 rounded-t"
-                    style={{ height: `${Math.max(height, 10)}%` }}
+          {/* Line chart visualization */}
+          <div className="relative h-32 border border-gray-200 rounded-lg p-2 bg-gray-50">
+            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+              {/* Grid lines */}
+              <line x1="0" y1="25" x2="100" y2="25" stroke="#e5e7eb" strokeWidth="0.5" />
+              <line x1="0" y1="50" x2="100" y2="50" stroke="#e5e7eb" strokeWidth="0.5" />
+              <line x1="0" y1="75" x2="100" y2="75" stroke="#e5e7eb" strokeWidth="0.5" />
+
+              {/* Price line path */}
+              <polyline
+                points={currentHistory.map((price, idx) => {
+                  const x = (idx / (currentHistory.length - 1)) * 100;
+                  const y = 100 - ((price - lowestPrice) / (highestPrice - lowestPrice)) * 90 - 5;
+                  return `${x},${y}`;
+                }).join(' ')}
+                fill="none"
+                stroke="#000000"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+
+              {/* Area fill under line */}
+              <polygon
+                points={`0,100 ${currentHistory.map((price, idx) => {
+                  const x = (idx / (currentHistory.length - 1)) * 100;
+                  const y = 100 - ((price - lowestPrice) / (highestPrice - lowestPrice)) * 90 - 5;
+                  return `${x},${y}`;
+                }).join(' ')} 100,100`}
+                fill="#000000"
+                opacity="0.05"
+              />
+
+              {/* Data points */}
+              {currentHistory.map((price, idx) => {
+                const x = (idx / (currentHistory.length - 1)) * 100;
+                const y = 100 - ((price - lowestPrice) / (highestPrice - lowestPrice)) * 90 - 5;
+                const isLowest = price === lowestPrice;
+                return (
+                  <circle
+                    key={idx}
+                    cx={x}
+                    cy={y}
+                    r={isLowest ? "2" : "1.5"}
+                    fill={isLowest ? "#000000" : "#ffffff"}
+                    stroke="#000000"
+                    strokeWidth={isLowest ? "1.5" : "1"}
                   />
-                </div>
-              );
-            })}
+                );
+              })}
+            </svg>
           </div>
 
-          <div className="flex justify-between mt-2">
+          <div className="flex justify-between mt-2 mb-3">
             <div className="text-xs">
               <span className="text-gray-500">Lowest: </span>
-              <span className="font-semibold text-green-600">₹{lowestPrice.toLocaleString()}</span>
+              <span className="font-semibold text-black">₹{lowestPrice.toLocaleString()}</span>
             </div>
             <div className="text-xs">
               <span className="text-gray-500">Drop: </span>
-              <span className="font-semibold text-blue-600">{dropPercentage}%</span>
+              <span className="font-semibold text-black">{dropPercentage}%</span>
             </div>
             <div className="text-xs">
               <span className="text-gray-500">Highest: </span>
               <span className="font-semibold text-gray-700">₹{highestPrice.toLocaleString()}</span>
             </div>
           </div>
+
+          {/* Price Alert Setup */}
+          <button
+            onClick={() => setPriceAlertEnabled(!priceAlertEnabled)}
+            className={`w-full py-2.5 px-3 rounded-lg font-semibold text-sm transition-all transform active:scale-95 flex items-center justify-center gap-2 ${
+              priceAlertEnabled
+                ? 'bg-black text-white'
+                : 'bg-white border-2 border-gray-300 text-gray-900 hover:border-black'
+            }`}
+          >
+            {priceAlertEnabled ? (
+              <>
+                <Bell className="w-4 h-4" />
+                Alert Active - Notify me on price drop
+              </>
+            ) : (
+              <>
+                <BellOff className="w-4 h-4" />
+                Set Price Drop Alert
+              </>
+            )}
+          </button>
+          {priceAlertEnabled && (
+            <p className="text-xs text-gray-600 mt-2 text-center">
+              We'll notify you when the price drops below ₹{(lowestPrice - 1000).toLocaleString()}
+            </p>
+          )}
         </div>
 
         {/* Best Deal Alert */}
-        <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg p-3 mb-3">
+        <div className="bg-white border-2 border-gray-300 rounded-lg p-3 mb-3">
           <div className="flex items-start gap-2">
-            <Zap className="w-5 h-5 mt-0.5 flex-shrink-0" />
+            <Zap className="w-5 h-5 mt-0.5 flex-shrink-0 text-black" />
             <div>
-              <p className="font-semibold text-sm mb-1">Best Deal Alert!</p>
-              <p className="text-xs opacity-90">Amazon offers the lowest price at ₹1,34,999 - Save ₹4,901 compared to MRP. Deal expires in 6 hours.</p>
+              <p className="font-semibold text-sm mb-1 text-black">Best Deal Alert!</p>
+              <p className="text-xs text-gray-700">Amazon offers the lowest price at ₹1,34,999 - Save ₹4,901 compared to MRP. Deal expires in 6 hours.</p>
             </div>
           </div>
         </div>
@@ -190,9 +256,9 @@ const ElectronicsProduct = () => {
         {/* Multi-Platform Price Comparison */}
         <div className="space-y-2">
           {priceComparisons.map((platform, idx) => (
-            <div key={idx} className={`${platform.color} border rounded-lg p-3 relative`}>
+            <div key={idx} className={`${platform.color} border-2 rounded-lg p-3 relative`}>
               {platform.bestSeller && (
-                <span className="absolute -top-2 left-3 bg-yellow-400 text-yellow-900 text-xs px-2 py-0.5 rounded-full font-semibold">
+                <span className="absolute -top-2 left-3 bg-black text-white text-xs px-2 py-0.5 rounded-full font-semibold">
                   🏆 Best Seller
                 </span>
               )}
@@ -213,7 +279,7 @@ const ElectronicsProduct = () => {
                 <div className="text-right">
                   <p className="font-bold text-gray-900 text-lg">₹{platform.price.toLocaleString()}</p>
                   {platform.discount > 0 && (
-                    <span className="text-xs text-green-600 font-medium">{platform.discount}% off</span>
+                    <span className="text-xs text-black bg-gray-200 px-2 py-0.5 rounded font-medium">{platform.discount}% off</span>
                   )}
                   <div className="flex items-center gap-1 mt-1">
                     <Clock className="w-3 h-3 text-gray-500" />
@@ -226,9 +292,9 @@ const ElectronicsProduct = () => {
         </div>
 
         {/* Budget-Based Recommendations */}
-        <div className="mt-3 bg-white rounded-lg p-3">
+        <div className="mt-3 bg-white rounded-lg p-3 border border-gray-200">
           <h4 className="text-sm font-semibold text-gray-900 mb-2 flex items-center gap-2">
-            <Shield className="w-4 h-4 text-purple-600" />
+            <Shield className="w-4 h-4 text-black" />
             Budget-Friendly Alternatives
           </h4>
           <div className="space-y-2">
@@ -237,11 +303,11 @@ const ElectronicsProduct = () => {
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">{rec.label}</p>
                   <p className="font-semibold text-sm text-gray-900">{rec.product}</p>
-                  <p className="text-xs text-green-600 font-medium mt-0.5">Save ₹{rec.saving.toLocaleString()}</p>
+                  <p className="text-xs text-black font-medium mt-0.5">Save ₹{rec.saving.toLocaleString()}</p>
                 </div>
                 <div className="text-right">
                   <p className="font-bold text-gray-900 text-sm">₹{rec.price.toLocaleString()}</p>
-                  <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{rec.match} match</span>
+                  <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">{rec.match} match</span>
                 </div>
               </div>
             ))}
@@ -280,11 +346,11 @@ const ElectronicsProduct = () => {
               {expandedSpec === catIdx && (
                 <div className="p-3 bg-white space-y-2">
                   {category.specs.map((spec, specIdx) => (
-                    <div key={specIdx} className={`p-2 rounded ${spec.highlight ? 'bg-blue-50 border border-blue-200' : 'bg-gray-50'}`}>
+                    <div key={specIdx} className={`p-2 rounded ${spec.highlight ? 'bg-gray-50 border-2 border-gray-300' : 'bg-gray-50 border border-gray-200'}`}>
                       <div className="flex items-start justify-between mb-1">
                         <span className="text-xs text-gray-600 font-medium">{spec.name}</span>
                         <div className="flex items-center gap-1">
-                          <span className={`text-sm font-semibold ${spec.highlight ? 'text-blue-700' : 'text-gray-900'}`}>
+                          <span className={`text-sm font-semibold ${spec.highlight ? 'text-black' : 'text-gray-900'}`}>
                             {spec.value}
                           </span>
                           <div className="group relative">
@@ -301,7 +367,7 @@ const ElectronicsProduct = () => {
                         <div className="mt-2">
                           <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                             <div
-                              className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+                              className="h-full bg-black rounded-full"
                               style={{ width: `${(spec.visualBar / 5000) * 100}%` }}
                             />
                           </div>
@@ -317,35 +383,35 @@ const ElectronicsProduct = () => {
         </div>
 
         {/* Quick Spec Comparison */}
-        <div className="mt-3 p-3 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border border-purple-100">
+        <div className="mt-3 p-3 bg-gray-50 rounded-lg border-2 border-gray-300">
           <h4 className="text-sm font-semibold text-gray-900 mb-2">How It Compares</h4>
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs">
               <span className="text-gray-600">vs iPhone 14 Pro</span>
-              <span className="font-semibold text-green-600">15% faster • 2 hrs more battery</span>
+              <span className="font-semibold text-black">15% faster • 2 hrs more battery</span>
             </div>
             <div className="flex items-center justify-between text-xs">
               <span className="text-gray-600">vs Samsung S24 Ultra</span>
-              <span className="font-semibold text-blue-600">Similar performance • Better ecosystem</span>
+              <span className="font-semibold text-black">Similar performance • Better ecosystem</span>
             </div>
             <div className="flex items-center justify-between text-xs">
               <span className="text-gray-600">vs Google Pixel 8 Pro</span>
-              <span className="font-semibold text-orange-600">Better processor • Pixel wins camera</span>
+              <span className="font-semibold text-black">Better processor • Pixel wins camera</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Score Breakdown */}
-      <section className="bg-white rounded-xl p-4 mx-4 mb-3">
+      <section className="bg-white rounded-xl p-4 mx-4 mb-3 border border-gray-200">
         <h3 className="font-bold text-gray-900 text-base mb-3">Score Breakdown</h3>
         <div className="space-y-3">
           {[
-            { name: 'Performance', score: 96, color: 'bg-blue-500', description: 'Exceptional A17 Pro chip' },
-            { name: 'Camera Quality', score: 94, color: 'bg-purple-500', description: '48MP with excellent low-light' },
-            { name: 'Battery Life', score: 85, color: 'bg-green-500', description: '23 hrs video playback' },
-            { name: 'Display', score: 98, color: 'bg-pink-500', description: 'ProMotion 120Hz OLED' },
-            { name: 'Value for Money', score: 78, color: 'bg-orange-500', description: 'Premium pricing' }
+            { name: 'Performance', score: 96, description: 'Exceptional A17 Pro chip' },
+            { name: 'Camera Quality', score: 94, description: '48MP with excellent low-light' },
+            { name: 'Battery Life', score: 85, description: '23 hrs video playback' },
+            { name: 'Display', score: 98, description: 'ProMotion 120Hz OLED' },
+            { name: 'Value for Money', score: 78, description: 'Premium pricing' }
           ].map((item, idx) => (
             <div key={idx}>
               <div className="flex items-center justify-between mb-1">
@@ -354,7 +420,7 @@ const ElectronicsProduct = () => {
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-1">
                 <div
-                  className={`h-full ${item.color} rounded-full transition-all duration-500`}
+                  className="h-full bg-black rounded-full transition-all duration-500"
                   style={{ width: `${item.score}%` }}
                 />
               </div>
@@ -382,7 +448,7 @@ const ElectronicsProduct = () => {
                     <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                     <span className="text-xs text-gray-700">{product.rating}</span>
                   </div>
-                  <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{product.match} match</span>
+                  <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">{product.match} match</span>
                 </div>
                 <p className="font-bold text-gray-900 text-sm">₹{product.price.toLocaleString()}</p>
               </div>
@@ -400,7 +466,7 @@ const ElectronicsProduct = () => {
           </div>
           <button
             onClick={() => navigate('/checkout')}
-            className="flex-1 bg-purple-600 text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-purple-700 transition-all transform active:scale-95 flex items-center justify-center gap-2"
+            className="flex-1 bg-black text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />
             Add to Cart
