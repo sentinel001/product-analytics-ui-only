@@ -312,7 +312,7 @@ const FashionProduct_Phase2 = () => {
               <RotateCw className="w-5 h-5 text-gray-700" />
             </button>
           </div>
-          <div className="absolute bottom-2 left-2 bg-black/60 backdrop-blur text-white px-3 py-1 rounded-full text-xs font-medium">
+          <div className="absolute bottom-2 left-2 bg-[#363636]/60 backdrop-blur text-white px-3 py-1 rounded-full text-xs font-medium">
             {productImages[selectedImage].label}
           </div>
         </div>
@@ -326,7 +326,7 @@ const FashionProduct_Phase2 = () => {
               className={`relative rounded-lg overflow-hidden border-2 ${selectedImage === idx ? 'border-orange-500' : 'border-gray-200'}`}
             >
               <img src={img.url} alt={img.label} className="w-full h-20 object-cover" />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div className="absolute inset-0 bg-[#363636]/40 flex items-center justify-center">
                 {img.icon}
               </div>
             </button>
@@ -392,7 +392,7 @@ const FashionProduct_Phase2 = () => {
                   <PlayCircle className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-xs text-gray-700 mt-1">{video.label}</p>
-                <span className="absolute top-1 right-1 bg-black/70 text-white text-xs px-1 rounded">
+                <span className="absolute top-1 right-1 bg-[#363636]/70 text-white text-xs px-1 rounded">
                   {video.duration}
                 </span>
               </div>

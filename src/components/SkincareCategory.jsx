@@ -155,7 +155,7 @@ const SkincareCategory = () => {
             <ArrowLeft className="w-5 h-5 text-gray-900" />
           </button>
           <div className="flex-1">
-            <h1 className="text-lg font-bold text-black">Skincare</h1>
+            <h1 className="text-lg font-bold text-[#363636]">Skincare</h1>
             <p className="text-xs text-gray-600">Personalized for you</p>
           </div>
         </div>
@@ -166,11 +166,11 @@ const SkincareCategory = () => {
         {/* AI Personalization Banner */}
         <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-lg p-4">
           <div className="flex items-start gap-3">
-            <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 bg-[#363636] rounded-full flex items-center justify-center flex-shrink-0">
               <Sparkles className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <h3 className="text-sm font-bold text-black mb-1">AI-Personalized Selection</h3>
+              <h3 className="text-sm font-bold text-[#363636] mb-1">AI-Personalized Selection</h3>
               <p className="text-xs text-gray-700 mb-3">
                 Based on your skin profile and {userProfile.previousPurchases} previous purchases, we've curated products that match your needs.
               </p>
@@ -197,14 +197,14 @@ const SkincareCategory = () => {
         {/* Category Filters */}
         <div>
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-semibold text-black">Filter by Category</h3>
+            <h3 className="text-sm font-semibold text-[#363636]">Filter by Category</h3>
             <Filter className="w-4 h-4 text-gray-600" />
           </div>
           <div className="flex items-center gap-2 overflow-x-auto pb-2">
             <button
               onClick={() => setSelectedFilter('all')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'all' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'all' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               All Products
@@ -212,7 +212,7 @@ const SkincareCategory = () => {
             <button
               onClick={() => setSelectedFilter('cleanser')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'cleanser' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'cleanser' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               Cleansers
@@ -220,7 +220,7 @@ const SkincareCategory = () => {
             <button
               onClick={() => setSelectedFilter('moisturizer')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'moisturizer' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'moisturizer' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               Moisturizers
@@ -228,7 +228,7 @@ const SkincareCategory = () => {
             <button
               onClick={() => setSelectedFilter('serum')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'serum' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'serum' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               Serums
@@ -236,7 +236,7 @@ const SkincareCategory = () => {
             <button
               onClick={() => setSelectedFilter('treatment')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'treatment' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'treatment' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               Treatments
@@ -247,8 +247,8 @@ const SkincareCategory = () => {
         {/* Products Grid */}
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-semibold text-black">{products.length} Products Matched</h3>
-            <button className="text-xs text-gray-600 hover:text-black font-medium flex items-center gap-1">
+            <h3 className="text-sm font-semibold text-[#363636]">{products.length} Products Matched</h3>
+            <button className="text-xs text-gray-600 hover:text-[#363636] font-medium flex items-center gap-1">
               Sort by Match
               <ChevronDown className="w-3 h-3" />
             </button>
@@ -258,7 +258,7 @@ const SkincareCategory = () => {
             <React.Fragment key={product.id}>
               <div
                 onClick={() => navigate(idx === 0 ? '/product/beauty-v1' : idx === 1 ? '/product/beauty-v2' : '/product/beauty')}
-                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
+                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-[#363636] hover:shadow-md transition-all cursor-pointer"
               >
               <div className="flex gap-3 p-3">
                 {/* Product Image */}
@@ -268,7 +268,7 @@ const SkincareCategory = () => {
                     alt={product.name}
                     className="w-20 h-24 object-cover rounded border border-gray-200"
                   />
-                  <div className="absolute top-1 left-1 bg-black text-white px-1.5 py-0.5 rounded text-xs font-bold">
+                  <div className="absolute top-1 left-1 bg-[#363636] text-white px-1.5 py-0.5 rounded text-xs font-bold">
                     AI {product.aiScore}
                   </div>
                 </div>
@@ -278,7 +278,7 @@ const SkincareCategory = () => {
                   <div className="flex items-start justify-between mb-1">
                     <div className="flex-1">
                       <p className="text-xs text-gray-600 mb-0.5">{product.brand}</p>
-                      <h3 className="text-sm font-bold text-black line-clamp-2 mb-1">{product.name}</h3>
+                      <h3 className="text-sm font-bold text-[#363636] line-clamp-2 mb-1">{product.name}</h3>
                     </div>
                   </div>
 
@@ -307,7 +307,7 @@ const SkincareCategory = () => {
                       <span className="text-xs font-medium text-gray-700">{product.rating}</span>
                       <span className="text-xs text-gray-500">({product.reviews})</span>
                     </div>
-                    <span className="text-sm font-bold text-black">₹{product.price}</span>
+                    <span className="text-sm font-bold text-[#363636]">₹{product.price}</span>
                   </div>
                 </div>
               </div>
@@ -316,7 +316,7 @@ const SkincareCategory = () => {
             {/* Shop by Occasion - Horizontal Carousel after 3rd product */}
             {idx === 2 && (
               <div className="my-4">
-                <h3 className="text-sm font-bold text-black mb-3 flex items-center gap-2">
+                <h3 className="text-sm font-bold text-[#363636] mb-3 flex items-center gap-2">
                   <Sparkles className="w-4 h-4" />
                   Shop by Occasion
                 </h3>
@@ -332,13 +332,13 @@ const SkincareCategory = () => {
                           {occasion.icon}
                         </div>
                         <div>
-                          <h4 className="text-sm font-bold text-black mb-1">{occasion.title}</h4>
+                          <h4 className="text-sm font-bold text-[#363636] mb-1">{occasion.title}</h4>
                           <p className="text-xs text-gray-700 mb-2 line-clamp-2">{occasion.description}</p>
                           <div className="flex flex-wrap items-center gap-2 text-xs">
                             <span className="bg-white px-2 py-0.5 rounded text-gray-900 font-medium">
                               {occasion.products} items
                             </span>
-                            <span className="text-black font-semibold">
+                            <span className="text-[#363636] font-semibold">
                               {occasion.matchScore}% match
                             </span>
                           </div>
@@ -355,13 +355,13 @@ const SkincareCategory = () => {
 
         {/* Routine Suggestion CTA */}
         <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-4">
-          <h3 className="text-sm font-bold text-black mb-1">Need a Complete Routine?</h3>
+          <h3 className="text-sm font-bold text-[#363636] mb-1">Need a Complete Routine?</h3>
           <p className="text-xs text-gray-700 mb-3">
             Get a personalized 4-step skincare routine curated for your oily skin type.
           </p>
           <button
             onClick={() => navigate('/routine/oily-skin')}
-            className="w-full bg-black text-white py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+            className="w-full bg-[#363636] text-white py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
           >
             View Oily Skin Routine
           </button>

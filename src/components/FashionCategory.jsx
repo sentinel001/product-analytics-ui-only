@@ -155,7 +155,7 @@ const FashionCategory = () => {
             <ArrowLeft className="w-5 h-5 text-gray-900" />
           </button>
           <div className="flex-1">
-            <h1 className="text-lg font-bold text-black">Fashion</h1>
+            <h1 className="text-lg font-bold text-[#363636]">Fashion</h1>
             <p className="text-xs text-gray-600">Personalized for you</p>
           </div>
         </div>
@@ -166,11 +166,11 @@ const FashionCategory = () => {
         {/* AI Personalization Banner */}
         <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-4">
           <div className="flex items-start gap-3">
-            <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 bg-[#363636] rounded-full flex items-center justify-center flex-shrink-0">
               <Sparkles className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <h3 className="text-sm font-bold text-black mb-1">AI-Personalized Selection</h3>
+              <h3 className="text-sm font-bold text-[#363636] mb-1">AI-Personalized Selection</h3>
               <p className="text-xs text-gray-700 mb-3">
                 Based on your body analysis and {userProfile.previousPurchases} previous purchases, we've curated styles that suit you best.
               </p>
@@ -197,14 +197,14 @@ const FashionCategory = () => {
         {/* Category Filters */}
         <div>
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-semibold text-black">Filter by Category</h3>
+            <h3 className="text-sm font-semibold text-[#363636]">Filter by Category</h3>
             <Filter className="w-4 h-4 text-gray-600" />
           </div>
           <div className="flex items-center gap-2 overflow-x-auto pb-2">
             <button
               onClick={() => setSelectedFilter('all')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'all' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'all' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               All Products
@@ -212,7 +212,7 @@ const FashionCategory = () => {
             <button
               onClick={() => setSelectedFilter('tshirts')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'tshirts' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'tshirts' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               T-Shirts
@@ -220,7 +220,7 @@ const FashionCategory = () => {
             <button
               onClick={() => setSelectedFilter('pants')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'pants' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'pants' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               Pants
@@ -228,7 +228,7 @@ const FashionCategory = () => {
             <button
               onClick={() => setSelectedFilter('footwear')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'footwear' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'footwear' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               Footwear
@@ -236,7 +236,7 @@ const FashionCategory = () => {
             <button
               onClick={() => setSelectedFilter('jackets')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'jackets' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'jackets' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               Jackets
@@ -247,8 +247,8 @@ const FashionCategory = () => {
         {/* Products Grid */}
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-semibold text-black">{products.length} Products Matched</h3>
-            <button className="text-xs text-gray-600 hover:text-black font-medium flex items-center gap-1">
+            <h3 className="text-sm font-semibold text-[#363636]">{products.length} Products Matched</h3>
+            <button className="text-xs text-gray-600 hover:text-[#363636] font-medium flex items-center gap-1">
               Sort by Match
               <ChevronDown className="w-3 h-3" />
             </button>
@@ -258,7 +258,7 @@ const FashionCategory = () => {
             <React.Fragment key={product.id}>
               <div
                 onClick={() => navigate(idx === 0 ? '/product/fashion-v1' : idx === 1 ? '/product/fashion-v2' : '/product/fashion')}
-                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
+                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-[#363636] hover:shadow-md transition-all cursor-pointer"
               >
                 <div className="flex gap-3 p-3">
                   {/* Product Image */}
@@ -268,7 +268,7 @@ const FashionCategory = () => {
                       alt={product.name}
                       className="w-20 h-24 object-cover rounded border border-gray-200"
                     />
-                    <div className="absolute top-1 left-1 bg-black text-white px-1.5 py-0.5 rounded text-xs font-bold">
+                    <div className="absolute top-1 left-1 bg-[#363636] text-white px-1.5 py-0.5 rounded text-xs font-bold">
                       AI {product.aiScore}
                     </div>
                   </div>
@@ -278,7 +278,7 @@ const FashionCategory = () => {
                     <div className="flex items-start justify-between mb-1">
                       <div className="flex-1">
                         <p className="text-xs text-gray-600 mb-0.5">{product.brand}</p>
-                        <h3 className="text-sm font-bold text-black line-clamp-2 mb-1">{product.name}</h3>
+                        <h3 className="text-sm font-bold text-[#363636] line-clamp-2 mb-1">{product.name}</h3>
                       </div>
                     </div>
 
@@ -307,7 +307,7 @@ const FashionCategory = () => {
                         <span className="text-xs font-medium text-gray-700">{product.rating}</span>
                         <span className="text-xs text-gray-500">({product.reviews})</span>
                       </div>
-                      <span className="text-sm font-bold text-black">₹{product.price}</span>
+                      <span className="text-sm font-bold text-[#363636]">₹{product.price}</span>
                     </div>
                   </div>
                 </div>
@@ -316,7 +316,7 @@ const FashionCategory = () => {
               {/* Shop by Occasion - Horizontal Carousel after 3rd product */}
               {idx === 2 && (
                 <div className="my-4">
-                  <h3 className="text-sm font-bold text-black mb-3 flex items-center gap-2">
+                  <h3 className="text-sm font-bold text-[#363636] mb-3 flex items-center gap-2">
                     <Sparkles className="w-4 h-4" />
                     Shop by Occasion
                   </h3>
@@ -332,13 +332,13 @@ const FashionCategory = () => {
                             {occasion.icon}
                           </div>
                           <div>
-                            <h4 className="text-sm font-bold text-black mb-1">{occasion.title}</h4>
+                            <h4 className="text-sm font-bold text-[#363636] mb-1">{occasion.title}</h4>
                             <p className="text-xs text-gray-700 mb-2 line-clamp-2">{occasion.description}</p>
                             <div className="flex flex-wrap items-center gap-2 text-xs">
                               <span className="bg-white px-2 py-0.5 rounded text-gray-900 font-medium">
                                 {occasion.products} items
                               </span>
-                              <span className="text-black font-semibold">
+                              <span className="text-[#363636] font-semibold">
                                 {occasion.matchScore}% match
                               </span>
                             </div>

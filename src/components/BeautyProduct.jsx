@@ -110,7 +110,7 @@ const BeautyProduct = () => {
           <button onClick={() => navigate(-1)} className="p-1 hover:bg-gray-100 rounded-lg transition-colors">
             <ArrowLeft className="w-5 h-5 text-gray-900" />
           </button>
-          <h1 className="text-xl font-bold text-black">Product Details</h1>
+          <h1 className="text-xl font-bold text-[#363636]">Product Details</h1>
         </div>
         <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
           <ExternalLink className="w-5 h-5 text-gray-700" />
@@ -122,9 +122,9 @@ const BeautyProduct = () => {
         {/* Trust Badge - From Ranked List */}
         <div className="bg-gray-50 border border-gray-300 rounded-lg p-3">
           <div className="flex items-center gap-2">
-            <Award className="w-5 h-5 text-black" />
+            <Award className="w-5 h-5 text-[#363636]" />
             <div>
-              <p className="text-xs font-bold text-black">Ranked #2 in "Top 10 Microplastic-Free Face Scrubs"</p>
+              <p className="text-xs font-bold text-[#363636]">Ranked #2 in "Top 10 Microplastic-Free Face Scrubs"</p>
               <p className="text-xs text-gray-600">Updated Jan 2026 • 200 products analyzed</p>
             </div>
           </div>
@@ -141,7 +141,7 @@ const BeautyProduct = () => {
                 className="w-16 h-20 object-cover rounded border border-gray-200"
               />
               <div className="flex-1">
-                <h3 className="text-sm font-bold text-black mb-2">
+                <h3 className="text-sm font-bold text-[#363636] mb-2">
                   Neutrogena Hydro Boost Water Gel
                 </h3>
                 <div className="flex items-center gap-3 text-xs text-gray-600 mb-2">
@@ -149,12 +149,12 @@ const BeautyProduct = () => {
                     <Droplet className="w-3 h-3" />
                     Oily/Combo Skin
                   </span>
-                  <span className="bg-black text-white px-2 py-0.5 rounded text-xs font-bold">
+                  <span className="bg-[#363636] text-white px-2 py-0.5 rounded text-xs font-bold">
                     AI 92
                   </span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-bold text-black">₹799</span>
+                  <span className="font-bold text-[#363636]">₹799</span>
                   <span className="text-gray-600 text-xs ml-1">50g • In Stock</span>
                 </div>
               </div>
@@ -165,14 +165,14 @@ const BeautyProduct = () => {
         {/* Skin Analysis Section */}
         <section className="bg-gray-50 border-2 border-gray-300 rounded-lg p-4">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-bold text-black flex items-center gap-2">
+            <h3 className="text-sm font-bold text-[#363636] flex items-center gap-2">
               <Sparkles className="w-5 h-5" />
               AI Skin Analysis
             </h3>
             {!showSkinAnalysis && (
               <button
                 onClick={() => setShowSkinAnalysis(true)}
-                className="text-xs font-semibold text-black hover:underline"
+                className="text-xs font-semibold text-[#363636] hover:underline"
               >
                 Start Analysis
               </button>
@@ -182,11 +182,11 @@ const BeautyProduct = () => {
           {!showSkinAnalysis ? (
             <div className="text-center py-4">
               <Camera className="w-12 h-12 text-gray-400 mx-auto mb-3" />
-              <p className="text-sm font-semibold text-black mb-1">Get Personalized Recommendations</p>
+              <p className="text-sm font-semibold text-[#363636] mb-1">Get Personalized Recommendations</p>
               <p className="text-xs text-gray-600 mb-3">Upload 3 photos of your face from different angles for AI analysis</p>
               <button
                 onClick={() => setShowSkinAnalysis(true)}
-                className="bg-black text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-all transform active:scale-95"
+                className="bg-[#363636] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-all transform active:scale-95"
               >
                 Upload Photos
               </button>
@@ -206,7 +206,7 @@ const BeautyProduct = () => {
                     />
                     <div className="text-center">
                       <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                      <p className="text-xs font-semibold text-black">Upload {3 - uploadedPhotos.length} more photo{3 - uploadedPhotos.length !== 1 ? 's' : ''}</p>
+                      <p className="text-xs font-semibold text-[#363636]">Upload {3 - uploadedPhotos.length} more photo{3 - uploadedPhotos.length !== 1 ? 's' : ''}</p>
                       <p className="text-xs text-gray-600 mt-1">Front, left side, right side views</p>
                     </div>
                   </label>
@@ -227,7 +227,7 @@ const BeautyProduct = () => {
                       </div>
                       <button
                         onClick={() => removePhoto(idx)}
-                        className="absolute -top-1 -right-1 bg-black text-white rounded-full p-1 hover:bg-gray-800"
+                        className="absolute -top-1 -right-1 bg-[#363636] text-white rounded-full p-1 hover:bg-gray-800"
                       >
                         <X className="w-3 h-3" />
                       </button>
@@ -241,7 +241,7 @@ const BeautyProduct = () => {
               {analysisComplete && (
                 <div className="bg-white border border-gray-200 rounded-lg p-3 space-y-3">
                   <div className="flex items-center justify-between">
-                    <h4 className="text-sm font-bold text-black">Analysis Complete</h4>
+                    <h4 className="text-sm font-bold text-[#363636]">Analysis Complete</h4>
                     <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">
                       {skinAnalysisResult.confidence}% confidence
                     </span>
@@ -250,7 +250,7 @@ const BeautyProduct = () => {
                   <div>
                     <p className="text-xs font-semibold text-gray-700 mb-1">Detected Skin Type:</p>
                     <div className="bg-gray-50 border border-gray-200 rounded p-2">
-                      <p className="text-sm font-bold text-black">{skinAnalysisResult.skinType}</p>
+                      <p className="text-sm font-bold text-[#363636]">{skinAnalysisResult.skinType}</p>
                     </div>
                   </div>
 
@@ -270,7 +270,7 @@ const BeautyProduct = () => {
                     <div className="space-y-1">
                       {skinAnalysisResult.recommendations.map((rec, idx) => (
                         <div key={idx} className="flex items-start gap-2 text-xs text-gray-700">
-                          <CheckCircle className="w-3 h-3 text-black mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-3 h-3 text-[#363636] mt-0.5 flex-shrink-0" />
                           <span>{rec}</span>
                         </div>
                       ))}
@@ -279,7 +279,7 @@ const BeautyProduct = () => {
 
                   <div className="bg-gray-50 border border-gray-200 rounded p-2">
                     <p className="text-xs text-gray-700">
-                      <span className="font-semibold text-black">Saved to your profile.</span> We'll use this to personalize your beauty recommendations.
+                      <span className="font-semibold text-[#363636]">Saved to your profile.</span> We'll use this to personalize your beauty recommendations.
                     </p>
                   </div>
                 </div>
@@ -288,7 +288,7 @@ const BeautyProduct = () => {
               {uploadedPhotos.length === 3 && !analysisComplete && (
                 <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                   <div className="animate-spin w-8 h-8 border-4 border-gray-200 border-t-black rounded-full mx-auto mb-2"></div>
-                  <p className="text-xs font-semibold text-black">Analyzing your skin...</p>
+                  <p className="text-xs font-semibold text-[#363636]">Analyzing your skin...</p>
                 </div>
               )}
             </div>
@@ -299,9 +299,9 @@ const BeautyProduct = () => {
         <section className="bg-gray-50 border border-gray-200 rounded-lg p-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Filter className="w-5 h-5 text-black" />
+              <Filter className="w-5 h-5 text-[#363636]" />
               <div>
-                <h3 className="text-sm font-semibold text-black">Matches: Sunscreen Buying Guide</h3>
+                <h3 className="text-sm font-semibold text-[#363636]">Matches: Sunscreen Buying Guide</h3>
                 <p className="text-xs text-gray-600">By Skin Type</p>
               </div>
             </div>
@@ -312,7 +312,7 @@ const BeautyProduct = () => {
         {/* Usage Guidance */}
         <section className="bg-gray-50 border border-gray-300 rounded-lg p-4">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-bold text-black flex items-center gap-2">
+            <h3 className="text-sm font-bold text-[#363636] flex items-center gap-2">
               <Play className="w-4 h-4" />
               How to Use
             </h3>
@@ -340,7 +340,7 @@ const BeautyProduct = () => {
               { step: 4, text: 'Allow 2 min to absorb', icon: '⏱️' },
             ].map((item) => (
               <div key={item.step} className="flex items-center gap-2 text-xs bg-white border border-gray-200 rounded p-2">
-                <span className="w-5 h-5 bg-black text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
+                <span className="w-5 h-5 bg-[#363636] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
                   {item.step}
                 </span>
                 <span className="text-xs mr-2">{item.icon}</span>
@@ -352,13 +352,13 @@ const BeautyProduct = () => {
           {/* Usage Frequency */}
           <div className="mt-3 grid grid-cols-2 gap-2">
             <div className="bg-white border border-gray-200 rounded p-2">
-              <Clock className="w-4 h-4 text-black mb-1" />
-              <p className="text-xs font-semibold text-black">When to Use</p>
+              <Clock className="w-4 h-4 text-[#363636] mb-1" />
+              <p className="text-xs font-semibold text-[#363636]">When to Use</p>
               <p className="text-xs text-gray-600">Morning & Night</p>
             </div>
             <div className="bg-white border border-gray-200 rounded p-2">
-              <Droplet className="w-4 h-4 text-black mb-1" />
-              <p className="text-xs font-semibold text-black">Amount</p>
+              <Droplet className="w-4 h-4 text-[#363636] mb-1" />
+              <p className="text-xs font-semibold text-[#363636]">Amount</p>
               <p className="text-xs text-gray-600">Pea-sized</p>
             </div>
           </div>
@@ -367,7 +367,7 @@ const BeautyProduct = () => {
         {/* Suitability Matcher */}
         <section className="bg-gray-50 border border-gray-300 rounded-lg p-4">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-bold text-black">Skin Type Match</h3>
+            <h3 className="text-sm font-bold text-[#363636]">Skin Type Match</h3>
           </div>
 
           {/* Skin Type Match */}
@@ -380,7 +380,7 @@ const BeautyProduct = () => {
               { type: 'Dry Skin', match: 45, color: 'red' },
             ].map((item) => (
               <div key={item.type} className="flex items-center justify-between bg-white border border-gray-200 rounded p-2">
-                <span className="text-xs font-medium text-black">{item.type}</span>
+                <span className="text-xs font-medium text-[#363636]">{item.type}</span>
                 <div className="flex items-center gap-2">
                   <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div
@@ -405,7 +405,7 @@ const BeautyProduct = () => {
           {/* Compatibility Checker */}
           <button
             onClick={() => setShowCompatibility(!showCompatibility)}
-            className="w-full bg-black text-white py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+            className="w-full bg-[#363636] text-white py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
           >
             {showCompatibility ? 'Hide' : 'Check'} Product Compatibility
           </button>
@@ -439,10 +439,10 @@ const BeautyProduct = () => {
         {/* Product Comparison - Phase 3 Feature */}
         <section className="bg-gray-50 border border-gray-300 rounded-lg p-4">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-bold text-black">Compare Similar Products</h3>
+            <h3 className="text-sm font-bold text-[#363636]">Compare Similar Products</h3>
             <button
               onClick={() => setShowComparison(!showComparison)}
-              className="text-xs text-gray-700 hover:text-black font-medium"
+              className="text-xs text-gray-700 hover:text-[#363636] font-medium"
             >
               {showComparison ? 'Hide' : 'Show'}
             </button>
@@ -456,7 +456,7 @@ const BeautyProduct = () => {
                 <div
                   key={product.id}
                   className={`bg-white border rounded-lg p-3 transition-all ${
-                    selectedProducts.includes(product.id) ? 'border-black' : 'border-gray-200'
+                    selectedProducts.includes(product.id) ? 'border-[#363636]' : 'border-gray-200'
                   }`}
                 >
                   <div className="flex items-start gap-3">
@@ -464,7 +464,7 @@ const BeautyProduct = () => {
                       onClick={() => toggleProductComparison(product.id)}
                       className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 transition-colors ${
                         selectedProducts.includes(product.id)
-                          ? 'bg-black border-black'
+                          ? 'bg-[#363636] border-[#363636]'
                           : 'border-gray-300 hover:border-gray-400'
                       }`}
                     >
@@ -476,10 +476,10 @@ const BeautyProduct = () => {
                       className="w-12 h-12 object-cover rounded border border-gray-200"
                     />
                     <div className="flex-1">
-                      <h4 className="text-xs font-bold text-black mb-1">{product.name}</h4>
+                      <h4 className="text-xs font-bold text-[#363636] mb-1">{product.name}</h4>
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-bold text-black">₹{product.price}</span>
-                        <span className="bg-black text-white px-1.5 py-0.5 rounded text-xs font-bold">
+                        <span className="text-xs font-bold text-[#363636]">₹{product.price}</span>
+                        <span className="bg-[#363636] text-white px-1.5 py-0.5 rounded text-xs font-bold">
                           AI {product.aiScore}
                         </span>
                       </div>
@@ -494,19 +494,19 @@ const BeautyProduct = () => {
 
               {selectedProducts.length > 1 && (
                 <div className="mt-3 bg-white border border-gray-300 rounded-lg p-3">
-                  <h4 className="text-xs font-bold text-black mb-2">Quick Comparison:</h4>
+                  <h4 className="text-xs font-bold text-[#363636] mb-2">Quick Comparison:</h4>
                   <div className="space-y-2 text-xs">
                     <div className="flex items-center justify-between">
                       <span className="text-gray-600">Best for Oily Skin:</span>
-                      <span className="font-semibold text-black">Neutrogena (95%)</span>
+                      <span className="font-semibold text-[#363636]">Neutrogena (95%)</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-gray-600">Best Value:</span>
-                      <span className="font-semibold text-black">CeraVe (₹12.98/g)</span>
+                      <span className="font-semibold text-[#363636]">CeraVe (₹12.98/g)</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-gray-600">Best Rated:</span>
-                      <span className="font-semibold text-black">CeraVe (4.7★)</span>
+                      <span className="font-semibold text-[#363636]">CeraVe (4.7★)</span>
                     </div>
                   </div>
                 </div>
@@ -517,34 +517,34 @@ const BeautyProduct = () => {
 
         {/* Price Comparison */}
         <section>
-          <h2 className="text-sm font-bold text-black mb-3">Best Prices</h2>
+          <h2 className="text-sm font-bold text-[#363636] mb-3">Best Prices</h2>
           <div className="space-y-2">
-            <div className="flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg hover:border-black transition-colors cursor-pointer">
+            <div className="flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg hover:border-[#363636] transition-colors cursor-pointer">
               <div className="flex items-center gap-3">
                 <img src="https://logo.clearbit.com/nykaa.com" alt="Nykaa" className="w-8 h-8 rounded" />
-                <span className="font-medium text-sm text-black">Nykaa</span>
+                <span className="font-medium text-sm text-[#363636]">Nykaa</span>
               </div>
               <div className="text-right">
-                <div className="font-bold text-black">₹799</div>
+                <div className="font-bold text-[#363636]">₹799</div>
                 <div className="text-xs text-gray-600">Use BEAUTY20</div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-400" />
             </div>
 
-            <div className="flex items-center justify-between p-3 bg-white border border-black rounded-lg cursor-pointer">
+            <div className="flex items-center justify-between p-3 bg-white border border-[#363636] rounded-lg cursor-pointer">
               <div className="flex items-center gap-3">
                 <img src="https://logo.clearbit.com/amazon.in" alt="Amazon" className="w-8 h-8 rounded" />
-                <span className="font-medium text-sm text-black">Amazon</span>
+                <span className="font-medium text-sm text-[#363636]">Amazon</span>
               </div>
               <div className="text-right">
-                <div className="font-bold text-black">₹679</div>
+                <div className="font-bold text-[#363636]">₹679</div>
                 <div className="text-xs text-green-600 font-semibold">Lowest Price!</div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-900" />
             </div>
           </div>
 
-          <button className="w-full mt-3 bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+          <button className="w-full mt-3 bg-[#363636] text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
             View All Stores
           </button>
         </section>
@@ -558,7 +558,7 @@ const BeautyProduct = () => {
                 onClick={() => setActiveTab(tab.toLowerCase().replace(' ', '-'))}
                 className={`pb-2 px-1 font-medium text-sm transition-colors ${
                   activeTab === tab.toLowerCase().replace(' ', '-')
-                    ? 'text-black border-b-2 border-black'
+                    ? 'text-[#363636] border-b-2 border-[#363636]'
                     : 'text-gray-500 hover:text-gray-700'
                 }`}
               >
@@ -570,7 +570,7 @@ const BeautyProduct = () => {
 
         {/* Ingredient Transparency */}
         <section>
-          <h3 className="text-sm font-bold text-black mb-3">Key Ingredients</h3>
+          <h3 className="text-sm font-bold text-[#363636] mb-3">Key Ingredients</h3>
           <div className="bg-gray-50 rounded-lg p-4 space-y-2">
             {[
               { name: 'Hyaluronic Acid', purpose: 'Deep hydration', safe: true },
@@ -581,7 +581,7 @@ const BeautyProduct = () => {
               <div key={idx} className="bg-white border border-gray-200 rounded p-3">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <p className="text-sm font-semibold text-black">{ingredient.name}</p>
+                    <p className="text-sm font-semibold text-[#363636]">{ingredient.name}</p>
                     <p className="text-xs text-gray-600 mt-0.5">{ingredient.purpose}</p>
                     {ingredient.warning && (
                       <p className="text-xs text-orange-600 mt-1 flex items-center gap-1">
@@ -614,12 +614,12 @@ const BeautyProduct = () => {
         {/* AI Recommendation Score */}
         <section className="bg-gray-50 border border-gray-300 rounded-lg p-4">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-bold text-black">AI Recommendation</h3>
+            <h3 className="text-sm font-bold text-[#363636]">AI Recommendation</h3>
             <Info className="w-4 h-4 text-gray-400" />
           </div>
           <div className="flex items-center gap-4">
             <div className="relative">
-              <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full bg-[#363636] flex items-center justify-center">
                 <div className="text-white text-center">
                   <div className="text-2xl font-bold">92</div>
                   <div className="text-xs">/100</div>
@@ -637,11 +637,11 @@ const BeautyProduct = () => {
 
         {/* Score Breakdown */}
         <section>
-          <h3 className="text-sm font-bold text-black mb-4">Score Breakdown</h3>
+          <h3 className="text-sm font-bold text-[#363636] mb-4">Score Breakdown</h3>
           <div className="grid grid-cols-4 gap-4">
             {[
               { score: 95, label: 'For Oily Skin', color: 'text-green-600' },
-              { score: 90, label: 'Ingredients', color: 'text-black' },
+              { score: 90, label: 'Ingredients', color: 'text-[#363636]' },
               { score: 88, label: 'Value', color: 'text-gray-700' },
               { score: 92, label: 'Reviews', color: 'text-gray-700' },
             ].map((item, idx) => (
@@ -658,8 +658,8 @@ const BeautyProduct = () => {
         {/* Similar Products */}
         <section>
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-sm font-bold text-black">Similar Products</h3>
-            <button className="text-xs text-gray-600 hover:text-black font-medium">See All</button>
+            <h3 className="text-sm font-bold text-[#363636]">Similar Products</h3>
+            <button className="text-xs text-gray-600 hover:text-[#363636] font-medium">See All</button>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -677,15 +677,15 @@ const BeautyProduct = () => {
                 image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=200&h=200&fit=crop'
               }
             ].map((product, idx) => (
-              <div key={idx} className="border border-gray-200 rounded-lg p-3 hover:border-black hover:shadow-sm transition-all cursor-pointer">
+              <div key={idx} className="border border-gray-200 rounded-lg p-3 hover:border-[#363636] hover:shadow-sm transition-all cursor-pointer">
                 <img src={product.image} alt={product.name} className="w-full h-24 object-cover rounded mb-2" />
-                <div className="text-xs font-medium mb-1 line-clamp-2 text-black">{product.name}</div>
+                <div className="text-xs font-medium mb-1 line-clamp-2 text-[#363636]">{product.name}</div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="bg-black text-white text-xs font-bold px-2 py-0.5 rounded">
+                  <span className="bg-[#363636] text-white text-xs font-bold px-2 py-0.5 rounded">
                     AI {product.score}
                   </span>
                 </div>
-                <div className="font-bold text-sm text-black">{product.price}</div>
+                <div className="font-bold text-sm text-[#363636]">{product.price}</div>
               </div>
             ))}
           </div>
@@ -697,11 +697,11 @@ const BeautyProduct = () => {
         <div className="flex items-center gap-3">
           <div className="flex-1">
             <p className="text-xs text-gray-600">Best Price</p>
-            <p className="text-xl font-bold text-black">₹679</p>
+            <p className="text-xl font-bold text-[#363636]">₹679</p>
           </div>
           <button
             onClick={() => navigate('/checkout')}
-            className="flex-1 bg-black text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
+            className="flex-1 bg-[#363636] text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />
             Add to Cart

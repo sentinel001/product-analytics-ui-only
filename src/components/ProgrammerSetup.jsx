@@ -118,7 +118,7 @@ const ProgrammerSetup = () => {
             <ArrowLeft className="w-5 h-5 text-gray-900" />
           </button>
           <div className="flex-1">
-            <h1 className="text-lg font-bold text-black">{bundleInfo.title}</h1>
+            <h1 className="text-lg font-bold text-[#363636]">{bundleInfo.title}</h1>
             <p className="text-xs text-gray-600">Curated based on your profile</p>
           </div>
         </div>
@@ -129,11 +129,11 @@ const ProgrammerSetup = () => {
         {/* AI Personalization Banner */}
         <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-200 rounded-lg p-4">
           <div className="flex items-start gap-3 mb-3">
-            <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 bg-[#363636] rounded-full flex items-center justify-center flex-shrink-0">
               <Zap className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <h3 className="text-sm font-bold text-black mb-1">Detected: {userPersona.type}</h3>
+              <h3 className="text-sm font-bold text-[#363636] mb-1">Detected: {userPersona.type}</h3>
               <p className="text-xs text-gray-700 mb-2">
                 Based on your activity, we've identified you as a high-end programmer who values quality and ergonomics.
               </p>
@@ -151,7 +151,7 @@ const ProgrammerSetup = () => {
           <div className="grid grid-cols-2 gap-2">
             <div className="bg-white rounded p-2">
               <p className="text-xs text-gray-600">Bundle Price</p>
-              <p className="text-lg font-bold text-black">₹{(bundleInfo.totalPrice - bundleInfo.savingsWithBundle).toLocaleString()}</p>
+              <p className="text-lg font-bold text-[#363636]">₹{(bundleInfo.totalPrice - bundleInfo.savingsWithBundle).toLocaleString()}</p>
             </div>
             <div className="bg-white rounded p-2">
               <p className="text-xs text-gray-600">You Save</p>
@@ -165,10 +165,10 @@ const ProgrammerSetup = () => {
           <div className="flex items-start gap-2 mb-3">
             <Info className="w-4 h-4 text-gray-700 flex-shrink-0 mt-0.5" />
             <div>
-              <h3 className="text-sm font-bold text-black mb-2">Why Ergonomics Matter</h3>
+              <h3 className="text-sm font-bold text-[#363636] mb-2">Why Ergonomics Matter</h3>
               <p className="text-xs text-gray-700 leading-relaxed mb-3">{knowledgeContent.ergonomics}</p>
 
-              <p className="text-xs font-semibold text-black mb-1">Setup Guidelines:</p>
+              <p className="text-xs font-semibold text-[#363636] mb-1">Setup Guidelines:</p>
               <ul className="space-y-1">
                 {knowledgeContent.tips.map((tip, idx) => (
                   <li key={idx} className="text-xs text-gray-700 flex items-start gap-1">
@@ -183,13 +183,13 @@ const ProgrammerSetup = () => {
 
         {/* Products in Bundle */}
         <div className="space-y-3">
-          <h3 className="text-sm font-bold text-black">{bundleInfo.totalProducts} Premium Products</h3>
+          <h3 className="text-sm font-bold text-[#363636]">{bundleInfo.totalProducts} Premium Products</h3>
 
           {products.map((product, idx) => (
             <div
               key={idx}
               onClick={() => navigate('/product/electronics')}
-              className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
+              className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-[#363636] hover:shadow-md transition-all cursor-pointer"
             >
               <div className="flex gap-3 p-3">
                 {/* Product Image */}
@@ -199,7 +199,7 @@ const ProgrammerSetup = () => {
                     alt={product.name}
                     className="w-20 h-24 object-cover rounded border border-gray-200"
                   />
-                  <div className="absolute top-1 left-1 bg-black text-white px-1.5 py-0.5 rounded text-xs font-bold">
+                  <div className="absolute top-1 left-1 bg-[#363636] text-white px-1.5 py-0.5 rounded text-xs font-bold">
                     {product.aiScore}
                   </div>
                 </div>
@@ -209,7 +209,7 @@ const ProgrammerSetup = () => {
                   <span className="inline-block bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-xs font-medium mb-1">
                     {product.category}
                   </span>
-                  <h4 className="text-sm font-bold text-black line-clamp-1 mb-0.5">{product.name}</h4>
+                  <h4 className="text-sm font-bold text-[#363636] line-clamp-1 mb-0.5">{product.name}</h4>
                   <p className="text-xs text-gray-600 mb-2">{product.brand}</p>
 
                   <div className="flex items-center gap-2 mb-2">
@@ -220,7 +220,7 @@ const ProgrammerSetup = () => {
                     </div>
                   </div>
 
-                  <p className="text-sm font-bold text-black">₹{product.price.toLocaleString()}</p>
+                  <p className="text-sm font-bold text-[#363636]">₹{product.price.toLocaleString()}</p>
                 </div>
               </div>
 
@@ -250,7 +250,7 @@ const ProgrammerSetup = () => {
 
         {/* Benefits */}
         <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-4">
-          <h3 className="text-sm font-bold text-black mb-2 flex items-center gap-2">
+          <h3 className="text-sm font-bold text-[#363636] mb-2 flex items-center gap-2">
             <Monitor className="w-4 h-4" />
             Your Productivity Benefits
           </h3>
@@ -281,13 +281,13 @@ const ProgrammerSetup = () => {
           <div className="flex-1">
             <p className="text-xs text-gray-600">Bundle Price</p>
             <div className="flex items-center gap-2">
-              <p className="text-xl font-bold text-black">₹{(bundleInfo.totalPrice - bundleInfo.savingsWithBundle).toLocaleString()}</p>
+              <p className="text-xl font-bold text-[#363636]">₹{(bundleInfo.totalPrice - bundleInfo.savingsWithBundle).toLocaleString()}</p>
               <span className="text-xs text-gray-500 line-through">₹{bundleInfo.totalPrice.toLocaleString()}</span>
             </div>
           </div>
           <button
             onClick={() => navigate('/checkout')}
-            className="flex-1 bg-black text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all flex items-center justify-center gap-2"
+            className="flex-1 bg-[#363636] text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all flex items-center justify-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />
             Add Bundle

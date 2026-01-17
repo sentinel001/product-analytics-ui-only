@@ -11,7 +11,7 @@ const ElectronicsProduct = () => {
   const specifications = [
     {
       category: 'Performance',
-      icon: <Cpu className="w-5 h-5 text-black" />,
+      icon: <Cpu className="w-5 h-5 text-[#363636]" />,
       specs: [
         { name: 'Processor', value: 'Apple A17 Pro', tooltip: '3nm chip with 6-core CPU (2 performance + 4 efficiency cores)', highlight: true },
         { name: 'RAM', value: '8GB', tooltip: 'LPDDR5 unified memory for smooth multitasking' },
@@ -21,7 +21,7 @@ const ElectronicsProduct = () => {
     },
     {
       category: 'Display',
-      icon: <Zap className="w-5 h-5 text-black" />,
+      icon: <Zap className="w-5 h-5 text-[#363636]" />,
       specs: [
         { name: 'Screen Size', value: '6.1 inches', tooltip: 'Super Retina XDR OLED display' },
         { name: 'Resolution', value: '2556 x 1179', tooltip: '460 ppi pixel density for crisp visuals', highlight: true },
@@ -31,7 +31,7 @@ const ElectronicsProduct = () => {
     },
     {
       category: 'Battery & Charging',
-      icon: <Battery className="w-5 h-5 text-black" />,
+      icon: <Battery className="w-5 h-5 text-[#363636]" />,
       specs: [
         { name: 'Battery Capacity', value: '3,877 mAh', tooltip: 'Lithium-ion battery', visualBar: 3877 },
         { name: 'Video Playback', value: 'Up to 23 hours', tooltip: 'Based on Apple testing conditions', highlight: true },
@@ -41,7 +41,7 @@ const ElectronicsProduct = () => {
     },
     {
       category: 'Camera System',
-      icon: <Camera className="w-5 h-5 text-black" />,
+      icon: <Camera className="w-5 h-5 text-[#363636]" />,
       specs: [
         { name: 'Main Camera', value: '48MP f/1.6', tooltip: 'Quad-pixel sensor with sensor-shift OIS', highlight: true },
         { name: 'Ultra Wide', value: '12MP f/2.4', tooltip: '120° field of view with macro capability' },
@@ -112,8 +112,8 @@ const ElectronicsProduct = () => {
               <span className="text-xs text-gray-500">16,718 reviews</span>
             </div>
             <div className="inline-flex items-center gap-1 bg-gray-50 border border-gray-300 px-2 py-1 rounded">
-              <TrendingDown className="w-3 h-3 text-black" />
-              <span className="text-xs font-medium text-black">₹14,901 price drop</span>
+              <TrendingDown className="w-3 h-3 text-[#363636]" />
+              <span className="text-xs font-medium text-[#363636]">₹14,901 price drop</span>
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@ const ElectronicsProduct = () => {
       <section className="bg-gray-50 rounded-xl p-4 mx-4 mb-3 border-2 border-gray-300">
         <div className="flex items-center justify-between mb-3">
           <h3 className="font-bold text-gray-900 text-base flex items-center gap-2">
-            <TrendingDown className="w-5 h-5 text-black" />
+            <TrendingDown className="w-5 h-5 text-[#363636]" />
             Live Price Intelligence
           </h3>
           <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">Updated 2 min ago</span>
@@ -138,7 +138,7 @@ const ElectronicsProduct = () => {
                 <button
                   key={period}
                   onClick={() => setPriceHistory(period)}
-                  className={`text-xs px-2 py-1 rounded ${priceHistory === period ? 'bg-black text-white' : 'bg-gray-100 text-gray-600'}`}
+                  className={`text-xs px-2 py-1 rounded ${priceHistory === period ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-600'}`}
                 >
                   {period}
                 </button>
@@ -202,11 +202,11 @@ const ElectronicsProduct = () => {
           <div className="flex justify-between mt-2 mb-3">
             <div className="text-xs">
               <span className="text-gray-500">Lowest: </span>
-              <span className="font-semibold text-black">₹{lowestPrice.toLocaleString()}</span>
+              <span className="font-semibold text-[#363636]">₹{lowestPrice.toLocaleString()}</span>
             </div>
             <div className="text-xs">
               <span className="text-gray-500">Drop: </span>
-              <span className="font-semibold text-black">{dropPercentage}%</span>
+              <span className="font-semibold text-[#363636]">{dropPercentage}%</span>
             </div>
             <div className="text-xs">
               <span className="text-gray-500">Highest: </span>
@@ -219,8 +219,8 @@ const ElectronicsProduct = () => {
             onClick={() => setPriceAlertEnabled(!priceAlertEnabled)}
             className={`w-full py-2.5 px-3 rounded-lg font-semibold text-sm transition-all transform active:scale-95 flex items-center justify-center gap-2 ${
               priceAlertEnabled
-                ? 'bg-black text-white'
-                : 'bg-white border-2 border-gray-300 text-gray-900 hover:border-black'
+                ? 'bg-[#363636] text-white'
+                : 'bg-white border-2 border-gray-300 text-gray-900 hover:border-[#363636]'
             }`}
           >
             {priceAlertEnabled ? (
@@ -245,9 +245,9 @@ const ElectronicsProduct = () => {
         {/* Best Deal Alert */}
         <div className="bg-white border-2 border-gray-300 rounded-lg p-3 mb-3">
           <div className="flex items-start gap-2">
-            <Zap className="w-5 h-5 mt-0.5 flex-shrink-0 text-black" />
+            <Zap className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#363636]" />
             <div>
-              <p className="font-semibold text-sm mb-1 text-black">Best Deal Alert!</p>
+              <p className="font-semibold text-sm mb-1 text-[#363636]">Best Deal Alert!</p>
               <p className="text-xs text-gray-700">Amazon offers the lowest price at ₹1,34,999 - Save ₹4,901 compared to MRP. Deal expires in 6 hours.</p>
             </div>
           </div>
@@ -258,7 +258,7 @@ const ElectronicsProduct = () => {
           {priceComparisons.map((platform, idx) => (
             <div key={idx} className={`${platform.color} border-2 rounded-lg p-3 relative`}>
               {platform.bestSeller && (
-                <span className="absolute -top-2 left-3 bg-black text-white text-xs px-2 py-0.5 rounded-full font-semibold">
+                <span className="absolute -top-2 left-3 bg-[#363636] text-white text-xs px-2 py-0.5 rounded-full font-semibold">
                   🏆 Best Seller
                 </span>
               )}
@@ -279,7 +279,7 @@ const ElectronicsProduct = () => {
                 <div className="text-right">
                   <p className="font-bold text-gray-900 text-lg">₹{platform.price.toLocaleString()}</p>
                   {platform.discount > 0 && (
-                    <span className="text-xs text-black bg-gray-200 px-2 py-0.5 rounded font-medium">{platform.discount}% off</span>
+                    <span className="text-xs text-[#363636] bg-gray-200 px-2 py-0.5 rounded font-medium">{platform.discount}% off</span>
                   )}
                   <div className="flex items-center gap-1 mt-1">
                     <Clock className="w-3 h-3 text-gray-500" />
@@ -294,7 +294,7 @@ const ElectronicsProduct = () => {
         {/* Budget-Based Recommendations */}
         <div className="mt-3 bg-white rounded-lg p-3 border border-gray-200">
           <h4 className="text-sm font-semibold text-gray-900 mb-2 flex items-center gap-2">
-            <Shield className="w-4 h-4 text-black" />
+            <Shield className="w-4 h-4 text-[#363636]" />
             Budget-Friendly Alternatives
           </h4>
           <div className="space-y-2">
@@ -303,7 +303,7 @@ const ElectronicsProduct = () => {
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">{rec.label}</p>
                   <p className="font-semibold text-sm text-gray-900">{rec.product}</p>
-                  <p className="text-xs text-black font-medium mt-0.5">Save ₹{rec.saving.toLocaleString()}</p>
+                  <p className="text-xs text-[#363636] font-medium mt-0.5">Save ₹{rec.saving.toLocaleString()}</p>
                 </div>
                 <div className="text-right">
                   <p className="font-bold text-gray-900 text-sm">₹{rec.price.toLocaleString()}</p>
@@ -350,7 +350,7 @@ const ElectronicsProduct = () => {
                       <div className="flex items-start justify-between mb-1">
                         <span className="text-xs text-gray-600 font-medium">{spec.name}</span>
                         <div className="flex items-center gap-1">
-                          <span className={`text-sm font-semibold ${spec.highlight ? 'text-black' : 'text-gray-900'}`}>
+                          <span className={`text-sm font-semibold ${spec.highlight ? 'text-[#363636]' : 'text-gray-900'}`}>
                             {spec.value}
                           </span>
                           <div className="group relative">
@@ -367,7 +367,7 @@ const ElectronicsProduct = () => {
                         <div className="mt-2">
                           <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                             <div
-                              className="h-full bg-black rounded-full"
+                              className="h-full bg-[#363636] rounded-full"
                               style={{ width: `${(spec.visualBar / 5000) * 100}%` }}
                             />
                           </div>
@@ -388,15 +388,15 @@ const ElectronicsProduct = () => {
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs">
               <span className="text-gray-600">vs iPhone 14 Pro</span>
-              <span className="font-semibold text-black">15% faster • 2 hrs more battery</span>
+              <span className="font-semibold text-[#363636]">15% faster • 2 hrs more battery</span>
             </div>
             <div className="flex items-center justify-between text-xs">
               <span className="text-gray-600">vs Samsung S24 Ultra</span>
-              <span className="font-semibold text-black">Similar performance • Better ecosystem</span>
+              <span className="font-semibold text-[#363636]">Similar performance • Better ecosystem</span>
             </div>
             <div className="flex items-center justify-between text-xs">
               <span className="text-gray-600">vs Google Pixel 8 Pro</span>
-              <span className="font-semibold text-black">Better processor • Pixel wins camera</span>
+              <span className="font-semibold text-[#363636]">Better processor • Pixel wins camera</span>
             </div>
           </div>
         </div>
@@ -420,7 +420,7 @@ const ElectronicsProduct = () => {
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-1">
                 <div
-                  className="h-full bg-black rounded-full transition-all duration-500"
+                  className="h-full bg-[#363636] rounded-full transition-all duration-500"
                   style={{ width: `${item.score}%` }}
                 />
               </div>
@@ -466,7 +466,7 @@ const ElectronicsProduct = () => {
           </div>
           <button
             onClick={() => navigate('/checkout')}
-            className="flex-1 bg-black text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
+            className="flex-1 bg-[#363636] text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />
             Add to Cart

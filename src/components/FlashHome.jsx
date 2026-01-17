@@ -154,10 +154,10 @@ const FlashHome = () => {
       <div className="sticky top-0 z-50 bg-white px-4 py-3 border-b border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#363636] rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <h1 className="text-xl font-bold text-black">Flash</h1>
+            <h1 className="text-xl font-bold text-[#363636]">Flash</h1>
           </div>
           <div className="flex items-center gap-2">
             <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
@@ -173,7 +173,7 @@ const FlashHome = () => {
       {/* Hero Search Section */}
       <div className="px-4 pt-6 pb-8 bg-gradient-to-b from-gray-50 to-white border-b border-gray-200">
         <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-black mb-2">Find Your Perfect Product</h2>
+          <h2 className="text-2xl font-bold text-[#363636] mb-2">Find Your Perfect Product</h2>
           <p className="text-sm text-gray-600">AI-powered search across millions of products</p>
         </div>
 
@@ -192,14 +192,14 @@ const FlashHome = () => {
               }
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 rounded-xl text-black text-base bg-white border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-black transition-all shadow-sm"
+              className="w-full pl-12 pr-4 py-4 rounded-xl text-[#363636] text-base bg-white border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-[#363636] transition-all shadow-sm"
             />
           </div>
           <div className="flex items-center gap-2">
             <button
               onClick={() => setSearchMode('name')}
               className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all ${
-                searchMode === 'name' ? 'bg-black text-white shadow-md' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                searchMode === 'name' ? 'bg-[#363636] text-white shadow-md' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
               }`}
             >
               <Search className="w-4 h-4 inline-block mr-1" />
@@ -208,7 +208,7 @@ const FlashHome = () => {
             <button
               onClick={() => setSearchMode('url')}
               className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all ${
-                searchMode === 'url' ? 'bg-black text-white shadow-md' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                searchMode === 'url' ? 'bg-[#363636] text-white shadow-md' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
               }`}
             >
               <LinkIcon className="w-4 h-4 inline-block mr-1" />
@@ -217,7 +217,7 @@ const FlashHome = () => {
             <button
               onClick={() => setSearchMode('image')}
               className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all ${
-                searchMode === 'image' ? 'bg-black text-white shadow-md' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                searchMode === 'image' ? 'bg-[#363636] text-white shadow-md' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
               }`}
             >
               <Camera className="w-4 h-4 inline-block mr-1" />
@@ -233,11 +233,11 @@ const FlashHome = () => {
         {/* 1. Just For You - Personalized First Impression */}
         <section>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#363636] rounded-full flex items-center justify-center">
               <Sparkles className="w-4 h-4 text-white" />
             </div>
             <div className="flex-1">
-              <h2 className="text-lg font-bold text-black">Just For You</h2>
+              <h2 className="text-lg font-bold text-[#363636]">Just For You</h2>
               <p className="text-xs text-gray-600">Based on your profile and shopping history</p>
             </div>
           </div>
@@ -253,7 +253,7 @@ const FlashHome = () => {
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <h3 className="text-base font-bold text-black">Complete Oily Skin Routine</h3>
+                  <h3 className="text-base font-bold text-[#363636]">Complete Oily Skin Routine</h3>
                   <span className="bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">94% Match</span>
                 </div>
                 <p className="text-xs text-gray-700 mb-3">
@@ -272,7 +272,7 @@ const FlashHome = () => {
               </div>
             </div>
             <div className="bg-white rounded-lg p-3 mb-3">
-              <p className="text-xs font-semibold text-black mb-2">What's included:</p>
+              <p className="text-xs font-semibold text-[#363636] mb-2">What's included:</p>
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2 text-xs text-gray-700">
                   <span className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center font-bold text-xs">1</span>
@@ -296,7 +296,7 @@ const FlashHome = () => {
               <div>
                 <p className="text-xs text-gray-700">Bundle Price</p>
                 <div className="flex items-center gap-2">
-                  <span className="text-lg font-bold text-black">₹3,389</span>
+                  <span className="text-lg font-bold text-[#363636]">₹3,389</span>
                   <span className="text-xs text-gray-500 line-through">₹3,987</span>
                   <span className="text-xs font-bold text-green-600">Save ₹598</span>
                 </div>
@@ -316,7 +316,7 @@ const FlashHome = () => {
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <h3 className="text-base font-bold text-black">High-End Programmer Setup</h3>
+                  <h3 className="text-base font-bold text-[#363636]">High-End Programmer Setup</h3>
                   <span className="bg-purple-600 text-white px-2 py-0.5 rounded text-xs font-bold">Detected</span>
                 </div>
                 <p className="text-xs text-gray-700 mb-3">
@@ -335,7 +335,7 @@ const FlashHome = () => {
               </div>
             </div>
             <div className="bg-white rounded-lg p-3 mb-3">
-              <p className="text-xs font-semibold text-black mb-2">Premium components:</p>
+              <p className="text-xs font-semibold text-[#363636] mb-2">Premium components:</p>
               <div className="grid grid-cols-2 gap-2">
                 <div className="flex items-center gap-2 text-xs text-gray-700">
                   <span className="text-base">🖥️</span>
@@ -367,7 +367,7 @@ const FlashHome = () => {
               <div>
                 <p className="text-xs text-gray-700">Bundle Price</p>
                 <div className="flex items-center gap-2">
-                  <span className="text-lg font-bold text-black">₹74,999</span>
+                  <span className="text-lg font-bold text-[#363636]">₹74,999</span>
                   <span className="text-xs text-gray-500 line-through">₹87,499</span>
                   <span className="text-xs font-bold text-green-600">Save ₹12,500</span>
                 </div>
@@ -380,11 +380,11 @@ const FlashHome = () => {
         {/* 2. Price Drop Alerts */}
         <section>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#363636] rounded-full flex items-center justify-center">
               <TrendingDown className="w-4 h-4 text-white" />
             </div>
             <div className="flex-1">
-              <h2 className="text-lg font-bold text-black">Price Drop Alerts</h2>
+              <h2 className="text-lg font-bold text-[#363636]">Price Drop Alerts</h2>
               <p className="text-xs text-gray-600">Products you're watching are now cheaper</p>
             </div>
           </div>
@@ -393,7 +393,7 @@ const FlashHome = () => {
             {priceDropAlerts.map((alert) => (
               <div
                 key={alert.id}
-                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-black hover:shadow-lg transition-all"
+                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-[#363636] hover:shadow-lg transition-all"
               >
                 <div
                   onClick={() => navigate(`/product/${alert.category}`)}
@@ -402,21 +402,21 @@ const FlashHome = () => {
                   <div className="relative">
                     <img src={alert.image} alt={alert.name} className="w-24 h-24 object-cover rounded-lg border border-gray-200" />
                     {alert.historicalLow && (
-                      <div className="absolute -top-1 -right-1 bg-black text-white px-2 py-1 rounded-full text-xs font-bold">
+                      <div className="absolute -top-1 -right-1 bg-[#363636] text-white px-2 py-1 rounded-full text-xs font-bold">
                         🔥 Low
                       </div>
                     )}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-sm font-bold text-black line-clamp-2 mb-2">{alert.name}</h3>
+                    <h3 className="text-sm font-bold text-[#363636] line-clamp-2 mb-2">{alert.name}</h3>
 
                     <div className="mb-2">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-xs text-gray-500 line-through">₹{alert.originalPrice.toLocaleString()}</span>
-                        <span className="text-lg font-bold text-black">₹{alert.currentPrice.toLocaleString()}</span>
+                        <span className="text-lg font-bold text-[#363636]">₹{alert.currentPrice.toLocaleString()}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="bg-black text-white px-2 py-0.5 rounded text-xs font-bold">
+                        <span className="bg-[#363636] text-white px-2 py-0.5 rounded text-xs font-bold">
                           {alert.dropPercentage}% OFF
                         </span>
                         <span className="text-xs text-gray-600">Save ₹{(alert.originalPrice - alert.currentPrice).toLocaleString()}</span>
@@ -426,7 +426,7 @@ const FlashHome = () => {
                     <div className="flex items-center gap-2 text-xs">
                       <span className="text-gray-600">Alert set {alert.alertSetDate}</span>
                       <span className="text-gray-400">•</span>
-                      <span className="text-black font-semibold">Historical low price!</span>
+                      <span className="text-[#363636] font-semibold">Historical low price!</span>
                     </div>
                   </div>
                   <ChevronRight className="w-4 h-4 text-gray-400 flex-shrink-0 mt-2" />
@@ -436,7 +436,7 @@ const FlashHome = () => {
                 <div className="border-t-2 border-gray-200 px-4 py-3 bg-gray-50">
                   <button
                     onClick={() => navigate('/checkout')}
-                    className="w-full bg-black text-white py-2.5 px-4 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
+                    className="w-full bg-[#363636] text-white py-2.5 px-4 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
                   >
                     <ShoppingCart className="w-4 h-4" />
                     Buy Now at ₹{alert.currentPrice.toLocaleString()}
@@ -450,11 +450,11 @@ const FlashHome = () => {
         {/* 3. Ranked Lists - Personalized to user interests */}
         <section>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#363636] rounded-full flex items-center justify-center">
               <Award className="w-4 h-4 text-white" />
             </div>
             <div className="flex-1">
-              <h2 className="text-lg font-bold text-black">Expert Rankings You'll Love</h2>
+              <h2 className="text-lg font-bold text-[#363636]">Expert Rankings You'll Love</h2>
               <p className="text-xs text-gray-600">Curated lists based on your beauty & tech interests</p>
             </div>
           </div>
@@ -463,13 +463,13 @@ const FlashHome = () => {
               <div
                 key={idx}
                 onClick={() => navigate('/ranked-list/microplastic-free-scrubs')}
-                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-black hover:shadow-lg transition-all cursor-pointer"
+                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-[#363636] hover:shadow-lg transition-all cursor-pointer"
               >
                 <div className="flex gap-4 p-4">
                   <img src={list.image} alt={list.title} className="w-28 h-28 object-cover rounded-lg border border-gray-200" />
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-2">
-                      <h3 className="text-sm font-bold text-black line-clamp-2 flex-1">{list.title}</h3>
+                      <h3 className="text-sm font-bold text-[#363636] line-clamp-2 flex-1">{list.title}</h3>
                       <ChevronRight className="w-4 h-4 text-gray-400 flex-shrink-0 ml-2" />
                     </div>
                     <div className="flex items-center gap-2 text-xs text-gray-600 mb-3">
@@ -494,11 +494,11 @@ const FlashHome = () => {
         {/* 4. Value Finds - Personalized */}
         <section>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#363636] rounded-full flex items-center justify-center">
               <TrendingDown className="w-4 h-4 text-white" />
             </div>
             <div className="flex-1">
-              <h2 className="text-lg font-bold text-black">Value Picks For You</h2>
+              <h2 className="text-lg font-bold text-[#363636]">Value Picks For You</h2>
               <p className="text-xs text-gray-600">Budget-friendly options matching your needs</p>
             </div>
           </div>
@@ -507,19 +507,19 @@ const FlashHome = () => {
               <div
                 key={idx}
                 onClick={() => navigate(`/product/${product.category}`)}
-                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-black hover:shadow-lg transition-all cursor-pointer"
+                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-[#363636] hover:shadow-lg transition-all cursor-pointer"
               >
                 <div className="relative">
                   <img src={product.image} alt={product.name} className="w-full h-36 object-cover" />
                   <span className="absolute top-2 right-2 text-xs bg-green-600 text-white px-2 py-1 rounded-md font-bold shadow-sm">
                     {product.badge}
                   </span>
-                  <div className="absolute top-2 left-2 text-xs bg-black text-white px-2 py-1 rounded-md font-bold">
+                  <div className="absolute top-2 left-2 text-xs bg-[#363636] text-white px-2 py-1 rounded-md font-bold">
                     AI {product.aiScore}
                   </div>
                 </div>
                 <div className="p-3">
-                  <p className="text-xs font-bold text-black mb-1 line-clamp-2">{product.name}</p>
+                  <p className="text-xs font-bold text-[#363636] mb-1 line-clamp-2">{product.name}</p>
                   <div className="flex items-center gap-1 mb-2">
                     <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
                     <span className="text-xs text-gray-600 font-medium">{product.rating}</span>
@@ -527,7 +527,7 @@ const FlashHome = () => {
                   <p className="text-xs text-gray-600 mb-2">
                     {idx === 0 ? 'Great for oily skin' : 'Budget smartwatch pick'}
                   </p>
-                  <p className="text-sm font-bold text-black">₹{product.price.toLocaleString()}</p>
+                  <p className="text-sm font-bold text-[#363636]">₹{product.price.toLocaleString()}</p>
                 </div>
               </div>
             ))}
@@ -537,24 +537,24 @@ const FlashHome = () => {
         {/* 5. Social Trends - Personalized */}
         <section>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#363636] rounded-full flex items-center justify-center">
               <TrendingUp className="w-4 h-4 text-white" />
             </div>
             <div className="flex-1">
-              <h2 className="text-lg font-bold text-black">Trending In Your World</h2>
+              <h2 className="text-lg font-bold text-[#363636]">Trending In Your World</h2>
               <p className="text-xs text-gray-600">Popular among people with similar interests</p>
             </div>
           </div>
           <div className="space-y-3">
             {socialTrends.map((trend, idx) => (
-              <div key={idx} className="bg-gray-50 border-2 border-gray-200 rounded-xl p-4 hover:border-black hover:shadow-md transition-all cursor-pointer">
+              <div key={idx} className="bg-gray-50 border-2 border-gray-200 rounded-xl p-4 hover:border-[#363636] hover:shadow-md transition-all cursor-pointer">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl shadow-sm">
                       {trend.icon}
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold text-black mb-1">{trend.title}</h3>
+                      <h3 className="text-sm font-bold text-[#363636] mb-1">{trend.title}</h3>
                       <p className="text-xs text-gray-600 mb-2">{trend.description}</p>
                       <p className="text-xs text-gray-700">
                         {idx === 0 ? 'Trending among skincare enthusiasts like you' : 'Popular with tech professionals in your network'}
@@ -577,17 +577,17 @@ const FlashHome = () => {
         {/* 6. Browse All Categories - General Purpose */}
         <section className="border-t-2 border-gray-200 pt-6">
           <div className="mb-6">
-            <h2 className="text-lg font-bold text-black mb-1">Browse All Categories</h2>
+            <h2 className="text-lg font-bold text-[#363636] mb-1">Browse All Categories</h2>
             <p className="text-xs text-gray-600">Explore our complete product catalog</p>
           </div>
 
           {/* Beauty */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-sm font-bold text-black">Beauty & Personal Care</h3>
+              <h3 className="text-sm font-bold text-[#363636]">Beauty & Personal Care</h3>
               <button
                 onClick={() => navigate('/discovery/beauty')}
-                className="text-xs text-gray-600 hover:text-black font-semibold flex items-center gap-1"
+                className="text-xs text-gray-600 hover:text-[#363636] font-semibold flex items-center gap-1"
               >
                 View All
                 <ChevronRight className="w-3 h-3" />
@@ -598,10 +598,10 @@ const FlashHome = () => {
                 <button
                   key={idx}
                   onClick={() => navigate(cat.path)}
-                  className="bg-white border border-gray-200 rounded-lg p-3 hover:border-black hover:shadow-sm transition-all text-center"
+                  className="bg-white border border-gray-200 rounded-lg p-3 hover:border-[#363636] hover:shadow-sm transition-all text-center"
                 >
                   <span className="text-2xl mb-2 block">{cat.icon}</span>
-                  <span className="text-xs font-medium text-black block">{cat.name}</span>
+                  <span className="text-xs font-medium text-[#363636] block">{cat.name}</span>
                 </button>
               ))}
             </div>
@@ -610,10 +610,10 @@ const FlashHome = () => {
           {/* Electronics */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-sm font-bold text-black">Electronics & Gadgets</h3>
+              <h3 className="text-sm font-bold text-[#363636]">Electronics & Gadgets</h3>
               <button
                 onClick={() => navigate('/discovery/electronics')}
-                className="text-xs text-gray-600 hover:text-black font-semibold flex items-center gap-1"
+                className="text-xs text-gray-600 hover:text-[#363636] font-semibold flex items-center gap-1"
               >
                 View All
                 <ChevronRight className="w-3 h-3" />
@@ -624,10 +624,10 @@ const FlashHome = () => {
                 <button
                   key={idx}
                   onClick={() => navigate(cat.path)}
-                  className="bg-white border border-gray-200 rounded-lg p-3 hover:border-black hover:shadow-sm transition-all text-center"
+                  className="bg-white border border-gray-200 rounded-lg p-3 hover:border-[#363636] hover:shadow-sm transition-all text-center"
                 >
                   <span className="text-2xl mb-2 block">{cat.icon}</span>
-                  <span className="text-xs font-medium text-black block">{cat.name}</span>
+                  <span className="text-xs font-medium text-[#363636] block">{cat.name}</span>
                 </button>
               ))}
             </div>
@@ -636,10 +636,10 @@ const FlashHome = () => {
           {/* Fashion */}
           <div>
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-sm font-bold text-black">Fashion & Lifestyle</h3>
+              <h3 className="text-sm font-bold text-[#363636]">Fashion & Lifestyle</h3>
               <button
                 onClick={() => navigate('/discovery/fashion')}
-                className="text-xs text-gray-600 hover:text-black font-semibold flex items-center gap-1"
+                className="text-xs text-gray-600 hover:text-[#363636] font-semibold flex items-center gap-1"
               >
                 View All
                 <ChevronRight className="w-3 h-3" />
@@ -650,10 +650,10 @@ const FlashHome = () => {
                 <button
                   key={idx}
                   onClick={() => navigate(cat.path)}
-                  className="bg-white border border-gray-200 rounded-lg p-3 hover:border-black hover:shadow-sm transition-all text-center"
+                  className="bg-white border border-gray-200 rounded-lg p-3 hover:border-[#363636] hover:shadow-sm transition-all text-center"
                 >
                   <span className="text-2xl mb-2 block">{cat.icon}</span>
-                  <span className="text-xs font-medium text-black block">{cat.name}</span>
+                  <span className="text-xs font-medium text-[#363636] block">{cat.name}</span>
                 </button>
               ))}
             </div>

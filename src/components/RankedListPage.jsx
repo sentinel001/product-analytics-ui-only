@@ -75,7 +75,7 @@ const RankedListPage = () => {
         <button onClick={() => navigate(-1)} className="p-1 hover:bg-gray-100 rounded-lg transition-colors">
           <ArrowLeft className="w-5 h-5 text-gray-900" />
         </button>
-        <h1 className="text-lg font-bold text-black">Ranked List</h1>
+        <h1 className="text-lg font-bold text-[#363636]">Ranked List</h1>
       </header>
 
       {/* Main Content */}
@@ -83,7 +83,7 @@ const RankedListPage = () => {
         {/* List Header */}
         <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
           <div className="flex items-start justify-between mb-3">
-            <h2 className="text-lg font-bold text-black leading-tight flex-1">{listInfo.title}</h2>
+            <h2 className="text-lg font-bold text-[#363636] leading-tight flex-1">{listInfo.title}</h2>
           </div>
 
           <div className="flex items-center gap-4 text-xs text-gray-600 mb-3">
@@ -98,7 +98,7 @@ const RankedListPage = () => {
           <div className="bg-white border border-gray-200 rounded p-3 flex items-start gap-2">
             <Info className="w-4 h-4 text-gray-600 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="text-xs font-semibold text-black mb-0.5">Our Methodology</p>
+              <p className="text-xs font-semibold text-[#363636] mb-0.5">Our Methodology</p>
               <p className="text-xs text-gray-600">{listInfo.methodology}</p>
             </div>
           </div>
@@ -109,7 +109,7 @@ const RankedListPage = () => {
           <button
             onClick={() => setSelectedFilter('all')}
             className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-              selectedFilter === 'all' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              selectedFilter === 'all' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
             All Products
@@ -117,7 +117,7 @@ const RankedListPage = () => {
           <button
             onClick={() => setSelectedFilter('oily')}
             className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-              selectedFilter === 'oily' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              selectedFilter === 'oily' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
             For Oily Skin
@@ -125,7 +125,7 @@ const RankedListPage = () => {
           <button
             onClick={() => setSelectedFilter('dry')}
             className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-              selectedFilter === 'dry' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              selectedFilter === 'dry' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
             For Dry Skin
@@ -133,7 +133,7 @@ const RankedListPage = () => {
           <button
             onClick={() => setSelectedFilter('budget')}
             className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-              selectedFilter === 'budget' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              selectedFilter === 'budget' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
             Budget Picks
@@ -146,20 +146,20 @@ const RankedListPage = () => {
             <div
               key={product.rank}
               onClick={() => navigate('/product/beauty')}
-              className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
+              className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-[#363636] hover:shadow-md transition-all cursor-pointer"
             >
               <div className="flex gap-3 p-3">
                 {/* Rank Badge */}
                 <div className="flex flex-col items-center flex-shrink-0">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${
-                    product.rank === 1 ? 'bg-yellow-400 text-black' :
-                    product.rank === 2 ? 'bg-gray-300 text-black' :
-                    product.rank === 3 ? 'bg-orange-300 text-black' :
+                    product.rank === 1 ? 'bg-yellow-400 text-[#363636]' :
+                    product.rank === 2 ? 'bg-gray-300 text-[#363636]' :
+                    product.rank === 3 ? 'bg-orange-300 text-[#363636]' :
                     'bg-gray-100 text-gray-700'
                   }`}>
                     {product.rank}
                   </div>
-                  <div className="mt-1 bg-black text-white px-1.5 py-0.5 rounded text-xs font-bold">
+                  <div className="mt-1 bg-[#363636] text-white px-1.5 py-0.5 rounded text-xs font-bold">
                     {product.aiScore}
                   </div>
                 </div>
@@ -179,7 +179,7 @@ const RankedListPage = () => {
                       <span
                         key={idx}
                         className={`text-xs px-2 py-0.5 rounded font-semibold ${
-                          badge.includes('Editor') ? 'bg-black text-white' :
+                          badge.includes('Editor') ? 'bg-[#363636] text-white' :
                           badge.includes('Value') ? 'bg-green-600 text-white' :
                           badge.includes('Budget') ? 'bg-blue-600 text-white' :
                           'bg-purple-600 text-white'
@@ -190,7 +190,7 @@ const RankedListPage = () => {
                     ))}
                   </div>
 
-                  <h3 className="text-sm font-bold text-black mb-1 line-clamp-2">{product.name}</h3>
+                  <h3 className="text-sm font-bold text-[#363636] mb-1 line-clamp-2">{product.name}</h3>
                   <p className="text-xs text-gray-600 mb-2">{product.brand}</p>
 
                   {/* Rating & Price */}
@@ -201,7 +201,7 @@ const RankedListPage = () => {
                       <span className="text-xs text-gray-500">({product.reviews})</span>
                     </div>
                     <span className="text-xs text-gray-400">•</span>
-                    <span className="text-sm font-bold text-black">₹{product.price}</span>
+                    <span className="text-sm font-bold text-[#363636]">₹{product.price}</span>
                   </div>
 
                   {/* Best For Tag */}
@@ -228,7 +228,7 @@ const RankedListPage = () => {
         </div>
 
         {/* Load More */}
-        <button className="w-full bg-gray-100 text-black py-3 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+        <button className="w-full bg-gray-100 text-[#363636] py-3 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
           <span>View More Products</span>
           <ChevronDown className="w-4 h-4" />
         </button>

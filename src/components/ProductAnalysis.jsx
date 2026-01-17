@@ -76,7 +76,7 @@ const ProductAnalysis = () => {
             </div>
           </div>
 
-          <button className="w-full mt-3 bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+          <button className="w-full mt-3 bg-[#363636] text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
             Compare these stores
           </button>
         </section>
@@ -90,7 +90,7 @@ const ProductAnalysis = () => {
                 onClick={() => setActiveTab(tab.toLowerCase().replace(' ', '-'))}
                 className={`pb-2 px-1 font-medium text-sm transition-colors ${
                   activeTab === tab.toLowerCase().replace(' ', '-')
-                    ? 'text-black border-b-2 border-black'
+                    ? 'text-[#363636] border-b-2 border-[#363636]'
                     : 'text-gray-500 hover:text-gray-700'
                 }`}
               >
@@ -244,7 +244,7 @@ const ProductAnalysis = () => {
               </button>
             ))}
           </div>
-          <button className="w-full mt-3 bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+          <button className="w-full mt-3 bg-[#363636] text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
             Ask Your Question
           </button>
         </section>

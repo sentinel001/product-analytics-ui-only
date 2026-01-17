@@ -20,7 +20,7 @@ const FashionProduct = () => {
     {
       material: 'Organic Cotton',
       percentage: 95,
-      icon: <Wind className="w-5 h-5 text-black" />,
+      icon: <Wind className="w-5 h-5 text-[#363636]" />,
       sustainability: 'Excellent',
       properties: ['Breathable', 'Soft', 'Hypoallergenic'],
       certifications: ['GOTS Certified', 'Fair Trade'],
@@ -30,7 +30,7 @@ const FashionProduct = () => {
     {
       material: 'Elastane (Spandex)',
       percentage: 5,
-      icon: <Shirt className="w-5 h-5 text-black" />,
+      icon: <Shirt className="w-5 h-5 text-[#363636]" />,
       sustainability: 'Good',
       properties: ['Stretch', 'Shape Retention', 'Flexibility'],
       certifications: ['OEKO-TEX Standard 100'],
@@ -138,12 +138,12 @@ const FashionProduct = () => {
             </div>
             <div className="flex gap-2">
               <div className="inline-flex items-center gap-1 bg-gray-50 border border-gray-300 px-2 py-1 rounded">
-                <CheckCircle className="w-3 h-3 text-black" />
-                <span className="text-xs font-medium text-black">Sustainable</span>
+                <CheckCircle className="w-3 h-3 text-[#363636]" />
+                <span className="text-xs font-medium text-[#363636]">Sustainable</span>
               </div>
               <div className="inline-flex items-center gap-1 bg-gray-50 border border-gray-300 px-2 py-1 rounded">
-                <Shield className="w-3 h-3 text-black" />
-                <span className="text-xs font-medium text-black">Premium Quality</span>
+                <Shield className="w-3 h-3 text-[#363636]" />
+                <span className="text-xs font-medium text-[#363636]">Premium Quality</span>
               </div>
             </div>
           </div>
@@ -154,7 +154,7 @@ const FashionProduct = () => {
       <section className="bg-gray-50 rounded-xl p-4 mx-4 mb-3 border-2 border-gray-300">
         <div className="flex items-center justify-between mb-3">
           <h3 className="font-bold text-gray-900 text-base flex items-center gap-2">
-            <Ruler className="w-5 h-5 text-black" />
+            <Ruler className="w-5 h-5 text-[#363636]" />
             Smart Size & Fit Predictor
           </h3>
           <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">
@@ -166,7 +166,7 @@ const FashionProduct = () => {
         {!showSizePredictor ? (
           <button
             onClick={() => setShowSizePredictor(true)}
-            className="w-full bg-black text-white rounded-lg p-4 font-semibold text-sm flex items-center justify-between hover:bg-gray-800 transition-all"
+            className="w-full bg-[#363636] text-white rounded-lg p-4 font-semibold text-sm flex items-center justify-between hover:bg-gray-800 transition-all"
           >
             <span>Find Your Perfect Size</span>
             <ChevronRight className="w-5 h-5" />
@@ -217,7 +217,7 @@ const FashionProduct = () => {
             </div>
 
             {/* AI Recommendation */}
-            <div className="bg-black text-white rounded-lg p-4">
+            <div className="bg-[#363636] text-white rounded-lg p-4">
               <div className="flex items-start justify-between mb-2">
                 <div>
                   <p className="text-sm font-semibold mb-1">Recommended Size</p>
@@ -290,7 +290,7 @@ const FashionProduct = () => {
             <div className="bg-white rounded-lg p-3 border border-gray-200">
               <div className="flex items-center justify-between mb-2">
                 <p className="text-sm font-semibold text-gray-900 flex items-center gap-2">
-                  <Users className="w-4 h-4 text-black" />
+                  <Users className="w-4 h-4 text-[#363636]" />
                   How Customers Rate the Fit
                 </p>
                 <span className="text-xs text-gray-500">2,123 reviews</span>
@@ -304,7 +304,7 @@ const FashionProduct = () => {
                     </div>
                     <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                       <div
-                        className="h-full rounded-full bg-black"
+                        className="h-full rounded-full bg-[#363636]"
                         style={{ width: `${item.percentage}%` }}
                       />
                     </div>
@@ -319,12 +319,12 @@ const FashionProduct = () => {
       {/* AI Body Analysis Feature */}
       <section className="bg-gray-50 border-2 border-gray-300 rounded-lg p-4 mx-4 mb-3">
         <div className="flex items-center justify-between mb-3">
-          <h3 className="text-sm font-bold text-black flex items-center gap-2">
+          <h3 className="text-sm font-bold text-[#363636] flex items-center gap-2">
             <Sparkles className="w-5 h-5" />
             AI Body & Style Analysis
           </h3>
           {bodyAnalysisComplete && (
-            <span className="text-xs bg-black text-white px-2 py-1 rounded-full">Saved to Profile</span>
+            <span className="text-xs bg-[#363636] text-white px-2 py-1 rounded-full">Saved to Profile</span>
           )}
         </div>
 
@@ -335,11 +335,11 @@ const FashionProduct = () => {
         {!showBodyAnalysis ? (
           <button
             onClick={() => setShowBodyAnalysis(true)}
-            className="w-full bg-white border-2 border-gray-300 rounded-lg p-4 hover:border-black transition-all transform active:scale-95"
+            className="w-full bg-white border-2 border-gray-300 rounded-lg p-4 hover:border-[#363636] transition-all transform active:scale-95"
           >
             <div className="flex flex-col items-center gap-2">
-              <Camera className="w-8 h-8 text-black" />
-              <p className="text-sm font-semibold text-black">Upload Body Photos</p>
+              <Camera className="w-8 h-8 text-[#363636]" />
+              <p className="text-sm font-semibold text-[#363636]">Upload Body Photos</p>
               <p className="text-xs text-gray-600">Get personalized style recommendations</p>
             </div>
           </button>
@@ -347,7 +347,7 @@ const FashionProduct = () => {
           <div className="space-y-3">
             {/* Photo Upload Area */}
             {uploadedBodyPhotos.length < 3 && (
-              <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 hover:border-black transition-all">
+              <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-4 hover:border-[#363636] transition-all">
                 <label className="cursor-pointer block">
                   <input
                     type="file"
@@ -358,7 +358,7 @@ const FashionProduct = () => {
                   />
                   <div className="flex flex-col items-center gap-2">
                     <Upload className="w-6 h-6 text-gray-400" />
-                    <p className="text-xs font-semibold text-black">
+                    <p className="text-xs font-semibold text-[#363636]">
                       Upload {uploadedBodyPhotos.length === 0 ? '3' : 3 - uploadedBodyPhotos.length} more photo{3 - uploadedBodyPhotos.length !== 1 ? 's' : ''}
                     </p>
                     <p className="text-xs text-gray-600 text-center">
@@ -383,7 +383,7 @@ const FashionProduct = () => {
                     </div>
                     <button
                       onClick={() => removeBodyPhoto(idx)}
-                      className="absolute -top-1 -right-1 bg-black text-white rounded-full p-1 hover:bg-gray-800 transition-all"
+                      className="absolute -top-1 -right-1 bg-[#363636] text-white rounded-full p-1 hover:bg-gray-800 transition-all"
                     >
                       <X className="w-3 h-3" />
                     </button>
@@ -399,7 +399,7 @@ const FashionProduct = () => {
             {uploadedBodyPhotos.length === 3 && !bodyAnalysisComplete && (
               <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                 <div className="animate-spin w-8 h-8 border-4 border-gray-200 border-t-black rounded-full mx-auto mb-2"></div>
-                <p className="text-xs font-semibold text-black">Analyzing your body type & style preferences...</p>
+                <p className="text-xs font-semibold text-[#363636]">Analyzing your body type & style preferences...</p>
                 <p className="text-xs text-gray-600 mt-1">This may take a few moments</p>
               </div>
             )}
@@ -411,17 +411,17 @@ const FashionProduct = () => {
                 <div className="flex items-center justify-between pb-3 border-b border-gray-200">
                   <div>
                     <p className="text-xs text-gray-600 mb-1">Detected Body Type</p>
-                    <p className="text-base font-bold text-black">{bodyAnalysisResult.bodyType}</p>
+                    <p className="text-base font-bold text-[#363636]">{bodyAnalysisResult.bodyType}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-xs text-gray-600 mb-1">Confidence</p>
-                    <p className="text-base font-bold text-black">{bodyAnalysisResult.confidence}%</p>
+                    <p className="text-base font-bold text-[#363636]">{bodyAnalysisResult.confidence}%</p>
                   </div>
                 </div>
 
                 {/* Recommended Styles */}
                 <div>
-                  <p className="text-xs font-semibold text-black mb-2 flex items-center gap-1">
+                  <p className="text-xs font-semibold text-[#363636] mb-2 flex items-center gap-1">
                     <CheckCircle className="w-3 h-3" />
                     Recommended Fits
                   </p>
@@ -436,7 +436,7 @@ const FashionProduct = () => {
 
                 {/* Recommended Types */}
                 <div>
-                  <p className="text-xs font-semibold text-black mb-2 flex items-center gap-1">
+                  <p className="text-xs font-semibold text-[#363636] mb-2 flex items-center gap-1">
                     <CheckCircle className="w-3 h-3" />
                     Best Dress Types
                   </p>
@@ -451,7 +451,7 @@ const FashionProduct = () => {
 
                 {/* Recommended Patterns */}
                 <div>
-                  <p className="text-xs font-semibold text-black mb-2 flex items-center gap-1">
+                  <p className="text-xs font-semibold text-[#363636] mb-2 flex items-center gap-1">
                     <CheckCircle className="w-3 h-3" />
                     Flattering Patterns
                   </p>
@@ -466,7 +466,7 @@ const FashionProduct = () => {
 
                 {/* Recommended Colors */}
                 <div>
-                  <p className="text-xs font-semibold text-black mb-2 flex items-center gap-1">
+                  <p className="text-xs font-semibold text-[#363636] mb-2 flex items-center gap-1">
                     <CheckCircle className="w-3 h-3" />
                     Complementary Colors
                   </p>
@@ -481,9 +481,9 @@ const FashionProduct = () => {
 
                 {/* Profile Save Notice */}
                 <div className="bg-gray-50 rounded-lg p-2.5 flex items-start gap-2 border border-gray-200">
-                  <Sparkles className="w-4 h-4 text-black mt-0.5 flex-shrink-0" />
+                  <Sparkles className="w-4 h-4 text-[#363636] mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-xs font-semibold text-black">Saved to Your Profile</p>
+                    <p className="text-xs font-semibold text-[#363636]">Saved to Your Profile</p>
                     <p className="text-xs text-gray-600 mt-0.5">
                       We'll use this to personalize your Fashion recommendations and show you clothes that match your body type.
                     </p>
@@ -536,7 +536,7 @@ const FashionProduct = () => {
               {/* Certifications */}
               <div className="flex flex-wrap gap-1">
                 {material.certifications.map((cert, cIdx) => (
-                  <span key={cIdx} className="text-xs bg-gray-50 px-2 py-1 rounded text-black font-medium border border-gray-300 flex items-center gap-1">
+                  <span key={cIdx} className="text-xs bg-gray-50 px-2 py-1 rounded text-[#363636] font-medium border border-gray-300 flex items-center gap-1">
                     <CheckCircle className="w-3 h-3" />
                     {cert}
                   </span>
@@ -549,14 +549,14 @@ const FashionProduct = () => {
         {/* Quality Indicators */}
         <div className="bg-gray-50 rounded-lg p-3 border-2 border-gray-300">
           <p className="font-semibold text-gray-900 text-sm mb-3 flex items-center gap-2">
-            <Star className="w-4 h-4 text-black" />
+            <Star className="w-4 h-4 text-[#363636]" />
             Premium Quality Indicators
           </p>
           <div className="space-y-2">
             {qualityIndicators.map((indicator, idx) => (
               <div key={idx} className="bg-white rounded p-2 flex items-center justify-between border border-gray-200">
                 <div className="flex items-center gap-2">
-                  <div className="text-black">{indicator.icon}</div>
+                  <div className="text-[#363636]">{indicator.icon}</div>
                   <div>
                     <p className="text-xs font-semibold text-gray-900">{indicator.aspect}</p>
                     <p className="text-xs text-gray-600">{indicator.value}</p>
@@ -581,7 +581,7 @@ const FashionProduct = () => {
         {/* Care Instructions */}
         <div className="mt-3 bg-gray-50 rounded-lg p-3 border-2 border-gray-300">
           <p className="font-semibold text-gray-900 text-sm mb-2 flex items-center gap-2">
-            <Droplets className="w-4 h-4 text-black" />
+            <Droplets className="w-4 h-4 text-[#363636]" />
             Care Instructions for Longevity
           </p>
           <div className="space-y-1 text-xs text-gray-700">
@@ -592,9 +592,9 @@ const FashionProduct = () => {
             <p>• Do not dry clean</p>
           </div>
           <div className="mt-2 flex items-start gap-2 bg-white rounded p-2 border border-gray-200">
-            <AlertCircle className="w-4 h-4 text-black mt-0.5 flex-shrink-0" />
+            <AlertCircle className="w-4 h-4 text-[#363636] mt-0.5 flex-shrink-0" />
             <p className="text-xs text-gray-700">
-              Following these instructions can extend your garment's life by <span className="font-semibold text-black">2-3 years</span>
+              Following these instructions can extend your garment's life by <span className="font-semibold text-[#363636]">2-3 years</span>
             </p>
           </div>
         </div>
@@ -649,7 +649,7 @@ const FashionProduct = () => {
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-1">
                 <div
-                  className="h-full bg-black rounded-full transition-all duration-500"
+                  className="h-full bg-[#363636] rounded-full transition-all duration-500"
                   style={{ width: `${item.score}%` }}
                 />
               </div>
@@ -696,7 +696,7 @@ const FashionProduct = () => {
           </div>
           <button
             onClick={() => navigate('/checkout')}
-            className="flex-1 bg-black text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
+            className="flex-1 bg-[#363636] text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />
             Add to Cart

@@ -141,7 +141,7 @@ const OilySkinRoutine = () => {
             <ArrowLeft className="w-5 h-5 text-gray-900" />
           </button>
           <div className="flex-1">
-            <h1 className="text-lg font-bold text-black">{routineInfo.title}</h1>
+            <h1 className="text-lg font-bold text-[#363636]">{routineInfo.title}</h1>
             <p className="text-xs text-gray-600">Personalized for your oily skin</p>
           </div>
         </div>
@@ -154,7 +154,7 @@ const OilySkinRoutine = () => {
           <div className="flex items-start gap-3 mb-3">
             <Droplet className="w-6 h-6 text-blue-600 flex-shrink-0" />
             <div className="flex-1">
-              <h3 className="text-sm font-bold text-black mb-1">Complete Routine Bundle</h3>
+              <h3 className="text-sm font-bold text-[#363636] mb-1">Complete Routine Bundle</h3>
               <p className="text-xs text-gray-700">
                 {routineInfo.totalProducts} products carefully selected for oily skin management
               </p>
@@ -164,7 +164,7 @@ const OilySkinRoutine = () => {
           <div className="grid grid-cols-2 gap-2">
             <div className="bg-white rounded p-2">
               <p className="text-xs text-gray-600">Bundle Price</p>
-              <p className="text-lg font-bold text-black">₹{routineInfo.totalPrice - routineInfo.savingsWithBundle}</p>
+              <p className="text-lg font-bold text-[#363636]">₹{routineInfo.totalPrice - routineInfo.savingsWithBundle}</p>
             </div>
             <div className="bg-white rounded p-2">
               <p className="text-xs text-gray-600">You Save</p>
@@ -178,13 +178,13 @@ const OilySkinRoutine = () => {
           <div className="flex items-start gap-2 mb-3">
             <Info className="w-4 h-4 text-gray-700 flex-shrink-0 mt-0.5" />
             <div>
-              <h3 className="text-sm font-bold text-black mb-2">Understanding Oily Skin</h3>
+              <h3 className="text-sm font-bold text-[#363636] mb-2">Understanding Oily Skin</h3>
               <p className="text-xs text-gray-700 leading-relaxed">{knowledgeContent.aboutOilySkin}</p>
             </div>
           </div>
 
           <div className="mb-3">
-            <p className="text-xs font-semibold text-black mb-1">Common Mistakes to Avoid:</p>
+            <p className="text-xs font-semibold text-[#363636] mb-1">Common Mistakes to Avoid:</p>
             <ul className="space-y-1">
               {knowledgeContent.commonMistakes.map((mistake, idx) => (
                 <li key={idx} className="text-xs text-gray-700 flex items-start gap-1">
@@ -196,7 +196,7 @@ const OilySkinRoutine = () => {
           </div>
 
           <div>
-            <p className="text-xs font-semibold text-black mb-1">Pro Tips:</p>
+            <p className="text-xs font-semibold text-[#363636] mb-1">Pro Tips:</p>
             <ul className="space-y-1">
               {knowledgeContent.tips.map((tip, idx) => (
                 <li key={idx} className="text-xs text-gray-700 flex items-start gap-1">
@@ -213,7 +213,7 @@ const OilySkinRoutine = () => {
           <button
             onClick={() => setSelectedTime('morning')}
             className={`flex-1 py-2 rounded-md text-sm font-medium transition-all flex items-center justify-center gap-2 ${
-              selectedTime === 'morning' ? 'bg-white text-black shadow-sm' : 'text-gray-600'
+              selectedTime === 'morning' ? 'bg-white text-[#363636] shadow-sm' : 'text-gray-600'
             }`}
           >
             <Sun className="w-4 h-4" />
@@ -222,7 +222,7 @@ const OilySkinRoutine = () => {
           <button
             onClick={() => setSelectedTime('night')}
             className={`flex-1 py-2 rounded-md text-sm font-medium transition-all flex items-center justify-center gap-2 ${
-              selectedTime === 'night' ? 'bg-white text-black shadow-sm' : 'text-gray-600'
+              selectedTime === 'night' ? 'bg-white text-[#363636] shadow-sm' : 'text-gray-600'
             }`}
           >
             <Moon className="w-4 h-4" />
@@ -232,7 +232,7 @@ const OilySkinRoutine = () => {
 
         {/* Routine Steps */}
         <div className="space-y-3">
-          <h3 className="text-sm font-bold text-black">
+          <h3 className="text-sm font-bold text-[#363636]">
             {selectedTime === 'morning' ? 'Morning' : 'Night'} Routine Steps
           </h3>
 
@@ -241,7 +241,7 @@ const OilySkinRoutine = () => {
               <div className="flex gap-3 p-3">
                 {/* Step Number */}
                 <div className="flex flex-col items-center flex-shrink-0">
-                  <div className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm">
+                  <div className="w-8 h-8 bg-[#363636] text-white rounded-full flex items-center justify-center font-bold text-sm">
                     {product.step}
                   </div>
                 </div>
@@ -253,7 +253,7 @@ const OilySkinRoutine = () => {
                     alt={product.name}
                     className="w-16 h-20 object-cover rounded border border-gray-200"
                   />
-                  <div className="absolute top-1 left-1 bg-black text-white px-1 py-0.5 rounded text-xs font-bold">
+                  <div className="absolute top-1 left-1 bg-[#363636] text-white px-1 py-0.5 rounded text-xs font-bold">
                     {product.aiScore}
                   </div>
                 </div>
@@ -263,14 +263,14 @@ const OilySkinRoutine = () => {
                   <span className="inline-block bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-xs font-medium mb-1">
                     {product.category}
                   </span>
-                  <h4 className="text-sm font-bold text-black line-clamp-1 mb-0.5">{product.name}</h4>
+                  <h4 className="text-sm font-bold text-[#363636] line-clamp-1 mb-0.5">{product.name}</h4>
                   <p className="text-xs text-gray-600 mb-2">{product.brand}</p>
 
                   <div className="flex items-center gap-2 mb-1">
                     <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
                     <span className="text-xs font-medium text-gray-700">{product.rating}</span>
                     <span className="text-xs text-gray-400">•</span>
-                    <span className="text-sm font-bold text-black">₹{product.price}</span>
+                    <span className="text-sm font-bold text-[#363636]">₹{product.price}</span>
                   </div>
                 </div>
               </div>
@@ -295,7 +295,7 @@ const OilySkinRoutine = () => {
 
         {/* Expected Results */}
         <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-4">
-          <h3 className="text-sm font-bold text-black mb-2">Expected Results</h3>
+          <h3 className="text-sm font-bold text-[#363636] mb-2">Expected Results</h3>
           <div className="space-y-2 text-xs text-gray-700">
             <div className="flex items-start gap-2">
               <span className="text-green-600 mt-0.5">✓</span>
@@ -319,13 +319,13 @@ const OilySkinRoutine = () => {
           <div className="flex-1">
             <p className="text-xs text-gray-600">Bundle Price</p>
             <div className="flex items-center gap-2">
-              <p className="text-xl font-bold text-black">₹{routineInfo.totalPrice - routineInfo.savingsWithBundle}</p>
+              <p className="text-xl font-bold text-[#363636]">₹{routineInfo.totalPrice - routineInfo.savingsWithBundle}</p>
               <span className="text-xs text-gray-500 line-through">₹{routineInfo.totalPrice}</span>
             </div>
           </div>
           <button
             onClick={() => navigate('/checkout')}
-            className="flex-1 bg-black text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all flex items-center justify-center gap-2"
+            className="flex-1 bg-[#363636] text-white py-3 px-6 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all flex items-center justify-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />
             Add Bundle

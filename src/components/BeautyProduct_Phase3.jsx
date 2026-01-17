@@ -631,7 +631,7 @@ const BeautyProduct_Phase3 = () => {
 
           {/* Video Tutorial */}
           <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg h-32 mb-3 flex items-center justify-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-black/20"></div>
+            <div className="absolute inset-0 bg-[#363636]/20"></div>
             <div className="relative z-10 text-white text-center">
               <Play className="w-12 h-12 mx-auto mb-2 opacity-90" />
               <p className="text-xs font-medium">Watch Application Tutorial (45s)</p>
@@ -777,7 +777,7 @@ const BeautyProduct_Phase3 = () => {
             </div>
           </div>
 
-          <button className="w-full mt-3 bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+          <button className="w-full mt-3 bg-[#363636] text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
             Compare these stores
           </button>
         </section>
@@ -791,7 +791,7 @@ const BeautyProduct_Phase3 = () => {
                 onClick={() => setActiveTab(tab.toLowerCase().replace(' ', '-'))}
                 className={`pb-2 px-1 font-medium text-sm transition-colors ${
                   activeTab === tab.toLowerCase().replace(' ', '-')
-                    ? 'text-black border-b-2 border-black'
+                    ? 'text-[#363636] border-b-2 border-[#363636]'
                     : 'text-gray-500 hover:text-gray-700'
                 }`}
               >

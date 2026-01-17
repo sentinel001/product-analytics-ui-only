@@ -625,7 +625,7 @@ const ElectronicsProduct_Phase2 = () => {
               {featureVideos.map((video, idx) => (
                 <div key={idx} className="relative rounded-lg overflow-hidden border border-gray-200">
                   <img src={video.thumbnail} alt={video.title} className="w-full h-24 object-cover" />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-[#363636] bg-opacity-40 flex items-center justify-center">
                     <Play className="w-8 h-8 text-white" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2">
