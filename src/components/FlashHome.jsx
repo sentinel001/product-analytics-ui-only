@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Sparkles, TrendingUp, Bell, User, ChevronRight, Star, Zap, Camera, Link as LinkIcon, Award, TrendingDown, CheckCircle } from 'lucide-react';
+import { Search, Sparkles, TrendingUp, Bell, User, ChevronRight, Star, Zap, Camera, Link as LinkIcon, Award, TrendingDown, CheckCircle, ShoppingCart } from 'lucide-react';
 
 const FlashHome = () => {
   const navigate = useNavigate();
@@ -393,10 +393,12 @@ const FlashHome = () => {
             {priceDropAlerts.map((alert) => (
               <div
                 key={alert.id}
-                onClick={() => navigate(`/product/${alert.category}`)}
-                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-black hover:shadow-lg transition-all cursor-pointer"
+                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-black hover:shadow-lg transition-all"
               >
-                <div className="flex gap-4 p-4">
+                <div
+                  onClick={() => navigate(`/product/${alert.category}`)}
+                  className="flex gap-4 p-4 cursor-pointer"
+                >
                   <div className="relative">
                     <img src={alert.image} alt={alert.name} className="w-24 h-24 object-cover rounded-lg border border-gray-200" />
                     {alert.historicalLow && (
@@ -428,6 +430,17 @@ const FlashHome = () => {
                     </div>
                   </div>
                   <ChevronRight className="w-4 h-4 text-gray-400 flex-shrink-0 mt-2" />
+                </div>
+
+                {/* Buy Now Action */}
+                <div className="border-t-2 border-gray-200 px-4 py-3 bg-gray-50">
+                  <button
+                    onClick={() => navigate('/checkout')}
+                    className="w-full bg-black text-white py-2.5 px-4 rounded-lg font-bold text-sm hover:bg-gray-800 transition-all transform active:scale-95 flex items-center justify-center gap-2"
+                  >
+                    <ShoppingCart className="w-4 h-4" />
+                    Buy Now at ₹{alert.currentPrice.toLocaleString()}
+                  </button>
                 </div>
               </div>
             ))}
