@@ -123,6 +123,31 @@ const FlashHome = () => {
     }
   ];
 
+  const priceDropAlerts = [
+    {
+      id: 1,
+      name: 'Sony WH-1000XM5 Headphones',
+      image: 'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=200&q=80',
+      category: 'electronics',
+      originalPrice: 29990,
+      currentPrice: 24990,
+      dropPercentage: 17,
+      historicalLow: true,
+      alertSetDate: '2 weeks ago'
+    },
+    {
+      id: 2,
+      name: 'The Ordinary AHA 30% + BHA 2% Peeling Solution',
+      image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=200&q=80',
+      category: 'beauty',
+      originalPrice: 1850,
+      currentPrice: 1295,
+      dropPercentage: 30,
+      historicalLow: true,
+      alertSetDate: '1 week ago'
+    }
+  ];
+
   return (
     <div className="max-w-md mx-auto bg-white min-h-screen font-['Inter_Tight'] pb-6">
       {/* Compact Header */}
@@ -352,7 +377,64 @@ const FlashHome = () => {
           </div>
         </section>
 
-        {/* 2. Ranked Lists - Personalized to user interests */}
+        {/* 2. Price Drop Alerts */}
+        <section>
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+              <TrendingDown className="w-4 h-4 text-white" />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-lg font-bold text-black">Price Drop Alerts</h2>
+              <p className="text-xs text-gray-600">Products you're watching are now cheaper</p>
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            {priceDropAlerts.map((alert) => (
+              <div
+                key={alert.id}
+                onClick={() => navigate(`/product/${alert.category}`)}
+                className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-black hover:shadow-lg transition-all cursor-pointer"
+              >
+                <div className="flex gap-4 p-4">
+                  <div className="relative">
+                    <img src={alert.image} alt={alert.name} className="w-24 h-24 object-cover rounded-lg border border-gray-200" />
+                    {alert.historicalLow && (
+                      <div className="absolute -top-1 -right-1 bg-black text-white px-2 py-1 rounded-full text-xs font-bold">
+                        🔥 Low
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-bold text-black line-clamp-2 mb-2">{alert.name}</h3>
+
+                    <div className="mb-2">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xs text-gray-500 line-through">₹{alert.originalPrice.toLocaleString()}</span>
+                        <span className="text-lg font-bold text-black">₹{alert.currentPrice.toLocaleString()}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="bg-black text-white px-2 py-0.5 rounded text-xs font-bold">
+                          {alert.dropPercentage}% OFF
+                        </span>
+                        <span className="text-xs text-gray-600">Save ₹{(alert.originalPrice - alert.currentPrice).toLocaleString()}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-xs">
+                      <span className="text-gray-600">Alert set {alert.alertSetDate}</span>
+                      <span className="text-gray-400">•</span>
+                      <span className="text-black font-semibold">Historical low price!</span>
+                    </div>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-gray-400 flex-shrink-0 mt-2" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 3. Ranked Lists - Personalized to user interests */}
         <section>
           <div className="flex items-center gap-2 mb-4">
             <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
@@ -396,7 +478,7 @@ const FlashHome = () => {
           </div>
         </section>
 
-        {/* 3. Value Finds - Personalized */}
+        {/* 4. Value Finds - Personalized */}
         <section>
           <div className="flex items-center gap-2 mb-4">
             <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
@@ -439,7 +521,7 @@ const FlashHome = () => {
           </div>
         </section>
 
-        {/* 4. Social Trends - Personalized */}
+        {/* 5. Social Trends - Personalized */}
         <section>
           <div className="flex items-center gap-2 mb-4">
             <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
@@ -479,7 +561,7 @@ const FlashHome = () => {
           </div>
         </section>
 
-        {/* 5. Browse All Categories - General Purpose */}
+        {/* 6. Browse All Categories - General Purpose */}
         <section className="border-t-2 border-gray-200 pt-6">
           <div className="mb-6">
             <h2 className="text-lg font-bold text-black mb-1">Browse All Categories</h2>
