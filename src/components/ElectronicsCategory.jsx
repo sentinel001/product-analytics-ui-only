@@ -16,7 +16,7 @@ const ElectronicsCategory = () => {
     {
       id: 'edc',
       title: 'Everyday Carry',
-      description: 'Essential tech gear optimized for your daily routine',
+      description: 'Essential tech gear for daily routine',
       icon: '🎒',
       products: 6,
       matchScore: 94,
@@ -27,7 +27,7 @@ const ElectronicsCategory = () => {
     {
       id: 'travel',
       title: 'Travel Essentials',
-      description: 'Compact, reliable gadgets for your next adventure',
+      description: 'Compact gadgets for your adventure',
       icon: '✈️',
       products: 9,
       matchScore: 91,
@@ -38,13 +38,24 @@ const ElectronicsCategory = () => {
     {
       id: 'gym',
       title: 'Gym Combos',
-      description: 'Fitness tech that tracks, motivates, and performs',
+      description: 'Fitness tech that tracks & motivates',
       icon: '💪',
       products: 7,
       matchScore: 89,
       color: 'from-green-50 to-emerald-50',
       borderColor: 'border-green-200',
       path: '/occasion/electronics/gym'
+    },
+    {
+      id: 'wfh',
+      title: 'Work From Home',
+      description: 'Productivity essentials for remote work',
+      icon: '🏠',
+      products: 8,
+      matchScore: 93,
+      color: 'from-purple-50 to-indigo-50',
+      borderColor: 'border-purple-200',
+      path: '/occasion/electronics/wfh'
     }
   ];
 
@@ -183,44 +194,6 @@ const ElectronicsCategory = () => {
           </div>
         </div>
 
-        {/* Shop by Occasion */}
-        <div>
-          <h3 className="text-sm font-bold text-black mb-3 flex items-center gap-2">
-            <Sparkles className="w-4 h-4" />
-            Shop by Occasion
-          </h3>
-          <div className="space-y-2">
-            {shopByOccasion.map((occasion) => (
-              <div
-                key={occasion.id}
-                onClick={() => navigate(occasion.path)}
-                className={`bg-gradient-to-br ${occasion.color} border-2 ${occasion.borderColor} rounded-lg p-3 hover:shadow-md transition-all cursor-pointer`}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl shadow-sm flex-shrink-0">
-                    {occasion.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-0.5">
-                      <h4 className="text-sm font-bold text-black">{occasion.title}</h4>
-                      <ChevronRight className="w-4 h-4 text-gray-600" />
-                    </div>
-                    <p className="text-xs text-gray-700 mb-1.5">{occasion.description}</p>
-                    <div className="flex items-center gap-2 text-xs">
-                      <span className="bg-white px-2 py-0.5 rounded text-gray-900 font-medium">
-                        {occasion.products} products
-                      </span>
-                      <span className="text-black font-semibold">
-                        {occasion.matchScore}% match
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Category Filters */}
         <div>
           <div className="flex items-center justify-between mb-2">
@@ -281,64 +254,102 @@ const ElectronicsCategory = () => {
             </button>
           </div>
 
-          {products.map((product) => (
-            <div
-              key={product.id}
-              onClick={() => navigate('/product/electronics')}
-              className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
-            >
-              <div className="flex gap-3 p-3">
-                {/* Product Image */}
-                <div className="relative flex-shrink-0">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-20 h-24 object-cover rounded border border-gray-200"
-                  />
-                  <div className="absolute top-1 left-1 bg-black text-white px-1.5 py-0.5 rounded text-xs font-bold">
-                    AI {product.aiScore}
-                  </div>
-                </div>
-
-                {/* Product Info */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-start justify-between mb-1">
-                    <div className="flex-1">
-                      <p className="text-xs text-gray-600 mb-0.5">{product.brand}</p>
-                      <h3 className="text-sm font-bold text-black line-clamp-2 mb-1">{product.name}</h3>
+          {products.map((product, idx) => (
+            <React.Fragment key={product.id}>
+              <div
+                onClick={() => navigate('/product/electronics')}
+                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
+              >
+                <div className="flex gap-3 p-3">
+                  {/* Product Image */}
+                  <div className="relative flex-shrink-0">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-20 h-24 object-cover rounded border border-gray-200"
+                    />
+                    <div className="absolute top-1 left-1 bg-black text-white px-1.5 py-0.5 rounded text-xs font-bold">
+                      AI {product.aiScore}
                     </div>
                   </div>
 
-                  <span className="inline-block bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-xs font-medium mb-2">
-                    {product.category}
-                  </span>
-
-                  {/* Match Indicator */}
-                  <div className="mb-2">
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className="flex-1 h-1.5 bg-gray-200 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-green-600"
-                          style={{ width: `${product.matchPercentage}%` }}
-                        ></div>
+                  {/* Product Info */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start justify-between mb-1">
+                      <div className="flex-1">
+                        <p className="text-xs text-gray-600 mb-0.5">{product.brand}</p>
+                        <h3 className="text-sm font-bold text-black line-clamp-2 mb-1">{product.name}</h3>
                       </div>
-                      <span className="text-xs font-bold text-green-600">{product.matchPercentage}%</span>
                     </div>
-                    <p className="text-xs text-gray-700 italic">"{product.matchReason}"</p>
-                  </div>
 
-                  {/* Rating & Price */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
-                      <span className="text-xs font-medium text-gray-700">{product.rating}</span>
-                      <span className="text-xs text-gray-500">({product.reviews})</span>
+                    <span className="inline-block bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-xs font-medium mb-2">
+                      {product.category}
+                    </span>
+
+                    {/* Match Indicator */}
+                    <div className="mb-2">
+                      <div className="flex items-center gap-2 mb-1">
+                        <div className="flex-1 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-green-600"
+                            style={{ width: `${product.matchPercentage}%` }}
+                          ></div>
+                        </div>
+                        <span className="text-xs font-bold text-green-600">{product.matchPercentage}%</span>
+                      </div>
+                      <p className="text-xs text-gray-700 italic">"{product.matchReason}"</p>
                     </div>
-                    <span className="text-sm font-bold text-black">₹{product.price.toLocaleString()}</span>
+
+                    {/* Rating & Price */}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-1">
+                        <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
+                        <span className="text-xs font-medium text-gray-700">{product.rating}</span>
+                        <span className="text-xs text-gray-500">({product.reviews})</span>
+                      </div>
+                      <span className="text-sm font-bold text-black">₹{product.price.toLocaleString()}</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+
+              {/* Shop by Occasion - Horizontal Carousel after 3rd product */}
+              {idx === 2 && (
+                <div className="my-4">
+                  <h3 className="text-sm font-bold text-black mb-3 flex items-center gap-2">
+                    <Sparkles className="w-4 h-4" />
+                    Shop by Occasion
+                  </h3>
+                  <div className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
+                    {shopByOccasion.map((occasion) => (
+                      <div
+                        key={occasion.id}
+                        onClick={() => navigate(occasion.path)}
+                        className={`flex-shrink-0 w-48 bg-gradient-to-br ${occasion.color} border-2 ${occasion.borderColor} rounded-lg p-3 hover:shadow-md transition-all cursor-pointer snap-start`}
+                      >
+                        <div className="flex flex-col gap-2">
+                          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm">
+                            {occasion.icon}
+                          </div>
+                          <div>
+                            <h4 className="text-sm font-bold text-black mb-1">{occasion.title}</h4>
+                            <p className="text-xs text-gray-700 mb-2 line-clamp-2">{occasion.description}</p>
+                            <div className="flex flex-wrap items-center gap-2 text-xs">
+                              <span className="bg-white px-2 py-0.5 rounded text-gray-900 font-medium">
+                                {occasion.products} items
+                              </span>
+                              <span className="text-black font-semibold">
+                                {occasion.matchScore}% match
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </React.Fragment>
           ))}
         </div>
       </div>

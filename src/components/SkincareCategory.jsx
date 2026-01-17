@@ -16,7 +16,7 @@ const SkincareCategory = () => {
     {
       id: 'winter',
       title: 'Winter Combo',
-      description: 'Deep hydration for cold weather - matched to your oily skin',
+      description: 'Deep hydration for cold weather',
       icon: '❄️',
       products: 5,
       matchScore: 97,
@@ -27,7 +27,7 @@ const SkincareCategory = () => {
     {
       id: 'summer',
       title: 'Summer Combo',
-      description: 'Lightweight, oil-control essentials for hot & humid days',
+      description: 'Lightweight oil-control essentials',
       icon: '🌞',
       products: 6,
       matchScore: 95,
@@ -37,14 +37,25 @@ const SkincareCategory = () => {
     },
     {
       id: 'beach',
-      title: 'Beach Vacation Day-Out',
-      description: 'Water-resistant, SPF-boosted protection for beach fun',
+      title: 'Beach Day-Out',
+      description: 'Water-resistant SPF protection',
       icon: '🏖️',
       products: 4,
       matchScore: 92,
       color: 'from-teal-50 to-cyan-50',
       borderColor: 'border-teal-200',
       path: '/occasion/beauty/beach'
+    },
+    {
+      id: 'party',
+      title: 'Party Night',
+      description: 'Long-lasting glow & makeup base',
+      icon: '✨',
+      products: 7,
+      matchScore: 90,
+      color: 'from-purple-50 to-pink-50',
+      borderColor: 'border-purple-200',
+      path: '/occasion/beauty/party'
     }
   ];
 
@@ -183,44 +194,6 @@ const SkincareCategory = () => {
           </div>
         </div>
 
-        {/* Shop by Occasion */}
-        <div>
-          <h3 className="text-sm font-bold text-black mb-3 flex items-center gap-2">
-            <Sparkles className="w-4 h-4" />
-            Shop by Occasion
-          </h3>
-          <div className="space-y-2">
-            {shopByOccasion.map((occasion) => (
-              <div
-                key={occasion.id}
-                onClick={() => navigate(occasion.path)}
-                className={`bg-gradient-to-br ${occasion.color} border-2 ${occasion.borderColor} rounded-lg p-3 hover:shadow-md transition-all cursor-pointer`}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl shadow-sm flex-shrink-0">
-                    {occasion.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-0.5">
-                      <h4 className="text-sm font-bold text-black">{occasion.title}</h4>
-                      <ChevronRight className="w-4 h-4 text-gray-600" />
-                    </div>
-                    <p className="text-xs text-gray-700 mb-1.5">{occasion.description}</p>
-                    <div className="flex items-center gap-2 text-xs">
-                      <span className="bg-white px-2 py-0.5 rounded text-gray-900 font-medium">
-                        {occasion.products} products
-                      </span>
-                      <span className="text-black font-semibold">
-                        {occasion.matchScore}% match
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Category Filters */}
         <div>
           <div className="flex items-center justify-between mb-2">
@@ -281,12 +254,12 @@ const SkincareCategory = () => {
             </button>
           </div>
 
-          {products.map((product) => (
-            <div
-              key={product.id}
-              onClick={() => navigate('/product/beauty')}
-              className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
-            >
+          {products.map((product, idx) => (
+            <React.Fragment key={product.id}>
+              <div
+                onClick={() => navigate('/product/beauty')}
+                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
+              >
               <div className="flex gap-3 p-3">
                 {/* Product Image */}
                 <div className="relative flex-shrink-0">
@@ -339,6 +312,44 @@ const SkincareCategory = () => {
                 </div>
               </div>
             </div>
+
+            {/* Shop by Occasion - Horizontal Carousel after 3rd product */}
+            {idx === 2 && (
+              <div className="my-4">
+                <h3 className="text-sm font-bold text-black mb-3 flex items-center gap-2">
+                  <Sparkles className="w-4 h-4" />
+                  Shop by Occasion
+                </h3>
+                <div className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
+                  {shopByOccasion.map((occasion) => (
+                    <div
+                      key={occasion.id}
+                      onClick={() => navigate(occasion.path)}
+                      className={`flex-shrink-0 w-48 bg-gradient-to-br ${occasion.color} border-2 ${occasion.borderColor} rounded-lg p-3 hover:shadow-md transition-all cursor-pointer snap-start`}
+                    >
+                      <div className="flex flex-col gap-2">
+                        <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm">
+                          {occasion.icon}
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-black mb-1">{occasion.title}</h4>
+                          <p className="text-xs text-gray-700 mb-2 line-clamp-2">{occasion.description}</p>
+                          <div className="flex flex-wrap items-center gap-2 text-xs">
+                            <span className="bg-white px-2 py-0.5 rounded text-gray-900 font-medium">
+                              {occasion.products} items
+                            </span>
+                            <span className="text-black font-semibold">
+                              {occasion.matchScore}% match
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </React.Fragment>
           ))}
         </div>
 
