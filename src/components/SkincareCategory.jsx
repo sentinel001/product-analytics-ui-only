@@ -257,7 +257,7 @@ const SkincareCategory = () => {
           {products.map((product, idx) => (
             <React.Fragment key={product.id}>
               <div
-                onClick={() => navigate('/product/beauty')}
+                onClick={() => navigate(idx === 0 ? '/product/beauty-v1' : idx === 1 ? '/product/beauty-v2' : '/product/beauty')}
                 className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
               >
               <div className="flex gap-3 p-3">

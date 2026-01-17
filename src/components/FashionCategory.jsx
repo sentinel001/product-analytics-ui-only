@@ -257,7 +257,7 @@ const FashionCategory = () => {
           {products.map((product, idx) => (
             <React.Fragment key={product.id}>
               <div
-                onClick={() => navigate('/product/fashion')}
+                onClick={() => navigate(idx === 0 ? '/product/fashion-v1' : idx === 1 ? '/product/fashion-v2' : '/product/fashion')}
                 className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
               >
                 <div className="flex gap-3 p-3">
