@@ -147,7 +147,7 @@ const ProductDiscovery = () => {
           </button>
           <div>
             <h1 className="text-lg font-bold">{data.name}</h1>
-            <p className="text-xs opacity-90">AI-powered recommendations</p>
+            <p className="text-sm opacity-90">AI-powered recommendations</p>
           </div>
         </div>
 
@@ -155,10 +155,10 @@ const ProductDiscovery = () => {
         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3 flex items-center gap-2">
           <Sparkles className="w-4 h-4" />
           <div className="flex-1">
-            <p className="text-xs font-semibold">Personalized for you</p>
-            <p className="text-xs opacity-90">Based on your preferences</p>
+            <p className="text-sm font-semibold">Personalized for you</p>
+            <p className="text-sm opacity-90">Based on your preferences</p>
           </div>
-          <button className="text-xs underline">Update</button>
+          <button className="text-sm underline">Update</button>
         </div>
       </div>
 
@@ -172,7 +172,7 @@ const ProductDiscovery = () => {
             <button
               key={filter}
               onClick={() => setSelectedFilter(filter.toLowerCase())}
-              className={`px-3 py-2 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0 ${
+              className={`px-3 py-2 rounded-full text-sm font-medium whitespace-nowrap flex-shrink-0 ${
                 selectedFilter === filter.toLowerCase()
                   ? 'bg-purple-600 text-white'
                   : 'bg-gray-100 text-gray-700'
@@ -188,7 +188,7 @@ const ProductDiscovery = () => {
       <div className="px-4 py-4">
         <div className="mb-3 flex items-center justify-between">
           <p className="text-sm text-gray-600">{data.products.length} products found</p>
-          <button className="flex items-center gap-1 text-xs text-purple-600 font-medium">
+          <button className="flex items-center gap-1 text-sm text-purple-600 font-medium">
             <Filter className="w-3 h-3" />
             Sort
           </button>
@@ -215,10 +215,10 @@ const ProductDiscovery = () => {
                   <div className="flex items-center gap-2 mb-1">
                     <div className="flex items-center gap-1 bg-purple-100 text-purple-700 px-2 py-1 rounded-full">
                       <Sparkles className="w-3 h-3" />
-                      <span className="text-xs font-bold">{product.aiMatch}% Match</span>
+                      <span className="text-sm font-bold">{product.aiMatch}% Match</span>
                     </div>
                     {product.badge && (
-                      <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                      <span className={`text-sm px-2 py-1 rounded-full font-medium ${
                         product.badge.includes('Price') ? 'bg-green-100 text-green-700' :
                         product.badge.includes('Sustainable') ? 'bg-green-100 text-green-700' :
                         'bg-blue-100 text-blue-700'
@@ -230,15 +230,15 @@ const ProductDiscovery = () => {
 
                   <h3 className="font-semibold text-sm text-gray-900 mb-1 line-clamp-2">{product.name}</h3>
 
-                  <p className="text-xs text-purple-600 mb-2">{product.matchReason}</p>
+                  <p className="text-sm text-purple-600 mb-2">{product.matchReason}</p>
 
                   {/* Rating */}
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex items-center gap-1">
                       <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                      <span className="text-xs font-semibold text-gray-900">{product.rating}</span>
+                      <span className="text-sm font-semibold text-gray-900">{product.rating}</span>
                     </div>
-                    <span className="text-xs text-gray-500">({product.reviews.toLocaleString()})</span>
+                    <span className="text-sm text-gray-500">({product.reviews.toLocaleString()})</span>
                   </div>
 
                   {/* Price */}
@@ -246,10 +246,10 @@ const ProductDiscovery = () => {
                     <span className="text-base font-bold text-gray-900">₹{product.price.toLocaleString()}</span>
                     {product.originalPrice && (
                       <>
-                        <span className="text-xs text-gray-500 line-through">₹{product.originalPrice.toLocaleString()}</span>
+                        <span className="text-sm text-gray-500 line-through">₹{product.originalPrice.toLocaleString()}</span>
                         <div className="flex items-center gap-1 text-green-600">
                           <TrendingDown className="w-3 h-3" />
-                          <span className="text-xs font-medium">
+                          <span className="text-sm font-medium">
                             {Math.round((1 - product.price / product.originalPrice) * 100)}% off
                           </span>
                         </div>

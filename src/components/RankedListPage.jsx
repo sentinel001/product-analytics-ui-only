@@ -86,7 +86,7 @@ const RankedListPage = () => {
             <h2 className="text-lg font-bold text-[#363636] leading-tight flex-1">{listInfo.title}</h2>
           </div>
 
-          <div className="flex items-center gap-4 text-xs text-gray-600 mb-3">
+          <div className="flex items-center gap-4 text-sm text-gray-600 mb-3">
             <span className="flex items-center gap-1">
               <TrendingUp className="w-3 h-3" />
               Updated {listInfo.updated}
@@ -98,8 +98,8 @@ const RankedListPage = () => {
           <div className="bg-white border border-gray-200 rounded p-3 flex items-start gap-2">
             <Info className="w-4 h-4 text-gray-600 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="text-xs font-semibold text-[#363636] mb-0.5">Our Methodology</p>
-              <p className="text-xs text-gray-600">{listInfo.methodology}</p>
+              <p className="text-sm font-semibold text-[#363636] mb-0.5">Our Methodology</p>
+              <p className="text-sm text-gray-600">{listInfo.methodology}</p>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@ const RankedListPage = () => {
         <div className="flex items-center gap-2 overflow-x-auto pb-2">
           <button
             onClick={() => setSelectedFilter('all')}
-            className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+            className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
               selectedFilter === 'all' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
@@ -116,7 +116,7 @@ const RankedListPage = () => {
           </button>
           <button
             onClick={() => setSelectedFilter('oily')}
-            className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+            className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
               selectedFilter === 'oily' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
@@ -124,7 +124,7 @@ const RankedListPage = () => {
           </button>
           <button
             onClick={() => setSelectedFilter('dry')}
-            className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+            className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
               selectedFilter === 'dry' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
@@ -132,7 +132,7 @@ const RankedListPage = () => {
           </button>
           <button
             onClick={() => setSelectedFilter('budget')}
-            className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+            className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
               selectedFilter === 'budget' ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
@@ -159,7 +159,7 @@ const RankedListPage = () => {
                   }`}>
                     {product.rank}
                   </div>
-                  <div className="mt-1 bg-[#363636] text-white px-1.5 py-0.5 rounded text-xs font-bold">
+                  <div className="mt-1 bg-[#363636] text-white px-1.5 py-0.5 rounded text-sm font-bold">
                     {product.aiScore}
                   </div>
                 </div>
@@ -178,7 +178,7 @@ const RankedListPage = () => {
                     {product.badges.map((badge, idx) => (
                       <span
                         key={idx}
-                        className={`text-xs px-2 py-0.5 rounded font-semibold ${
+                        className={`text-sm px-2 py-0.5 rounded font-semibold ${
                           badge.includes('Editor') ? 'bg-[#363636] text-white' :
                           badge.includes('Value') ? 'bg-green-600 text-white' :
                           badge.includes('Budget') ? 'bg-blue-600 text-white' :
@@ -191,21 +191,21 @@ const RankedListPage = () => {
                   </div>
 
                   <h3 className="text-sm font-bold text-[#363636] mb-1 line-clamp-2">{product.name}</h3>
-                  <p className="text-xs text-gray-600 mb-2">{product.brand}</p>
+                  <p className="text-sm text-gray-600 mb-2">{product.brand}</p>
 
                   {/* Rating & Price */}
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex items-center gap-1">
                       <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
-                      <span className="text-xs font-medium text-gray-700">{product.rating}</span>
-                      <span className="text-xs text-gray-500">({product.reviews})</span>
+                      <span className="text-sm font-medium text-gray-700">{product.rating}</span>
+                      <span className="text-sm text-gray-500">({product.reviews})</span>
                     </div>
-                    <span className="text-xs text-gray-400">•</span>
+                    <span className="text-sm text-gray-400">•</span>
                     <span className="text-sm font-bold text-[#363636]">₹{product.price}</span>
                   </div>
 
                   {/* Best For Tag */}
-                  <div className="inline-block bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-medium mb-2">
+                  <div className="inline-block bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm font-medium mb-2">
                     Best for: {product.bestFor}
                   </div>
                 </div>
@@ -213,10 +213,10 @@ const RankedListPage = () => {
 
               {/* Highlights - Expandable */}
               <div className="border-t border-gray-200 bg-gray-50 px-3 py-2">
-                <p className="text-xs font-semibold text-gray-700 mb-1">Key Highlights:</p>
+                <p className="text-sm font-semibold text-gray-700 mb-1">Key Highlights:</p>
                 <ul className="space-y-0.5">
                   {product.highlights.slice(0, 2).map((highlight, idx) => (
-                    <li key={idx} className="text-xs text-gray-600 flex items-start gap-1">
+                    <li key={idx} className="text-sm text-gray-600 flex items-start gap-1">
                       <span className="text-green-600 mt-0.5">✓</span>
                       <span>{highlight}</span>
                     </li>

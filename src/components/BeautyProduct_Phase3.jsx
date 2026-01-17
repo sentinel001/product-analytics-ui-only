@@ -248,7 +248,7 @@ const BeautyProduct_Phase3 = () => {
   const getAIRecommendationBadge = (recommendations) => {
     if (!recommendations || recommendations.length === 0) return null;
     return recommendations.map((rec, idx) => (
-      <span key={idx} className="inline-flex items-center gap-1 text-xs bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-2 py-1 rounded-full font-medium">
+      <span key={idx} className="inline-flex items-center gap-1 text-sm bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-2 py-1 rounded-full font-medium">
         <Zap className="w-3 h-3" /> {rec}
       </span>
     ));
@@ -271,7 +271,7 @@ const BeautyProduct_Phase3 = () => {
         <div className="flex items-center justify-between">
           <div>
             <div className="text-sm font-bold">Phase 3: Comparison & Discovery</div>
-            <div className="text-xs opacity-90">Months 5-6 • All Features Active</div>
+            <div className="text-sm opacity-90">Months 5-6 • All Features Active</div>
           </div>
           <Award className="w-8 h-8 opacity-90" />
         </div>
@@ -293,7 +293,7 @@ const BeautyProduct_Phase3 = () => {
                 <h3 className="text-sm font-semibold mb-2">
                   Neutrogena Hydro Boost Water Gel
                 </h3>
-                <div className="flex items-center gap-3 text-xs text-gray-600 mb-2">
+                <div className="flex items-center gap-3 text-sm text-gray-600 mb-2">
                   <span className="flex items-center gap-1">
                     <Droplet className="w-3 h-3" />
                     Oily/Combo Skin
@@ -301,7 +301,7 @@ const BeautyProduct_Phase3 = () => {
                 </div>
                 <div className="text-sm">
                   <span className="font-semibold">₹799</span>
-                  <span className="text-gray-600 text-xs ml-1">50g • In Stock</span>
+                  <span className="text-gray-600 text-sm ml-1">50g • In Stock</span>
                 </div>
               </div>
             </div>
@@ -315,14 +315,14 @@ const BeautyProduct_Phase3 = () => {
               <TrendingUp className="w-4 h-4 text-purple-600" />
               Intelligent Product Comparison
             </h3>
-            <span className="text-xs bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full font-bold">
+            <span className="text-sm bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full font-bold">
               PHASE 3
             </span>
           </div>
 
           {/* Product Selection */}
           <div className="mb-4">
-            <p className="text-xs text-gray-600 mb-2">Select products to compare (up to 4):</p>
+            <p className="text-sm text-gray-600 mb-2">Select products to compare (up to 4):</p>
             <div className="grid grid-cols-2 gap-2">
               {comparisonProducts.map((product) => (
                 <button
@@ -335,8 +335,8 @@ const BeautyProduct_Phase3 = () => {
                   }`}
                 >
                   <img src={product.image} alt={product.name} className="w-full h-16 object-cover rounded mb-1" />
-                  <p className="text-xs font-medium line-clamp-2">{product.name}</p>
-                  <p className="text-xs text-gray-600">₹{product.price}</p>
+                  <p className="text-sm font-medium line-clamp-2">{product.name}</p>
+                  <p className="text-sm text-gray-600">₹{product.price}</p>
                 </button>
               ))}
             </div>
@@ -350,7 +350,7 @@ const BeautyProduct_Phase3 = () => {
                   <button
                     key={tab}
                     onClick={() => setActiveComparisonTab(tab)}
-                    className={`pb-2 px-2 text-xs font-medium transition-colors ${
+                    className={`pb-2 px-2 text-sm font-medium transition-colors ${
                       activeComparisonTab === tab
                         ? 'text-purple-600 border-b-2 border-purple-600'
                         : 'text-gray-500 hover:text-gray-700'
@@ -377,15 +377,15 @@ const BeautyProduct_Phase3 = () => {
                     ))}
 
                     {/* Price */}
-                    <div className="text-xs font-semibold text-gray-700 py-2">Price</div>
+                    <div className="text-sm font-semibold text-gray-700 py-2">Price</div>
                     {selectedProducts.map((product) => (
-                      <div key={product.id} className="text-xs font-bold text-center py-2">₹{product.price}</div>
+                      <div key={product.id} className="text-sm font-bold text-center py-2">₹{product.price}</div>
                     ))}
 
                     {/* Price per unit */}
-                    <div className="text-xs font-semibold text-gray-700 py-2">Price per {selectedProducts[0].unit}</div>
+                    <div className="text-sm font-semibold text-gray-700 py-2">Price per {selectedProducts[0].unit}</div>
                     {selectedProducts.map((product) => (
-                      <div key={product.id} className="text-xs text-center py-2">
+                      <div key={product.id} className="text-sm text-center py-2">
                         ₹{product.pricePerUnit}
                         {product.pricePerUnit === Math.min(...selectedProducts.map(p => p.pricePerUnit)) && (
                           <span className="block text-green-600 font-bold">Best</span>
@@ -394,15 +394,15 @@ const BeautyProduct_Phase3 = () => {
                     ))}
 
                     {/* Size */}
-                    <div className="text-xs font-semibold text-gray-700 py-2">Size</div>
+                    <div className="text-sm font-semibold text-gray-700 py-2">Size</div>
                     {selectedProducts.map((product) => (
-                      <div key={product.id} className="text-xs text-center py-2">{product.size}{product.unit}</div>
+                      <div key={product.id} className="text-sm text-center py-2">{product.size}{product.unit}</div>
                     ))}
 
                     {/* Rating */}
-                    <div className="text-xs font-semibold text-gray-700 py-2">Rating</div>
+                    <div className="text-sm font-semibold text-gray-700 py-2">Rating</div>
                     {selectedProducts.map((product) => (
-                      <div key={product.id} className="text-xs text-center py-2">
+                      <div key={product.id} className="text-sm text-center py-2">
                         <div className="flex items-center justify-center gap-1">
                           <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                           <span>{product.rating}</span>
@@ -411,27 +411,27 @@ const BeautyProduct_Phase3 = () => {
                     ))}
 
                     {/* Texture */}
-                    <div className="text-xs font-semibold text-gray-700 py-2">Texture</div>
+                    <div className="text-sm font-semibold text-gray-700 py-2">Texture</div>
                     {selectedProducts.map((product) => (
-                      <div key={product.id} className="text-xs text-center py-2">{product.texture}</div>
+                      <div key={product.id} className="text-sm text-center py-2">{product.texture}</div>
                     ))}
 
                     {/* Finish */}
-                    <div className="text-xs font-semibold text-gray-700 py-2">Finish</div>
+                    <div className="text-sm font-semibold text-gray-700 py-2">Finish</div>
                     {selectedProducts.map((product) => (
-                      <div key={product.id} className="text-xs text-center py-2">{product.finish}</div>
+                      <div key={product.id} className="text-sm text-center py-2">{product.finish}</div>
                     ))}
 
                     {/* Absorption */}
-                    <div className="text-xs font-semibold text-gray-700 py-2">Absorption</div>
+                    <div className="text-sm font-semibold text-gray-700 py-2">Absorption</div>
                     {selectedProducts.map((product) => (
-                      <div key={product.id} className="text-xs text-center py-2">{product.absorption}</div>
+                      <div key={product.id} className="text-sm text-center py-2">{product.absorption}</div>
                     ))}
 
                     {/* Fragrance */}
-                    <div className="text-xs font-semibold text-gray-700 py-2">Fragrance</div>
+                    <div className="text-sm font-semibold text-gray-700 py-2">Fragrance</div>
                     {selectedProducts.map((product) => (
-                      <div key={product.id} className="text-xs text-center py-2">{product.fragrance}</div>
+                      <div key={product.id} className="text-sm text-center py-2">{product.fragrance}</div>
                     ))}
                   </div>
                 </div>
@@ -442,10 +442,10 @@ const BeautyProduct_Phase3 = () => {
                 <div className="space-y-3">
                   {selectedProducts.map((product) => (
                     <div key={product.id} className="bg-gray-50 rounded p-2">
-                      <p className="text-xs font-semibold text-gray-700 mb-1">{product.brand}</p>
+                      <p className="text-sm font-semibold text-gray-700 mb-1">{product.brand}</p>
                       <div className="flex flex-wrap gap-1">
                         {product.keyIngredients.map((ingredient, idx) => (
-                          <span key={idx} className="text-xs bg-white px-2 py-1 rounded border">
+                          <span key={idx} className="text-sm bg-white px-2 py-1 rounded border">
                             {ingredient}
                           </span>
                         ))}
@@ -460,7 +460,7 @@ const BeautyProduct_Phase3 = () => {
                 <div className="space-y-2">
                   {['oily', 'combination', 'acne', 'sensitive', 'dry'].map((skinType) => (
                     <div key={skinType}>
-                      <p className="text-xs font-semibold text-gray-700 mb-1 capitalize">
+                      <p className="text-sm font-semibold text-gray-700 mb-1 capitalize">
                         {skinType === 'acne' ? 'Acne-Prone' : skinType} Skin
                       </p>
                       <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${selectedProducts.length}, 1fr)` }}>
@@ -469,7 +469,7 @@ const BeautyProduct_Phase3 = () => {
                           const isHighest = score === Math.max(...selectedProducts.map(p => p.suitability[skinType]));
                           return (
                             <div key={product.id} className="text-center">
-                              <div className={`text-xs font-bold ${
+                              <div className={`text-sm font-bold ${
                                 score >= 85 ? 'text-green-600' :
                                 score >= 70 ? 'text-yellow-600' : 'text-red-600'
                               }`}>
@@ -493,8 +493,8 @@ const BeautyProduct_Phase3 = () => {
                       <div className="flex gap-2 mb-2">
                         <img src={product.image} alt={product.name} className="w-12 h-12 object-cover rounded" />
                         <div className="flex-1">
-                          <p className="text-xs font-semibold text-gray-900 mb-1">{product.name}</p>
-                          <p className="text-xs text-gray-600">₹{product.price}</p>
+                          <p className="text-sm font-semibold text-gray-900 mb-1">{product.name}</p>
+                          <p className="text-sm text-gray-600">₹{product.price}</p>
                         </div>
                       </div>
                       <div className="flex flex-wrap gap-1">
@@ -506,9 +506,9 @@ const BeautyProduct_Phase3 = () => {
                   <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-3 text-white">
                     <div className="flex items-center gap-2 mb-2">
                       <Zap className="w-4 h-4" />
-                      <p className="text-xs font-bold">AI Verdict</p>
+                      <p className="text-sm font-bold">AI Verdict</p>
                     </div>
-                    <p className="text-xs">
+                    <p className="text-sm">
                       For your oily skin, we recommend <span className="font-bold">{selectedProducts.find(p => p.aiRecommendations?.includes('Best for you'))?.name || selectedProducts[0].name}</span>.
                       It offers excellent oil control with a lightweight formula that won't clog pores.
                     </p>
@@ -526,7 +526,7 @@ const BeautyProduct_Phase3 = () => {
               <Heart className="w-4 h-4 text-teal-600" />
               Shop by Concern
             </h3>
-            <span className="text-xs bg-gradient-to-r from-teal-600 to-blue-600 text-white px-3 py-1 rounded-full font-bold">
+            <span className="text-sm bg-gradient-to-r from-teal-600 to-blue-600 text-white px-3 py-1 rounded-full font-bold">
               PHASE 3
             </span>
           </div>
@@ -537,7 +537,7 @@ const BeautyProduct_Phase3 = () => {
               <button
                 key={concern.id}
                 onClick={() => setSelectedConcern(concern.id)}
-                className={`flex-shrink-0 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
+                className={`flex-shrink-0 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                   selectedConcern === concern.id
                     ? `bg-${concern.color}-600 text-white shadow-lg`
                     : 'bg-white text-gray-600 border hover:border-gray-400'
@@ -555,12 +555,12 @@ const BeautyProduct_Phase3 = () => {
               {/* Educational Content */}
               <div className="bg-white rounded-lg p-3">
                 <h4 className="text-sm font-bold text-gray-900 mb-2">{selectedConcernData.name}</h4>
-                <p className="text-xs text-gray-600 mb-3">{selectedConcernData.description}</p>
+                <p className="text-sm text-gray-600 mb-3">{selectedConcernData.description}</p>
 
                 <div className="space-y-1">
-                  <p className="text-xs font-semibold text-gray-700">Key Benefits:</p>
+                  <p className="text-sm font-semibold text-gray-700">Key Benefits:</p>
                   {selectedConcernData.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs text-gray-600">
+                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
                       <Check className="w-3 h-3 text-green-600" />
                       <span>{benefit}</span>
                     </div>
@@ -570,17 +570,17 @@ const BeautyProduct_Phase3 = () => {
 
               {/* Curated Products */}
               <div>
-                <h4 className="text-xs font-semibold text-gray-700 mb-2">Recommended Products:</h4>
+                <h4 className="text-sm font-semibold text-gray-700 mb-2">Recommended Products:</h4>
                 <div className="grid grid-cols-2 gap-2">
                   {selectedConcernData.products.map((product) => (
                     <div key={product.id} className="bg-white rounded-lg p-2 border hover:border-teal-500 transition-colors cursor-pointer">
                       <img src={product.image} alt={product.name} className="w-full h-20 object-cover rounded mb-2" />
-                      <p className="text-xs font-medium line-clamp-2 mb-1">{product.name}</p>
+                      <p className="text-sm font-medium line-clamp-2 mb-1">{product.name}</p>
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold">₹{product.price}</span>
+                        <span className="text-sm font-bold">₹{product.price}</span>
                         <div className="flex items-center gap-1">
                           <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                          <span className="text-xs">{product.rating}</span>
+                          <span className="text-sm">{product.rating}</span>
                         </div>
                       </div>
                     </div>
@@ -590,19 +590,19 @@ const BeautyProduct_Phase3 = () => {
 
               {/* Recommended Routine */}
               <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-lg p-3 border border-teal-200">
-                <h4 className="text-xs font-semibold text-gray-900 mb-2 flex items-center gap-1">
+                <h4 className="text-sm font-semibold text-gray-900 mb-2 flex items-center gap-1">
                   <Clock className="w-3 h-3" />
                   Recommended Routine
                 </h4>
                 <div className="space-y-2">
                   {selectedConcernData.routine.map((item) => (
                     <div key={item.step} className="flex items-start gap-2 bg-white rounded p-2">
-                      <span className="w-5 h-5 bg-teal-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
+                      <span className="w-5 h-5 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
                         {item.step}
                       </span>
                       <div className="flex-1">
-                        <p className="text-xs font-medium text-gray-900">{item.product}</p>
-                        <p className="text-xs text-gray-600">{item.time}</p>
+                        <p className="text-sm font-medium text-gray-900">{item.product}</p>
+                        <p className="text-sm text-gray-600">{item.time}</p>
                       </div>
                     </div>
                   ))}
@@ -624,7 +624,7 @@ const BeautyProduct_Phase3 = () => {
               <Play className="w-4 h-4 text-purple-600" />
               How to Use This Product
             </h3>
-            <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
+            <span className="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
               PHASE 1
             </span>
           </div>
@@ -634,7 +634,7 @@ const BeautyProduct_Phase3 = () => {
             <div className="absolute inset-0 bg-[#363636]/20"></div>
             <div className="relative z-10 text-white text-center">
               <Play className="w-12 h-12 mx-auto mb-2 opacity-90" />
-              <p className="text-xs font-medium">Watch Application Tutorial (45s)</p>
+              <p className="text-sm font-medium">Watch Application Tutorial (45s)</p>
             </div>
             <img
               src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=200&fit=crop"
@@ -645,18 +645,18 @@ const BeautyProduct_Phase3 = () => {
 
           {/* Step-by-step Instructions */}
           <div className="space-y-2">
-            <h4 className="text-xs font-semibold text-gray-700 mb-2">Application Steps:</h4>
+            <h4 className="text-sm font-semibold text-gray-700 mb-2">Application Steps:</h4>
             {[
               { step: 1, text: 'Cleanse face and pat dry', icon: '💧' },
               { step: 2, text: 'Take pea-sized amount', icon: '🫘' },
               { step: 3, text: 'Apply in upward circular motions', icon: '↻' },
               { step: 4, text: 'Allow 2 min to absorb', icon: '⏱️' },
             ].map((item) => (
-              <div key={item.step} className="flex items-center gap-2 text-xs bg-white/60 rounded p-2">
-                <span className="w-5 h-5 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
+              <div key={item.step} className="flex items-center gap-2 text-sm bg-white/60 rounded p-2">
+                <span className="w-5 h-5 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
                   {item.step}
                 </span>
-                <span className="text-xs mr-2">{item.icon}</span>
+                <span className="text-sm mr-2">{item.icon}</span>
                 <span className="text-gray-700">{item.text}</span>
               </div>
             ))}
@@ -666,13 +666,13 @@ const BeautyProduct_Phase3 = () => {
           <div className="mt-3 grid grid-cols-2 gap-2">
             <div className="bg-white/60 rounded p-2">
               <Clock className="w-4 h-4 text-purple-600 mb-1" />
-              <p className="text-xs font-semibold text-gray-700">When to Use</p>
-              <p className="text-xs text-gray-600">Morning & Night</p>
+              <p className="text-sm font-semibold text-gray-700">When to Use</p>
+              <p className="text-sm text-gray-600">Morning & Night</p>
             </div>
             <div className="bg-white/60 rounded p-2">
               <Droplet className="w-4 h-4 text-purple-600 mb-1" />
-              <p className="text-xs font-semibold text-gray-700">Amount</p>
-              <p className="text-xs text-gray-600">Pea-sized</p>
+              <p className="text-sm font-semibold text-gray-700">Amount</p>
+              <p className="text-sm text-gray-600">Pea-sized</p>
             </div>
           </div>
         </section>
@@ -681,7 +681,7 @@ const BeautyProduct_Phase3 = () => {
         <section className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-100">
           <div className="flex items-center justify-between mb-3">
             <h3 className="text-sm font-semibold">Suitable For You?</h3>
-            <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
+            <span className="text-sm bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
               PHASE 1
             </span>
           </div>
@@ -696,7 +696,7 @@ const BeautyProduct_Phase3 = () => {
               { type: 'Dry Skin', match: 45, color: 'red' },
             ].map((item) => (
               <div key={item.type} className="flex items-center justify-between bg-white/60 rounded p-2">
-                <span className="text-xs font-medium text-gray-700">{item.type}</span>
+                <span className="text-sm font-medium text-gray-700">{item.type}</span>
                 <div className="flex items-center gap-2">
                   <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div
@@ -707,7 +707,7 @@ const BeautyProduct_Phase3 = () => {
                       style={{ width: `${item.match}%` }}
                     ></div>
                   </div>
-                  <span className={`text-xs font-bold ${
+                  <span className={`text-sm font-bold ${
                     item.color === 'green' ? 'text-green-600' :
                     item.color === 'yellow' ? 'text-yellow-600' : 'text-red-600'
                   }`}>
@@ -728,7 +728,7 @@ const BeautyProduct_Phase3 = () => {
 
           {showCompatibility && (
             <div className="mt-3 space-y-2">
-              <p className="text-xs font-semibold text-gray-700">Can be used with:</p>
+              <p className="text-sm font-semibold text-gray-700">Can be used with:</p>
               {[
                 { product: 'Vitamin C Serum', compatible: true },
                 { product: 'Retinol Treatment', compatible: false },
@@ -736,11 +736,11 @@ const BeautyProduct_Phase3 = () => {
                 { product: 'AHA/BHA Exfoliant', compatible: false },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center justify-between bg-white/60 rounded p-2">
-                  <span className="text-xs text-gray-700">{item.product}</span>
+                  <span className="text-sm text-gray-700">{item.product}</span>
                   {item.compatible ? (
-                    <span className="text-green-600 text-xs font-medium">✓ Compatible</span>
+                    <span className="text-green-600 text-sm font-medium">✓ Compatible</span>
                   ) : (
-                    <span className="text-red-600 text-xs font-medium">✗ Not recommended</span>
+                    <span className="text-red-600 text-sm font-medium">✗ Not recommended</span>
                   )}
                 </div>
               ))}
@@ -759,7 +759,7 @@ const BeautyProduct_Phase3 = () => {
               </div>
               <div className="text-right">
                 <div className="font-semibold">₹799</div>
-                <div className="text-xs text-gray-500">Use BEAUTY20 for ₹160 off</div>
+                <div className="text-sm text-gray-500">Use BEAUTY20 for ₹160 off</div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-400" />
             </div>
@@ -771,7 +771,7 @@ const BeautyProduct_Phase3 = () => {
               </div>
               <div className="text-right">
                 <div className="font-semibold">₹679</div>
-                <div className="text-xs text-green-600">Lowest Price!</div>
+                <div className="text-sm text-green-600">Lowest Price!</div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-400" />
             </div>
@@ -815,14 +815,14 @@ const BeautyProduct_Phase3 = () => {
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <p className="text-sm font-medium text-gray-900">{ingredient.name}</p>
-                    <p className="text-xs text-gray-600 mt-0.5">{ingredient.purpose}</p>
+                    <p className="text-sm text-gray-600 mt-0.5">{ingredient.purpose}</p>
                     {ingredient.warning && (
-                      <p className="text-xs text-orange-600 mt-1 flex items-center gap-1">
+                      <p className="text-sm text-orange-600 mt-1 flex items-center gap-1">
                         <Info className="w-3 h-3" /> {ingredient.warning}
                       </p>
                     )}
                   </div>
-                  <span className={`text-xs font-medium px-2 py-1 rounded-full ${
+                  <span className={`text-sm font-medium px-2 py-1 rounded-full ${
                     ingredient.safe ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'
                   }`}>
                     {ingredient.safe ? 'Safe' : 'Caution'}
@@ -832,13 +832,13 @@ const BeautyProduct_Phase3 = () => {
             ))}
           </div>
           <div className="mt-2 flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
+            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
               ✓ Paraben-free
             </span>
-            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
+            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
               ✓ Non-comedogenic
             </span>
-            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
+            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
               ✓ Dermatologist tested
             </span>
           </div>
@@ -855,12 +855,12 @@ const BeautyProduct_Phase3 = () => {
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center">
                 <div className="text-white text-center">
                   <div className="text-2xl font-bold">92</div>
-                  <div className="text-xs">/100</div>
+                  <div className="text-sm">/100</div>
                 </div>
               </div>
             </div>
             <div className="flex-1">
-              <div className="text-xs text-green-700 font-medium mb-1">Excellent Choice!</div>
+              <div className="text-sm text-green-700 font-medium mb-1">Excellent Choice!</div>
               <p className="text-sm text-gray-700">
                 Perfect for oily/combination skin. Lightweight, non-greasy formula
               </p>
@@ -882,7 +882,7 @@ const BeautyProduct_Phase3 = () => {
                 <div className={`w-12 h-12 mx-auto rounded-full border-4 ${item.color} border-opacity-30 flex items-center justify-center mb-2`}>
                   <span className={`text-lg font-bold ${item.color}`}>{item.score}</span>
                 </div>
-                <div className="text-xs text-gray-600">{item.label}</div>
+                <div className="text-sm text-gray-600">{item.label}</div>
               </div>
             ))}
           </div>
@@ -892,7 +892,7 @@ const BeautyProduct_Phase3 = () => {
         <section>
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-semibold">Similar Products</h3>
-            <button className="text-xs text-blue-600 font-medium">See All</button>
+            <button className="text-sm text-blue-600 font-medium">See All</button>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -912,9 +912,9 @@ const BeautyProduct_Phase3 = () => {
             ].map((product, idx) => (
               <div key={idx} className="border rounded-lg p-3 hover:shadow-md transition-shadow">
                 <img src={product.image} alt={product.name} className="w-full h-24 object-cover rounded mb-2" />
-                <div className="text-xs font-medium mb-1 line-clamp-2">{product.name}</div>
+                <div className="text-sm font-medium mb-1 line-clamp-2">{product.name}</div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded">
+                  <span className="bg-green-100 text-green-700 text-sm font-bold px-2 py-0.5 rounded">
                     {product.score}/100
                   </span>
                 </div>

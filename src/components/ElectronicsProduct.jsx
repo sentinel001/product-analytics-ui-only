@@ -88,7 +88,7 @@ const ElectronicsProduct = () => {
             <h1 className="text-lg font-bold text-gray-900">Product Analysis</h1>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-500">Electronics</span>
+            <span className="text-sm text-gray-500">Electronics</span>
           </div>
         </div>
       </div>
@@ -109,11 +109,11 @@ const ElectronicsProduct = () => {
                 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 <span className="text-sm font-semibold text-gray-900">4.6</span>
               </div>
-              <span className="text-xs text-gray-500">16,718 reviews</span>
+              <span className="text-sm text-gray-500">16,718 reviews</span>
             </div>
             <div className="inline-flex items-center gap-1 bg-gray-50 border border-gray-300 px-2 py-1 rounded">
               <TrendingDown className="w-3 h-3 text-[#363636]" />
-              <span className="text-xs font-medium text-[#363636]">₹14,901 price drop</span>
+              <span className="text-sm font-medium text-[#363636]">₹14,901 price drop</span>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ const ElectronicsProduct = () => {
             <TrendingDown className="w-5 h-5 text-[#363636]" />
             Live Price Intelligence
           </h3>
-          <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">Updated 2 min ago</span>
+          <span className="text-sm bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">Updated 2 min ago</span>
         </div>
 
         {/* Price History Graph */}
@@ -138,7 +138,7 @@ const ElectronicsProduct = () => {
                 <button
                   key={period}
                   onClick={() => setPriceHistory(period)}
-                  className={`text-xs px-2 py-1 rounded ${priceHistory === period ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-600'}`}
+                  className={`text-sm px-2 py-1 rounded ${priceHistory === period ? 'bg-[#363636] text-white' : 'bg-gray-100 text-gray-600'}`}
                 >
                   {period}
                 </button>
@@ -200,15 +200,15 @@ const ElectronicsProduct = () => {
           </div>
 
           <div className="flex justify-between mt-2 mb-3">
-            <div className="text-xs">
+            <div className="text-sm">
               <span className="text-gray-500">Lowest: </span>
               <span className="font-semibold text-[#363636]">₹{lowestPrice.toLocaleString()}</span>
             </div>
-            <div className="text-xs">
+            <div className="text-sm">
               <span className="text-gray-500">Drop: </span>
               <span className="font-semibold text-[#363636]">{dropPercentage}%</span>
             </div>
-            <div className="text-xs">
+            <div className="text-sm">
               <span className="text-gray-500">Highest: </span>
               <span className="font-semibold text-gray-700">₹{highestPrice.toLocaleString()}</span>
             </div>
@@ -236,7 +236,7 @@ const ElectronicsProduct = () => {
             )}
           </button>
           {priceAlertEnabled && (
-            <p className="text-xs text-gray-600 mt-2 text-center">
+            <p className="text-sm text-gray-600 mt-2 text-center">
               We'll notify you when the price drops below ₹{(lowestPrice - 1000).toLocaleString()}
             </p>
           )}
@@ -248,7 +248,7 @@ const ElectronicsProduct = () => {
             <Zap className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#363636]" />
             <div>
               <p className="font-semibold text-sm mb-1 text-[#363636]">Best Deal Alert!</p>
-              <p className="text-xs text-gray-700">Amazon offers the lowest price at ₹1,34,999 - Save ₹4,901 compared to MRP. Deal expires in 6 hours.</p>
+              <p className="text-sm text-gray-700">Amazon offers the lowest price at ₹1,34,999 - Save ₹4,901 compared to MRP. Deal expires in 6 hours.</p>
             </div>
           </div>
         </div>
@@ -258,7 +258,7 @@ const ElectronicsProduct = () => {
           {priceComparisons.map((platform, idx) => (
             <div key={idx} className={`${platform.color} border-2 rounded-lg p-3 relative`}>
               {platform.bestSeller && (
-                <span className="absolute -top-2 left-3 bg-[#363636] text-white text-xs px-2 py-0.5 rounded-full font-semibold">
+                <span className="absolute -top-2 left-3 bg-[#363636] text-white text-sm px-2 py-0.5 rounded-full font-semibold">
                   🏆 Best Seller
                 </span>
               )}
@@ -270,20 +270,20 @@ const ElectronicsProduct = () => {
                     <div className="flex items-center gap-2 mt-0.5">
                       <div className="flex items-center gap-1">
                         <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                        <span className="text-xs text-gray-700">{platform.rating}</span>
+                        <span className="text-sm text-gray-700">{platform.rating}</span>
                       </div>
-                      <span className="text-xs text-gray-500">({platform.reviews})</span>
+                      <span className="text-sm text-gray-500">({platform.reviews})</span>
                     </div>
                   </div>
                 </div>
                 <div className="text-right">
                   <p className="font-bold text-gray-900 text-lg">₹{platform.price.toLocaleString()}</p>
                   {platform.discount > 0 && (
-                    <span className="text-xs text-[#363636] bg-gray-200 px-2 py-0.5 rounded font-medium">{platform.discount}% off</span>
+                    <span className="text-sm text-[#363636] bg-gray-200 px-2 py-0.5 rounded font-medium">{platform.discount}% off</span>
                   )}
                   <div className="flex items-center gap-1 mt-1">
                     <Clock className="w-3 h-3 text-gray-500" />
-                    <span className="text-xs text-gray-600">{platform.delivery}</span>
+                    <span className="text-sm text-gray-600">{platform.delivery}</span>
                   </div>
                 </div>
               </div>
@@ -301,13 +301,13 @@ const ElectronicsProduct = () => {
             {budgetRecommendations.map((rec, idx) => (
               <div key={idx} className="flex items-center justify-between p-2 bg-gray-50 rounded border border-gray-200">
                 <div>
-                  <p className="text-xs text-gray-500 mb-0.5">{rec.label}</p>
+                  <p className="text-sm text-gray-500 mb-0.5">{rec.label}</p>
                   <p className="font-semibold text-sm text-gray-900">{rec.product}</p>
-                  <p className="text-xs text-[#363636] font-medium mt-0.5">Save ₹{rec.saving.toLocaleString()}</p>
+                  <p className="text-sm text-[#363636] font-medium mt-0.5">Save ₹{rec.saving.toLocaleString()}</p>
                 </div>
                 <div className="text-right">
                   <p className="font-bold text-gray-900 text-sm">₹{rec.price.toLocaleString()}</p>
-                  <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">{rec.match} match</span>
+                  <span className="text-sm bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">{rec.match} match</span>
                 </div>
               </div>
             ))}
@@ -322,7 +322,7 @@ const ElectronicsProduct = () => {
             <Cpu className="w-5 h-5 text-gray-700" />
             Complete Technical Specs
           </h3>
-          <span className="text-xs text-gray-500">Tap specs for details</span>
+          <span className="text-sm text-gray-500">Tap specs for details</span>
         </div>
 
         <div className="space-y-3">
@@ -348,14 +348,14 @@ const ElectronicsProduct = () => {
                   {category.specs.map((spec, specIdx) => (
                     <div key={specIdx} className={`p-2 rounded ${spec.highlight ? 'bg-gray-50 border-2 border-gray-300' : 'bg-gray-50 border border-gray-200'}`}>
                       <div className="flex items-start justify-between mb-1">
-                        <span className="text-xs text-gray-600 font-medium">{spec.name}</span>
+                        <span className="text-sm text-gray-600 font-medium">{spec.name}</span>
                         <div className="flex items-center gap-1">
                           <span className={`text-sm font-semibold ${spec.highlight ? 'text-[#363636]' : 'text-gray-900'}`}>
                             {spec.value}
                           </span>
                           <div className="group relative">
                             <Info className="w-3 h-3 text-gray-400 cursor-help" />
-                            <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block w-48 bg-gray-900 text-white text-xs p-2 rounded shadow-lg z-10">
+                            <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block w-48 bg-gray-900 text-white text-sm p-2 rounded shadow-lg z-10">
                               {spec.tooltip}
                             </div>
                           </div>
@@ -371,7 +371,7 @@ const ElectronicsProduct = () => {
                               style={{ width: `${(spec.visualBar / 5000) * 100}%` }}
                             />
                           </div>
-                          <p className="text-xs text-gray-500 mt-1">{spec.tooltip}</p>
+                          <p className="text-sm text-gray-500 mt-1">{spec.tooltip}</p>
                         </div>
                       )}
                     </div>
@@ -386,15 +386,15 @@ const ElectronicsProduct = () => {
         <div className="mt-3 p-3 bg-gray-50 rounded-lg border-2 border-gray-300">
           <h4 className="text-sm font-semibold text-gray-900 mb-2">How It Compares</h4>
           <div className="space-y-2">
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600">vs iPhone 14 Pro</span>
               <span className="font-semibold text-[#363636]">15% faster • 2 hrs more battery</span>
             </div>
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600">vs Samsung S24 Ultra</span>
               <span className="font-semibold text-[#363636]">Similar performance • Better ecosystem</span>
             </div>
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600">vs Google Pixel 8 Pro</span>
               <span className="font-semibold text-[#363636]">Better processor • Pixel wins camera</span>
             </div>
@@ -424,7 +424,7 @@ const ElectronicsProduct = () => {
                   style={{ width: `${item.score}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-500">{item.description}</p>
+              <p className="text-sm text-gray-500">{item.description}</p>
             </div>
           ))}
         </div>
@@ -446,9 +446,9 @@ const ElectronicsProduct = () => {
                 <div className="flex items-center gap-2 mb-1">
                   <div className="flex items-center gap-1">
                     <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                    <span className="text-xs text-gray-700">{product.rating}</span>
+                    <span className="text-sm text-gray-700">{product.rating}</span>
                   </div>
-                  <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">{product.match} match</span>
+                  <span className="text-sm bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">{product.match} match</span>
                 </div>
                 <p className="font-bold text-gray-900 text-sm">₹{product.price.toLocaleString()}</p>
               </div>
@@ -461,7 +461,7 @@ const ElectronicsProduct = () => {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-200 px-4 py-3 max-w-md mx-auto">
         <div className="flex items-center gap-3">
           <div className="flex-1">
-            <p className="text-xs text-gray-600">Best Price</p>
+            <p className="text-sm text-gray-600">Best Price</p>
             <p className="text-xl font-bold text-gray-900">₹1,34,999</p>
           </div>
           <button

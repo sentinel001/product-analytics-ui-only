@@ -264,7 +264,7 @@ const FashionProduct_Phase2 = () => {
         <div className="flex items-center justify-between">
           <h1 className="text-lg font-bold text-gray-900">Product Analysis</h1>
           <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-500">Fashion</span>
+            <span className="text-sm text-gray-500">Fashion</span>
           </div>
         </div>
       </div>
@@ -276,11 +276,11 @@ const FashionProduct_Phase2 = () => {
             <Camera className="w-5 h-5" />
             <div>
               <p className="font-bold text-sm">Phase 2: Visual Confidence</p>
-              <p className="text-xs opacity-90">Months 3-4 Features</p>
+              <p className="text-sm opacity-90">Months 3-4 Features</p>
             </div>
           </div>
           <div className="bg-white/20 rounded px-2 py-1">
-            <p className="text-xs font-semibold">NEW</p>
+            <p className="text-sm font-semibold">NEW</p>
           </div>
         </div>
       </div>
@@ -292,7 +292,7 @@ const FashionProduct_Phase2 = () => {
             <Camera className="w-5 h-5 text-orange-600" />
             360° Visual Experience
           </h3>
-          <span className="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">
+          <span className="text-sm bg-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">
             Phase 2
           </span>
         </div>
@@ -312,7 +312,7 @@ const FashionProduct_Phase2 = () => {
               <RotateCw className="w-5 h-5 text-gray-700" />
             </button>
           </div>
-          <div className="absolute bottom-2 left-2 bg-[#363636]/60 backdrop-blur text-white px-3 py-1 rounded-full text-xs font-medium">
+          <div className="absolute bottom-2 left-2 bg-[#363636]/60 backdrop-blur text-white px-3 py-1 rounded-full text-sm font-medium">
             {productImages[selectedImage].label}
           </div>
         </div>
@@ -342,10 +342,10 @@ const FashionProduct_Phase2 = () => {
               </div>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">AR Virtual Try-On</p>
-                <p className="text-xs text-gray-600">See how it looks on you</p>
+                <p className="text-sm text-gray-600">See how it looks on you</p>
               </div>
             </div>
-            <button className="bg-purple-600 text-white px-4 py-2 rounded-lg text-xs font-semibold">
+            <button className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold">
               Try Now
             </button>
           </div>
@@ -357,7 +357,7 @@ const FashionProduct_Phase2 = () => {
             <CheckCircle className="w-4 h-4 text-amber-600" />
             <p className="text-sm font-semibold text-gray-900">True Color Photography</p>
           </div>
-          <p className="text-xs text-gray-600 mb-2">Photographed in natural daylight & studio lighting for accurate colors</p>
+          <p className="text-sm text-gray-600 mb-2">Photographed in natural daylight & studio lighting for accurate colors</p>
           <div className="flex gap-2">
             {colorVariants.map((color, idx) => (
               <div key={idx} className="relative">
@@ -366,7 +366,7 @@ const FashionProduct_Phase2 = () => {
                   style={{ backgroundColor: color.hex }}
                 />
                 {color.current && (
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 whitespace-nowrap">
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-sm text-gray-600 whitespace-nowrap">
                     Current
                   </div>
                 )}
@@ -391,8 +391,8 @@ const FashionProduct_Phase2 = () => {
                 <div className="bg-gray-200 rounded-lg h-20 flex items-center justify-center">
                   <PlayCircle className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-xs text-gray-700 mt-1">{video.label}</p>
-                <span className="absolute top-1 right-1 bg-[#363636]/70 text-white text-xs px-1 rounded">
+                <p className="text-sm text-gray-700 mt-1">{video.label}</p>
+                <span className="absolute top-1 right-1 bg-[#363636]/70 text-white text-sm px-1 rounded">
                   {video.duration}
                 </span>
               </div>
@@ -408,7 +408,7 @@ const FashionProduct_Phase2 = () => {
             <Users className="w-5 h-5 text-indigo-600" />
             See It On Different Body Types
           </h3>
-          <span className="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full font-medium">
+          <span className="text-sm bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full font-medium">
             Phase 2
           </span>
         </div>
@@ -423,7 +423,7 @@ const FashionProduct_Phase2 = () => {
             >
               <img src={model.url} alt={model.label} className="w-20 h-24 object-cover" />
               <div className="bg-white px-2 py-1">
-                <p className="text-xs font-semibold text-gray-900">{model.label}</p>
+                <p className="text-sm font-semibold text-gray-900">{model.label}</p>
               </div>
             </button>
           ))}
@@ -441,7 +441,7 @@ const FashionProduct_Phase2 = () => {
               <p className="font-semibold text-gray-900 text-sm mb-2">
                 {modelShots.find(m => m.type === selectedModelView).label}
               </p>
-              <div className="space-y-1 text-xs">
+              <div className="space-y-1 text-sm">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Body Type:</span>
                   <span className="font-semibold text-gray-900">
@@ -472,7 +472,7 @@ const FashionProduct_Phase2 = () => {
             {['S', 'M', 'L'].map((size, idx) => (
               <div key={idx} className="flex-1">
                 <div className="bg-gray-200 rounded-lg h-32 mb-1"></div>
-                <p className="text-xs text-center font-semibold text-gray-700">Size {size}</p>
+                <p className="text-sm text-center font-semibold text-gray-700">Size {size}</p>
               </div>
             ))}
           </div>
@@ -486,7 +486,7 @@ const FashionProduct_Phase2 = () => {
             <Instagram className="w-5 h-5 text-green-600" />
             See It On Real People
           </h3>
-          <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
+          <span className="text-sm bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
             {userPhotos.length} Verified Photos
           </span>
         </div>
@@ -496,7 +496,7 @@ const FashionProduct_Phase2 = () => {
           {['All', 'Athletic', 'Slim', 'Average', 'Broad'].map((type, idx) => (
             <button
               key={idx}
-              className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium ${idx === 0 ? 'bg-green-600 text-white' : 'bg-white text-gray-700 border border-gray-300'}`}
+              className={`flex-shrink-0 px-3 py-1 rounded-full text-sm font-medium ${idx === 0 ? 'bg-green-600 text-white' : 'bg-white text-gray-700 border border-gray-300'}`}
             >
               {type}
             </button>
@@ -540,11 +540,11 @@ const FashionProduct_Phase2 = () => {
                 </div>
               </div>
               <div className="flex gap-2 mb-2">
-                <span className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded">{userPhotos[0].bodyType}</span>
-                <span className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded">{userPhotos[0].height}</span>
-                <span className="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded font-medium">Size {userPhotos[0].size}</span>
+                <span className="text-sm bg-gray-100 text-gray-700 px-2 py-0.5 rounded">{userPhotos[0].bodyType}</span>
+                <span className="text-sm bg-gray-100 text-gray-700 px-2 py-0.5 rounded">{userPhotos[0].height}</span>
+                <span className="text-sm bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded font-medium">Size {userPhotos[0].size}</span>
               </div>
-              <p className="text-xs text-gray-600">
+              <p className="text-sm text-gray-600">
                 "Perfect fit! The fabric is incredibly soft and breathable. True to size for athletic build."
               </p>
             </div>
@@ -559,7 +559,7 @@ const FashionProduct_Phase2 = () => {
             <DollarSign className="w-5 h-5 text-orange-600" />
             Price Intelligence
           </h3>
-          <span className="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">
+          <span className="text-sm bg-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">
             Phase 2
           </span>
         </div>
@@ -568,13 +568,13 @@ const FashionProduct_Phase2 = () => {
         <div className="bg-gradient-to-r from-orange-600 to-amber-600 text-white rounded-lg p-4 mb-3">
           <div className="flex items-start justify-between mb-3">
             <div>
-              <p className="text-xs opacity-90 mb-1">Best Price Today</p>
+              <p className="text-sm opacity-90 mb-1">Best Price Today</p>
               <p className="text-3xl font-bold">₹{priceInsights.lowestEver}</p>
               <div className="flex items-center gap-2 mt-1">
-                <span className="bg-white/20 text-xs px-2 py-0.5 rounded-full font-medium">
+                <span className="bg-white/20 text-sm px-2 py-0.5 rounded-full font-medium">
                   Lowest Ever
                 </span>
-                <span className="text-xs opacity-90">
+                <span className="text-sm opacity-90">
                   {priceInsights.belowAverage}% below avg
                 </span>
               </div>
@@ -582,13 +582,13 @@ const FashionProduct_Phase2 = () => {
             <div className="text-right">
               <div className="bg-white/20 rounded-lg px-3 py-2">
                 <TrendingDown className="w-6 h-6 mb-1" />
-                <p className="text-xs">Great Deal</p>
+                <p className="text-sm">Great Deal</p>
               </div>
             </div>
           </div>
           <div className="flex items-center gap-2 bg-white/10 rounded p-2">
             <AlertCircle className="w-4 h-4 flex-shrink-0" />
-            <p className="text-xs">
+            <p className="text-sm">
               {priceInsights.watchingUsers} users watching • {priceInsights.priceDropChance} chance of further drop
             </p>
           </div>
@@ -617,12 +617,12 @@ const FashionProduct_Phase2 = () => {
                 points={priceHistory.map((p, i) => `${(i / (priceHistory.length - 1)) * 300},${100 - ((p.price - 1099) / 500) * 100}`).join(' ')}
               />
             </svg>
-            <div className="absolute inset-0 flex items-end justify-between text-xs text-gray-500 px-1">
+            <div className="absolute inset-0 flex items-end justify-between text-sm text-gray-500 px-1">
               <span>{priceHistory[0].date}</span>
               <span>{priceHistory[priceHistory.length - 1].date}</span>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-2 text-xs">
+          <div className="grid grid-cols-3 gap-2 text-sm">
             <div className="bg-gray-50 rounded p-2">
               <p className="text-gray-600">Average</p>
               <p className="font-bold text-gray-900">₹{priceInsights.averagePrice}</p>
@@ -650,7 +650,7 @@ const FashionProduct_Phase2 = () => {
                     <div className="flex items-center gap-2 mb-1">
                       <p className="font-semibold text-gray-900 text-sm">{platform.platform}</p>
                       {platform.badges.map((badge, bIdx) => (
-                        <span key={bIdx} className="text-xs bg-green-600 text-white px-2 py-0.5 rounded-full font-medium">
+                        <span key={bIdx} className="text-sm bg-green-600 text-white px-2 py-0.5 rounded-full font-medium">
                           {badge}
                         </span>
                       ))}
@@ -658,17 +658,17 @@ const FashionProduct_Phase2 = () => {
                     <div className="flex items-center gap-2">
                       <div className="flex items-center gap-1">
                         <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                        <span className="text-xs text-gray-700">{platform.rating}</span>
+                        <span className="text-sm text-gray-700">{platform.rating}</span>
                       </div>
-                      <span className="text-xs text-gray-500">({platform.reviews})</span>
-                      <span className="text-xs text-gray-600">• {platform.deliveryDays} days</span>
+                      <span className="text-sm text-gray-500">({platform.reviews})</span>
+                      <span className="text-sm text-gray-600">• {platform.deliveryDays} days</span>
                     </div>
                   </div>
                 </div>
                 <div className="text-right">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs text-gray-500 line-through">₹{platform.originalPrice}</span>
-                    <span className="text-xs bg-red-100 text-red-700 px-1 py-0.5 rounded font-medium">
+                    <span className="text-sm text-gray-500 line-through">₹{platform.originalPrice}</span>
+                    <span className="text-sm bg-red-100 text-red-700 px-1 py-0.5 rounded font-medium">
                       {platform.discount}% OFF
                     </span>
                   </div>
@@ -681,18 +681,18 @@ const FashionProduct_Phase2 = () => {
                 <div className="flex items-center gap-2">
                   <Tag className="w-4 h-4 text-green-600" />
                   <div>
-                    <p className="text-xs font-semibold text-gray-900">Apply code: {platform.coupon}</p>
-                    <p className="text-xs text-green-600">Extra ₹{platform.couponDiscount} off</p>
+                    <p className="text-sm font-semibold text-gray-900">Apply code: {platform.coupon}</p>
+                    <p className="text-sm text-green-600">Extra ₹{platform.couponDiscount} off</p>
                   </div>
                 </div>
-                <button className="text-xs text-orange-600 font-semibold">COPY</button>
+                <button className="text-sm text-orange-600 font-semibold">COPY</button>
               </div>
 
               {/* Final Price */}
               <div className="mt-2 flex items-center justify-between bg-green-50 rounded p-2">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span className="text-xs text-gray-700">Final Price (with coupon + {platform.shipping} shipping)</span>
+                  <span className="text-sm text-gray-700">Final Price (with coupon + {platform.shipping} shipping)</span>
                 </div>
                 <span className="text-sm font-bold text-green-700">₹{platform.finalPrice}</span>
               </div>
@@ -720,7 +720,7 @@ const FashionProduct_Phase2 = () => {
               Notify Me
             </button>
           </div>
-          <p className="text-xs text-gray-600 mt-2">
+          <p className="text-sm text-gray-600 mt-2">
             {priceInsights.watchingUsers} users are watching this price
           </p>
         </div>
@@ -732,12 +732,12 @@ const FashionProduct_Phase2 = () => {
               <Calendar className="w-5 h-5 text-blue-600" />
               <p className="font-semibold text-gray-900 text-sm">Next Sale Prediction</p>
             </div>
-            <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
+            <span className="text-sm bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
               {priceInsights.daysUntilSale} days
             </span>
           </div>
           <p className="text-sm text-gray-700 mb-1">{priceInsights.nextSale}</p>
-          <p className="text-xs text-gray-600">Expected discount: 30-40% off</p>
+          <p className="text-sm text-gray-600">Expected discount: 30-40% off</p>
         </div>
 
         {/* Value Assessment */}
@@ -745,23 +745,23 @@ const FashionProduct_Phase2 = () => {
           <p className="font-semibold text-gray-900 text-sm mb-3">Value Assessment</p>
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-xs text-gray-600">Price Category</span>
-              <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
+              <span className="text-sm text-gray-600">Price Category</span>
+              <span className="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
                 Premium
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-xs text-gray-600">Price per Wear (100 wears)</span>
-              <span className="text-xs font-semibold text-gray-900">₹{Math.round(priceInsights.lowestEver / 100)}</span>
+              <span className="text-sm text-gray-600">Price per Wear (100 wears)</span>
+              <span className="text-sm font-semibold text-gray-900">₹{Math.round(priceInsights.lowestEver / 100)}</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-xs text-gray-600">Similar Styles Range</span>
-              <span className="text-xs font-semibold text-gray-900">₹899 - ₹1,999</span>
+              <span className="text-sm text-gray-600">Similar Styles Range</span>
+              <span className="text-sm font-semibold text-gray-900">₹899 - ₹1,999</span>
             </div>
           </div>
           <div className="mt-3 bg-green-50 rounded p-2 flex items-start gap-2">
             <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-            <p className="text-xs text-gray-700">
+            <p className="text-sm text-gray-700">
               <span className="font-semibold text-green-700">Worth the premium:</span> High-quality organic cotton, ethical production, and premium durability justify the price point.
             </p>
           </div>
@@ -787,7 +787,7 @@ const FashionProduct_Phase2 = () => {
             <Ruler className="w-5 h-5 text-purple-600" />
             Smart Size & Fit Predictor
           </h3>
-          <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
+          <span className="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
             {returnReduction.savings}% fewer returns
           </span>
         </div>
@@ -808,7 +808,7 @@ const FashionProduct_Phase2 = () => {
               <p className="text-sm font-semibold text-gray-900 mb-2">Your Measurements</p>
               <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <label className="text-xs text-gray-600">Height (cm)</label>
+                  <label className="text-sm text-gray-600">Height (cm)</label>
                   <input
                     type="number"
                     value={userMeasurements.height}
@@ -817,7 +817,7 @@ const FashionProduct_Phase2 = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-xs text-gray-600">Weight (kg)</label>
+                  <label className="text-sm text-gray-600">Weight (kg)</label>
                   <input
                     type="number"
                     value={userMeasurements.weight}
@@ -826,7 +826,7 @@ const FashionProduct_Phase2 = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-xs text-gray-600">Chest (inches)</label>
+                  <label className="text-sm text-gray-600">Chest (inches)</label>
                   <input
                     type="number"
                     value={userMeasurements.chest}
@@ -835,7 +835,7 @@ const FashionProduct_Phase2 = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-xs text-gray-600">Waist (inches)</label>
+                  <label className="text-sm text-gray-600">Waist (inches)</label>
                   <input
                     type="number"
                     value={userMeasurements.waist}
@@ -852,18 +852,18 @@ const FashionProduct_Phase2 = () => {
                 <div>
                   <p className="text-sm font-semibold mb-1">Recommended Size</p>
                   <p className="text-3xl font-bold">{sizePrediction.recommended}</p>
-                  <p className="text-xs opacity-90 mt-1">{sizePrediction.fit}</p>
+                  <p className="text-sm opacity-90 mt-1">{sizePrediction.fit}</p>
                 </div>
                 <div className="text-right">
                   <div className="bg-white/20 rounded-lg px-3 py-1">
-                    <p className="text-xs opacity-90">Confidence</p>
+                    <p className="text-sm opacity-90">Confidence</p>
                     <p className="text-2xl font-bold">{sizePrediction.confidence}%</p>
                   </div>
                 </div>
               </div>
               <div className="flex items-center gap-2 mt-3 bg-white/10 rounded p-2">
                 <Info className="w-4 h-4 flex-shrink-0" />
-                <p className="text-xs">Based on your measurements and 2,123 verified customer reviews</p>
+                <p className="text-sm">Based on your measurements and 2,123 verified customer reviews</p>
               </div>
             </div>
 
@@ -876,9 +876,9 @@ const FashionProduct_Phase2 = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="font-semibold text-gray-900">Size {alt.size}</span>
-                        <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded">{alt.fit}</span>
+                        <span className="text-sm bg-gray-200 text-gray-700 px-2 py-0.5 rounded">{alt.fit}</span>
                       </div>
-                      <p className="text-xs text-gray-600">{alt.note}</p>
+                      <p className="text-sm text-gray-600">{alt.note}</p>
                     </div>
                     <div className="text-right ml-2">
                       <p className="text-sm font-semibold text-gray-700">{alt.confidence}%</p>
@@ -891,7 +891,7 @@ const FashionProduct_Phase2 = () => {
             {/* Size Chart */}
             <div className="bg-white rounded-lg p-3 overflow-x-auto">
               <p className="text-sm font-semibold text-gray-900 mb-2">Detailed Size Chart (inches)</p>
-              <table className="w-full text-xs">
+              <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-gray-200">
                     <th className="text-left py-2 text-gray-700">Size</th>
@@ -923,14 +923,14 @@ const FashionProduct_Phase2 = () => {
                   <Users className="w-4 h-4 text-blue-600" />
                   How Customers Rate the Fit
                 </p>
-                <span className="text-xs text-gray-500">2,123 reviews</span>
+                <span className="text-sm text-gray-500">2,123 reviews</span>
               </div>
               <div className="space-y-2">
                 {customerFitData.map((item, idx) => (
                   <div key={idx}>
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs text-gray-700">{item.metric}</span>
-                      <span className="text-xs font-semibold text-gray-900">{item.percentage}% ({item.count})</span>
+                      <span className="text-sm text-gray-700">{item.metric}</span>
+                      <span className="text-sm font-semibold text-gray-900">{item.percentage}% ({item.count})</span>
                     </div>
                     <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                       <div
@@ -953,7 +953,7 @@ const FashionProduct_Phase2 = () => {
             <Shield className="w-5 h-5 text-gray-700" />
             Material & Quality Details
           </h3>
-          <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">Certified Sustainable</span>
+          <span className="text-sm bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">Certified Sustainable</span>
         </div>
 
         {/* Material Composition */}
@@ -965,20 +965,20 @@ const FashionProduct_Phase2 = () => {
                   {material.icon}
                   <div>
                     <p className="font-semibold text-gray-900 text-sm">{material.material}</p>
-                    <p className="text-xs text-gray-600">{material.percentage}% of fabric</p>
+                    <p className="text-sm text-gray-600">{material.percentage}% of fabric</p>
                   </div>
                 </div>
-                <span className={`text-xs px-2 py-1 rounded-full font-medium ${material.sustainability === 'Excellent' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
+                <span className={`text-sm px-2 py-1 rounded-full font-medium ${material.sustainability === 'Excellent' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
                   {material.sustainability}
                 </span>
               </div>
 
-              <p className="text-xs text-gray-700 mb-2">{material.description}</p>
+              <p className="text-sm text-gray-700 mb-2">{material.description}</p>
 
               {/* Properties */}
               <div className="flex flex-wrap gap-1 mb-2">
                 {material.properties.map((prop, pIdx) => (
-                  <span key={pIdx} className="text-xs bg-white px-2 py-1 rounded text-gray-700 border border-gray-200">
+                  <span key={pIdx} className="text-sm bg-white px-2 py-1 rounded text-gray-700 border border-gray-200">
                     {prop}
                   </span>
                 ))}
@@ -987,7 +987,7 @@ const FashionProduct_Phase2 = () => {
               {/* Certifications */}
               <div className="flex flex-wrap gap-1">
                 {material.certifications.map((cert, cIdx) => (
-                  <span key={cIdx} className="text-xs bg-white px-2 py-1 rounded text-green-700 font-medium border border-green-200 flex items-center gap-1">
+                  <span key={cIdx} className="text-sm bg-white px-2 py-1 rounded text-green-700 font-medium border border-green-200 flex items-center gap-1">
                     <CheckCircle className="w-3 h-3" />
                     {cert}
                   </span>
@@ -1009,17 +1009,17 @@ const FashionProduct_Phase2 = () => {
                 <div className="flex items-center gap-2">
                   <div className="text-amber-600">{indicator.icon}</div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-900">{indicator.aspect}</p>
-                    <p className="text-xs text-gray-600">{indicator.value}</p>
+                    <p className="text-sm font-semibold text-gray-900">{indicator.aspect}</p>
+                    <p className="text-sm text-gray-600">{indicator.value}</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
+                  <span className="text-sm bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
                     {indicator.rating}
                   </span>
                   <div className="group relative inline-block ml-1">
                     <Info className="w-3 h-3 text-gray-400 cursor-help" />
-                    <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block w-40 bg-gray-900 text-white text-xs p-2 rounded shadow-lg z-10">
+                    <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block w-40 bg-gray-900 text-white text-sm p-2 rounded shadow-lg z-10">
                       {indicator.info}
                     </div>
                   </div>
@@ -1035,7 +1035,7 @@ const FashionProduct_Phase2 = () => {
             <Droplets className="w-4 h-4 text-blue-600" />
             Care Instructions for Longevity
           </p>
-          <div className="space-y-1 text-xs text-gray-700">
+          <div className="space-y-1 text-sm text-gray-700">
             <p>• Machine wash cold (30°C) with similar colors</p>
             <p>• Use mild detergent, avoid bleach</p>
             <p>• Tumble dry low or hang to dry</p>
@@ -1044,7 +1044,7 @@ const FashionProduct_Phase2 = () => {
           </div>
           <div className="mt-2 flex items-start gap-2 bg-white rounded p-2">
             <AlertCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-            <p className="text-xs text-gray-700">
+            <p className="text-sm text-gray-700">
               Following these instructions can extend your garment's life by <span className="font-semibold text-blue-700">2-3 years</span>
             </p>
           </div>
@@ -1073,7 +1073,7 @@ const FashionProduct_Phase2 = () => {
                   style={{ width: `${item.score}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-500">{item.description}</p>
+              <p className="text-sm text-gray-500">{item.description}</p>
             </div>
           ))}
         </div>
@@ -1092,13 +1092,13 @@ const FashionProduct_Phase2 = () => {
               <img src={product.image} alt={product.name} className="w-16 h-16 object-cover rounded-lg" />
               <div className="flex-1">
                 <p className="font-semibold text-sm text-gray-900 mb-0.5">{product.name}</p>
-                <p className="text-xs text-gray-600 mb-1">{product.brand}</p>
+                <p className="text-sm text-gray-600 mb-1">{product.brand}</p>
                 <div className="flex items-center gap-2 mb-1">
                   <div className="flex items-center gap-1">
                     <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                    <span className="text-xs text-gray-700">{product.rating}</span>
+                    <span className="text-sm text-gray-700">{product.rating}</span>
                   </div>
-                  <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">{product.match} match</span>
+                  <span className="text-sm bg-green-100 text-green-700 px-2 py-0.5 rounded-full">{product.match} match</span>
                 </div>
                 <p className="font-bold text-gray-900 text-sm">₹{product.price}</p>
               </div>

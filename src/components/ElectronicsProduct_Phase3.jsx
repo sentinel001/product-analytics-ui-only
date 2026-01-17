@@ -203,10 +203,10 @@ const ElectronicsProduct_Phase3 = () => {
         <div className="flex items-center justify-between">
           <h1 className="text-lg font-bold text-gray-900">Product Analysis</h1>
           <div className="flex items-center gap-2">
-            <span className="text-xs bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white px-3 py-1 rounded-full font-bold">
+            <span className="text-sm bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white px-3 py-1 rounded-full font-bold">
               Phase 3: Optimization
             </span>
-            <span className="text-xs text-gray-500">Months 5-6</span>
+            <span className="text-sm text-gray-500">Months 5-6</span>
           </div>
         </div>
       </div>
@@ -227,11 +227,11 @@ const ElectronicsProduct_Phase3 = () => {
                 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 <span className="text-sm font-semibold text-gray-900">4.6</span>
               </div>
-              <span className="text-xs text-gray-500">16,718 reviews</span>
+              <span className="text-sm text-gray-500">16,718 reviews</span>
             </div>
             <div className="inline-flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
               <TrendingDown className="w-3 h-3 text-green-600" />
-              <span className="text-xs font-medium text-green-700">₹14,901 price drop</span>
+              <span className="text-sm font-medium text-green-700">₹14,901 price drop</span>
             </div>
           </div>
         </div>
@@ -244,7 +244,7 @@ const ElectronicsProduct_Phase3 = () => {
             <Package className="w-5 h-5 text-purple-600" />
             Configure Your Perfect Device
           </h3>
-          <span className="text-xs bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full font-bold">
+          <span className="text-sm bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full font-bold">
             PHASE 3
           </span>
         </div>
@@ -255,7 +255,7 @@ const ElectronicsProduct_Phase3 = () => {
             <button
               key={tab}
               onClick={() => setActiveVariantTab(tab)}
-              className={`flex-shrink-0 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
+              className={`flex-shrink-0 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                 activeVariantTab === tab
                   ? 'bg-purple-600 text-white shadow-lg'
                   : 'bg-white text-gray-600 border hover:border-purple-300'
@@ -283,7 +283,7 @@ const ElectronicsProduct_Phase3 = () => {
 
               {showStorageQuiz && (
                 <div className="space-y-2 mt-3">
-                  <p className="text-xs text-gray-600 mb-2">Select your usage pattern:</p>
+                  <p className="text-sm text-gray-600 mb-2">Select your usage pattern:</p>
                   <div className="grid grid-cols-2 gap-2">
                     {storageScenarios.map((scenario) => (
                       <button
@@ -299,9 +299,9 @@ const ElectronicsProduct_Phase3 = () => {
                         }`}
                       >
                         <div className="text-2xl mb-1">{scenario.icon}</div>
-                        <p className="text-xs font-semibold text-gray-900">{scenario.label}</p>
-                        <p className="text-xs text-gray-600 mt-1">{scenario.description}</p>
-                        <p className="text-xs font-bold text-purple-600 mt-2">→ {scenario.recommendation}GB</p>
+                        <p className="text-sm font-semibold text-gray-900">{scenario.label}</p>
+                        <p className="text-sm text-gray-600 mt-1">{scenario.description}</p>
+                        <p className="text-sm font-bold text-purple-600 mt-2">→ {scenario.recommendation}GB</p>
                       </button>
                     ))}
                   </div>
@@ -320,8 +320,8 @@ const ElectronicsProduct_Phase3 = () => {
                   { type: 'Music', amount: Math.floor(selectedStorage * 16), unit: 'songs', icon: '🎵' }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center justify-between p-2 bg-gray-50 rounded">
-                    <span className="text-xs text-gray-700">{item.icon} {item.type}</span>
-                    <span className="text-xs font-bold text-purple-600">~{item.amount.toLocaleString()} {item.unit}</span>
+                    <span className="text-sm text-gray-700">{item.icon} {item.type}</span>
+                    <span className="text-sm font-bold text-purple-600">~{item.amount.toLocaleString()} {item.unit}</span>
                   </div>
                 ))}
               </div>
@@ -346,12 +346,12 @@ const ElectronicsProduct_Phase3 = () => {
                         <div className="flex items-center gap-2">
                           <span className="text-sm font-bold text-gray-900">{option.size}GB</span>
                           {option.popular && (
-                            <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-medium">
+                            <span className="text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-medium">
                               Most Popular
                             </span>
                           )}
                         </div>
-                        <p className="text-xs text-gray-600 mt-1">{option.recommendation}</p>
+                        <p className="text-sm text-gray-600 mt-1">{option.recommendation}</p>
                       </div>
                       <span className="text-sm font-bold text-gray-900">₹{option.price.toLocaleString()}</span>
                     </div>
@@ -359,14 +359,14 @@ const ElectronicsProduct_Phase3 = () => {
                     {upgrade && (
                       <div className="mt-2 pt-2 border-t border-gray-200">
                         <div className="flex items-center justify-between">
-                          <span className="text-xs text-gray-600">Upgrade cost:</span>
-                          <span className="text-xs font-bold text-orange-600">+₹{upgrade.priceDiff.toLocaleString()}</span>
+                          <span className="text-sm text-gray-600">Upgrade cost:</span>
+                          <span className="text-sm font-bold text-orange-600">+₹{upgrade.priceDiff.toLocaleString()}</span>
                         </div>
                         <div className="flex items-center justify-between mt-1">
-                          <span className="text-xs text-gray-600">Value:</span>
-                          <span className="text-xs font-medium text-gray-700">₹{upgrade.pricePerGB}/GB extra</span>
+                          <span className="text-sm text-gray-600">Value:</span>
+                          <span className="text-sm font-medium text-gray-700">₹{upgrade.pricePerGB}/GB extra</span>
                         </div>
-                        <div className={`mt-2 text-xs font-medium ${
+                        <div className={`mt-2 text-sm font-medium ${
                           upgrade.pricePerGB < 100 ? 'text-green-600' : 'text-gray-600'
                         }`}>
                           {upgrade.pricePerGB < 100 ? '✓ Great value upgrade!' : '→ Consider if you need the space'}
@@ -385,7 +385,7 @@ const ElectronicsProduct_Phase3 = () => {
           <div className="space-y-3">
             <div className="bg-white rounded-lg p-3 mb-3">
               <h4 className="text-sm font-semibold text-gray-900 mb-2">8GB vs 16GB - Which do you need?</h4>
-              <p className="text-xs text-gray-600">
+              <p className="text-sm text-gray-600">
                 More RAM means better multitasking and future-proofing. Here's what you need to know:
               </p>
             </div>
@@ -405,8 +405,8 @@ const ElectronicsProduct_Phase3 = () => {
                   <div className="flex items-start justify-between mb-2">
                     <div className="flex-1">
                       <span className="text-sm font-bold text-gray-900">{option.size}GB RAM</span>
-                      <p className="text-xs text-gray-600 mt-1">{option.recommendation}</p>
-                      <div className="mt-2 flex items-center gap-1 text-xs text-blue-600">
+                      <p className="text-sm text-gray-600 mt-1">{option.recommendation}</p>
+                      <div className="mt-2 flex items-center gap-1 text-sm text-blue-600">
                         <Shield className="w-3 h-3" />
                         <span>{option.futureProof}</span>
                       </div>
@@ -414,41 +414,41 @@ const ElectronicsProduct_Phase3 = () => {
                     <div className="text-right">
                       <span className="text-sm font-bold text-gray-900">₹{totalPrice.toLocaleString()}</span>
                       {option.price > 0 && (
-                        <p className="text-xs text-orange-600 font-medium mt-1">+₹{option.price.toLocaleString()}</p>
+                        <p className="text-sm text-orange-600 font-medium mt-1">+₹{option.price.toLocaleString()}</p>
                       )}
                     </div>
                   </div>
 
                   {/* Use Case Recommendations */}
                   <div className="mt-2 pt-2 border-t border-gray-200">
-                    <p className="text-xs font-semibold text-gray-700 mb-1">Best for:</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-1">Best for:</p>
                     <div className="space-y-1">
                       {option.size === 8 ? (
                         <>
-                          <div className="flex items-center gap-1 text-xs text-gray-600">
+                          <div className="flex items-center gap-1 text-sm text-gray-600">
                             <CheckCircle className="w-3 h-3 text-green-600" />
                             <span>Social media & browsing</span>
                           </div>
-                          <div className="flex items-center gap-1 text-xs text-gray-600">
+                          <div className="flex items-center gap-1 text-sm text-gray-600">
                             <CheckCircle className="w-3 h-3 text-green-600" />
                             <span>Photography & casual gaming</span>
                           </div>
-                          <div className="flex items-center gap-1 text-xs text-gray-600">
+                          <div className="flex items-center gap-1 text-sm text-gray-600">
                             <CheckCircle className="w-3 h-3 text-green-600" />
                             <span>Streaming & video calls</span>
                           </div>
                         </>
                       ) : (
                         <>
-                          <div className="flex items-center gap-1 text-xs text-gray-600">
+                          <div className="flex items-center gap-1 text-sm text-gray-600">
                             <CheckCircle className="w-3 h-3 text-green-600" />
                             <span>Intensive gaming & multitasking</span>
                           </div>
-                          <div className="flex items-center gap-1 text-xs text-gray-600">
+                          <div className="flex items-center gap-1 text-sm text-gray-600">
                             <CheckCircle className="w-3 h-3 text-green-600" />
                             <span>Video editing & ProRes recording</span>
                           </div>
-                          <div className="flex items-center gap-1 text-xs text-gray-600">
+                          <div className="flex items-center gap-1 text-sm text-gray-600">
                             <CheckCircle className="w-3 h-3 text-green-600" />
                             <span>Professional apps & future-proofing</span>
                           </div>
@@ -467,7 +467,7 @@ const ElectronicsProduct_Phase3 = () => {
           <div className="space-y-3">
             <div className="bg-white rounded-lg p-3 mb-3">
               <h4 className="text-sm font-semibold text-gray-900 mb-2">Choose Your Finish</h4>
-              <p className="text-xs text-gray-600">
+              <p className="text-sm text-gray-600">
                 All colors feature premium titanium construction with textured matte glass back.
               </p>
             </div>
@@ -489,9 +489,9 @@ const ElectronicsProduct_Phase3 = () => {
                         className="w-16 h-16 rounded-full mb-2 border-4 border-white shadow-lg"
                         style={{ backgroundColor: color.hex }}
                       />
-                      <span className="text-xs font-semibold text-gray-900 text-center">{color.name}</span>
+                      <span className="text-sm font-semibold text-gray-900 text-center">{color.name}</span>
                       {color.popular && (
-                        <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-medium mt-2">
+                        <span className="text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-medium mt-2">
                           Most Popular
                         </span>
                       )}
@@ -499,7 +499,7 @@ const ElectronicsProduct_Phase3 = () => {
 
                     {isSelected && (
                       <div className="mt-3 pt-2 border-t border-gray-200">
-                        <p className="text-xs text-gray-600 text-center">
+                        <p className="text-sm text-gray-600 text-center">
                           <CheckCircle className="w-3 h-3 inline text-green-600 mr-1" />
                           Selected
                         </p>
@@ -512,17 +512,17 @@ const ElectronicsProduct_Phase3 = () => {
 
             {/* Practical Considerations */}
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-3 border border-blue-200">
-              <h4 className="text-xs font-semibold text-gray-900 mb-2">💡 Color Tips</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">💡 Color Tips</h4>
               <div className="space-y-1">
-                <div className="flex items-start gap-2 text-xs text-gray-700">
+                <div className="flex items-start gap-2 text-sm text-gray-700">
                   <span>•</span>
                   <span>Lighter colors show fingerprints less</span>
                 </div>
-                <div className="flex items-start gap-2 text-xs text-gray-700">
+                <div className="flex items-start gap-2 text-sm text-gray-700">
                   <span>•</span>
                   <span>Natural Titanium has the best resale value</span>
                 </div>
-                <div className="flex items-start gap-2 text-xs text-gray-700">
+                <div className="flex items-start gap-2 text-sm text-gray-700">
                   <span>•</span>
                   <span>All colors look great with most cases</span>
                 </div>
@@ -536,16 +536,16 @@ const ElectronicsProduct_Phase3 = () => {
           <h4 className="text-sm font-semibold text-gray-900 mb-2">Your Configuration Summary</h4>
           <div className="space-y-2">
             <div className="flex justify-between items-center p-2 bg-gray-50 rounded">
-              <span className="text-xs text-gray-600">Storage</span>
-              <span className="text-xs font-bold text-gray-900">{selectedStorage}GB</span>
+              <span className="text-sm text-gray-600">Storage</span>
+              <span className="text-sm font-bold text-gray-900">{selectedStorage}GB</span>
             </div>
             <div className="flex justify-between items-center p-2 bg-gray-50 rounded">
-              <span className="text-xs text-gray-600">RAM</span>
-              <span className="text-xs font-bold text-gray-900">{selectedRAM}GB</span>
+              <span className="text-sm text-gray-600">RAM</span>
+              <span className="text-sm font-bold text-gray-900">{selectedRAM}GB</span>
             </div>
             <div className="flex justify-between items-center p-2 bg-gray-50 rounded">
-              <span className="text-xs text-gray-600">Color</span>
-              <span className="text-xs font-bold text-gray-900">{selectedColor}</span>
+              <span className="text-sm text-gray-600">Color</span>
+              <span className="text-sm font-bold text-gray-900">{selectedColor}</span>
             </div>
             <div className="flex justify-between items-center p-2 bg-purple-50 rounded border border-purple-200">
               <span className="text-sm font-bold text-gray-900">Total Price</span>
@@ -570,17 +570,17 @@ const ElectronicsProduct_Phase3 = () => {
             ].map((accessory, idx) => (
               <div key={idx} className="flex items-center justify-between p-2 bg-white rounded border border-orange-200">
                 <div className="flex-1">
-                  <p className="text-xs font-semibold text-gray-900">{accessory.name}</p>
-                  <p className="text-xs text-gray-600">{accessory.bought} bought together</p>
+                  <p className="text-sm font-semibold text-gray-900">{accessory.name}</p>
+                  <p className="text-sm text-gray-600">{accessory.bought} bought together</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-xs font-bold text-gray-900">₹{accessory.price.toLocaleString()}</p>
-                  <p className="text-xs text-green-600">Save ₹{accessory.savings}</p>
+                  <p className="text-sm font-bold text-gray-900">₹{accessory.price.toLocaleString()}</p>
+                  <p className="text-sm text-green-600">Save ₹{accessory.savings}</p>
                 </div>
               </div>
             ))}
           </div>
-          <button className="w-full mt-2 bg-gradient-to-r from-orange-500 to-red-500 text-white py-2 rounded-lg text-xs font-medium hover:shadow-lg transition-shadow">
+          <button className="w-full mt-2 bg-gradient-to-r from-orange-500 to-red-500 text-white py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-shadow">
             Bundle & Save ₹1,000
           </button>
         </div>
@@ -593,7 +593,7 @@ const ElectronicsProduct_Phase3 = () => {
             <DollarSign className="w-5 h-5 text-emerald-600" />
             Budget Shopping Assistant
           </h3>
-          <span className="text-xs bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-3 py-1 rounded-full font-bold">
+          <span className="text-sm bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-3 py-1 rounded-full font-bold">
             PHASE 3
           </span>
         </div>
@@ -621,7 +621,7 @@ const ElectronicsProduct_Phase3 = () => {
               <button
                 key={amount}
                 onClick={() => setBudgetInput(amount)}
-                className="px-3 py-1 bg-gray-100 hover:bg-emerald-100 hover:text-emerald-700 rounded text-xs font-medium transition-colors"
+                className="px-3 py-1 bg-gray-100 hover:bg-emerald-100 hover:text-emerald-700 rounded text-sm font-medium transition-colors"
               >
                 ₹{amount.toLocaleString()}
               </button>
@@ -647,7 +647,7 @@ const ElectronicsProduct_Phase3 = () => {
             </div>
           </div>
           <div className="mt-2 pt-2 border-t border-white/30">
-            <p className="text-xs opacity-90">Worth the upgrade? 87% of users say yes!</p>
+            <p className="text-sm opacity-90">Worth the upgrade? 87% of users say yes!</p>
           </div>
         </div>
 
@@ -675,19 +675,19 @@ const ElectronicsProduct_Phase3 = () => {
                       <Star className="w-4 h-4 text-white fill-white" />
                     )}
                   </div>
-                  <span className="absolute top-full mt-1 text-xs font-medium whitespace-nowrap transform -translate-x-1/3">
+                  <span className="absolute top-full mt-1 text-sm font-medium whitespace-nowrap transform -translate-x-1/3">
                     {point.label}
                   </span>
                 </div>
               ))}
             </div>
-            <div className="absolute bottom-0 left-0 text-xs text-gray-500">Low Price</div>
-            <div className="absolute bottom-0 right-0 text-xs text-gray-500">High Price</div>
-            <div className="absolute top-0 left-0 text-xs text-gray-500 -rotate-90 origin-top-left transform translate-y-full">
+            <div className="absolute bottom-0 left-0 text-sm text-gray-500">Low Price</div>
+            <div className="absolute bottom-0 right-0 text-sm text-gray-500">High Price</div>
+            <div className="absolute top-0 left-0 text-sm text-gray-500 -rotate-90 origin-top-left transform translate-y-full">
               Performance
             </div>
           </div>
-          <p className="text-xs text-gray-600 mt-2 flex items-center gap-1">
+          <p className="text-sm text-gray-600 mt-2 flex items-center gap-1">
             <Star className="w-3 h-3 text-yellow-500 fill-yellow-500" />
             <span>Sweet spot: Best performance per rupee</span>
           </p>
@@ -709,14 +709,14 @@ const ElectronicsProduct_Phase3 = () => {
                 {range.phones.map((phone, pIdx) => (
                   <div key={pIdx} className="flex items-center justify-between p-2 bg-gray-50 rounded">
                     <div className="flex-1">
-                      <p className="text-xs font-semibold text-gray-900">{phone.name}</p>
-                      <p className="text-xs text-emerald-600 font-medium">{phone.highlight}</p>
+                      <p className="text-sm font-semibold text-gray-900">{phone.name}</p>
+                      <p className="text-sm text-emerald-600 font-medium">{phone.highlight}</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs font-bold text-gray-900">₹{phone.price.toLocaleString()}</p>
+                      <p className="text-sm font-bold text-gray-900">₹{phone.price.toLocaleString()}</p>
                       <div className="flex items-center gap-1">
                         <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                        <span className="text-xs">{phone.rating}</span>
+                        <span className="text-sm">{phone.rating}</span>
                       </div>
                     </div>
                   </div>
@@ -734,7 +734,7 @@ const ElectronicsProduct_Phase3 = () => {
             <Shield className="w-5 h-5 text-blue-600" />
             Warranty & Service Info
           </h3>
-          <span className="text-xs bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1 rounded-full font-bold">
+          <span className="text-sm bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1 rounded-full font-bold">
             PHASE 3
           </span>
         </div>
@@ -748,7 +748,7 @@ const ElectronicsProduct_Phase3 = () => {
             </div>
             <button
               onClick={() => setShowWarrantyDetails(!showWarrantyDetails)}
-              className="text-xs text-blue-600 font-medium flex items-center gap-1"
+              className="text-sm text-blue-600 font-medium flex items-center gap-1"
             >
               {showWarrantyDetails ? 'Hide' : 'Show'} Details
               <ChevronDown className={`w-3 h-3 transition-transform ${showWarrantyDetails ? 'rotate-180' : ''}`} />
@@ -758,7 +758,7 @@ const ElectronicsProduct_Phase3 = () => {
           {showWarrantyDetails && (
             <div className="mt-3 pt-3 border-t border-gray-200 space-y-2">
               <div>
-                <p className="text-xs font-semibold text-gray-700 mb-1">What's Covered:</p>
+                <p className="text-sm font-semibold text-gray-700 mb-1">What's Covered:</p>
                 <div className="space-y-1">
                   {[
                     'Manufacturing defects',
@@ -766,7 +766,7 @@ const ElectronicsProduct_Phase3 = () => {
                     'Battery issues (if capacity drops below 80%)',
                     'Display defects'
                   ].map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-xs text-gray-600">
+                    <div key={idx} className="flex items-start gap-2 text-sm text-gray-600">
                       <CheckCircle className="w-3 h-3 text-green-600 flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </div>
@@ -775,7 +775,7 @@ const ElectronicsProduct_Phase3 = () => {
               </div>
 
               <div>
-                <p className="text-xs font-semibold text-gray-700 mb-1">Not Covered:</p>
+                <p className="text-sm font-semibold text-gray-700 mb-1">Not Covered:</p>
                 <div className="space-y-1">
                   {[
                     'Accidental damage (drops, cracks)',
@@ -783,7 +783,7 @@ const ElectronicsProduct_Phase3 = () => {
                     'Cosmetic damage (scratches, dents)',
                     'Software issues (covered under updates)'
                   ].map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-xs text-gray-600">
+                    <div key={idx} className="flex items-start gap-2 text-sm text-gray-600">
                       <AlertCircle className="w-3 h-3 text-red-600 flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </div>
@@ -806,12 +806,12 @@ const ElectronicsProduct_Phase3 = () => {
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex-1">
                     <p className="text-sm font-bold text-gray-900">{plan.name}</p>
-                    <p className="text-xs text-gray-600">{plan.duration} coverage</p>
+                    <p className="text-sm text-gray-600">{plan.duration} coverage</p>
                   </div>
                   <span className="text-sm font-bold text-gray-900">₹{plan.price.toLocaleString()}</span>
                 </div>
-                <p className="text-xs text-gray-700 mb-1">{plan.coverage}</p>
-                <p className="text-xs text-gray-600">{plan.deductible}</p>
+                <p className="text-sm text-gray-700 mb-1">{plan.coverage}</p>
+                <p className="text-sm text-gray-600">{plan.deductible}</p>
               </div>
             ))}
           </div>
@@ -831,22 +831,22 @@ const ElectronicsProduct_Phase3 = () => {
               <div key={idx} className="p-2 bg-gray-50 rounded border border-gray-200">
                 <div className="flex items-start justify-between mb-1">
                   <div className="flex-1">
-                    <p className="text-xs font-semibold text-gray-900">{center.name}</p>
-                    <p className="text-xs text-gray-600">{center.location}</p>
+                    <p className="text-sm font-semibold text-gray-900">{center.name}</p>
+                    <p className="text-sm text-gray-600">{center.location}</p>
                   </div>
                   <div className="flex items-center gap-1">
                     <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                    <span className="text-xs font-semibold">{center.rating}</span>
+                    <span className="text-sm font-semibold">{center.rating}</span>
                   </div>
                 </div>
                 <div className="flex items-center justify-between mt-2">
-                  <span className="text-xs text-gray-500">{center.reviews} reviews</span>
-                  <span className="text-xs text-blue-600 font-medium">Avg repair: {center.time}</span>
+                  <span className="text-sm text-gray-500">{center.reviews} reviews</span>
+                  <span className="text-sm text-blue-600 font-medium">Avg repair: {center.time}</span>
                 </div>
               </div>
             ))}
           </div>
-          <button className="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-xs font-medium hover:bg-blue-700">
+          <button className="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-blue-700">
             View All Centers on Map
           </button>
         </div>
@@ -865,22 +865,22 @@ const ElectronicsProduct_Phase3 = () => {
               { step: 4, title: 'Service', description: 'Drop-off or mail-in service', docs: 'Service ticket' }
             ].map((step) => (
               <div key={step.step} className="flex gap-2 p-2 bg-white rounded">
-                <span className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
+                <span className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
                   {step.step}
                 </span>
                 <div className="flex-1">
-                  <p className="text-xs font-semibold text-gray-900">{step.title}</p>
-                  <p className="text-xs text-gray-600">{step.description}</p>
+                  <p className="text-sm font-semibold text-gray-900">{step.title}</p>
+                  <p className="text-sm text-gray-600">{step.description}</p>
                   {step.docs !== 'N/A' && (
-                    <p className="text-xs text-blue-600 mt-1">Required: {step.docs}</p>
+                    <p className="text-sm text-blue-600 mt-1">Required: {step.docs}</p>
                   )}
                 </div>
               </div>
             ))}
           </div>
           <div className="mt-2 p-2 bg-white rounded border border-green-200">
-            <p className="text-xs font-semibold text-gray-900">Expected Timeline:</p>
-            <p className="text-xs text-gray-600">Most repairs: 3-5 business days • Express service available</p>
+            <p className="text-sm font-semibold text-gray-900">Expected Timeline:</p>
+            <p className="text-sm text-gray-600">Most repairs: 3-5 business days • Express service available</p>
           </div>
         </div>
 
@@ -894,7 +894,7 @@ const ElectronicsProduct_Phase3 = () => {
             </div>
           </div>
           <div className="space-y-2 mt-3">
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span>After-Sales Service</span>
               <div className="flex items-center gap-1">
                 <div className="w-16 h-1.5 bg-white/30 rounded-full overflow-hidden">
@@ -903,7 +903,7 @@ const ElectronicsProduct_Phase3 = () => {
                 <span className="font-bold">9.2</span>
               </div>
             </div>
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span>Customer Satisfaction</span>
               <div className="flex items-center gap-1">
                 <div className="w-16 h-1.5 bg-white/30 rounded-full overflow-hidden">
@@ -912,7 +912,7 @@ const ElectronicsProduct_Phase3 = () => {
                 <span className="font-bold">9.4</span>
               </div>
             </div>
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span>Repair Quality</span>
               <div className="flex items-center gap-1">
                 <div className="w-16 h-1.5 bg-white/30 rounded-full overflow-hidden">
@@ -922,7 +922,7 @@ const ElectronicsProduct_Phase3 = () => {
               </div>
             </div>
           </div>
-          <p className="text-xs opacity-90 mt-3">Based on 15,000+ customer reviews and service experiences</p>
+          <p className="text-sm opacity-90 mt-3">Based on 15,000+ customer reviews and service experiences</p>
         </div>
       </section>
 
@@ -933,7 +933,7 @@ const ElectronicsProduct_Phase3 = () => {
             <TrendingDown className="w-5 h-5 text-blue-600" />
             Live Price Intelligence
           </h3>
-          <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">PHASE 1</span>
+          <span className="text-sm bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">PHASE 1</span>
         </div>
 
         {/* Price History Graph */}
@@ -945,7 +945,7 @@ const ElectronicsProduct_Phase3 = () => {
                 <button
                   key={period}
                   onClick={() => setPriceHistory(period)}
-                  className={`text-xs px-2 py-1 rounded ${priceHistory === period ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600'}`}
+                  className={`text-sm px-2 py-1 rounded ${priceHistory === period ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600'}`}
                 >
                   {period}
                 </button>
@@ -968,15 +968,15 @@ const ElectronicsProduct_Phase3 = () => {
           </div>
 
           <div className="flex justify-between mt-2">
-            <div className="text-xs">
+            <div className="text-sm">
               <span className="text-gray-500">Lowest: </span>
               <span className="font-semibold text-green-600">₹{lowestPrice.toLocaleString()}</span>
             </div>
-            <div className="text-xs">
+            <div className="text-sm">
               <span className="text-gray-500">Drop: </span>
               <span className="font-semibold text-blue-600">{dropPercentage}%</span>
             </div>
-            <div className="text-xs">
+            <div className="text-sm">
               <span className="text-gray-500">Highest: </span>
               <span className="font-semibold text-gray-700">₹{highestPrice.toLocaleString()}</span>
             </div>
@@ -989,7 +989,7 @@ const ElectronicsProduct_Phase3 = () => {
             <Zap className="w-5 h-5 mt-0.5 flex-shrink-0" />
             <div>
               <p className="font-semibold text-sm mb-1">Best Deal Alert!</p>
-              <p className="text-xs opacity-90">Amazon offers the lowest price at ₹1,34,999 - Save ₹4,901 compared to MRP. Deal expires in 6 hours.</p>
+              <p className="text-sm opacity-90">Amazon offers the lowest price at ₹1,34,999 - Save ₹4,901 compared to MRP. Deal expires in 6 hours.</p>
             </div>
           </div>
         </div>
@@ -999,7 +999,7 @@ const ElectronicsProduct_Phase3 = () => {
           {priceComparisons.map((platform, idx) => (
             <div key={idx} className={`${platform.color} border rounded-lg p-3 relative`}>
               {platform.bestSeller && (
-                <span className="absolute -top-2 left-3 bg-yellow-400 text-yellow-900 text-xs px-2 py-0.5 rounded-full font-semibold">
+                <span className="absolute -top-2 left-3 bg-yellow-400 text-yellow-900 text-sm px-2 py-0.5 rounded-full font-semibold">
                   Best Seller
                 </span>
               )}
@@ -1011,20 +1011,20 @@ const ElectronicsProduct_Phase3 = () => {
                     <div className="flex items-center gap-2 mt-0.5">
                       <div className="flex items-center gap-1">
                         <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                        <span className="text-xs text-gray-700">{platform.rating}</span>
+                        <span className="text-sm text-gray-700">{platform.rating}</span>
                       </div>
-                      <span className="text-xs text-gray-500">({platform.reviews})</span>
+                      <span className="text-sm text-gray-500">({platform.reviews})</span>
                     </div>
                   </div>
                 </div>
                 <div className="text-right">
                   <p className="font-bold text-gray-900 text-lg">₹{platform.price.toLocaleString()}</p>
                   {platform.discount > 0 && (
-                    <span className="text-xs text-green-600 font-medium">{platform.discount}% off</span>
+                    <span className="text-sm text-green-600 font-medium">{platform.discount}% off</span>
                   )}
                   <div className="flex items-center gap-1 mt-1">
                     <Clock className="w-3 h-3 text-gray-500" />
-                    <span className="text-xs text-gray-600">{platform.delivery}</span>
+                    <span className="text-sm text-gray-600">{platform.delivery}</span>
                   </div>
                 </div>
               </div>
@@ -1040,7 +1040,7 @@ const ElectronicsProduct_Phase3 = () => {
             <Cpu className="w-5 h-5 text-gray-700" />
             Complete Technical Specs
           </h3>
-          <span className="text-xs text-gray-500">Tap specs for details</span>
+          <span className="text-sm text-gray-500">Tap specs for details</span>
         </div>
 
         <div className="space-y-3">
@@ -1066,14 +1066,14 @@ const ElectronicsProduct_Phase3 = () => {
                   {category.specs.map((spec, specIdx) => (
                     <div key={specIdx} className={`p-2 rounded ${spec.highlight ? 'bg-blue-50 border border-blue-200' : 'bg-gray-50'}`}>
                       <div className="flex items-start justify-between mb-1">
-                        <span className="text-xs text-gray-600 font-medium">{spec.name}</span>
+                        <span className="text-sm text-gray-600 font-medium">{spec.name}</span>
                         <div className="flex items-center gap-1">
                           <span className={`text-sm font-semibold ${spec.highlight ? 'text-blue-700' : 'text-gray-900'}`}>
                             {spec.value}
                           </span>
                           <div className="group relative">
                             <Info className="w-3 h-3 text-gray-400 cursor-help" />
-                            <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block w-48 bg-gray-900 text-white text-xs p-2 rounded shadow-lg z-10">
+                            <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block w-48 bg-gray-900 text-white text-sm p-2 rounded shadow-lg z-10">
                               {spec.tooltip}
                             </div>
                           </div>
@@ -1088,7 +1088,7 @@ const ElectronicsProduct_Phase3 = () => {
                               style={{ width: `${(spec.visualBar / 5000) * 100}%` }}
                             />
                           </div>
-                          <p className="text-xs text-gray-500 mt-1">{spec.tooltip}</p>
+                          <p className="text-sm text-gray-500 mt-1">{spec.tooltip}</p>
                         </div>
                       )}
                     </div>
@@ -1103,15 +1103,15 @@ const ElectronicsProduct_Phase3 = () => {
         <div className="mt-3 p-3 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border border-purple-100">
           <h4 className="text-sm font-semibold text-gray-900 mb-2">How It Compares</h4>
           <div className="space-y-2">
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600">vs iPhone 14 Pro</span>
               <span className="font-semibold text-green-600">15% faster • 2 hrs more battery</span>
             </div>
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600">vs Samsung S24 Ultra</span>
               <span className="font-semibold text-blue-600">Similar performance • Better ecosystem</span>
             </div>
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600">vs Google Pixel 8 Pro</span>
               <span className="font-semibold text-orange-600">Better processor • Pixel wins camera</span>
             </div>
@@ -1141,7 +1141,7 @@ const ElectronicsProduct_Phase3 = () => {
                   style={{ width: `${item.score}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-500">{item.description}</p>
+              <p className="text-sm text-gray-500">{item.description}</p>
             </div>
           ))}
         </div>
@@ -1163,9 +1163,9 @@ const ElectronicsProduct_Phase3 = () => {
                 <div className="flex items-center gap-2 mb-1">
                   <div className="flex items-center gap-1">
                     <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                    <span className="text-xs text-gray-700">{product.rating}</span>
+                    <span className="text-sm text-gray-700">{product.rating}</span>
                   </div>
-                  <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{product.match} match</span>
+                  <span className="text-sm bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{product.match} match</span>
                 </div>
                 <p className="font-bold text-gray-900 text-sm">₹{product.price.toLocaleString()}</p>
               </div>

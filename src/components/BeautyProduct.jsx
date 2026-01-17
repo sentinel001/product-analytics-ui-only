@@ -124,8 +124,8 @@ const BeautyProduct = () => {
           <div className="flex items-center gap-2">
             <Award className="w-5 h-5 text-[#363636]" />
             <div>
-              <p className="text-xs font-bold text-[#363636]">Ranked #2 in "Top 10 Microplastic-Free Face Scrubs"</p>
-              <p className="text-xs text-gray-600">Updated Jan 2026 • 200 products analyzed</p>
+              <p className="text-sm font-bold text-[#363636]">Ranked #2 in "Top 10 Microplastic-Free Face Scrubs"</p>
+              <p className="text-sm text-gray-600">Updated Jan 2026 • 200 products analyzed</p>
             </div>
           </div>
         </div>
@@ -144,18 +144,18 @@ const BeautyProduct = () => {
                 <h3 className="text-sm font-bold text-[#363636] mb-2">
                   Neutrogena Hydro Boost Water Gel
                 </h3>
-                <div className="flex items-center gap-3 text-xs text-gray-600 mb-2">
+                <div className="flex items-center gap-3 text-sm text-gray-600 mb-2">
                   <span className="flex items-center gap-1">
                     <Droplet className="w-3 h-3" />
                     Oily/Combo Skin
                   </span>
-                  <span className="bg-[#363636] text-white px-2 py-0.5 rounded text-xs font-bold">
+                  <span className="bg-[#363636] text-white px-2 py-0.5 rounded text-sm font-bold">
                     AI 92
                   </span>
                 </div>
                 <div className="text-sm">
                   <span className="font-bold text-[#363636]">₹799</span>
-                  <span className="text-gray-600 text-xs ml-1">50g • In Stock</span>
+                  <span className="text-gray-600 text-sm ml-1">50g • In Stock</span>
                 </div>
               </div>
             </div>
@@ -172,7 +172,7 @@ const BeautyProduct = () => {
             {!showSkinAnalysis && (
               <button
                 onClick={() => setShowSkinAnalysis(true)}
-                className="text-xs font-semibold text-[#363636] hover:underline"
+                className="text-sm font-semibold text-[#363636] hover:underline"
               >
                 Start Analysis
               </button>
@@ -183,7 +183,7 @@ const BeautyProduct = () => {
             <div className="text-center py-4">
               <Camera className="w-12 h-12 text-gray-400 mx-auto mb-3" />
               <p className="text-sm font-semibold text-[#363636] mb-1">Get Personalized Recommendations</p>
-              <p className="text-xs text-gray-600 mb-3">Upload 3 photos of your face from different angles for AI analysis</p>
+              <p className="text-sm text-gray-600 mb-3">Upload 3 photos of your face from different angles for AI analysis</p>
               <button
                 onClick={() => setShowSkinAnalysis(true)}
                 className="bg-[#363636] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-all transform active:scale-95"
@@ -206,8 +206,8 @@ const BeautyProduct = () => {
                     />
                     <div className="text-center">
                       <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                      <p className="text-xs font-semibold text-[#363636]">Upload {3 - uploadedPhotos.length} more photo{3 - uploadedPhotos.length !== 1 ? 's' : ''}</p>
-                      <p className="text-xs text-gray-600 mt-1">Front, left side, right side views</p>
+                      <p className="text-sm font-semibold text-[#363636]">Upload {3 - uploadedPhotos.length} more photo{3 - uploadedPhotos.length !== 1 ? 's' : ''}</p>
+                      <p className="text-sm text-gray-600 mt-1">Front, left side, right side views</p>
                     </div>
                   </label>
                 </div>
@@ -231,7 +231,7 @@ const BeautyProduct = () => {
                       >
                         <X className="w-3 h-3" />
                       </button>
-                      <p className="text-xs text-gray-600 text-center mt-1">Photo {idx + 1}</p>
+                      <p className="text-sm text-gray-600 text-center mt-1">Photo {idx + 1}</p>
                     </div>
                   ))}
                 </div>
@@ -242,23 +242,23 @@ const BeautyProduct = () => {
                 <div className="bg-white border border-gray-200 rounded-lg p-3 space-y-3">
                   <div className="flex items-center justify-between">
                     <h4 className="text-sm font-bold text-[#363636]">Analysis Complete</h4>
-                    <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">
+                    <span className="text-sm bg-gray-200 text-gray-700 px-2 py-1 rounded-full font-medium">
                       {skinAnalysisResult.confidence}% confidence
                     </span>
                   </div>
 
                   <div>
-                    <p className="text-xs font-semibold text-gray-700 mb-1">Detected Skin Type:</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-1">Detected Skin Type:</p>
                     <div className="bg-gray-50 border border-gray-200 rounded p-2">
                       <p className="text-sm font-bold text-[#363636]">{skinAnalysisResult.skinType}</p>
                     </div>
                   </div>
 
                   <div>
-                    <p className="text-xs font-semibold text-gray-700 mb-1">Main Concerns:</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-1">Main Concerns:</p>
                     <div className="flex flex-wrap gap-1">
                       {skinAnalysisResult.concerns.map((concern, idx) => (
-                        <span key={idx} className="text-xs bg-gray-50 border border-gray-300 text-gray-700 px-2 py-1 rounded">
+                        <span key={idx} className="text-sm bg-gray-50 border border-gray-300 text-gray-700 px-2 py-1 rounded">
                           {concern}
                         </span>
                       ))}
@@ -266,10 +266,10 @@ const BeautyProduct = () => {
                   </div>
 
                   <div>
-                    <p className="text-xs font-semibold text-gray-700 mb-1">AI Recommendations:</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-1">AI Recommendations:</p>
                     <div className="space-y-1">
                       {skinAnalysisResult.recommendations.map((rec, idx) => (
-                        <div key={idx} className="flex items-start gap-2 text-xs text-gray-700">
+                        <div key={idx} className="flex items-start gap-2 text-sm text-gray-700">
                           <CheckCircle className="w-3 h-3 text-[#363636] mt-0.5 flex-shrink-0" />
                           <span>{rec}</span>
                         </div>
@@ -278,7 +278,7 @@ const BeautyProduct = () => {
                   </div>
 
                   <div className="bg-gray-50 border border-gray-200 rounded p-2">
-                    <p className="text-xs text-gray-700">
+                    <p className="text-sm text-gray-700">
                       <span className="font-semibold text-[#363636]">Saved to your profile.</span> We'll use this to personalize your beauty recommendations.
                     </p>
                   </div>
@@ -288,7 +288,7 @@ const BeautyProduct = () => {
               {uploadedPhotos.length === 3 && !analysisComplete && (
                 <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                   <div className="animate-spin w-8 h-8 border-4 border-gray-200 border-t-black rounded-full mx-auto mb-2"></div>
-                  <p className="text-xs font-semibold text-[#363636]">Analyzing your skin...</p>
+                  <p className="text-sm font-semibold text-[#363636]">Analyzing your skin...</p>
                 </div>
               )}
             </div>
@@ -302,7 +302,7 @@ const BeautyProduct = () => {
               <Filter className="w-5 h-5 text-[#363636]" />
               <div>
                 <h3 className="text-sm font-semibold text-[#363636]">Matches: Sunscreen Buying Guide</h3>
-                <p className="text-xs text-gray-600">By Skin Type</p>
+                <p className="text-sm text-gray-600">By Skin Type</p>
               </div>
             </div>
             <ChevronRight className="w-4 h-4 text-gray-400" />
@@ -322,7 +322,7 @@ const BeautyProduct = () => {
           <div className="bg-gray-900 rounded-lg h-32 mb-3 flex items-center justify-center relative overflow-hidden">
             <div className="relative z-10 text-white text-center">
               <Play className="w-12 h-12 mx-auto mb-2 opacity-90" />
-              <p className="text-xs font-medium">Watch Tutorial (45s)</p>
+              <p className="text-sm font-medium">Watch Tutorial (45s)</p>
             </div>
             <img
               src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=200&fit=crop"
@@ -339,11 +339,11 @@ const BeautyProduct = () => {
               { step: 3, text: 'Apply in upward circular motions', icon: '↻' },
               { step: 4, text: 'Allow 2 min to absorb', icon: '⏱️' },
             ].map((item) => (
-              <div key={item.step} className="flex items-center gap-2 text-xs bg-white border border-gray-200 rounded p-2">
-                <span className="w-5 h-5 bg-[#363636] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
+              <div key={item.step} className="flex items-center gap-2 text-sm bg-white border border-gray-200 rounded p-2">
+                <span className="w-5 h-5 bg-[#363636] text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
                   {item.step}
                 </span>
-                <span className="text-xs mr-2">{item.icon}</span>
+                <span className="text-sm mr-2">{item.icon}</span>
                 <span className="text-gray-700">{item.text}</span>
               </div>
             ))}
@@ -353,13 +353,13 @@ const BeautyProduct = () => {
           <div className="mt-3 grid grid-cols-2 gap-2">
             <div className="bg-white border border-gray-200 rounded p-2">
               <Clock className="w-4 h-4 text-[#363636] mb-1" />
-              <p className="text-xs font-semibold text-[#363636]">When to Use</p>
-              <p className="text-xs text-gray-600">Morning & Night</p>
+              <p className="text-sm font-semibold text-[#363636]">When to Use</p>
+              <p className="text-sm text-gray-600">Morning & Night</p>
             </div>
             <div className="bg-white border border-gray-200 rounded p-2">
               <Droplet className="w-4 h-4 text-[#363636] mb-1" />
-              <p className="text-xs font-semibold text-[#363636]">Amount</p>
-              <p className="text-xs text-gray-600">Pea-sized</p>
+              <p className="text-sm font-semibold text-[#363636]">Amount</p>
+              <p className="text-sm text-gray-600">Pea-sized</p>
             </div>
           </div>
         </section>
@@ -380,7 +380,7 @@ const BeautyProduct = () => {
               { type: 'Dry Skin', match: 45, color: 'red' },
             ].map((item) => (
               <div key={item.type} className="flex items-center justify-between bg-white border border-gray-200 rounded p-2">
-                <span className="text-xs font-medium text-[#363636]">{item.type}</span>
+                <span className="text-sm font-medium text-[#363636]">{item.type}</span>
                 <div className="flex items-center gap-2">
                   <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div
@@ -391,7 +391,7 @@ const BeautyProduct = () => {
                       style={{ width: `${item.match}%` }}
                     ></div>
                   </div>
-                  <span className={`text-xs font-bold ${
+                  <span className={`text-sm font-bold ${
                     item.color === 'green' ? 'text-green-600' :
                     item.color === 'yellow' ? 'text-yellow-600' : 'text-red-600'
                   }`}>
@@ -412,7 +412,7 @@ const BeautyProduct = () => {
 
           {showCompatibility && (
             <div className="mt-3 space-y-2">
-              <p className="text-xs font-semibold text-gray-700">Can be used with:</p>
+              <p className="text-sm font-semibold text-gray-700">Can be used with:</p>
               {[
                 { product: 'Vitamin C Serum', compatible: true },
                 { product: 'Retinol Treatment', compatible: false },
@@ -420,13 +420,13 @@ const BeautyProduct = () => {
                 { product: 'AHA/BHA Exfoliant', compatible: false },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center justify-between bg-white border border-gray-200 rounded p-2">
-                  <span className="text-xs text-gray-700">{item.product}</span>
+                  <span className="text-sm text-gray-700">{item.product}</span>
                   {item.compatible ? (
-                    <span className="text-green-600 text-xs font-medium flex items-center gap-1">
+                    <span className="text-green-600 text-sm font-medium flex items-center gap-1">
                       <CheckCircle className="w-3 h-3" /> Compatible
                     </span>
                   ) : (
-                    <span className="text-red-600 text-xs font-medium flex items-center gap-1">
+                    <span className="text-red-600 text-sm font-medium flex items-center gap-1">
                       <X className="w-3 h-3" /> Not recommended
                     </span>
                   )}
@@ -442,7 +442,7 @@ const BeautyProduct = () => {
             <h3 className="text-sm font-bold text-[#363636]">Compare Similar Products</h3>
             <button
               onClick={() => setShowComparison(!showComparison)}
-              className="text-xs text-gray-700 hover:text-[#363636] font-medium"
+              className="text-sm text-gray-700 hover:text-[#363636] font-medium"
             >
               {showComparison ? 'Hide' : 'Show'}
             </button>
@@ -450,7 +450,7 @@ const BeautyProduct = () => {
 
           {showComparison && (
             <div className="space-y-3">
-              <p className="text-xs text-gray-600">Select up to 3 products to compare:</p>
+              <p className="text-sm text-gray-600">Select up to 3 products to compare:</p>
 
               {comparisonProducts.map((product) => (
                 <div
@@ -476,16 +476,16 @@ const BeautyProduct = () => {
                       className="w-12 h-12 object-cover rounded border border-gray-200"
                     />
                     <div className="flex-1">
-                      <h4 className="text-xs font-bold text-[#363636] mb-1">{product.name}</h4>
+                      <h4 className="text-sm font-bold text-[#363636] mb-1">{product.name}</h4>
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-bold text-[#363636]">₹{product.price}</span>
-                        <span className="bg-[#363636] text-white px-1.5 py-0.5 rounded text-xs font-bold">
+                        <span className="text-sm font-bold text-[#363636]">₹{product.price}</span>
+                        <span className="bg-[#363636] text-white px-1.5 py-0.5 rounded text-sm font-bold">
                           AI {product.aiScore}
                         </span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
-                        <span className="text-xs text-gray-600">{product.rating} ({product.reviews})</span>
+                        <span className="text-sm text-gray-600">{product.rating} ({product.reviews})</span>
                       </div>
                     </div>
                   </div>
@@ -494,8 +494,8 @@ const BeautyProduct = () => {
 
               {selectedProducts.length > 1 && (
                 <div className="mt-3 bg-white border border-gray-300 rounded-lg p-3">
-                  <h4 className="text-xs font-bold text-[#363636] mb-2">Quick Comparison:</h4>
-                  <div className="space-y-2 text-xs">
+                  <h4 className="text-sm font-bold text-[#363636] mb-2">Quick Comparison:</h4>
+                  <div className="space-y-2 text-sm">
                     <div className="flex items-center justify-between">
                       <span className="text-gray-600">Best for Oily Skin:</span>
                       <span className="font-semibold text-[#363636]">Neutrogena (95%)</span>
@@ -526,7 +526,7 @@ const BeautyProduct = () => {
               </div>
               <div className="text-right">
                 <div className="font-bold text-[#363636]">₹799</div>
-                <div className="text-xs text-gray-600">Use BEAUTY20</div>
+                <div className="text-sm text-gray-600">Use BEAUTY20</div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-400" />
             </div>
@@ -538,7 +538,7 @@ const BeautyProduct = () => {
               </div>
               <div className="text-right">
                 <div className="font-bold text-[#363636]">₹679</div>
-                <div className="text-xs text-green-600 font-semibold">Lowest Price!</div>
+                <div className="text-sm text-green-600 font-semibold">Lowest Price!</div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-900" />
             </div>
@@ -582,14 +582,14 @@ const BeautyProduct = () => {
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <p className="text-sm font-semibold text-[#363636]">{ingredient.name}</p>
-                    <p className="text-xs text-gray-600 mt-0.5">{ingredient.purpose}</p>
+                    <p className="text-sm text-gray-600 mt-0.5">{ingredient.purpose}</p>
                     {ingredient.warning && (
-                      <p className="text-xs text-orange-600 mt-1 flex items-center gap-1">
+                      <p className="text-sm text-orange-600 mt-1 flex items-center gap-1">
                         <Info className="w-3 h-3" /> {ingredient.warning}
                       </p>
                     )}
                   </div>
-                  <span className={`text-xs font-medium px-2 py-1 rounded-full ${
+                  <span className={`text-sm font-medium px-2 py-1 rounded-full ${
                     ingredient.safe ? 'bg-gray-200 text-gray-700' : 'bg-orange-100 text-orange-700'
                   }`}>
                     {ingredient.safe ? 'Safe' : 'Caution'}
@@ -599,13 +599,13 @@ const BeautyProduct = () => {
             ))}
           </div>
           <div className="mt-2 flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-xs font-medium">
+            <span className="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm font-medium">
               ✓ Paraben-free
             </span>
-            <span className="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-xs font-medium">
+            <span className="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm font-medium">
               ✓ Non-comedogenic
             </span>
-            <span className="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-xs font-medium">
+            <span className="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm font-medium">
               ✓ Dermatologist tested
             </span>
           </div>
@@ -622,12 +622,12 @@ const BeautyProduct = () => {
               <div className="w-16 h-16 rounded-full bg-[#363636] flex items-center justify-center">
                 <div className="text-white text-center">
                   <div className="text-2xl font-bold">92</div>
-                  <div className="text-xs">/100</div>
+                  <div className="text-sm">/100</div>
                 </div>
               </div>
             </div>
             <div className="flex-1">
-              <div className="text-xs text-green-600 font-bold mb-1">Excellent Match!</div>
+              <div className="text-sm text-green-600 font-bold mb-1">Excellent Match!</div>
               <p className="text-sm text-gray-700">
                 Perfect for oily/combination skin. Lightweight, non-greasy formula
               </p>
@@ -649,7 +649,7 @@ const BeautyProduct = () => {
                 <div className={`w-12 h-12 mx-auto rounded-full border-4 ${item.color} border-opacity-30 flex items-center justify-center mb-2`}>
                   <span className={`text-lg font-bold ${item.color}`}>{item.score}</span>
                 </div>
-                <div className="text-xs text-gray-600">{item.label}</div>
+                <div className="text-sm text-gray-600">{item.label}</div>
               </div>
             ))}
           </div>
@@ -659,7 +659,7 @@ const BeautyProduct = () => {
         <section>
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-bold text-[#363636]">Similar Products</h3>
-            <button className="text-xs text-gray-600 hover:text-[#363636] font-medium">See All</button>
+            <button className="text-sm text-gray-600 hover:text-[#363636] font-medium">See All</button>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -679,9 +679,9 @@ const BeautyProduct = () => {
             ].map((product, idx) => (
               <div key={idx} className="border border-gray-200 rounded-lg p-3 hover:border-[#363636] hover:shadow-sm transition-all cursor-pointer">
                 <img src={product.image} alt={product.name} className="w-full h-24 object-cover rounded mb-2" />
-                <div className="text-xs font-medium mb-1 line-clamp-2 text-[#363636]">{product.name}</div>
+                <div className="text-sm font-medium mb-1 line-clamp-2 text-[#363636]">{product.name}</div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="bg-[#363636] text-white text-xs font-bold px-2 py-0.5 rounded">
+                  <span className="bg-[#363636] text-white text-sm font-bold px-2 py-0.5 rounded">
                     AI {product.score}
                   </span>
                 </div>
@@ -696,7 +696,7 @@ const BeautyProduct = () => {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-300 px-4 py-3 max-w-md mx-auto">
         <div className="flex items-center gap-3">
           <div className="flex-1">
-            <p className="text-xs text-gray-600">Best Price</p>
+            <p className="text-sm text-gray-600">Best Price</p>
             <p className="text-xl font-bold text-[#363636]">₹679</p>
           </div>
           <button

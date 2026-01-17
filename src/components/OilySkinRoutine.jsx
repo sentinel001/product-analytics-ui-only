@@ -142,7 +142,7 @@ const OilySkinRoutine = () => {
           </button>
           <div className="flex-1">
             <h1 className="text-lg font-bold text-[#363636]">{routineInfo.title}</h1>
-            <p className="text-xs text-gray-600">Personalized for your oily skin</p>
+            <p className="text-sm text-gray-600">Personalized for your oily skin</p>
           </div>
         </div>
       </header>
@@ -155,7 +155,7 @@ const OilySkinRoutine = () => {
             <Droplet className="w-6 h-6 text-blue-600 flex-shrink-0" />
             <div className="flex-1">
               <h3 className="text-sm font-bold text-[#363636] mb-1">Complete Routine Bundle</h3>
-              <p className="text-xs text-gray-700">
+              <p className="text-sm text-gray-700">
                 {routineInfo.totalProducts} products carefully selected for oily skin management
               </p>
             </div>
@@ -163,11 +163,11 @@ const OilySkinRoutine = () => {
 
           <div className="grid grid-cols-2 gap-2">
             <div className="bg-white rounded p-2">
-              <p className="text-xs text-gray-600">Bundle Price</p>
+              <p className="text-sm text-gray-600">Bundle Price</p>
               <p className="text-lg font-bold text-[#363636]">₹{routineInfo.totalPrice - routineInfo.savingsWithBundle}</p>
             </div>
             <div className="bg-white rounded p-2">
-              <p className="text-xs text-gray-600">You Save</p>
+              <p className="text-sm text-gray-600">You Save</p>
               <p className="text-lg font-bold text-green-600">₹{routineInfo.savingsWithBundle}</p>
             </div>
           </div>
@@ -179,15 +179,15 @@ const OilySkinRoutine = () => {
             <Info className="w-4 h-4 text-gray-700 flex-shrink-0 mt-0.5" />
             <div>
               <h3 className="text-sm font-bold text-[#363636] mb-2">Understanding Oily Skin</h3>
-              <p className="text-xs text-gray-700 leading-relaxed">{knowledgeContent.aboutOilySkin}</p>
+              <p className="text-sm text-gray-700 leading-relaxed">{knowledgeContent.aboutOilySkin}</p>
             </div>
           </div>
 
           <div className="mb-3">
-            <p className="text-xs font-semibold text-[#363636] mb-1">Common Mistakes to Avoid:</p>
+            <p className="text-sm font-semibold text-[#363636] mb-1">Common Mistakes to Avoid:</p>
             <ul className="space-y-1">
               {knowledgeContent.commonMistakes.map((mistake, idx) => (
-                <li key={idx} className="text-xs text-gray-700 flex items-start gap-1">
+                <li key={idx} className="text-sm text-gray-700 flex items-start gap-1">
                   <span className="text-red-500 mt-0.5">✗</span>
                   <span>{mistake}</span>
                 </li>
@@ -196,10 +196,10 @@ const OilySkinRoutine = () => {
           </div>
 
           <div>
-            <p className="text-xs font-semibold text-[#363636] mb-1">Pro Tips:</p>
+            <p className="text-sm font-semibold text-[#363636] mb-1">Pro Tips:</p>
             <ul className="space-y-1">
               {knowledgeContent.tips.map((tip, idx) => (
-                <li key={idx} className="text-xs text-gray-700 flex items-start gap-1">
+                <li key={idx} className="text-sm text-gray-700 flex items-start gap-1">
                   <span className="text-green-600 mt-0.5">✓</span>
                   <span>{tip}</span>
                 </li>
@@ -253,23 +253,23 @@ const OilySkinRoutine = () => {
                     alt={product.name}
                     className="w-16 h-20 object-cover rounded border border-gray-200"
                   />
-                  <div className="absolute top-1 left-1 bg-[#363636] text-white px-1 py-0.5 rounded text-xs font-bold">
+                  <div className="absolute top-1 left-1 bg-[#363636] text-white px-1 py-0.5 rounded text-sm font-bold">
                     {product.aiScore}
                   </div>
                 </div>
 
                 {/* Product Info */}
                 <div className="flex-1 min-w-0">
-                  <span className="inline-block bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-xs font-medium mb-1">
+                  <span className="inline-block bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-sm font-medium mb-1">
                     {product.category}
                   </span>
                   <h4 className="text-sm font-bold text-[#363636] line-clamp-1 mb-0.5">{product.name}</h4>
-                  <p className="text-xs text-gray-600 mb-2">{product.brand}</p>
+                  <p className="text-sm text-gray-600 mb-2">{product.brand}</p>
 
                   <div className="flex items-center gap-2 mb-1">
                     <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
-                    <span className="text-xs font-medium text-gray-700">{product.rating}</span>
-                    <span className="text-xs text-gray-400">•</span>
+                    <span className="text-sm font-medium text-gray-700">{product.rating}</span>
+                    <span className="text-sm text-gray-400">•</span>
                     <span className="text-sm font-bold text-[#363636]">₹{product.price}</span>
                   </div>
                 </div>
@@ -278,15 +278,15 @@ const OilySkinRoutine = () => {
               {/* Why This Product */}
               <div className="border-t border-gray-200 bg-gray-50 p-3 space-y-2">
                 <div>
-                  <p className="text-xs font-semibold text-gray-700 mb-0.5 flex items-center gap-1">
+                  <p className="text-sm font-semibold text-gray-700 mb-0.5 flex items-center gap-1">
                     <CheckCircle className="w-3 h-3 text-green-600" />
                     Why this product:
                   </p>
-                  <p className="text-xs text-gray-600 italic">"{product.whyThis}"</p>
+                  <p className="text-sm text-gray-600 italic">"{product.whyThis}"</p>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-gray-700 mb-0.5">How to use:</p>
-                  <p className="text-xs text-gray-600">{product.howToUse}</p>
+                  <p className="text-sm font-semibold text-gray-700 mb-0.5">How to use:</p>
+                  <p className="text-sm text-gray-600">{product.howToUse}</p>
                 </div>
               </div>
             </div>
@@ -296,7 +296,7 @@ const OilySkinRoutine = () => {
         {/* Expected Results */}
         <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-4">
           <h3 className="text-sm font-bold text-[#363636] mb-2">Expected Results</h3>
-          <div className="space-y-2 text-xs text-gray-700">
+          <div className="space-y-2 text-sm text-gray-700">
             <div className="flex items-start gap-2">
               <span className="text-green-600 mt-0.5">✓</span>
               <span><strong>Week 1-2:</strong> Reduced shine and oil production</span>
@@ -317,10 +317,10 @@ const OilySkinRoutine = () => {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-300 px-4 py-3 max-w-md mx-auto">
         <div className="flex items-center gap-3">
           <div className="flex-1">
-            <p className="text-xs text-gray-600">Bundle Price</p>
+            <p className="text-sm text-gray-600">Bundle Price</p>
             <div className="flex items-center gap-2">
               <p className="text-xl font-bold text-[#363636]">₹{routineInfo.totalPrice - routineInfo.savingsWithBundle}</p>
-              <span className="text-xs text-gray-500 line-through">₹{routineInfo.totalPrice}</span>
+              <span className="text-sm text-gray-500 line-through">₹{routineInfo.totalPrice}</span>
             </div>
           </div>
           <button

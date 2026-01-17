@@ -87,11 +87,11 @@ const Checkout = () => {
           </button>
           <div className="flex-1">
             <h1 className="text-lg font-bold text-gray-900">Checkout</h1>
-            <p className="text-xs text-gray-500">Step {step === 'address' ? 1 : step === 'payment' ? 2 : 3} of 3</p>
+            <p className="text-sm text-gray-500">Step {step === 'address' ? 1 : step === 'payment' ? 2 : 3} of 3</p>
           </div>
           <div className="flex items-center gap-1">
             <Lock className="w-4 h-4 text-green-600" />
-            <span className="text-xs text-green-600 font-medium">Secure</span>
+            <span className="text-sm text-green-600 font-medium">Secure</span>
           </div>
         </div>
 
@@ -108,8 +108,8 @@ const Checkout = () => {
         <div className="flex items-start gap-2">
           <Sparkles className="w-4 h-4 text-[#363636] mt-0.5 flex-shrink-0" />
           <div className="flex-1">
-            <p className="text-xs font-semibold text-gray-900 mb-1">AI Shopping Assistant Active</p>
-            <p className="text-xs text-gray-600">We'll track your order & send smart updates. Plus, you've earned ₹160 discount!</p>
+            <p className="text-sm font-semibold text-gray-900 mb-1">AI Shopping Assistant Active</p>
+            <p className="text-sm text-gray-600">We'll track your order & send smart updates. Plus, you've earned ₹160 discount!</p>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@ const Checkout = () => {
                       <MapPin className="w-4 h-4 text-gray-600" />
                       <span className="text-sm font-semibold text-gray-900">{addr.type}</span>
                       {addr.isDefault && (
-                        <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">Default</span>
+                        <span className="text-sm bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full">Default</span>
                       )}
                     </div>
                     {selectedAddress === addr.id && (
@@ -148,8 +148,8 @@ const Checkout = () => {
                     )}
                   </div>
                   <p className="text-sm text-gray-900 mb-1">{addr.name}</p>
-                  <p className="text-xs text-gray-600 mb-1">{addr.address}</p>
-                  <p className="text-xs text-gray-600">{addr.phone}</p>
+                  <p className="text-sm text-gray-600 mb-1">{addr.address}</p>
+                  <p className="text-sm text-gray-600">{addr.phone}</p>
                 </button>
               ))}
             </div>
@@ -190,13 +190,13 @@ const Checkout = () => {
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-sm font-semibold text-gray-900">{method.name}</span>
                         {method.recommended && (
-                          <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full flex items-center gap-1">
+                          <span className="text-sm bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full flex items-center gap-1">
                             <Sparkles className="w-3 h-3" />
                             Recommended
                           </span>
                         )}
                       </div>
-                      <p className="text-xs text-gray-600">{method.description}</p>
+                      <p className="text-sm text-gray-600">{method.description}</p>
                     </div>
                     {selectedPayment === method.id && (
                       <CheckCircle className="w-5 h-5 text-[#363636]" />
@@ -211,8 +211,8 @@ const Checkout = () => {
               <div className="flex items-center gap-2">
                 <Gift className="w-4 h-4 text-[#363636]" />
                 <div className="flex-1">
-                  <p className="text-xs font-semibold text-gray-900">AI Discount Applied!</p>
-                  <p className="text-xs text-gray-600">You saved ₹160 with our smart recommendations</p>
+                  <p className="text-sm font-semibold text-gray-900">AI Discount Applied!</p>
+                  <p className="text-sm text-gray-600">You saved ₹160 with our smart recommendations</p>
                 </div>
                 <p className="text-sm font-bold text-[#363636]">-₹160</p>
               </div>
@@ -246,7 +246,7 @@ const Checkout = () => {
                     <p className="text-sm font-semibold text-gray-900 mb-1">{item.name}</p>
                     <div className="flex items-center gap-1 mb-1">
                       <Sparkles className="w-3 h-3 text-[#363636]" />
-                      <p className="text-xs text-gray-700">{item.aiInsight}</p>
+                      <p className="text-sm text-gray-700">{item.aiInsight}</p>
                     </div>
                     <p className="text-sm font-bold text-gray-900">₹{item.price} × {item.quantity}</p>
                   </div>
@@ -260,17 +260,17 @@ const Checkout = () => {
                 <Truck className="w-4 h-4 text-[#363636]" />
                 <span className="text-sm font-semibold text-gray-900">Delivery Information</span>
               </div>
-              <p className="text-xs text-gray-600 mb-1">Estimated delivery: Tomorrow, 11 AM - 5 PM</p>
-              <p className="text-xs text-[#363636] font-medium">Free delivery on this order</p>
+              <p className="text-sm text-gray-600 mb-1">Estimated delivery: Tomorrow, 11 AM - 5 PM</p>
+              <p className="text-sm text-[#363636] font-medium">Free delivery on this order</p>
             </div>
 
             {/* AI Guarantee */}
             <div className="bg-gray-50 rounded-lg p-3 border-2 border-gray-300 mb-3">
               <div className="flex items-center gap-2 mb-2">
                 <Shield className="w-4 h-4 text-[#363636]" />
-                <span className="text-xs font-semibold text-gray-900">Flash AI Guarantee</span>
+                <span className="text-sm font-semibold text-gray-900">Flash AI Guarantee</span>
               </div>
-              <div className="space-y-1 text-xs text-gray-600">
+              <div className="space-y-1 text-sm text-gray-600">
                 <p>✓ 95% skin compatibility confirmed</p>
                 <p>✓ Easy 30-day returns if not suitable</p>
                 <p>✓ Real-time delivery tracking with AI updates</p>
@@ -288,8 +288,8 @@ const Checkout = () => {
                 <div key={idx} className="flex gap-3 mb-2">
                   <img src={item.image} alt={item.name} className="w-12 h-12 object-cover rounded-lg" />
                   <div className="flex-1">
-                    <p className="text-xs font-semibold text-gray-900 line-clamp-1">{item.name}</p>
-                    <p className="text-xs text-gray-600">Qty: {item.quantity}</p>
+                    <p className="text-sm font-semibold text-gray-900 line-clamp-1">{item.name}</p>
+                    <p className="text-sm text-gray-600">Qty: {item.quantity}</p>
                   </div>
                   <p className="text-sm font-bold text-gray-900">₹{item.price}</p>
                 </div>

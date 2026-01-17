@@ -119,7 +119,7 @@ const ProgrammerSetup = () => {
           </button>
           <div className="flex-1">
             <h1 className="text-lg font-bold text-[#363636]">{bundleInfo.title}</h1>
-            <p className="text-xs text-gray-600">Curated based on your profile</p>
+            <p className="text-sm text-gray-600">Curated based on your profile</p>
           </div>
         </div>
       </header>
@@ -134,12 +134,12 @@ const ProgrammerSetup = () => {
             </div>
             <div className="flex-1">
               <h3 className="text-sm font-bold text-[#363636] mb-1">Detected: {userPersona.type}</h3>
-              <p className="text-xs text-gray-700 mb-2">
+              <p className="text-sm text-gray-700 mb-2">
                 Based on your activity, we've identified you as a high-end programmer who values quality and ergonomics.
               </p>
               <div className="space-y-1">
                 {userPersona.detectedFrom.map((item, idx) => (
-                  <p key={idx} className="text-xs text-gray-600 flex items-start gap-1">
+                  <p key={idx} className="text-sm text-gray-600 flex items-start gap-1">
                     <CheckCircle className="w-3 h-3 text-purple-600 flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </p>
@@ -150,11 +150,11 @@ const ProgrammerSetup = () => {
 
           <div className="grid grid-cols-2 gap-2">
             <div className="bg-white rounded p-2">
-              <p className="text-xs text-gray-600">Bundle Price</p>
+              <p className="text-sm text-gray-600">Bundle Price</p>
               <p className="text-lg font-bold text-[#363636]">₹{(bundleInfo.totalPrice - bundleInfo.savingsWithBundle).toLocaleString()}</p>
             </div>
             <div className="bg-white rounded p-2">
-              <p className="text-xs text-gray-600">You Save</p>
+              <p className="text-sm text-gray-600">You Save</p>
               <p className="text-lg font-bold text-green-600">₹{bundleInfo.savingsWithBundle.toLocaleString()}</p>
             </div>
           </div>
@@ -166,12 +166,12 @@ const ProgrammerSetup = () => {
             <Info className="w-4 h-4 text-gray-700 flex-shrink-0 mt-0.5" />
             <div>
               <h3 className="text-sm font-bold text-[#363636] mb-2">Why Ergonomics Matter</h3>
-              <p className="text-xs text-gray-700 leading-relaxed mb-3">{knowledgeContent.ergonomics}</p>
+              <p className="text-sm text-gray-700 leading-relaxed mb-3">{knowledgeContent.ergonomics}</p>
 
-              <p className="text-xs font-semibold text-[#363636] mb-1">Setup Guidelines:</p>
+              <p className="text-sm font-semibold text-[#363636] mb-1">Setup Guidelines:</p>
               <ul className="space-y-1">
                 {knowledgeContent.tips.map((tip, idx) => (
-                  <li key={idx} className="text-xs text-gray-700 flex items-start gap-1">
+                  <li key={idx} className="text-sm text-gray-700 flex items-start gap-1">
                     <span className="text-green-600 mt-0.5">✓</span>
                     <span>{tip}</span>
                   </li>
@@ -199,24 +199,24 @@ const ProgrammerSetup = () => {
                     alt={product.name}
                     className="w-20 h-24 object-cover rounded border border-gray-200"
                   />
-                  <div className="absolute top-1 left-1 bg-[#363636] text-white px-1.5 py-0.5 rounded text-xs font-bold">
+                  <div className="absolute top-1 left-1 bg-[#363636] text-white px-1.5 py-0.5 rounded text-sm font-bold">
                     {product.aiScore}
                   </div>
                 </div>
 
                 {/* Product Info */}
                 <div className="flex-1 min-w-0">
-                  <span className="inline-block bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-xs font-medium mb-1">
+                  <span className="inline-block bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-sm font-medium mb-1">
                     {product.category}
                   </span>
                   <h4 className="text-sm font-bold text-[#363636] line-clamp-1 mb-0.5">{product.name}</h4>
-                  <p className="text-xs text-gray-600 mb-2">{product.brand}</p>
+                  <p className="text-sm text-gray-600 mb-2">{product.brand}</p>
 
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex items-center gap-1">
                       <Star className="w-3 h-3 fill-gray-900 text-gray-900" />
-                      <span className="text-xs font-medium text-gray-700">{product.rating}</span>
-                      <span className="text-xs text-gray-500">({product.reviews})</span>
+                      <span className="text-sm font-medium text-gray-700">{product.rating}</span>
+                      <span className="text-sm text-gray-500">({product.reviews})</span>
                     </div>
                   </div>
 
@@ -227,21 +227,21 @@ const ProgrammerSetup = () => {
               {/* Product Details */}
               <div className="border-t border-gray-200 bg-gray-50 p-3 space-y-2">
                 <div>
-                  <p className="text-xs font-semibold text-gray-700 mb-1">Key Specs:</p>
+                  <p className="text-sm font-semibold text-gray-700 mb-1">Key Specs:</p>
                   <div className="flex flex-wrap gap-1">
                     {product.specs.map((spec, i) => (
-                      <span key={i} className="bg-white border border-gray-200 px-2 py-0.5 rounded text-xs text-gray-700">
+                      <span key={i} className="bg-white border border-gray-200 px-2 py-0.5 rounded text-sm text-gray-700">
                         {spec}
                       </span>
                     ))}
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-gray-700 mb-0.5 flex items-center gap-1">
+                  <p className="text-sm font-semibold text-gray-700 mb-0.5 flex items-center gap-1">
                     <CheckCircle className="w-3 h-3 text-green-600" />
                     Why this product:
                   </p>
-                  <p className="text-xs text-gray-600 italic">"{product.whyThis}"</p>
+                  <p className="text-sm text-gray-600 italic">"{product.whyThis}"</p>
                 </div>
               </div>
             </div>
@@ -254,7 +254,7 @@ const ProgrammerSetup = () => {
             <Monitor className="w-4 h-4" />
             Your Productivity Benefits
           </h3>
-          <div className="space-y-2 text-xs text-gray-700">
+          <div className="space-y-2 text-sm text-gray-700">
             <div className="flex items-start gap-2">
               <span className="text-green-600 mt-0.5">✓</span>
               <span>25% increase in coding productivity</span>
@@ -279,10 +279,10 @@ const ProgrammerSetup = () => {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-300 px-4 py-3 max-w-md mx-auto">
         <div className="flex items-center gap-3">
           <div className="flex-1">
-            <p className="text-xs text-gray-600">Bundle Price</p>
+            <p className="text-sm text-gray-600">Bundle Price</p>
             <div className="flex items-center gap-2">
               <p className="text-xl font-bold text-[#363636]">₹{(bundleInfo.totalPrice - bundleInfo.savingsWithBundle).toLocaleString()}</p>
-              <span className="text-xs text-gray-500 line-through">₹{bundleInfo.totalPrice.toLocaleString()}</span>
+              <span className="text-sm text-gray-500 line-through">₹{bundleInfo.totalPrice.toLocaleString()}</span>
             </div>
           </div>
           <button

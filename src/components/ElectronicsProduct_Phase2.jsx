@@ -249,7 +249,7 @@ const ElectronicsProduct_Phase2 = () => {
         <div className="flex items-center justify-between">
           <h1 className="text-lg font-bold text-gray-900">Product Analysis</h1>
           <div className="flex items-center gap-2">
-            <span className="text-xs bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full font-semibold">
+            <span className="text-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full font-semibold">
               Phase 2: Guidance & Decisions
             </span>
           </div>
@@ -272,11 +272,11 @@ const ElectronicsProduct_Phase2 = () => {
                 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 <span className="text-sm font-semibold text-gray-900">4.6</span>
               </div>
-              <span className="text-xs text-gray-500">16,718 reviews</span>
+              <span className="text-sm text-gray-500">16,718 reviews</span>
             </div>
             <div className="inline-flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
               <TrendingDown className="w-3 h-3 text-green-600" />
-              <span className="text-xs font-medium text-green-700">₹14,901 price drop</span>
+              <span className="text-sm font-medium text-green-700">₹14,901 price drop</span>
             </div>
           </div>
         </div>
@@ -289,7 +289,7 @@ const ElectronicsProduct_Phase2 = () => {
             <TrendingDown className="w-5 h-5 text-blue-600" />
             Live Price Intelligence
           </h3>
-          <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">Updated 2 min ago</span>
+          <span className="text-sm bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">Updated 2 min ago</span>
         </div>
 
         {/* Price History Graph */}
@@ -301,7 +301,7 @@ const ElectronicsProduct_Phase2 = () => {
                 <button
                   key={period}
                   onClick={() => setPriceHistory(period)}
-                  className={`text-xs px-2 py-1 rounded ${priceHistory === period ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600'}`}
+                  className={`text-sm px-2 py-1 rounded ${priceHistory === period ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600'}`}
                 >
                   {period}
                 </button>
@@ -325,15 +325,15 @@ const ElectronicsProduct_Phase2 = () => {
           </div>
 
           <div className="flex justify-between mt-2">
-            <div className="text-xs">
+            <div className="text-sm">
               <span className="text-gray-500">Lowest: </span>
               <span className="font-semibold text-green-600">₹{lowestPrice.toLocaleString()}</span>
             </div>
-            <div className="text-xs">
+            <div className="text-sm">
               <span className="text-gray-500">Drop: </span>
               <span className="font-semibold text-blue-600">{dropPercentage}%</span>
             </div>
-            <div className="text-xs">
+            <div className="text-sm">
               <span className="text-gray-500">Highest: </span>
               <span className="font-semibold text-gray-700">₹{highestPrice.toLocaleString()}</span>
             </div>
@@ -346,7 +346,7 @@ const ElectronicsProduct_Phase2 = () => {
             <Zap className="w-5 h-5 mt-0.5 flex-shrink-0" />
             <div>
               <p className="font-semibold text-sm mb-1">Best Deal Alert!</p>
-              <p className="text-xs opacity-90">Amazon offers the lowest price at ₹1,34,999 - Save ₹4,901 compared to MRP. Deal expires in 6 hours.</p>
+              <p className="text-sm opacity-90">Amazon offers the lowest price at ₹1,34,999 - Save ₹4,901 compared to MRP. Deal expires in 6 hours.</p>
             </div>
           </div>
         </div>
@@ -356,7 +356,7 @@ const ElectronicsProduct_Phase2 = () => {
           {priceComparisons.map((platform, idx) => (
             <div key={idx} className={`${platform.color} border rounded-lg p-3 relative`}>
               {platform.bestSeller && (
-                <span className="absolute -top-2 left-3 bg-yellow-400 text-yellow-900 text-xs px-2 py-0.5 rounded-full font-semibold">
+                <span className="absolute -top-2 left-3 bg-yellow-400 text-yellow-900 text-sm px-2 py-0.5 rounded-full font-semibold">
                   Best Seller
                 </span>
               )}
@@ -368,20 +368,20 @@ const ElectronicsProduct_Phase2 = () => {
                     <div className="flex items-center gap-2 mt-0.5">
                       <div className="flex items-center gap-1">
                         <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                        <span className="text-xs text-gray-700">{platform.rating}</span>
+                        <span className="text-sm text-gray-700">{platform.rating}</span>
                       </div>
-                      <span className="text-xs text-gray-500">({platform.reviews})</span>
+                      <span className="text-sm text-gray-500">({platform.reviews})</span>
                     </div>
                   </div>
                 </div>
                 <div className="text-right">
                   <p className="font-bold text-gray-900 text-lg">₹{platform.price.toLocaleString()}</p>
                   {platform.discount > 0 && (
-                    <span className="text-xs text-green-600 font-medium">{platform.discount}% off</span>
+                    <span className="text-sm text-green-600 font-medium">{platform.discount}% off</span>
                   )}
                   <div className="flex items-center gap-1 mt-1">
                     <Clock className="w-3 h-3 text-gray-500" />
-                    <span className="text-xs text-gray-600">{platform.delivery}</span>
+                    <span className="text-sm text-gray-600">{platform.delivery}</span>
                   </div>
                 </div>
               </div>
@@ -399,13 +399,13 @@ const ElectronicsProduct_Phase2 = () => {
             {budgetRecommendations.map((rec, idx) => (
               <div key={idx} className="flex items-center justify-between p-2 bg-gray-50 rounded border border-gray-200">
                 <div>
-                  <p className="text-xs text-gray-500 mb-0.5">{rec.label}</p>
+                  <p className="text-sm text-gray-500 mb-0.5">{rec.label}</p>
                   <p className="font-semibold text-sm text-gray-900">{rec.product}</p>
-                  <p className="text-xs text-green-600 font-medium mt-0.5">Save ₹{rec.saving.toLocaleString()}</p>
+                  <p className="text-sm text-green-600 font-medium mt-0.5">Save ₹{rec.saving.toLocaleString()}</p>
                 </div>
                 <div className="text-right">
                   <p className="font-bold text-gray-900 text-sm">₹{rec.price.toLocaleString()}</p>
-                  <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{rec.match} match</span>
+                  <span className="text-sm bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{rec.match} match</span>
                 </div>
               </div>
             ))}
@@ -420,7 +420,7 @@ const ElectronicsProduct_Phase2 = () => {
             <Cpu className="w-5 h-5 text-gray-700" />
             Complete Technical Specs
           </h3>
-          <span className="text-xs text-gray-500">Tap specs for details</span>
+          <span className="text-sm text-gray-500">Tap specs for details</span>
         </div>
 
         <div className="space-y-3">
@@ -446,14 +446,14 @@ const ElectronicsProduct_Phase2 = () => {
                   {category.specs.map((spec, specIdx) => (
                     <div key={specIdx} className={`p-2 rounded ${spec.highlight ? 'bg-blue-50 border border-blue-200' : 'bg-gray-50'}`}>
                       <div className="flex items-start justify-between mb-1">
-                        <span className="text-xs text-gray-600 font-medium">{spec.name}</span>
+                        <span className="text-sm text-gray-600 font-medium">{spec.name}</span>
                         <div className="flex items-center gap-1">
                           <span className={`text-sm font-semibold ${spec.highlight ? 'text-blue-700' : 'text-gray-900'}`}>
                             {spec.value}
                           </span>
                           <div className="group relative">
                             <Info className="w-3 h-3 text-gray-400 cursor-help" />
-                            <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block w-48 bg-gray-900 text-white text-xs p-2 rounded shadow-lg z-10">
+                            <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block w-48 bg-gray-900 text-white text-sm p-2 rounded shadow-lg z-10">
                               {spec.tooltip}
                             </div>
                           </div>
@@ -469,7 +469,7 @@ const ElectronicsProduct_Phase2 = () => {
                               style={{ width: `${(spec.visualBar / 5000) * 100}%` }}
                             />
                           </div>
-                          <p className="text-xs text-gray-500 mt-1">{spec.tooltip}</p>
+                          <p className="text-sm text-gray-500 mt-1">{spec.tooltip}</p>
                         </div>
                       )}
                     </div>
@@ -484,15 +484,15 @@ const ElectronicsProduct_Phase2 = () => {
         <div className="mt-3 p-3 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border border-purple-100">
           <h4 className="text-sm font-semibold text-gray-900 mb-2">How It Compares</h4>
           <div className="space-y-2">
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600">vs iPhone 14 Pro</span>
               <span className="font-semibold text-green-600">15% faster • 2 hrs more battery</span>
             </div>
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600">vs Samsung S24 Ultra</span>
               <span className="font-semibold text-blue-600">Similar performance • Better ecosystem</span>
             </div>
-            <div className="flex items-center justify-between text-xs">
+            <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600">vs Google Pixel 8 Pro</span>
               <span className="font-semibold text-orange-600">Better processor • Pixel wins camera</span>
             </div>
@@ -507,7 +507,7 @@ const ElectronicsProduct_Phase2 = () => {
             <BookOpen className="w-5 h-5 text-emerald-600" />
             Usage Guidance & How-To
           </h3>
-          <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full font-medium">Phase 2</span>
+          <span className="text-sm bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full font-medium">Phase 2</span>
         </div>
 
         {/* Tab Navigation */}
@@ -522,7 +522,7 @@ const ElectronicsProduct_Phase2 = () => {
             <button
               key={tab.id}
               onClick={() => setActiveGuideTab(tab.id)}
-              className={`text-xs px-3 py-2 rounded-lg font-medium whitespace-nowrap ${
+              className={`text-sm px-3 py-2 rounded-lg font-medium whitespace-nowrap ${
                 activeGuideTab === tab.id
                   ? 'bg-emerald-600 text-white'
                   : 'bg-white text-gray-600 border border-gray-200'
@@ -546,11 +546,11 @@ const ElectronicsProduct_Phase2 = () => {
                   <div className="text-3xl">{step.icon}</div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-bold text-emerald-600">STEP {step.step}</span>
-                      <span className="text-xs text-gray-500">{step.duration}</span>
+                      <span className="text-sm font-bold text-emerald-600">STEP {step.step}</span>
+                      <span className="text-sm text-gray-500">{step.duration}</span>
                     </div>
                     <p className="font-semibold text-sm text-gray-900 mb-1">{step.title}</p>
-                    <p className="text-xs text-gray-600">{step.description}</p>
+                    <p className="text-sm text-gray-600">{step.description}</p>
                   </div>
                   <CheckCircle className="w-5 h-5 text-gray-300" />
                 </div>
@@ -562,25 +562,25 @@ const ElectronicsProduct_Phase2 = () => {
               <div className="flex items-start gap-2">
                 <AlertCircle className="w-4 h-4 text-orange-600 mt-0.5" />
                 <div>
-                  <p className="text-xs font-semibold text-gray-900 mb-1">Initial Charging Tip</p>
-                  <p className="text-xs text-gray-600">For optimal battery health, charge to 80% on first use. Enable "Optimized Battery Charging" in Settings → Battery.</p>
+                  <p className="text-sm font-semibold text-gray-900 mb-1">Initial Charging Tip</p>
+                  <p className="text-sm text-gray-600">For optimal battery health, charge to 80% on first use. Enable "Optimized Battery Charging" in Settings → Battery.</p>
                 </div>
               </div>
             </div>
 
             {/* App Download Links */}
             <div className="mt-3">
-              <h5 className="text-xs font-semibold text-gray-900 mb-2 flex items-center gap-1">
+              <h5 className="text-sm font-semibold text-gray-900 mb-2 flex items-center gap-1">
                 <Download className="w-3 h-3" />
                 Essential Apps to Download
               </h5>
               <div className="grid grid-cols-2 gap-2">
                 {['iCloud', 'Find My', 'Apple Music', 'Apple TV'].map((app, idx) => (
                   <div key={idx} className="flex items-center gap-2 p-2 bg-gray-50 rounded border border-gray-200">
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-xs font-bold">
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-sm font-bold">
                       {app[0]}
                     </div>
-                    <span className="text-xs font-medium text-gray-900">{app}</span>
+                    <span className="text-sm font-medium text-gray-900">{app}</span>
                   </div>
                 ))}
               </div>
@@ -591,8 +591,8 @@ const ElectronicsProduct_Phase2 = () => {
               <div className="flex items-start gap-2">
                 <Wifi className="w-4 h-4 text-blue-600 mt-0.5" />
                 <div>
-                  <p className="text-xs font-semibold text-gray-900 mb-1">Quick Pairing</p>
-                  <p className="text-xs text-gray-600">AirPods: Open case near iPhone. Apple Watch: Open Watch app. Other devices: Settings → Bluetooth.</p>
+                  <p className="text-sm font-semibold text-gray-900 mb-1">Quick Pairing</p>
+                  <p className="text-sm text-gray-600">AirPods: Open case near iPhone. Apple Watch: Open Watch app. Other devices: Settings → Bluetooth.</p>
                 </div>
               </div>
             </div>
@@ -608,8 +608,8 @@ const ElectronicsProduct_Phase2 = () => {
                 <div key={idx} className="flex items-start gap-3 p-2 bg-gray-50 rounded">
                   <div className="mt-1">{item.icon}</div>
                   <div className="flex-1">
-                    <p className="text-xs font-semibold text-emerald-600">{item.time}</p>
-                    <p className="text-xs text-gray-700">{item.task}</p>
+                    <p className="text-sm font-semibold text-emerald-600">{item.time}</p>
+                    <p className="text-sm text-gray-700">{item.task}</p>
                   </div>
                 </div>
               ))}
@@ -629,10 +629,10 @@ const ElectronicsProduct_Phase2 = () => {
                     <Play className="w-8 h-8 text-white" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2">
-                    <p className="text-xs font-semibold text-white">{video.title}</p>
+                    <p className="text-sm font-semibold text-white">{video.title}</p>
                     <div className="flex items-center justify-between mt-1">
-                      <span className="text-xs text-white">{video.duration}</span>
-                      <span className="text-xs text-white opacity-75">{video.views} views</span>
+                      <span className="text-sm text-white">{video.duration}</span>
+                      <span className="text-sm text-white opacity-75">{video.views} views</span>
                     </div>
                   </div>
                 </div>
@@ -649,8 +649,8 @@ const ElectronicsProduct_Phase2 = () => {
               {batteryBreakdown.map((item, idx) => (
                 <div key={idx}>
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs font-medium text-gray-700">{item.activity}</span>
-                    <span className="text-xs font-bold text-gray-900">{item.duration}</span>
+                    <span className="text-sm font-medium text-gray-700">{item.activity}</span>
+                    <span className="text-sm font-bold text-gray-900">{item.duration}</span>
                   </div>
                   <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div
@@ -666,8 +666,8 @@ const ElectronicsProduct_Phase2 = () => {
               <div className="flex items-start gap-2">
                 <Battery className="w-4 h-4 text-green-600 mt-0.5" />
                 <div>
-                  <p className="text-xs font-semibold text-gray-900 mb-1">Battery Optimization Tips</p>
-                  <ul className="text-xs text-gray-600 space-y-1">
+                  <p className="text-sm font-semibold text-gray-900 mb-1">Battery Optimization Tips</p>
+                  <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Enable Low Power Mode for 20-25% longer battery life</li>
                     <li>• Reduce screen brightness and use Auto-Brightness</li>
                     <li>• Disable Background App Refresh for unused apps</li>
@@ -691,7 +691,7 @@ const ElectronicsProduct_Phase2 = () => {
                       {item.icon}
                       <span className="text-sm font-semibold text-gray-900">{item.platform}</span>
                     </div>
-                    <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                    <span className={`text-sm px-2 py-1 rounded-full font-medium ${
                       item.status === 'Excellent' ? 'bg-green-100 text-green-700' :
                       item.status === 'Good' ? 'bg-blue-100 text-blue-700' :
                       'bg-yellow-100 text-yellow-700'
@@ -699,7 +699,7 @@ const ElectronicsProduct_Phase2 = () => {
                       {item.status}
                     </span>
                   </div>
-                  <ul className="text-xs text-gray-600 space-y-1">
+                  <ul className="text-sm text-gray-600 space-y-1">
                     {item.items.map((feature, featureIdx) => (
                       <li key={featureIdx}>• {feature}</li>
                     ))}
@@ -713,8 +713,8 @@ const ElectronicsProduct_Phase2 = () => {
               <div className="flex items-start gap-2">
                 <Shield className="w-4 h-4 text-blue-600 mt-0.5" />
                 <div>
-                  <p className="text-xs font-semibold text-gray-900 mb-1">Warranty & Support</p>
-                  <ul className="text-xs text-gray-600 space-y-1">
+                  <p className="text-sm font-semibold text-gray-900 mb-1">Warranty & Support</p>
+                  <ul className="text-sm text-gray-600 space-y-1">
                     <li>• 1-year limited warranty included</li>
                     <li>• AppleCare+ available: ₹18,900 (2 years coverage)</li>
                     <li>• 90 days complimentary technical support</li>
@@ -734,7 +734,7 @@ const ElectronicsProduct_Phase2 = () => {
             <BarChart3 className="w-5 h-5 text-purple-600" />
             Intelligent Comparison Engine
           </h3>
-          <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">Phase 2</span>
+          <span className="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">Phase 2</span>
         </div>
 
         {/* AI-Powered Recommendations */}
@@ -745,7 +745,7 @@ const ElectronicsProduct_Phase2 = () => {
                 <Award className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-sm mb-1">{rec.badge}: {rec.product}</p>
-                  <p className="text-xs opacity-90">{rec.reason}</p>
+                  <p className="text-sm opacity-90">{rec.reason}</p>
                 </div>
               </div>
             </div>
@@ -756,7 +756,7 @@ const ElectronicsProduct_Phase2 = () => {
         <div className="bg-white rounded-lg p-3 mb-3">
           <div className="flex items-center justify-between mb-2">
             <h4 className="text-sm font-semibold text-gray-900">Select Products to Compare (up to 4)</h4>
-            <span className="text-xs text-gray-500">{selectedComparison.length}/4 selected</span>
+            <span className="text-sm text-gray-500">{selectedComparison.length}/4 selected</span>
           </div>
           <div className="grid grid-cols-2 gap-2">
             {comparisonProducts.map((product) => (
@@ -770,8 +770,8 @@ const ElectronicsProduct_Phase2 = () => {
                 }`}
               >
                 <img src={product.image} alt={product.name} className="w-full h-16 object-cover rounded mb-2" />
-                <p className="text-xs font-semibold text-gray-900 truncate">{product.name}</p>
-                <p className="text-xs text-gray-600">₹{product.price.toLocaleString()}</p>
+                <p className="text-sm font-semibold text-gray-900 truncate">{product.name}</p>
+                <p className="text-sm text-gray-600">₹{product.price.toLocaleString()}</p>
               </button>
             ))}
           </div>
@@ -781,7 +781,7 @@ const ElectronicsProduct_Phase2 = () => {
         {selectedComparison.length >= 2 && (
           <div className="bg-white rounded-lg p-3 overflow-x-auto">
             <h4 className="text-sm font-semibold text-gray-900 mb-3">Side-by-Side Comparison</h4>
-            <table className="w-full text-xs">
+            <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-gray-200">
                   <th className="text-left py-2 pr-2 text-gray-600 font-semibold">Specification</th>
@@ -789,7 +789,7 @@ const ElectronicsProduct_Phase2 = () => {
                     const product = comparisonProducts.find(p => p.id === id);
                     return (
                       <th key={id} className="text-center py-2 px-2 font-semibold text-gray-900">
-                        <div className="text-xs truncate">{product.name}</div>
+                        <div className="text-sm truncate">{product.name}</div>
                       </th>
                     );
                   })}
@@ -818,7 +818,7 @@ const ElectronicsProduct_Phase2 = () => {
                             isLoser ? 'bg-red-50 text-red-700' :
                             'bg-yellow-50 text-yellow-700'
                           }`}>
-                            <div className="text-xs">{spec.value}</div>
+                            <div className="text-sm">{spec.value}</div>
                             {isWinner && <Award className="w-3 h-3 mx-auto mt-1 text-yellow-500" />}
                           </td>
                         );
@@ -834,9 +834,9 @@ const ElectronicsProduct_Phase2 = () => {
                       <td key={id} className="text-center py-2 px-2">
                         <div className="flex items-center justify-center gap-1">
                           <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                          <span className="text-xs font-semibold">{product.rating}</span>
+                          <span className="text-sm font-semibold">{product.rating}</span>
                         </div>
-                        <span className="text-xs text-gray-500">({product.reviews.toLocaleString()})</span>
+                        <span className="text-sm text-gray-500">({product.reviews.toLocaleString()})</span>
                       </td>
                     );
                   })}
@@ -846,8 +846,8 @@ const ElectronicsProduct_Phase2 = () => {
 
             {/* Decision Helper */}
             <div className="mt-3 p-3 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg border border-indigo-200">
-              <h5 className="text-xs font-semibold text-gray-900 mb-2">Decision Helper</h5>
-              <div className="space-y-2 text-xs text-gray-700">
+              <h5 className="text-sm font-semibold text-gray-900 mb-2">Decision Helper</h5>
+              <div className="space-y-2 text-sm text-gray-700">
                 <p>• <strong>Choose iPhone 15 Pro</strong> if you prioritize ecosystem integration and optimal performance</p>
                 <p>• <strong>Choose Samsung S24 Ultra</strong> if you need maximum battery life and S Pen functionality</p>
                 <p>• <strong>Choose Google Pixel 8 Pro</strong> if you want the best value with AI-powered camera features</p>
@@ -862,16 +862,16 @@ const ElectronicsProduct_Phase2 = () => {
           <h4 className="text-sm font-semibold text-gray-900 mb-2">Alternative Suggestions Based on Your Priorities</h4>
           <div className="space-y-2">
             <div className="p-2 bg-blue-50 rounded border border-blue-200">
-              <p className="text-xs font-semibold text-blue-900 mb-1">Best for Gaming</p>
-              <p className="text-xs text-blue-700">Samsung Galaxy S24 Ultra - 12GB RAM, better cooling system</p>
+              <p className="text-sm font-semibold text-blue-900 mb-1">Best for Gaming</p>
+              <p className="text-sm text-blue-700">Samsung Galaxy S24 Ultra - 12GB RAM, better cooling system</p>
             </div>
             <div className="p-2 bg-purple-50 rounded border border-purple-200">
-              <p className="text-xs font-semibold text-purple-900 mb-1">Best for Photography</p>
-              <p className="text-xs text-purple-700">Google Pixel 8 Pro - AI-enhanced camera with Night Sight</p>
+              <p className="text-sm font-semibold text-purple-900 mb-1">Best for Photography</p>
+              <p className="text-sm text-purple-700">Google Pixel 8 Pro - AI-enhanced camera with Night Sight</p>
             </div>
             <div className="p-2 bg-green-50 rounded border border-green-200">
-              <p className="text-xs font-semibold text-green-900 mb-1">Best Battery Life</p>
-              <p className="text-xs text-green-700">Samsung Galaxy S24 Ultra - 5,000 mAh battery (30% more)</p>
+              <p className="text-sm font-semibold text-green-900 mb-1">Best Battery Life</p>
+              <p className="text-sm text-green-700">Samsung Galaxy S24 Ultra - 5,000 mAh battery (30% more)</p>
             </div>
           </div>
         </div>
@@ -899,7 +899,7 @@ const ElectronicsProduct_Phase2 = () => {
                   style={{ width: `${item.score}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-500">{item.description}</p>
+              <p className="text-sm text-gray-500">{item.description}</p>
             </div>
           ))}
         </div>
@@ -921,9 +921,9 @@ const ElectronicsProduct_Phase2 = () => {
                 <div className="flex items-center gap-2 mb-1">
                   <div className="flex items-center gap-1">
                     <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                    <span className="text-xs text-gray-700">{product.rating}</span>
+                    <span className="text-sm text-gray-700">{product.rating}</span>
                   </div>
-                  <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{product.match} match</span>
+                  <span className="text-sm bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{product.match} match</span>
                 </div>
                 <p className="font-bold text-gray-900 text-sm">₹{product.price.toLocaleString()}</p>
               </div>

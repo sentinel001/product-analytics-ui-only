@@ -13,7 +13,7 @@ const BeautyProduct_Phase2 = () => {
       <header className="flex items-center justify-between p-4 border-b">
         <h1 className="text-xl font-semibold">Flash AI</h1>
         <div className="flex items-center gap-2">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
             Phase 2: Trust Building
           </div>
           <button className="p-2">
@@ -38,7 +38,7 @@ const BeautyProduct_Phase2 = () => {
                 <h3 className="text-sm font-semibold mb-2">
                   Neutrogena Hydro Boost Water Gel
                 </h3>
-                <div className="flex items-center gap-3 text-xs text-gray-600 mb-2">
+                <div className="flex items-center gap-3 text-sm text-gray-600 mb-2">
                   <span className="flex items-center gap-1">
                     <Droplet className="w-3 h-3" />
                     Oily/Combo Skin
@@ -46,7 +46,7 @@ const BeautyProduct_Phase2 = () => {
                 </div>
                 <div className="text-sm">
                   <span className="font-semibold">₹799</span>
-                  <span className="text-gray-600 text-xs ml-1">50g • In Stock</span>
+                  <span className="text-gray-600 text-sm ml-1">50g • In Stock</span>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@ const BeautyProduct_Phase2 = () => {
               <Play className="w-4 h-4 text-purple-600" />
               How to Use This Product
             </h3>
-            <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
+            <span className="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
               PHASE 1
             </span>
           </div>
@@ -70,7 +70,7 @@ const BeautyProduct_Phase2 = () => {
             <div className="absolute inset-0 bg-[#363636]/20"></div>
             <div className="relative z-10 text-white text-center">
               <Play className="w-12 h-12 mx-auto mb-2 opacity-90" />
-              <p className="text-xs font-medium">Watch Application Tutorial (45s)</p>
+              <p className="text-sm font-medium">Watch Application Tutorial (45s)</p>
             </div>
             <img
               src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=200&fit=crop"
@@ -81,18 +81,18 @@ const BeautyProduct_Phase2 = () => {
 
           {/* Step-by-step Instructions */}
           <div className="space-y-2">
-            <h4 className="text-xs font-semibold text-gray-700 mb-2">Application Steps:</h4>
+            <h4 className="text-sm font-semibold text-gray-700 mb-2">Application Steps:</h4>
             {[
               { step: 1, text: 'Cleanse face and pat dry', icon: '💧' },
               { step: 2, text: 'Take pea-sized amount', icon: '🫘' },
               { step: 3, text: 'Apply in upward circular motions', icon: '↻' },
               { step: 4, text: 'Allow 2 min to absorb', icon: '⏱️' },
             ].map((item) => (
-              <div key={item.step} className="flex items-center gap-2 text-xs bg-white/60 rounded p-2">
-                <span className="w-5 h-5 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
+              <div key={item.step} className="flex items-center gap-2 text-sm bg-white/60 rounded p-2">
+                <span className="w-5 h-5 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
                   {item.step}
                 </span>
-                <span className="text-xs mr-2">{item.icon}</span>
+                <span className="text-sm mr-2">{item.icon}</span>
                 <span className="text-gray-700">{item.text}</span>
               </div>
             ))}
@@ -102,13 +102,13 @@ const BeautyProduct_Phase2 = () => {
           <div className="mt-3 grid grid-cols-2 gap-2">
             <div className="bg-white/60 rounded p-2">
               <Clock className="w-4 h-4 text-purple-600 mb-1" />
-              <p className="text-xs font-semibold text-gray-700">When to Use</p>
-              <p className="text-xs text-gray-600">Morning & Night</p>
+              <p className="text-sm font-semibold text-gray-700">When to Use</p>
+              <p className="text-sm text-gray-600">Morning & Night</p>
             </div>
             <div className="bg-white/60 rounded p-2">
               <Droplet className="w-4 h-4 text-purple-600 mb-1" />
-              <p className="text-xs font-semibold text-gray-700">Amount</p>
-              <p className="text-xs text-gray-600">Pea-sized</p>
+              <p className="text-sm font-semibold text-gray-700">Amount</p>
+              <p className="text-sm text-gray-600">Pea-sized</p>
             </div>
           </div>
         </section>
@@ -117,7 +117,7 @@ const BeautyProduct_Phase2 = () => {
         <section className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-100">
           <div className="flex items-center justify-between mb-3">
             <h3 className="text-sm font-semibold">Suitable For You?</h3>
-            <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
+            <span className="text-sm bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
               PHASE 1
             </span>
           </div>
@@ -132,7 +132,7 @@ const BeautyProduct_Phase2 = () => {
               { type: 'Dry Skin', match: 45, color: 'red' },
             ].map((item) => (
               <div key={item.type} className="flex items-center justify-between bg-white/60 rounded p-2">
-                <span className="text-xs font-medium text-gray-700">{item.type}</span>
+                <span className="text-sm font-medium text-gray-700">{item.type}</span>
                 <div className="flex items-center gap-2">
                   <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div
@@ -143,7 +143,7 @@ const BeautyProduct_Phase2 = () => {
                       style={{ width: `${item.match}%` }}
                     ></div>
                   </div>
-                  <span className={`text-xs font-bold ${
+                  <span className={`text-sm font-bold ${
                     item.color === 'green' ? 'text-green-600' :
                     item.color === 'yellow' ? 'text-yellow-600' : 'text-red-600'
                   }`}>
@@ -164,7 +164,7 @@ const BeautyProduct_Phase2 = () => {
 
           {showCompatibility && (
             <div className="mt-3 space-y-2">
-              <p className="text-xs font-semibold text-gray-700">Can be used with:</p>
+              <p className="text-sm font-semibold text-gray-700">Can be used with:</p>
               {[
                 { product: 'Vitamin C Serum', compatible: true },
                 { product: 'Retinol Treatment', compatible: false },
@@ -172,11 +172,11 @@ const BeautyProduct_Phase2 = () => {
                 { product: 'AHA/BHA Exfoliant', compatible: false },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center justify-between bg-white/60 rounded p-2">
-                  <span className="text-xs text-gray-700">{item.product}</span>
+                  <span className="text-sm text-gray-700">{item.product}</span>
                   {item.compatible ? (
-                    <span className="text-green-600 text-xs font-medium">✓ Compatible</span>
+                    <span className="text-green-600 text-sm font-medium">✓ Compatible</span>
                   ) : (
-                    <span className="text-red-600 text-xs font-medium">✗ Not recommended</span>
+                    <span className="text-red-600 text-sm font-medium">✗ Not recommended</span>
                   )}
                 </div>
               ))}
@@ -191,7 +191,7 @@ const BeautyProduct_Phase2 = () => {
               <TrendingUp className="w-4 h-4 text-emerald-600" />
               Results & Effectiveness Timeline
             </h3>
-            <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full font-medium">
+            <span className="text-sm bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full font-medium">
               PHASE 2
             </span>
           </div>
@@ -237,13 +237,13 @@ const BeautyProduct_Phase2 = () => {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs font-bold text-gray-700">{milestone.week}</span>
-                        <span className={`text-xs font-bold text-${milestone.color}-600`}>
+                        <span className="text-sm font-bold text-gray-700">{milestone.week}</span>
+                        <span className={`text-sm font-bold text-${milestone.color}-600`}>
                           {milestone.percentage}% users see results
                         </span>
                       </div>
                       <h4 className="text-sm font-semibold text-gray-900 mb-1">{milestone.title}</h4>
-                      <p className="text-xs text-gray-600">{milestone.description}</p>
+                      <p className="text-sm text-gray-600">{milestone.description}</p>
                       <div className="mt-2 w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
                         <div
                           className={`h-full bg-gradient-to-r from-${milestone.color}-400 to-${milestone.color}-600`}
@@ -259,13 +259,13 @@ const BeautyProduct_Phase2 = () => {
 
           {/* Filter by Skin Type */}
           <div className="mb-4">
-            <p className="text-xs font-semibold text-gray-700 mb-2">Filter success stories by skin type:</p>
+            <p className="text-sm font-semibold text-gray-700 mb-2">Filter success stories by skin type:</p>
             <div className="flex flex-wrap gap-2">
               {['all', 'oily', 'combo', 'sensitive', 'acne-prone'].map((type) => (
                 <button
                   key={type}
                   onClick={() => setSelectedSkinTypeFilter(type)}
-                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                     selectedSkinTypeFilter === type
                       ? 'bg-emerald-600 text-white'
                       : 'bg-white text-gray-700 border border-gray-300 hover:border-emerald-400'
@@ -279,7 +279,7 @@ const BeautyProduct_Phase2 = () => {
 
           {/* User Success Stories with Before/After */}
           <div className="space-y-3">
-            <h4 className="text-xs font-semibold text-gray-700 flex items-center gap-1">
+            <h4 className="text-sm font-semibold text-gray-700 flex items-center gap-1">
               <Users className="w-3 h-3" />
               Verified User Success Stories
             </h4>
@@ -308,7 +308,7 @@ const BeautyProduct_Phase2 = () => {
                 <div className="flex items-start justify-between mb-2">
                   <div>
                     <div className="flex items-center gap-2">
-                      <p className="text-xs font-semibold text-gray-900">{story.name}</p>
+                      <p className="text-sm font-semibold text-gray-900">{story.name}</p>
                       <span className="flex items-center gap-0.5">
                         {[...Array(story.rating)].map((_, i) => (
                           <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
@@ -316,11 +316,11 @@ const BeautyProduct_Phase2 = () => {
                       </span>
                     </div>
                     <div className="flex items-center gap-2 mt-1">
-                      <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">
+                      <span className="text-sm bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">
                         {story.skinType} Skin
                       </span>
-                      <span className="text-xs text-gray-500">{story.timeframe}</span>
-                      <span className="flex items-center gap-1 text-xs text-green-600">
+                      <span className="text-sm text-gray-500">{story.timeframe}</span>
+                      <span className="flex items-center gap-1 text-sm text-green-600">
                         <Shield className="w-3 h-3" /> Verified
                       </span>
                     </div>
@@ -330,7 +330,7 @@ const BeautyProduct_Phase2 = () => {
                 {/* Before/After Images */}
                 <div className="grid grid-cols-2 gap-2 mb-2">
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Before</p>
+                    <p className="text-sm text-gray-500 mb-1">Before</p>
                     <img
                       src={story.beforeImage}
                       alt="Before"
@@ -338,7 +338,7 @@ const BeautyProduct_Phase2 = () => {
                     />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">After ({story.timeframe})</p>
+                    <p className="text-sm text-gray-500 mb-1">After ({story.timeframe})</p>
                     <img
                       src={story.afterImage}
                       alt="After"
@@ -347,7 +347,7 @@ const BeautyProduct_Phase2 = () => {
                   </div>
                 </div>
 
-                <p className="text-xs text-gray-700 italic">"{story.quote}"</p>
+                <p className="text-sm text-gray-700 italic">"{story.quote}"</p>
               </div>
             ))}
           </div>
@@ -356,15 +356,15 @@ const BeautyProduct_Phase2 = () => {
           <div className="mt-4 grid grid-cols-3 gap-2">
             <div className="bg-white rounded p-2 text-center border border-emerald-200">
               <p className="text-lg font-bold text-emerald-600">2,847</p>
-              <p className="text-xs text-gray-600">Success Stories</p>
+              <p className="text-sm text-gray-600">Success Stories</p>
             </div>
             <div className="bg-white rounded p-2 text-center border border-emerald-200">
               <p className="text-lg font-bold text-emerald-600">89%</p>
-              <p className="text-xs text-gray-600">Repurchase Rate</p>
+              <p className="text-sm text-gray-600">Repurchase Rate</p>
             </div>
             <div className="bg-white rounded p-2 text-center border border-emerald-200">
               <p className="text-lg font-bold text-emerald-600">4-6wks</p>
-              <p className="text-xs text-gray-600">Avg. Full Results</p>
+              <p className="text-sm text-gray-600">Avg. Full Results</p>
             </div>
           </div>
         </section>
@@ -380,7 +380,7 @@ const BeautyProduct_Phase2 = () => {
               </div>
               <div className="text-right">
                 <div className="font-semibold">₹799</div>
-                <div className="text-xs text-gray-500">Use BEAUTY20 for ₹160 off</div>
+                <div className="text-sm text-gray-500">Use BEAUTY20 for ₹160 off</div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-400" />
             </div>
@@ -392,7 +392,7 @@ const BeautyProduct_Phase2 = () => {
               </div>
               <div className="text-right">
                 <div className="font-semibold">₹679</div>
-                <div className="text-xs text-green-600">Lowest Price!</div>
+                <div className="text-sm text-green-600">Lowest Price!</div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-400" />
             </div>
@@ -429,7 +429,7 @@ const BeautyProduct_Phase2 = () => {
               <Info className="w-4 h-4 text-purple-600" />
               Comprehensive Ingredients Breakdown
             </h3>
-            <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
+            <span className="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
               ENHANCED
             </span>
           </div>
@@ -440,7 +440,7 @@ const BeautyProduct_Phase2 = () => {
               <Shield className="w-5 h-5 text-green-600" />
               <h4 className="text-sm font-semibold text-green-900">Safety Score: 8.5/10</h4>
             </div>
-            <p className="text-xs text-gray-700">
+            <p className="text-sm text-gray-700">
               This product contains mostly safe, well-researched ingredients. One ingredient may cause sensitivity in some users.
             </p>
           </div>
@@ -496,7 +496,7 @@ const BeautyProduct_Phase2 = () => {
                       <p className="text-sm font-semibold text-gray-900">{ingredient.name}</p>
                       <button
                         onClick={() => setExpandedIngredient(expandedIngredient === idx ? null : idx)}
-                        className="text-purple-600 text-xs font-medium flex items-center gap-1"
+                        className="text-purple-600 text-sm font-medium flex items-center gap-1"
                       >
                         {expandedIngredient === idx ? 'Hide' : 'Details'}
                         <HelpCircle className="w-3 h-3" />
@@ -504,37 +504,37 @@ const BeautyProduct_Phase2 = () => {
                     </div>
 
                     <div className="flex items-center gap-2 mb-1">
-                      <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+                      <span className={`text-sm font-medium px-2 py-0.5 rounded-full ${
                         ingredient.safe ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'
                       }`}>
                         {ingredient.safe ? 'Safe' : 'Caution'}
                       </span>
-                      <span className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">
+                      <span className="text-sm bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">
                         {ingredient.concentration}
                       </span>
-                      <span className="text-xs font-bold text-purple-600">
+                      <span className="text-sm font-bold text-purple-600">
                         {ingredient.rating}
                       </span>
                     </div>
 
-                    <p className="text-xs text-gray-600 mt-1">{ingredient.purpose}</p>
+                    <p className="text-sm text-gray-600 mt-1">{ingredient.purpose}</p>
 
                     {/* Expanded Details */}
                     {expandedIngredient === idx && (
                       <div className="mt-3 space-y-2 pt-2 border-t">
                         <div>
-                          <p className="text-xs font-semibold text-gray-700 mb-1">Research & Evidence:</p>
-                          <p className="text-xs text-gray-600 flex items-start gap-1">
+                          <p className="text-sm font-semibold text-gray-700 mb-1">Research & Evidence:</p>
+                          <p className="text-sm text-gray-600 flex items-start gap-1">
                             <CheckCircle className="w-3 h-3 text-green-600 flex-shrink-0 mt-0.5" />
                             {ingredient.research}
                           </p>
                         </div>
 
                         <div>
-                          <p className="text-xs font-semibold text-gray-700 mb-1">Benefits:</p>
+                          <p className="text-sm font-semibold text-gray-700 mb-1">Benefits:</p>
                           <div className="space-y-1">
                             {ingredient.benefits.map((benefit, bIdx) => (
-                              <p key={bIdx} className="text-xs text-gray-600 flex items-start gap-1">
+                              <p key={bIdx} className="text-sm text-gray-600 flex items-start gap-1">
                                 <CheckCircle className="w-3 h-3 text-green-600 flex-shrink-0 mt-0.5" />
                                 {benefit}
                               </p>
@@ -544,10 +544,10 @@ const BeautyProduct_Phase2 = () => {
 
                         {ingredient.concerns.length > 0 && (
                           <div>
-                            <p className="text-xs font-semibold text-gray-700 mb-1">Potential Concerns:</p>
+                            <p className="text-sm font-semibold text-gray-700 mb-1">Potential Concerns:</p>
                             <div className="space-y-1">
                               {ingredient.concerns.map((concern, cIdx) => (
-                                <p key={cIdx} className="text-xs text-orange-600 flex items-start gap-1">
+                                <p key={cIdx} className="text-sm text-orange-600 flex items-start gap-1">
                                   <AlertCircle className="w-3 h-3 flex-shrink-0 mt-0.5" />
                                   {concern}
                                 </p>
@@ -565,16 +565,16 @@ const BeautyProduct_Phase2 = () => {
 
           {/* Certification Badges */}
           <div className="mt-3 flex flex-wrap gap-2">
-            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium flex items-center gap-1">
+            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium flex items-center gap-1">
               <CheckCircle className="w-3 h-3" /> Paraben-free
             </span>
-            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium flex items-center gap-1">
+            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium flex items-center gap-1">
               <CheckCircle className="w-3 h-3" /> Non-comedogenic
             </span>
-            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium flex items-center gap-1">
+            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium flex items-center gap-1">
               <Shield className="w-3 h-3" /> Dermatologist tested
             </span>
-            <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium flex items-center gap-1">
+            <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium flex items-center gap-1">
               <Award className="w-3 h-3" /> Cruelty-free
             </span>
           </div>
@@ -584,8 +584,8 @@ const BeautyProduct_Phase2 = () => {
             <div className="flex items-start gap-2">
               <Info className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-xs font-semibold text-blue-900 mb-1">What makes this formula effective?</p>
-                <p className="text-xs text-gray-700">
+                <p className="text-sm font-semibold text-blue-900 mb-1">What makes this formula effective?</p>
+                <p className="text-sm text-gray-700">
                   The combination of Hyaluronic Acid and Glycerin creates a synergistic hydration effect,
                   while Dimethicone locks in moisture. Clinical studies show this formula increases skin
                   hydration by up to 96% within 24 hours.
@@ -606,12 +606,12 @@ const BeautyProduct_Phase2 = () => {
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center">
                 <div className="text-white text-center">
                   <div className="text-2xl font-bold">92</div>
-                  <div className="text-xs">/100</div>
+                  <div className="text-sm">/100</div>
                 </div>
               </div>
             </div>
             <div className="flex-1">
-              <div className="text-xs text-green-700 font-medium mb-1">Excellent Choice!</div>
+              <div className="text-sm text-green-700 font-medium mb-1">Excellent Choice!</div>
               <p className="text-sm text-gray-700">
                 Perfect for oily/combination skin. Lightweight, non-greasy formula
               </p>
@@ -633,7 +633,7 @@ const BeautyProduct_Phase2 = () => {
                 <div className={`w-12 h-12 mx-auto rounded-full border-4 ${item.color} border-opacity-30 flex items-center justify-center mb-2`}>
                   <span className={`text-lg font-bold ${item.color}`}>{item.score}</span>
                 </div>
-                <div className="text-xs text-gray-600">{item.label}</div>
+                <div className="text-sm text-gray-600">{item.label}</div>
               </div>
             ))}
           </div>
@@ -643,7 +643,7 @@ const BeautyProduct_Phase2 = () => {
         <section>
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-semibold">Similar Products</h3>
-            <button className="text-xs text-blue-600 font-medium">See All</button>
+            <button className="text-sm text-blue-600 font-medium">See All</button>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -663,9 +663,9 @@ const BeautyProduct_Phase2 = () => {
             ].map((product, idx) => (
               <div key={idx} className="border rounded-lg p-3 hover:shadow-md transition-shadow">
                 <img src={product.image} alt={product.name} className="w-full h-24 object-cover rounded mb-2" />
-                <div className="text-xs font-medium mb-1 line-clamp-2">{product.name}</div>
+                <div className="text-sm font-medium mb-1 line-clamp-2">{product.name}</div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded">
+                  <span className="bg-green-100 text-green-700 text-sm font-bold px-2 py-0.5 rounded">
                     {product.score}/100
                   </span>
                 </div>

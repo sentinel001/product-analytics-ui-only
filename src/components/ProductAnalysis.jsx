@@ -30,13 +30,13 @@ const ProductAnalysis = () => {
                 <h3 className="text-sm font-medium mb-2">
                   Re'equil Ultra Matte Dry Touch Gel Sunscreen SPF 50
                 </h3>
-                <div className="flex items-center gap-4 text-xs text-gray-600">
+                <div className="flex items-center gap-4 text-sm text-gray-600">
                   <span>Storage: 0/2 GB</span>
                   <span>Screen: 14 inches</span>
                 </div>
                 <div className="mt-2 text-sm">
                   <span className="font-semibold">₹948</span>
-                  <span className="text-gray-600 text-xs ml-1">1/Units Available</span>
+                  <span className="text-gray-600 text-sm ml-1">1/Units Available</span>
                 </div>
               </div>
             </div>
@@ -56,7 +56,7 @@ const ProductAnalysis = () => {
               </div>
               <div className="text-right">
                 <div className="font-semibold">₹4,500</div>
-                <div className="text-xs text-gray-500">Use HDFC10 for ₹14 off</div>
+                <div className="text-sm text-gray-500">Use HDFC10 for ₹14 off</div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-400" />
             </div>
@@ -64,13 +64,13 @@ const ProductAnalysis = () => {
             <div className="flex items-center justify-between p-3 border rounded-lg hover:border-blue-500 transition-colors cursor-pointer">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-blue-500 rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-xs">FK</span>
+                  <span className="text-white font-bold text-sm">FK</span>
                 </div>
                 <span className="font-medium">Flipkart</span>
               </div>
               <div className="text-right">
                 <div className="font-semibold">₹4,350</div>
-                <div className="text-xs text-gray-500">Use code for extra off</div>
+                <div className="text-sm text-gray-500">Use code for extra off</div>
               </div>
               <ChevronRight className="w-5 h-5 text-gray-400" />
             </div>
@@ -111,11 +111,11 @@ const ProductAnalysis = () => {
               { icon: '💄', label: 'Makeup & Beauty', color: 'bg-pink-100 text-pink-700' },
               { icon: '📱', label: 'Jane Itraide', color: 'bg-green-100 text-green-700' },
             ].map((source, idx) => (
-              <span key={idx} className={`px-3 py-1 rounded-full text-xs font-medium ${source.color}`}>
+              <span key={idx} className={`px-3 py-1 rounded-full text-sm font-medium ${source.color}`}>
                 {source.icon} {source.label}
               </span>
             ))}
-            <span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">
+            <span className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700">
               +2 more
             </span>
           </div>
@@ -132,12 +132,12 @@ const ProductAnalysis = () => {
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center">
                 <div className="text-white">
                   <div className="text-2xl font-bold">87</div>
-                  <div className="text-xs">/100</div>
+                  <div className="text-sm">/100</div>
                 </div>
               </div>
             </div>
             <div className="flex-1">
-              <div className="text-xs text-gray-600 mb-1">Great Buy!</div>
+              <div className="text-sm text-gray-600 mb-1">Great Buy!</div>
               <p className="text-sm text-gray-700">
                 This sunscreen is an excellent choice for daily skin care
               </p>
@@ -168,7 +168,7 @@ const ProductAnalysis = () => {
                 <div className={`w-12 h-12 mx-auto rounded-full border-4 ${item.color} border-opacity-30 flex items-center justify-center mb-2`}>
                   <span className={`text-lg font-bold ${item.color}`}>{item.score}</span>
                 </div>
-                <div className="text-xs text-gray-600">{item.label}</div>
+                <div className="text-sm text-gray-600">{item.label}</div>
               </div>
             ))}
           </div>
@@ -253,9 +253,9 @@ const ProductAnalysis = () => {
         <section>
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-semibold">Score Higher, Pay Less</h3>
-            <button className="text-xs text-blue-600 font-medium">See All</button>
+            <button className="text-sm text-blue-600 font-medium">See All</button>
           </div>
-          <p className="text-xs text-gray-500 mb-4">Better Products in this price range</p>
+          <p className="text-sm text-gray-500 mb-4">Better Products in this price range</p>
 
           <div className="grid grid-cols-2 gap-4">
             {[
@@ -276,16 +276,16 @@ const ProductAnalysis = () => {
             ].map((product, idx) => (
               <div key={idx} className="border rounded-lg p-3 hover:shadow-md transition-shadow">
                 <img src={product.image} alt={product.name} className="w-full h-24 object-contain mb-2" />
-                <div className="text-xs font-medium mb-1">{product.name}</div>
+                <div className="text-sm font-medium mb-1">{product.name}</div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded">
+                  <span className="bg-green-100 text-green-700 text-sm font-bold px-2 py-0.5 rounded">
                     {product.score}/100
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-sm">{product.price}</span>
-                  <span className="text-xs text-gray-400 line-through">{product.originalPrice}</span>
-                  <span className="text-xs text-green-600 ml-auto">-14%</span>
+                  <span className="text-sm text-gray-400 line-through">{product.originalPrice}</span>
+                  <span className="text-sm text-green-600 ml-auto">-14%</span>
                 </div>
               </div>
             ))}
@@ -296,9 +296,9 @@ const ProductAnalysis = () => {
         <section>
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-semibold">Fragrance-free options</h3>
-            <button className="text-xs text-blue-600 font-medium">See All</button>
+            <button className="text-sm text-blue-600 font-medium">See All</button>
           </div>
-          <p className="text-xs text-gray-500 mb-4">Gentle formulas for sensitive skin</p>
+          <p className="text-sm text-gray-500 mb-4">Gentle formulas for sensitive skin</p>
 
           <div className="grid grid-cols-2 gap-4">
             {[
@@ -319,15 +319,15 @@ const ProductAnalysis = () => {
             ].map((product, idx) => (
               <div key={idx} className="border rounded-lg p-3 hover:shadow-md transition-shadow">
                 <img src={product.image} alt={product.name} className="w-full h-24 object-contain mb-2" />
-                <div className="text-xs font-medium mb-1">{product.name}</div>
+                <div className="text-sm font-medium mb-1">{product.name}</div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded">
+                  <span className="bg-green-100 text-green-700 text-sm font-bold px-2 py-0.5 rounded">
                     {product.score}/100
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-sm">{product.price}</span>
-                  <span className="text-xs text-gray-400 line-through">{product.originalPrice}</span>
+                  <span className="text-sm text-gray-400 line-through">{product.originalPrice}</span>
                 </div>
               </div>
             ))}
@@ -362,7 +362,7 @@ const ProductAnalysis = () => {
         {/* Explore More */}
         <section>
           <h3 className="text-sm font-semibold mb-4">Explore all types of Sunscreens</h3>
-          <p className="text-xs text-gray-500 mb-4">By skin type, finish, ingredients & more</p>
+          <p className="text-sm text-gray-500 mb-4">By skin type, finish, ingredients & more</p>
           <button className="w-full border-2 border-dashed border-gray-300 rounded-lg py-3 text-sm font-medium text-gray-600 hover:border-blue-500 hover:text-blue-600 transition-colors">
             View All Categories
           </button>

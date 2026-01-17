@@ -265,7 +265,7 @@ const FashionProduct_Phase3 = () => {
         <div className="flex items-center justify-between">
           <h1 className="text-lg font-bold text-gray-900">Product Analysis</h1>
           <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-500">Fashion</span>
+            <span className="text-sm text-gray-500">Fashion</span>
           </div>
         </div>
       </div>
@@ -275,7 +275,7 @@ const FashionProduct_Phase3 = () => {
         <div className="flex items-center justify-between">
           <div>
             <div className="text-sm font-bold">Phase 3: Suitability & Trust</div>
-            <div className="text-xs opacity-90">Months 5-6 • All Features Active</div>
+            <div className="text-sm opacity-90">Months 5-6 • All Features Active</div>
           </div>
           <Award className="w-8 h-8 opacity-90" />
         </div>
@@ -297,20 +297,20 @@ const FashionProduct_Phase3 = () => {
                 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 <span className="text-sm font-semibold text-gray-900">4.7</span>
               </div>
-              <span className="text-xs text-gray-500">2,123 reviews</span>
+              <span className="text-sm text-gray-500">2,123 reviews</span>
             </div>
             <div className="flex gap-2 flex-wrap">
               <div className="inline-flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
                 <CheckCircle className="w-3 h-3 text-green-600" />
-                <span className="text-xs font-medium text-green-700">Sustainable</span>
+                <span className="text-sm font-medium text-green-700">Sustainable</span>
               </div>
               <div className="inline-flex items-center gap-1 bg-blue-50 px-2 py-1 rounded">
                 <Shield className="w-3 h-3 text-blue-600" />
-                <span className="text-xs font-medium text-blue-700">Premium Quality</span>
+                <span className="text-sm font-medium text-blue-700">Premium Quality</span>
               </div>
               <div className="inline-flex items-center gap-1 bg-purple-50 px-2 py-1 rounded">
                 <BadgeCheck className="w-3 h-3 text-purple-600" />
-                <span className="text-xs font-medium text-purple-700">100% Original</span>
+                <span className="text-sm font-medium text-purple-700">100% Original</span>
               </div>
             </div>
           </div>
@@ -324,7 +324,7 @@ const FashionProduct_Phase3 = () => {
             <BadgeCheck className="w-5 h-5 text-purple-600" />
             Authenticity & Trust
           </h3>
-          <span className="text-xs bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full font-bold">
+          <span className="text-sm bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full font-bold">
             PHASE 3
           </span>
         </div>
@@ -337,20 +337,20 @@ const FashionProduct_Phase3 = () => {
           </div>
           <div className="grid grid-cols-2 gap-2">
             <div className="bg-green-50 rounded p-2">
-              <p className="text-xs text-gray-600 mb-1">Brand Authorization</p>
-              <p className="text-xs font-semibold text-gray-900 flex items-center gap-1">
+              <p className="text-sm text-gray-600 mb-1">Brand Authorization</p>
+              <p className="text-sm font-semibold text-gray-900 flex items-center gap-1">
                 <CheckCircle className="w-3 h-3 text-green-600" /> Certified Partner
               </p>
             </div>
             <div className="bg-green-50 rounded p-2">
-              <p className="text-xs text-gray-600 mb-1">Serial Number</p>
-              <p className="text-xs font-semibold text-gray-900 flex items-center gap-1">
+              <p className="text-sm text-gray-600 mb-1">Serial Number</p>
+              <p className="text-sm font-semibold text-gray-900 flex items-center gap-1">
                 <CheckCircle className="w-3 h-3 text-green-600" /> Verifiable
               </p>
             </div>
           </div>
           <div className="mt-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded p-2 text-center">
-            <p className="text-xs font-semibold">Money-Back Guarantee if Product is Not Original</p>
+            <p className="text-sm font-semibold">Money-Back Guarantee if Product is Not Original</p>
           </div>
         </div>
 
@@ -360,20 +360,20 @@ const FashionProduct_Phase3 = () => {
             <Sparkles className="w-4 h-4 text-purple-600" />
             Brand Story
           </p>
-          <p className="text-xs text-gray-700 mb-2">{brandInfo.story}</p>
+          <p className="text-sm text-gray-700 mb-2">{brandInfo.story}</p>
           <div className="grid grid-cols-2 gap-2">
             <div className="flex items-center gap-2 bg-purple-50 rounded p-2">
               <MapPin className="w-4 h-4 text-purple-600" />
               <div>
-                <p className="text-xs text-gray-600">Manufacturing</p>
-                <p className="text-xs font-semibold text-gray-900">{brandInfo.manufacturing}</p>
+                <p className="text-sm text-gray-600">Manufacturing</p>
+                <p className="text-sm font-semibold text-gray-900">{brandInfo.manufacturing}</p>
               </div>
             </div>
             <div className="flex items-center gap-2 bg-purple-50 rounded p-2">
               <Calendar className="w-4 h-4 text-purple-600" />
               <div>
-                <p className="text-xs text-gray-600">Heritage</p>
-                <p className="text-xs font-semibold text-gray-900">{brandInfo.heritage}</p>
+                <p className="text-sm text-gray-600">Heritage</p>
+                <p className="text-sm font-semibold text-gray-900">{brandInfo.heritage}</p>
               </div>
             </div>
           </div>
@@ -388,25 +388,25 @@ const FashionProduct_Phase3 = () => {
           <div className="grid grid-cols-2 gap-2 mb-3">
             <div className="bg-blue-50 rounded p-2 text-center">
               <p className="text-xl font-bold text-blue-700">{trustIndicators.unitsSold.toLocaleString()}</p>
-              <p className="text-xs text-gray-600">Units Sold</p>
+              <p className="text-sm text-gray-600">Units Sold</p>
             </div>
             <div className="bg-green-50 rounded p-2 text-center">
               <p className="text-xl font-bold text-green-700">{trustIndicators.repeatBuyerRate}%</p>
-              <p className="text-xs text-gray-600">Repeat Buyers</p>
+              <p className="text-sm text-gray-600">Repeat Buyers</p>
             </div>
           </div>
           <div className="flex gap-2">
             {trustIndicators.trending && (
-              <span className="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium flex items-center gap-1">
+              <span className="text-sm bg-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium flex items-center gap-1">
                 <TrendingUp className="w-3 h-3" /> Trending
               </span>
             )}
             {trustIndicators.bestseller && (
-              <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full font-medium flex items-center gap-1">
+              <span className="text-sm bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full font-medium flex items-center gap-1">
                 <Award className="w-3 h-3" /> Bestseller
               </span>
             )}
-            <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium flex items-center gap-1">
+            <span className="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium flex items-center gap-1">
               <CheckCircle className="w-3 h-3" /> {trustIndicators.verifiedPurchases} Verified
             </span>
           </div>
@@ -420,14 +420,14 @@ const FashionProduct_Phase3 = () => {
             <Tag className="w-5 h-5 text-cyan-600" />
             Occasion & Activity Suitability
           </h3>
-          <span className="text-xs bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-3 py-1 rounded-full font-bold">
+          <span className="text-sm bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-3 py-1 rounded-full font-bold">
             PHASE 3
           </span>
         </div>
 
         {/* Occasion Tags */}
         <div className="mb-4">
-          <p className="text-xs font-semibold text-gray-700 mb-2">Shop by Occasion:</p>
+          <p className="text-sm font-semibold text-gray-700 mb-2">Shop by Occasion:</p>
           <div className="grid grid-cols-3 gap-2">
             {occasions.map((occasion) => (
               <button
@@ -440,7 +440,7 @@ const FashionProduct_Phase3 = () => {
                 }`}
               >
                 <div className="text-2xl mb-1">{occasion.icon}</div>
-                <p className="text-xs font-medium text-gray-900 leading-tight">{occasion.name}</p>
+                <p className="text-sm font-medium text-gray-900 leading-tight">{occasion.name}</p>
               </button>
             ))}
           </div>
@@ -455,25 +455,25 @@ const FashionProduct_Phase3 = () => {
             <div className="space-y-2">
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs text-gray-700">Comfort</span>
+                  <span className="text-sm text-gray-700">Comfort</span>
                   <div className="flex gap-0.5">{renderStars(selectedOccasionData.suitability.comfort)}</div>
                 </div>
               </div>
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs text-gray-700">Warmth</span>
+                  <span className="text-sm text-gray-700">Warmth</span>
                   <div className="flex gap-0.5">{renderStars(selectedOccasionData.suitability.warmth)}</div>
                 </div>
               </div>
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs text-gray-700">Formal Rating</span>
+                  <span className="text-sm text-gray-700">Formal Rating</span>
                   <div className="flex gap-0.5">{renderStars(selectedOccasionData.suitability.formalRating)}</div>
                 </div>
               </div>
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs text-gray-700">Versatility</span>
+                  <span className="text-sm text-gray-700">Versatility</span>
                   <div className="flex gap-0.5">{renderStars(selectedOccasionData.suitability.versatility)}</div>
                 </div>
               </div>
@@ -490,25 +490,25 @@ const FashionProduct_Phase3 = () => {
           <div className="grid grid-cols-3 gap-2 mb-2">
             {weatherSuitability.bestFor.map((season, idx) => (
               <div key={idx} className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded p-2 text-center border border-yellow-200">
-                <p className="text-xs font-semibold text-gray-900">{season}</p>
+                <p className="text-sm font-semibold text-gray-900">{season}</p>
               </div>
             ))}
           </div>
           <div className="bg-blue-50 rounded p-2 mb-2">
-            <p className="text-xs text-gray-600 mb-1">Suitable for:</p>
+            <p className="text-sm text-gray-600 mb-1">Suitable for:</p>
             <p className="text-sm font-bold text-blue-700">{weatherSuitability.temperature} weather</p>
           </div>
           <div className="grid grid-cols-3 gap-2">
             <div className="text-center">
-              <p className="text-xs text-gray-600 mb-1">Breathability</p>
+              <p className="text-sm text-gray-600 mb-1">Breathability</p>
               <div className="flex gap-0.5 justify-center">{renderStars(weatherSuitability.breathability)}</div>
             </div>
             <div className="text-center">
-              <p className="text-xs text-gray-600 mb-1">Water Resist</p>
+              <p className="text-sm text-gray-600 mb-1">Water Resist</p>
               <div className="flex gap-0.5 justify-center">{renderStars(weatherSuitability.waterResistance)}</div>
             </div>
             <div className="text-center">
-              <p className="text-xs text-gray-600 mb-1">UV Protection</p>
+              <p className="text-sm text-gray-600 mb-1">UV Protection</p>
               <div className="flex gap-0.5 justify-center">{renderStars(weatherSuitability.uvProtection)}</div>
             </div>
           </div>
@@ -520,12 +520,12 @@ const FashionProduct_Phase3 = () => {
 
           {/* Pairs Well With */}
           <div className="mb-3">
-            <p className="text-xs font-semibold text-gray-700 mb-2">Pairs well with:</p>
+            <p className="text-sm font-semibold text-gray-700 mb-2">Pairs well with:</p>
             <div className="grid grid-cols-4 gap-2">
               {styleGuide.pairsWellWith.map((item, idx) => (
                 <div key={idx} className="text-center">
                   <img src={item.image} alt={item.item} className="w-full h-16 object-cover rounded mb-1" />
-                  <p className="text-xs text-gray-700 leading-tight">{item.item}</p>
+                  <p className="text-sm text-gray-700 leading-tight">{item.item}</p>
                 </div>
               ))}
             </div>
@@ -533,16 +533,16 @@ const FashionProduct_Phase3 = () => {
 
           {/* Complete Outfit Suggestions */}
           <div>
-            <p className="text-xs font-semibold text-gray-700 mb-2">Complete Outfit Ideas:</p>
+            <p className="text-sm font-semibold text-gray-700 mb-2">Complete Outfit Ideas:</p>
             <div className="grid grid-cols-2 gap-2">
               {styleGuide.outfitIdeas.map((outfit, idx) => (
                 <div key={idx} className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-lg overflow-hidden border border-cyan-200">
                   <img src={outfit.image} alt={outfit.name} className="w-full h-24 object-cover" />
                   <div className="p-2">
-                    <p className="text-xs font-semibold text-gray-900 mb-1">{outfit.name}</p>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">{outfit.name}</p>
                     <ul className="space-y-0.5">
                       {outfit.items.map((item, iIdx) => (
-                        <li key={iIdx} className="text-xs text-gray-600 flex items-center gap-1">
+                        <li key={iIdx} className="text-sm text-gray-600 flex items-center gap-1">
                           <CheckCircle className="w-2 h-2 text-cyan-600" />
                           {item}
                         </li>
@@ -563,7 +563,7 @@ const FashionProduct_Phase3 = () => {
             <Shield className="w-5 h-5 text-teal-600" />
             Product Care & Maintenance
           </h3>
-          <span className="text-xs bg-gradient-to-r from-teal-600 to-green-600 text-white px-3 py-1 rounded-full font-bold">
+          <span className="text-sm bg-gradient-to-r from-teal-600 to-green-600 text-white px-3 py-1 rounded-full font-bold">
             PHASE 3
           </span>
         </div>
@@ -577,9 +577,9 @@ const FashionProduct_Phase3 = () => {
                 <div className="flex items-start gap-3">
                   <span className="text-2xl">{care.icon}</span>
                   <div className="flex-1">
-                    <p className="text-xs font-semibold text-gray-900 mb-1">{care.label}</p>
-                    <p className="text-xs font-medium text-teal-700 mb-1">{care.instruction}</p>
-                    <p className="text-xs text-gray-600">{care.details}</p>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">{care.label}</p>
+                    <p className="text-sm font-medium text-teal-700 mb-1">{care.instruction}</p>
+                    <p className="text-sm text-gray-600">{care.details}</p>
                   </div>
                 </div>
               </div>
@@ -595,24 +595,24 @@ const FashionProduct_Phase3 = () => {
           </p>
           <div className="grid grid-cols-2 gap-2 mb-3">
             <div className="bg-green-50 rounded p-2">
-              <p className="text-xs text-gray-600 mb-1">Expected Lifetime</p>
+              <p className="text-sm text-gray-600 mb-1">Expected Lifetime</p>
               <p className="text-sm font-bold text-green-700">{durabilityInfo.expectedLifetime}</p>
-              <p className="text-xs text-gray-600 mt-1">with proper care</p>
+              <p className="text-sm text-gray-600 mt-1">with proper care</p>
             </div>
             <div className="bg-blue-50 rounded p-2">
-              <p className="text-xs text-gray-600 mb-1">Color Fastness</p>
+              <p className="text-sm text-gray-600 mb-1">Color Fastness</p>
               <p className="text-sm font-bold text-blue-700">{durabilityInfo.colorFastness}</p>
-              <p className="text-xs text-gray-600 mt-1">won't fade easily</p>
+              <p className="text-sm text-gray-600 mt-1">won't fade easily</p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-2">
             <div className="bg-yellow-50 rounded p-2">
-              <p className="text-xs font-semibold text-gray-900 mb-1">Will it shrink?</p>
-              <p className="text-xs text-gray-700">{durabilityInfo.shrinkage}</p>
+              <p className="text-sm font-semibold text-gray-900 mb-1">Will it shrink?</p>
+              <p className="text-sm text-gray-700">{durabilityInfo.shrinkage}</p>
             </div>
             <div className="bg-purple-50 rounded p-2">
-              <p className="text-xs font-semibold text-gray-900 mb-1">Pilling Tendency</p>
-              <p className="text-xs text-gray-700">{durabilityInfo.pillingTendency}</p>
+              <p className="text-sm font-semibold text-gray-900 mb-1">Pilling Tendency</p>
+              <p className="text-sm text-gray-700">{durabilityInfo.pillingTendency}</p>
             </div>
           </div>
         </div>
@@ -630,10 +630,10 @@ const FashionProduct_Phase3 = () => {
           <div className="space-y-3">
             {/* Maintenance Tips */}
             <div className="bg-white rounded-lg p-3">
-              <p className="text-xs font-semibold text-gray-900 mb-2">Maintenance Tips:</p>
+              <p className="text-sm font-semibold text-gray-900 mb-2">Maintenance Tips:</p>
               <div className="space-y-1">
                 {durabilityInfo.maintenanceTips.map((tip, idx) => (
-                  <div key={idx} className="flex items-start gap-2 text-xs text-gray-700">
+                  <div key={idx} className="flex items-start gap-2 text-sm text-gray-700">
                     <CheckCircle className="w-3 h-3 text-teal-600 mt-0.5 flex-shrink-0" />
                     <span>{tip}</span>
                   </div>
@@ -643,12 +643,12 @@ const FashionProduct_Phase3 = () => {
 
             {/* Stain Removal Guide */}
             <div className="bg-white rounded-lg p-3">
-              <p className="text-xs font-semibold text-gray-900 mb-2">How to Remove Common Stains:</p>
+              <p className="text-sm font-semibold text-gray-900 mb-2">How to Remove Common Stains:</p>
               <div className="space-y-2">
                 {stainRemovalGuide.map((guide, idx) => (
                   <div key={idx} className="bg-teal-50 rounded p-2 border border-teal-200">
-                    <p className="text-xs font-semibold text-gray-900 mb-1">{guide.stain}</p>
-                    <p className="text-xs text-gray-700">{guide.solution}</p>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">{guide.stain}</p>
+                    <p className="text-sm text-gray-700">{guide.solution}</p>
                   </div>
                 ))}
               </div>
@@ -658,9 +658,9 @@ const FashionProduct_Phase3 = () => {
             <div className="bg-gradient-to-r from-teal-600 to-green-600 text-white rounded-lg p-3">
               <div className="flex items-center gap-2 mb-2">
                 <Shield className="w-4 h-4" />
-                <p className="text-xs font-bold">Quality Warranty</p>
+                <p className="text-sm font-bold">Quality Warranty</p>
               </div>
-              <p className="text-xs">
+              <p className="text-sm">
                 6-month warranty on manufacturing defects. If you experience any quality issues like excessive shrinkage, color bleeding, or stitching problems, we'll replace it free of charge.
               </p>
             </div>
@@ -675,7 +675,7 @@ const FashionProduct_Phase3 = () => {
             <Ruler className="w-5 h-5 text-purple-600" />
             Smart Size & Fit Predictor
           </h3>
-          <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
+          <span className="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
             {returnReduction.savings}% fewer returns
           </span>
         </div>
@@ -696,7 +696,7 @@ const FashionProduct_Phase3 = () => {
               <p className="text-sm font-semibold text-gray-900 mb-2">Your Measurements</p>
               <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <label className="text-xs text-gray-600">Height (cm)</label>
+                  <label className="text-sm text-gray-600">Height (cm)</label>
                   <input
                     type="number"
                     value={userMeasurements.height}
@@ -705,7 +705,7 @@ const FashionProduct_Phase3 = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-xs text-gray-600">Weight (kg)</label>
+                  <label className="text-sm text-gray-600">Weight (kg)</label>
                   <input
                     type="number"
                     value={userMeasurements.weight}
@@ -714,7 +714,7 @@ const FashionProduct_Phase3 = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-xs text-gray-600">Chest (inches)</label>
+                  <label className="text-sm text-gray-600">Chest (inches)</label>
                   <input
                     type="number"
                     value={userMeasurements.chest}
@@ -723,7 +723,7 @@ const FashionProduct_Phase3 = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-xs text-gray-600">Waist (inches)</label>
+                  <label className="text-sm text-gray-600">Waist (inches)</label>
                   <input
                     type="number"
                     value={userMeasurements.waist}
@@ -740,18 +740,18 @@ const FashionProduct_Phase3 = () => {
                 <div>
                   <p className="text-sm font-semibold mb-1">Recommended Size</p>
                   <p className="text-3xl font-bold">{sizePrediction.recommended}</p>
-                  <p className="text-xs opacity-90 mt-1">{sizePrediction.fit}</p>
+                  <p className="text-sm opacity-90 mt-1">{sizePrediction.fit}</p>
                 </div>
                 <div className="text-right">
                   <div className="bg-white/20 rounded-lg px-3 py-1">
-                    <p className="text-xs opacity-90">Confidence</p>
+                    <p className="text-sm opacity-90">Confidence</p>
                     <p className="text-2xl font-bold">{sizePrediction.confidence}%</p>
                   </div>
                 </div>
               </div>
               <div className="flex items-center gap-2 mt-3 bg-white/10 rounded p-2">
                 <Info className="w-4 h-4 flex-shrink-0" />
-                <p className="text-xs">Based on your measurements and 2,123 verified customer reviews</p>
+                <p className="text-sm">Based on your measurements and 2,123 verified customer reviews</p>
               </div>
             </div>
 
@@ -764,9 +764,9 @@ const FashionProduct_Phase3 = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="font-semibold text-gray-900">Size {alt.size}</span>
-                        <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded">{alt.fit}</span>
+                        <span className="text-sm bg-gray-200 text-gray-700 px-2 py-0.5 rounded">{alt.fit}</span>
                       </div>
-                      <p className="text-xs text-gray-600">{alt.note}</p>
+                      <p className="text-sm text-gray-600">{alt.note}</p>
                     </div>
                     <div className="text-right ml-2">
                       <p className="text-sm font-semibold text-gray-700">{alt.confidence}%</p>
@@ -779,7 +779,7 @@ const FashionProduct_Phase3 = () => {
             {/* Size Chart */}
             <div className="bg-white rounded-lg p-3 overflow-x-auto">
               <p className="text-sm font-semibold text-gray-900 mb-2">Detailed Size Chart (inches)</p>
-              <table className="w-full text-xs">
+              <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-gray-200">
                     <th className="text-left py-2 text-gray-700">Size</th>
@@ -811,14 +811,14 @@ const FashionProduct_Phase3 = () => {
                   <Users className="w-4 h-4 text-blue-600" />
                   How Customers Rate the Fit
                 </p>
-                <span className="text-xs text-gray-500">2,123 reviews</span>
+                <span className="text-sm text-gray-500">2,123 reviews</span>
               </div>
               <div className="space-y-2">
                 {customerFitData.map((item, idx) => (
                   <div key={idx}>
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs text-gray-700">{item.metric}</span>
-                      <span className="text-xs font-semibold text-gray-900">{item.percentage}% ({item.count})</span>
+                      <span className="text-sm text-gray-700">{item.metric}</span>
+                      <span className="text-sm font-semibold text-gray-900">{item.percentage}% ({item.count})</span>
                     </div>
                     <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                       <div
@@ -841,7 +841,7 @@ const FashionProduct_Phase3 = () => {
             <Shield className="w-5 h-5 text-gray-700" />
             Material & Quality Details
           </h3>
-          <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">Certified Sustainable</span>
+          <span className="text-sm bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">Certified Sustainable</span>
         </div>
 
         {/* Material Composition */}
@@ -853,20 +853,20 @@ const FashionProduct_Phase3 = () => {
                   {material.icon}
                   <div>
                     <p className="font-semibold text-gray-900 text-sm">{material.material}</p>
-                    <p className="text-xs text-gray-600">{material.percentage}% of fabric</p>
+                    <p className="text-sm text-gray-600">{material.percentage}% of fabric</p>
                   </div>
                 </div>
-                <span className={`text-xs px-2 py-1 rounded-full font-medium ${material.sustainability === 'Excellent' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
+                <span className={`text-sm px-2 py-1 rounded-full font-medium ${material.sustainability === 'Excellent' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}`}>
                   {material.sustainability}
                 </span>
               </div>
 
-              <p className="text-xs text-gray-700 mb-2">{material.description}</p>
+              <p className="text-sm text-gray-700 mb-2">{material.description}</p>
 
               {/* Properties */}
               <div className="flex flex-wrap gap-1 mb-2">
                 {material.properties.map((prop, pIdx) => (
-                  <span key={pIdx} className="text-xs bg-white px-2 py-1 rounded text-gray-700 border border-gray-200">
+                  <span key={pIdx} className="text-sm bg-white px-2 py-1 rounded text-gray-700 border border-gray-200">
                     {prop}
                   </span>
                 ))}
@@ -875,7 +875,7 @@ const FashionProduct_Phase3 = () => {
               {/* Certifications */}
               <div className="flex flex-wrap gap-1">
                 {material.certifications.map((cert, cIdx) => (
-                  <span key={cIdx} className="text-xs bg-white px-2 py-1 rounded text-green-700 font-medium border border-green-200 flex items-center gap-1">
+                  <span key={cIdx} className="text-sm bg-white px-2 py-1 rounded text-green-700 font-medium border border-green-200 flex items-center gap-1">
                     <CheckCircle className="w-3 h-3" />
                     {cert}
                   </span>
@@ -897,17 +897,17 @@ const FashionProduct_Phase3 = () => {
                 <div className="flex items-center gap-2">
                   <div className="text-amber-600">{indicator.icon}</div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-900">{indicator.aspect}</p>
-                    <p className="text-xs text-gray-600">{indicator.value}</p>
+                    <p className="text-sm font-semibold text-gray-900">{indicator.aspect}</p>
+                    <p className="text-sm text-gray-600">{indicator.value}</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
+                  <span className="text-sm bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
                     {indicator.rating}
                   </span>
                   <div className="group relative inline-block ml-1">
                     <Info className="w-3 h-3 text-gray-400 cursor-help" />
-                    <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block w-40 bg-gray-900 text-white text-xs p-2 rounded shadow-lg z-10">
+                    <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block w-40 bg-gray-900 text-white text-sm p-2 rounded shadow-lg z-10">
                       {indicator.info}
                     </div>
                   </div>
@@ -923,7 +923,7 @@ const FashionProduct_Phase3 = () => {
             <Droplets className="w-4 h-4 text-blue-600" />
             Care Instructions for Longevity
           </p>
-          <div className="space-y-1 text-xs text-gray-700">
+          <div className="space-y-1 text-sm text-gray-700">
             <p>• Machine wash cold (30°C) with similar colors</p>
             <p>• Use mild detergent, avoid bleach</p>
             <p>• Tumble dry low or hang to dry</p>
@@ -932,7 +932,7 @@ const FashionProduct_Phase3 = () => {
           </div>
           <div className="mt-2 flex items-start gap-2 bg-white rounded p-2">
             <AlertCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-            <p className="text-xs text-gray-700">
+            <p className="text-sm text-gray-700">
               Following these instructions can extend your garment's life by <span className="font-semibold text-blue-700">2-3 years</span>
             </p>
           </div>
@@ -957,9 +957,9 @@ const FashionProduct_Phase3 = () => {
                     <div className="flex items-center gap-2 mt-0.5">
                       <div className="flex items-center gap-1">
                         <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                        <span className="text-xs text-gray-700">{platform.rating}</span>
+                        <span className="text-sm text-gray-700">{platform.rating}</span>
                       </div>
-                      <span className="text-xs text-gray-500">({platform.reviews})</span>
+                      <span className="text-sm text-gray-500">({platform.reviews})</span>
                     </div>
                   </div>
                 </div>
@@ -992,7 +992,7 @@ const FashionProduct_Phase3 = () => {
                   style={{ width: `${item.score}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-500">{item.description}</p>
+              <p className="text-sm text-gray-500">{item.description}</p>
             </div>
           ))}
         </div>
@@ -1011,13 +1011,13 @@ const FashionProduct_Phase3 = () => {
               <img src={product.image} alt={product.name} className="w-16 h-16 object-cover rounded-lg" />
               <div className="flex-1">
                 <p className="font-semibold text-sm text-gray-900 mb-0.5">{product.name}</p>
-                <p className="text-xs text-gray-600 mb-1">{product.brand}</p>
+                <p className="text-sm text-gray-600 mb-1">{product.brand}</p>
                 <div className="flex items-center gap-2 mb-1">
                   <div className="flex items-center gap-1">
                     <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                    <span className="text-xs text-gray-700">{product.rating}</span>
+                    <span className="text-sm text-gray-700">{product.rating}</span>
                   </div>
-                  <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">{product.match} match</span>
+                  <span className="text-sm bg-green-100 text-green-700 px-2 py-0.5 rounded-full">{product.match} match</span>
                 </div>
                 <p className="font-bold text-gray-900 text-sm">₹{product.price}</p>
               </div>
