@@ -1,135 +1,124 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Star, Sparkles, TrendingUp, Filter, ChevronDown, User, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Star, Sparkles, Filter, ChevronDown, User, ChevronRight } from 'lucide-react';
 
-const SkincareCategory = () => {
+const FashionCategory = () => {
   const navigate = useNavigate();
   const [selectedFilter, setSelectedFilter] = useState('all');
 
   const userProfile = {
-    skinType: 'Oily/Combination',
-    concerns: ['Acne', 'Large Pores', 'Excess Oil'],
-    previousPurchases: 12
+    bodyType: 'Athletic Build',
+    preferences: ['Casual', 'Minimalist', 'Comfortable'],
+    previousPurchases: 8
   };
 
   const shopByOccasion = [
     {
-      id: 'winter',
-      title: 'Winter Combo',
-      description: 'Deep hydration for cold weather - matched to your oily skin',
-      icon: '❄️',
-      products: 5,
-      matchScore: 97,
-      color: 'from-cyan-50 to-blue-50',
-      borderColor: 'border-cyan-200',
-      path: '/occasion/beauty/winter'
+      id: 'wedding',
+      title: "Friend's Wedding",
+      description: "Smart casuals to wedding outfits - all personalized for your body type",
+      icon: '💍',
+      products: 8,
+      matchScore: 96,
+      color: 'from-pink-50 to-rose-50',
+      borderColor: 'border-pink-200',
+      path: '/occasion/fashion/wedding'
     },
     {
       id: 'summer',
-      title: 'Summer Combo',
-      description: 'Lightweight, oil-control essentials for hot & humid days',
-      icon: '🌞',
-      products: 6,
-      matchScore: 95,
-      color: 'from-amber-50 to-orange-50',
-      borderColor: 'border-amber-200',
-      path: '/occasion/beauty/summer'
-    },
-    {
-      id: 'beach',
-      title: 'Beach Vacation Day-Out',
-      description: 'Water-resistant, SPF-boosted protection for beach fun',
-      icon: '🏖️',
-      products: 4,
-      matchScore: 92,
-      color: 'from-teal-50 to-cyan-50',
-      borderColor: 'border-teal-200',
-      path: '/occasion/beauty/beach'
+      title: 'College Summer Fit',
+      description: 'Breathable, stylish basics perfect for your campus vibe',
+      icon: '☀️',
+      products: 12,
+      matchScore: 93,
+      color: 'from-orange-50 to-yellow-50',
+      borderColor: 'border-orange-200',
+      path: '/occasion/fashion/summer'
     }
   ];
 
   const products = [
     {
       id: 1,
-      name: 'Neutrogena Hydro Boost Water Gel',
-      brand: 'Neutrogena',
-      category: 'Moisturizer',
-      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=300&q=80',
-      price: 799,
+      name: 'Premium Organic Cotton T-Shirt',
+      brand: 'Myntra',
+      category: 'T-Shirts',
+      image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&q=80',
+      price: 1299,
       aiScore: 95,
-      rating: 4.5,
-      reviews: 1243,
-      matchReason: 'Perfect for your oily skin - oil-free, non-comedogenic',
+      rating: 4.7,
+      reviews: 2123,
+      matchReason: 'Perfect fit for athletic build - slim fit with stretch',
       matchPercentage: 95,
       inStock: true
     },
     {
       id: 2,
-      name: 'La Roche-Posay Effaclar Duo+',
-      brand: 'La Roche-Posay',
-      category: 'Treatment',
-      image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300&q=80',
-      price: 1450,
+      name: 'Slim Fit Chinos',
+      brand: 'H&M',
+      category: 'Pants',
+      image: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=300&q=80',
+      price: 1899,
       aiScore: 92,
-      rating: 4.6,
+      rating: 4.5,
       reviews: 1567,
-      matchReason: 'Targets acne and large pores - your main concerns',
+      matchReason: 'Tailored fit complements your body type',
       matchPercentage: 92,
       inStock: true
     },
     {
       id: 3,
-      name: 'CeraVe Foaming Facial Cleanser',
-      brand: 'CeraVe',
-      category: 'Cleanser',
-      image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=300&q=80',
-      price: 649,
+      name: 'Classic White Sneakers',
+      brand: 'Adidas',
+      category: 'Footwear',
+      image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&q=80',
+      price: 3499,
       aiScore: 90,
-      rating: 4.7,
-      reviews: 2891,
-      matchReason: 'Removes excess oil without stripping moisture',
+      rating: 4.8,
+      reviews: 3421,
+      matchReason: 'Versatile style matches your minimalist preference',
       matchPercentage: 90,
       inStock: true
     },
     {
       id: 4,
-      name: 'The Ordinary Niacinamide 10% + Zinc 1%',
-      brand: 'The Ordinary',
-      category: 'Serum',
-      image: 'https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=300&q=80',
-      price: 590,
+      name: 'Denim Jacket',
+      brand: 'Levis',
+      category: 'Jackets',
+      image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&q=80',
+      price: 3999,
       aiScore: 91,
-      rating: 4.4,
-      reviews: 3421,
-      matchReason: 'Controls oil production & minimizes pores',
+      rating: 4.6,
+      reviews: 1876,
+      matchReason: 'Classic fit for your athletic frame',
       matchPercentage: 91,
       inStock: true
     },
     {
       id: 5,
-      name: 'Plum Green Tea Toner',
-      brand: 'Plum',
-      category: 'Toner',
-      image: 'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=300&q=80',
-      price: 399,
+      name: 'Casual Oxford Shirt',
+      brand: 'Zara',
+      category: 'Shirts',
+      image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=300&q=80',
+      price: 1599,
       aiScore: 88,
-      rating: 4.5,
+      rating: 4.4,
       reviews: 987,
-      matchReason: 'Balances pH and controls shine - budget friendly',
+      matchReason: 'Smart casual style - perfect for occasions',
       matchPercentage: 88,
       inStock: true
     },
     {
       id: 6,
-      name: 'Minimalist Salicylic Acid 2% Face Serum',
-      brand: 'Minimalist',
-      category: 'Treatment',
-      image: 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=300&q=80',
-      price: 599,
+      name: 'Athletic Fit Polo',
+      brand: 'Nike',
+      category: 'Polos',
+      image: 'https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=300&q=80',
+      price: 2199,
       aiScore: 89,
-      rating: 4.3,
+      rating: 4.5,
       reviews: 1654,
-      matchReason: 'Unclogs pores and prevents breakouts',
+      matchReason: 'Performance fabric with tailored athletic fit',
       matchPercentage: 89,
       inStock: true
     }
@@ -144,7 +133,7 @@ const SkincareCategory = () => {
             <ArrowLeft className="w-5 h-5 text-gray-900" />
           </button>
           <div className="flex-1">
-            <h1 className="text-lg font-bold text-black">Skincare</h1>
+            <h1 className="text-lg font-bold text-black">Fashion</h1>
             <p className="text-xs text-gray-600">Personalized for you</p>
           </div>
         </div>
@@ -153,7 +142,7 @@ const SkincareCategory = () => {
       {/* Main Content */}
       <div className="p-4 space-y-4">
         {/* AI Personalization Banner */}
-        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-lg p-4">
+        <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-4">
           <div className="flex items-start gap-3">
             <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
               <Sparkles className="w-5 h-5 text-white" />
@@ -161,7 +150,7 @@ const SkincareCategory = () => {
             <div className="flex-1">
               <h3 className="text-sm font-bold text-black mb-1">AI-Personalized Selection</h3>
               <p className="text-xs text-gray-700 mb-3">
-                Based on your skin profile and {userProfile.previousPurchases} previous purchases, we've curated products that match your needs.
+                Based on your body analysis and {userProfile.previousPurchases} previous purchases, we've curated styles that suit you best.
               </p>
 
               {/* User Profile Pills */}
@@ -171,11 +160,11 @@ const SkincareCategory = () => {
               </div>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-white border border-gray-300 px-2 py-1 rounded text-xs font-medium text-gray-700">
-                  {userProfile.skinType}
+                  {userProfile.bodyType}
                 </span>
-                {userProfile.concerns.map((concern, idx) => (
+                {userProfile.preferences.map((pref, idx) => (
                   <span key={idx} className="bg-white border border-gray-300 px-2 py-1 rounded text-xs font-medium text-gray-700">
-                    {concern}
+                    {pref}
                   </span>
                 ))}
               </div>
@@ -237,36 +226,36 @@ const SkincareCategory = () => {
               All Products
             </button>
             <button
-              onClick={() => setSelectedFilter('cleanser')}
+              onClick={() => setSelectedFilter('tshirts')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'cleanser' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'tshirts' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              Cleansers
+              T-Shirts
             </button>
             <button
-              onClick={() => setSelectedFilter('moisturizer')}
+              onClick={() => setSelectedFilter('pants')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'moisturizer' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'pants' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              Moisturizers
+              Pants
             </button>
             <button
-              onClick={() => setSelectedFilter('serum')}
+              onClick={() => setSelectedFilter('footwear')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'serum' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'footwear' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              Serums
+              Footwear
             </button>
             <button
-              onClick={() => setSelectedFilter('treatment')}
+              onClick={() => setSelectedFilter('jackets')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'treatment' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'jackets' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              Treatments
+              Jackets
             </button>
           </div>
         </div>
@@ -284,7 +273,7 @@ const SkincareCategory = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              onClick={() => navigate('/product/beauty')}
+              onClick={() => navigate('/product/fashion')}
               className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
             >
               <div className="flex gap-3 p-3">
@@ -341,23 +330,9 @@ const SkincareCategory = () => {
             </div>
           ))}
         </div>
-
-        {/* Routine Suggestion CTA */}
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-4">
-          <h3 className="text-sm font-bold text-black mb-1">Need a Complete Routine?</h3>
-          <p className="text-xs text-gray-700 mb-3">
-            Get a personalized 4-step skincare routine curated for your oily skin type.
-          </p>
-          <button
-            onClick={() => navigate('/routine/oily-skin')}
-            className="w-full bg-black text-white py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
-          >
-            View Oily Skin Routine
-          </button>
-        </div>
       </div>
     </div>
   );
 };
 
-export default SkincareCategory;
+export default FashionCategory;

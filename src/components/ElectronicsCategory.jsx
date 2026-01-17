@@ -1,136 +1,136 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Star, Sparkles, TrendingUp, Filter, ChevronDown, User, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Star, Sparkles, Filter, ChevronDown, User, ChevronRight } from 'lucide-react';
 
-const SkincareCategory = () => {
+const ElectronicsCategory = () => {
   const navigate = useNavigate();
   const [selectedFilter, setSelectedFilter] = useState('all');
 
   const userProfile = {
-    skinType: 'Oily/Combination',
-    concerns: ['Acne', 'Large Pores', 'Excess Oil'],
-    previousPurchases: 12
+    interests: ['Programming', 'Productivity', 'Audio'],
+    budget: 'Mid-High Range',
+    previousPurchases: 15
   };
 
   const shopByOccasion = [
     {
-      id: 'winter',
-      title: 'Winter Combo',
-      description: 'Deep hydration for cold weather - matched to your oily skin',
-      icon: '❄️',
-      products: 5,
-      matchScore: 97,
-      color: 'from-cyan-50 to-blue-50',
-      borderColor: 'border-cyan-200',
-      path: '/occasion/beauty/winter'
-    },
-    {
-      id: 'summer',
-      title: 'Summer Combo',
-      description: 'Lightweight, oil-control essentials for hot & humid days',
-      icon: '🌞',
+      id: 'edc',
+      title: 'Everyday Carry',
+      description: 'Essential tech gear optimized for your daily routine',
+      icon: '🎒',
       products: 6,
-      matchScore: 95,
-      color: 'from-amber-50 to-orange-50',
-      borderColor: 'border-amber-200',
-      path: '/occasion/beauty/summer'
+      matchScore: 94,
+      color: 'from-gray-50 to-slate-50',
+      borderColor: 'border-gray-300',
+      path: '/occasion/electronics/edc'
     },
     {
-      id: 'beach',
-      title: 'Beach Vacation Day-Out',
-      description: 'Water-resistant, SPF-boosted protection for beach fun',
-      icon: '🏖️',
-      products: 4,
-      matchScore: 92,
-      color: 'from-teal-50 to-cyan-50',
-      borderColor: 'border-teal-200',
-      path: '/occasion/beauty/beach'
+      id: 'travel',
+      title: 'Travel Essentials',
+      description: 'Compact, reliable gadgets for your next adventure',
+      icon: '✈️',
+      products: 9,
+      matchScore: 91,
+      color: 'from-blue-50 to-sky-50',
+      borderColor: 'border-blue-200',
+      path: '/occasion/electronics/travel'
+    },
+    {
+      id: 'gym',
+      title: 'Gym Combos',
+      description: 'Fitness tech that tracks, motivates, and performs',
+      icon: '💪',
+      products: 7,
+      matchScore: 89,
+      color: 'from-green-50 to-emerald-50',
+      borderColor: 'border-green-200',
+      path: '/occasion/electronics/gym'
     }
   ];
 
   const products = [
     {
       id: 1,
-      name: 'Neutrogena Hydro Boost Water Gel',
-      brand: 'Neutrogena',
-      category: 'Moisturizer',
-      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=300&q=80',
-      price: 799,
-      aiScore: 95,
-      rating: 4.5,
-      reviews: 1243,
-      matchReason: 'Perfect for your oily skin - oil-free, non-comedogenic',
-      matchPercentage: 95,
+      name: 'Sony WH-1000XM5 Headphones',
+      brand: 'Sony',
+      category: 'Audio',
+      image: 'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=300&q=80',
+      price: 29990,
+      aiScore: 96,
+      rating: 4.8,
+      reviews: 5243,
+      matchReason: 'Perfect for programmers - exceptional noise cancellation',
+      matchPercentage: 96,
       inStock: true
     },
     {
       id: 2,
-      name: 'La Roche-Posay Effaclar Duo+',
-      brand: 'La Roche-Posay',
-      category: 'Treatment',
-      image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300&q=80',
-      price: 1450,
-      aiScore: 92,
-      rating: 4.6,
-      reviews: 1567,
-      matchReason: 'Targets acne and large pores - your main concerns',
-      matchPercentage: 92,
+      name: 'Apple MacBook Air M2',
+      brand: 'Apple',
+      category: 'Laptops',
+      image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&q=80',
+      price: 114900,
+      aiScore: 95,
+      rating: 4.9,
+      reviews: 3567,
+      matchReason: 'Ideal for your productivity and programming needs',
+      matchPercentage: 95,
       inStock: true
     },
     {
       id: 3,
-      name: 'CeraVe Foaming Facial Cleanser',
-      brand: 'CeraVe',
-      category: 'Cleanser',
-      image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=300&q=80',
-      price: 649,
-      aiScore: 90,
+      name: 'Logitech MX Master 3S',
+      brand: 'Logitech',
+      category: 'Accessories',
+      image: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=300&q=80',
+      price: 8995,
+      aiScore: 92,
       rating: 4.7,
       reviews: 2891,
-      matchReason: 'Removes excess oil without stripping moisture',
-      matchPercentage: 90,
+      matchReason: 'Ergonomic mouse perfect for long coding sessions',
+      matchPercentage: 92,
       inStock: true
     },
     {
       id: 4,
-      name: 'The Ordinary Niacinamide 10% + Zinc 1%',
-      brand: 'The Ordinary',
-      category: 'Serum',
-      image: 'https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=300&q=80',
-      price: 590,
-      aiScore: 91,
-      rating: 4.4,
-      reviews: 3421,
-      matchReason: 'Controls oil production & minimizes pores',
-      matchPercentage: 91,
+      name: 'iPad Pro 11" M2',
+      brand: 'Apple',
+      category: 'Tablets',
+      image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300&q=80',
+      price: 81900,
+      aiScore: 93,
+      rating: 4.8,
+      reviews: 1421,
+      matchReason: 'Versatile for work and creative tasks',
+      matchPercentage: 93,
       inStock: true
     },
     {
       id: 5,
-      name: 'Plum Green Tea Toner',
-      brand: 'Plum',
-      category: 'Toner',
-      image: 'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=300&q=80',
-      price: 399,
-      aiScore: 88,
+      name: 'Samsung Galaxy Watch 5',
+      brand: 'Samsung',
+      category: 'Wearables',
+      image: 'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=300&q=80',
+      price: 24999,
+      aiScore: 89,
       rating: 4.5,
       reviews: 987,
-      matchReason: 'Balances pH and controls shine - budget friendly',
-      matchPercentage: 88,
+      matchReason: 'Tracks fitness and productivity metrics',
+      matchPercentage: 89,
       inStock: true
     },
     {
       id: 6,
-      name: 'Minimalist Salicylic Acid 2% Face Serum',
-      brand: 'Minimalist',
-      category: 'Treatment',
-      image: 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=300&q=80',
-      price: 599,
-      aiScore: 89,
-      rating: 4.3,
+      name: 'Keychron K8 Pro Mechanical Keyboard',
+      brand: 'Keychron',
+      category: 'Accessories',
+      image: 'https://images.unsplash.com/photo-1595225476474-87563907a212?w=300&q=80',
+      price: 9999,
+      aiScore: 91,
+      rating: 4.6,
       reviews: 1654,
-      matchReason: 'Unclogs pores and prevents breakouts',
-      matchPercentage: 89,
+      matchReason: 'Premium typing experience for programmers',
+      matchPercentage: 91,
       inStock: true
     }
   ];
@@ -144,7 +144,7 @@ const SkincareCategory = () => {
             <ArrowLeft className="w-5 h-5 text-gray-900" />
           </button>
           <div className="flex-1">
-            <h1 className="text-lg font-bold text-black">Skincare</h1>
+            <h1 className="text-lg font-bold text-black">Electronics</h1>
             <p className="text-xs text-gray-600">Personalized for you</p>
           </div>
         </div>
@@ -153,7 +153,7 @@ const SkincareCategory = () => {
       {/* Main Content */}
       <div className="p-4 space-y-4">
         {/* AI Personalization Banner */}
-        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-lg p-4">
+        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-200 rounded-lg p-4">
           <div className="flex items-start gap-3">
             <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
               <Sparkles className="w-5 h-5 text-white" />
@@ -161,7 +161,7 @@ const SkincareCategory = () => {
             <div className="flex-1">
               <h3 className="text-sm font-bold text-black mb-1">AI-Personalized Selection</h3>
               <p className="text-xs text-gray-700 mb-3">
-                Based on your skin profile and {userProfile.previousPurchases} previous purchases, we've curated products that match your needs.
+                Based on your interests and {userProfile.previousPurchases} previous purchases, we've curated tech that fits your lifestyle.
               </p>
 
               {/* User Profile Pills */}
@@ -170,14 +170,14 @@ const SkincareCategory = () => {
                 <span className="text-xs font-semibold text-gray-700">Your Profile:</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-white border border-gray-300 px-2 py-1 rounded text-xs font-medium text-gray-700">
-                  {userProfile.skinType}
-                </span>
-                {userProfile.concerns.map((concern, idx) => (
+                {userProfile.interests.map((interest, idx) => (
                   <span key={idx} className="bg-white border border-gray-300 px-2 py-1 rounded text-xs font-medium text-gray-700">
-                    {concern}
+                    {interest}
                   </span>
                 ))}
+                <span className="bg-white border border-gray-300 px-2 py-1 rounded text-xs font-medium text-gray-700">
+                  {userProfile.budget}
+                </span>
               </div>
             </div>
           </div>
@@ -237,36 +237,36 @@ const SkincareCategory = () => {
               All Products
             </button>
             <button
-              onClick={() => setSelectedFilter('cleanser')}
+              onClick={() => setSelectedFilter('audio')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'cleanser' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'audio' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              Cleansers
+              Audio
             </button>
             <button
-              onClick={() => setSelectedFilter('moisturizer')}
+              onClick={() => setSelectedFilter('laptops')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'moisturizer' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'laptops' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              Moisturizers
+              Laptops
             </button>
             <button
-              onClick={() => setSelectedFilter('serum')}
+              onClick={() => setSelectedFilter('wearables')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'serum' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'wearables' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              Serums
+              Wearables
             </button>
             <button
-              onClick={() => setSelectedFilter('treatment')}
+              onClick={() => setSelectedFilter('accessories')}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                selectedFilter === 'treatment' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                selectedFilter === 'accessories' ? 'bg-black text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              Treatments
+              Accessories
             </button>
           </div>
         </div>
@@ -284,7 +284,7 @@ const SkincareCategory = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              onClick={() => navigate('/product/beauty')}
+              onClick={() => navigate('/product/electronics')}
               className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-black hover:shadow-md transition-all cursor-pointer"
             >
               <div className="flex gap-3 p-3">
@@ -334,30 +334,16 @@ const SkincareCategory = () => {
                       <span className="text-xs font-medium text-gray-700">{product.rating}</span>
                       <span className="text-xs text-gray-500">({product.reviews})</span>
                     </div>
-                    <span className="text-sm font-bold text-black">₹{product.price}</span>
+                    <span className="text-sm font-bold text-black">₹{product.price.toLocaleString()}</span>
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Routine Suggestion CTA */}
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-4">
-          <h3 className="text-sm font-bold text-black mb-1">Need a Complete Routine?</h3>
-          <p className="text-xs text-gray-700 mb-3">
-            Get a personalized 4-step skincare routine curated for your oily skin type.
-          </p>
-          <button
-            onClick={() => navigate('/routine/oily-skin')}
-            className="w-full bg-black text-white py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
-          >
-            View Oily Skin Routine
-          </button>
-        </div>
       </div>
     </div>
   );
 };
 
-export default SkincareCategory;
+export default ElectronicsCategory;

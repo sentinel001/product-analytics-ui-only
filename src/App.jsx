@@ -16,6 +16,8 @@ import OrderConfirmation from './components/OrderConfirmation';
 import OrderTracking from './components/OrderTracking';
 import RankedListPage from './components/RankedListPage';
 import SkincareCategory from './components/SkincareCategory';
+import FashionCategory from './components/FashionCategory';
+import ElectronicsCategory from './components/ElectronicsCategory';
 import OilySkinRoutine from './components/OilySkinRoutine';
 import ProgrammerSetup from './components/ProgrammerSetup';
 import { Sparkles, Zap, Shirt, Calendar } from 'lucide-react';
@@ -145,6 +147,8 @@ function App() {
         {/* Ranked Lists & Categories */}
         <Route path="/ranked-list/:id" element={<RankedListPage />} />
         <Route path="/category/skincare" element={<SkincareCategory />} />
+        <Route path="/category/fashion" element={<FashionCategory />} />
+        <Route path="/category/electronics" element={<ElectronicsCategory />} />
 
         {/* Personalized Bundles & Routines */}
         <Route path="/routine/oily-skin" element={<OilySkinRoutine />} />
